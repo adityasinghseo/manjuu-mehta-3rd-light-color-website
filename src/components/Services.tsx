@@ -1,33 +1,33 @@
 const services = [
   {
-    deva: "जन्म कुण्डली",
-    title: "Janma Kundli",
-    desc: "A precise birth chart revealing the celestial alignment at the moment of your soul's arrival.",
+    deva: "वास्तु शास्त्र",
+    title: "Vastu Consultation",
+    desc: "Harmonize homes and workplaces with the five elements and directional energies for prosperity and peace.",
+  },
+  {
+    deva: "ज्योतिष",
+    title: "Vedic Astrology",
+    desc: "Personalised birth chart readings, Mahadasha analysis and remedies aligned with your planetary blueprint.",
+  },
+  {
+    deva: "अंक शास्त्र",
+    title: "Karmic Numerology",
+    desc: "Decode the vibrations of your name and date of birth to unlock your soul's purpose and life path.",
   },
   {
     deva: "विवाह मिलन",
-    title: "Kundli Milan",
-    desc: "Ashta-Koota matchmaking to harmonize two souls through the eight sacred compatibilities.",
+    title: "Match Making",
+    desc: "Ashta-Koota compatibility readings to bless unions with harmony, longevity and shared destiny.",
   },
   {
-    deva: "महादशा",
-    title: "Mahadasha Reading",
-    desc: "Decode the planetary periods that govern the chapters of your unfolding life journey.",
-  },
-  {
-    deva: "मुहूर्त",
-    title: "Muhurta Selection",
-    desc: "Auspicious timings chosen with Vedic precision for ceremonies, ventures and beginnings.",
+    deva: "व्यापार परामर्श",
+    title: "Business Guidance",
+    desc: "Strategic Vastu and astrological counsel for entrepreneurs and enterprises seeking aligned growth.",
   },
   {
     deva: "रत्न परामर्श",
     title: "Gemstone Counsel",
-    desc: "Sacred stones aligned with your planetary lords to amplify benefic cosmic energies.",
-  },
-  {
-    deva: "वास्तु शास्त्र",
-    title: "Vastu Shastra",
-    desc: "Harmonize your dwelling with the five elements and the eight directional deities.",
+    desc: "Sacred stones recommended through precise planetary analysis to amplify benefic cosmic energies.",
   },
 ];
 
@@ -38,6 +38,9 @@ const Services = () => (
         <p className="font-sanskrit text-primary/70 text-xl mb-3">सेवाएं</p>
         <h2 className="font-display text-4xl md:text-6xl text-gold">Sacred Services</h2>
         <div className="mx-auto h-px w-32 bg-gradient-gold mt-4" />
+        <p className="mt-6 text-foreground/70 max-w-2xl mx-auto text-lg italic">
+          Precision-crafted consultations rooted in ancient wisdom, delivered with modern clarity.
+        </p>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((s, i) => (
@@ -52,7 +55,7 @@ const Services = () => (
               <h3 className="font-display text-2xl text-gold mb-4">{s.title}</h3>
               <p className="text-foreground/75 leading-relaxed text-lg">{s.desc}</p>
               <div className="mt-6 inline-flex items-center gap-2 text-primary text-sm font-display tracking-widest uppercase group-hover:gap-4 transition-all">
-                Discover →
+                Enquire →
               </div>
             </div>
           </article>

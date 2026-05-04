@@ -4,24 +4,22 @@ import StarField from "./StarField";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center pt-20">
       <div className="absolute inset-0">
         <img
           src={mandala}
-          alt="Cosmic mandala of Vedic zodiac"
+          alt="Cosmic mandala backdrop"
           width={1920}
           height={1080}
-          className="h-full w-full object-cover opacity-50"
+          className="h-full w-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
       </div>
       <StarField />
 
-      {/* Aura glow */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full animate-glow-pulse"
         style={{ background: 'var(--gradient-aura)' }} />
 
-      {/* Rotating yantra */}
       <img
         src={yantra}
         alt=""
@@ -29,35 +27,41 @@ const Hero = () => {
         width={1024}
         height={1024}
         loading="lazy"
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[640px] w-[640px] -translate-x-1/2 -translate-y-1/2 opacity-30 animate-spin-slow mix-blend-screen"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[640px] w-[640px] -translate-x-1/2 -translate-y-1/2 opacity-25 animate-spin-slow mix-blend-screen"
       />
 
       <div className="relative z-10 text-center px-6 max-w-4xl animate-rise">
-        <p className="font-sanskrit text-2xl md:text-3xl text-primary/80 mb-4 tracking-widest animate-fade-in">
-          ॐ ज्योतिषं वेद चक्षुः
+        <p className="font-sanskrit text-xl md:text-2xl text-primary/80 mb-4 tracking-widest animate-fade-in">
+          ॐ गुरुर्ब्रह्मा गुरुर्विष्णुः
         </p>
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-          <span className="block shimmer-text">Jyotisha</span>
-          <span className="block text-foreground/90 text-3xl md:text-5xl mt-4 font-light tracking-[0.3em]">
-            THE EYE OF THE VEDAS
+        <p className="text-xs md:text-sm tracking-[0.5em] text-primary/70 font-display uppercase mb-6">
+          Certified Vastu Advisor · Astrologer · Karmic Numerologist
+        </p>
+        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05]">
+          <span className="block shimmer-text">Manjuu Mehta</span>
+          <span className="block text-foreground/85 text-2xl md:text-4xl mt-6 font-light tracking-[0.25em] italic font-body">
+            Aligning Lives with the Cosmos
           </span>
         </h1>
-        <p className="mt-8 text-xl md:text-2xl font-body italic text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-          Discover the ancient wisdom of the stars — your Rashi, your Nakshatra,
-          and the cosmic dance of the Navagraha that shape your destiny.
+        <p className="mt-8 text-lg md:text-xl font-body italic text-foreground/80 max-w-2xl mx-auto leading-relaxed">
+          Over a decade of transforming lives through the ancient sciences of Vastu, Vedic Astrology
+          and Karmic Numerology — guiding individuals, families and businesses to clarity, prosperity
+          and aligned growth.
         </p>
         <div className="mt-12 flex flex-wrap items-center justify-center gap-5">
-          <button className="group relative px-10 py-4 bg-gradient-gold text-primary-foreground font-display tracking-widest text-sm uppercase rounded-full shadow-glow transition-transform hover:scale-105">
-            Reveal My Kundli
-          </button>
-          <button className="px-10 py-4 gold-border text-primary font-display tracking-widest text-sm uppercase rounded-full hover:bg-primary/10 transition-colors">
-            Daily Horoscope
-          </button>
+          <a href="#consult" className="group relative px-10 py-4 bg-gradient-gold text-primary-foreground font-display tracking-widest text-sm uppercase rounded-full shadow-glow transition-transform hover:scale-105">
+            Book a Consultation
+          </a>
+          <a href="#about" className="px-10 py-4 gold-border text-primary font-display tracking-widest text-sm uppercase rounded-full hover:bg-primary/10 transition-colors">
+            Discover My Journey
+          </a>
         </div>
-      </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary/60 text-xs tracking-[0.4em] font-display animate-twinkle">
-        ↓ SCROLL THROUGH THE COSMOS
+        <div className="mt-14 flex flex-wrap justify-center gap-x-10 gap-y-3 text-xs font-display tracking-[0.3em] uppercase text-primary/70">
+          <span>10+ Years</span><span className="text-primary/30">✦</span>
+          <span>AIFAS Elite Member</span><span className="text-primary/30">✦</span>
+          <span>Global Clientele</span>
+        </div>
       </div>
     </section>
   );
