@@ -1,19 +1,21 @@
 import SiteNav from "@/components/SiteNav";
 import Hero from "@/components/Hero";
-import Rashis from "@/components/Rashis";
-import Navagraha from "@/components/Navagraha";
+import About from "@/components/About";
 import Services from "@/components/Services";
+import Awards from "@/components/Awards";
 import Wisdom from "@/components/Wisdom";
+import Consult from "@/components/Consult";
 import Footer from "@/components/Footer";
 
 const Index = () => (
   <main className="relative min-h-screen">
     <SiteNav />
     <Hero />
-    <Rashis />
-    <Navagraha />
+    <About />
     <Services />
+    <Awards />
     <Wisdom />
+    <Consult />
     <Footer />
   </main>
 );

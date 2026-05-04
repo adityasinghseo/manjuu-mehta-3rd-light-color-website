@@ -1,7 +1,7 @@
 const links = [
-  { href: "#rashis", label: "Rashis" },
-  { href: "#navagraha", label: "Navagraha" },
+  { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
+  { href: "#awards", label: "Awards" },
   { href: "#wisdom", label: "Wisdom" },
 ];
 
@@ -10,7 +10,10 @@ const SiteNav = () => (
     <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
       <a href="#" className="flex items-center gap-3">
         <span className="text-2xl text-gold font-display">✦</span>
-        <span className="font-display tracking-[0.3em] text-gold text-sm md:text-base">JYOTISHA</span>
+        <div className="leading-tight">
+          <div className="font-display tracking-[0.25em] text-gold text-sm md:text-base">MANJUU MEHTA</div>
+          <div className="text-[10px] tracking-[0.3em] text-muted-foreground uppercase hidden md:block">Vastu · Astrology · Numerology</div>
+        </div>
       </a>
       <ul className="hidden md:flex items-center gap-10 text-sm font-display tracking-widest uppercase">
         {links.map(l => (
@@ -22,9 +25,9 @@ const SiteNav = () => (
           </li>
         ))}
       </ul>
-      <button className="px-5 py-2 rounded-full gold-border text-primary text-xs font-display tracking-widest uppercase hover:bg-primary/10 transition">
-        Consult
-      </button>
+      <a href="#consult" className="px-5 py-2 rounded-full gold-border text-primary text-xs font-display tracking-widest uppercase hover:bg-primary/10 transition">
+        Book Consult
+      </a>
     </nav>
   </header>
 );
