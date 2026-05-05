@@ -24,15 +24,12 @@ const Wisdom = () => (
         />
       </div>
       <div className="animate-rise">
-        <p className="font-sanskrit text-primary/80 text-xl mb-4">वेद वाणी</p>
+        <p className="font-display tracking-widest text-primary/80 text-sm uppercase mb-4">Cosmic Wisdom</p>
         <h2 className="font-display text-4xl md:text-5xl text-gold mb-8 leading-tight">
           The Stars Whisper, <br />the Wise Listen.
         </h2>
         <blockquote className="border-l-2 border-primary/60 pl-6 italic text-xl text-foreground/85 leading-relaxed mb-6">
-          "यथा पिण्डे तथा ब्रह्माण्डे" <br />
-          <span className="text-base not-italic text-muted-foreground">
-            As is the microcosm, so is the macrocosm. The same cosmic rhythm pulses within you and within the heavens.
-          </span>
+          "As is the microcosm, so is the macrocosm. The same cosmic rhythm pulses within you and within the heavens."
         </blockquote>
         <p className="text-foreground/75 text-lg leading-relaxed mb-8">
           For five thousand years, the Rishis have read the language of light. Through Vedic Jyotisha,

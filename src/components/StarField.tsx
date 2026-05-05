@@ -2,7 +2,7 @@ const StarField = () => {
   const stars = Array.from({ length: 60 });
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      <div className="absolute inset-0 star-field opacity-70" />
+      <div className="absolute inset-0 star-field opacity-70 animate-pan-stars" />
       {stars.map((_, i) => {
         const left = Math.random() * 100;
         const top = Math.random() * 100;

@@ -134,6 +134,10 @@
     from { transform: rotate(0deg) translateX(var(--r,180px)) rotate(0deg); }
     to { transform: rotate(360deg) translateX(var(--r,180px)) rotate(-360deg); }
   }
+  @keyframes pan-stars {
+    from { background-position: 0 0; }
+    to { background-position: 600px 600px; }
+  }
 
   .animate-spin-slow { animation: spin-slow 60s linear infinite; }
   .animate-spin-reverse { animation: spin-reverse 90s linear infinite; }
@@ -142,6 +146,7 @@
   .animate-twinkle { animation: twinkle 3s ease-in-out infinite; }
   .animate-rise { animation: rise 1s cubic-bezier(.2,.7,.2,1) both; }
   .animate-fade-in { animation: fade-in 1.4s ease-out both; }
+  .animate-pan-stars { animation: pan-stars 60s linear infinite; }
 
   .shimmer-text {
     background: linear-gradient(90deg, hsl(38 85% 50%) 0%, hsl(48 100% 80%) 50%, hsl(38 85% 50%) 100%);

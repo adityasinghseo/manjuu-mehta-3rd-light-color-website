@@ -2,7 +2,7 @@ const Consult = () => (
   <section id="consult" className="relative py-32 px-6">
     <div className="max-w-4xl mx-auto text-center relative">
       <div className="absolute inset-0 -z-10 animate-glow-pulse" style={{ background: 'var(--gradient-aura)' }} />
-      <p className="font-sanskrit text-primary/80 text-xl mb-3">परामर्श</p>
+      <p className="font-display tracking-widest text-primary/80 text-sm uppercase mb-3">Consultation</p>
       <h2 className="font-display text-4xl md:text-6xl text-gold mb-6 leading-tight">
         Begin Your Journey
       </h2>
@@ -19,7 +19,7 @@ const Consult = () => (
           Call Manjuu
         </a>
       </div>
-      <p className="mt-10 font-sanskrit text-primary/70 text-lg">शुभं भवतु</p>
+      <p className="mt-10 font-display tracking-widest text-primary/70 text-sm uppercase">May All Be Auspicious</p>
     </div>
   </section>
 );

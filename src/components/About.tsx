@@ -1,4 +1,4 @@
-import portrait from "@/assets/manjuu-portrait.jpg";
+import portrait from "@/assets/Gemini_Generated_Image_c38wuqc38wuqc38w.png";
 
 const About = () => (
   <section id="about" className="relative py-32 px-6">
@@ -10,19 +10,19 @@ const About = () => (
             src={portrait}
             alt="Manjuu Mehta — Vastu Advisor and Astrologer"
             width={1024}
-            height={1280}
+            height={1024}
             loading="lazy"
             className="w-full h-auto"
           />
         </div>
         <div className="absolute -bottom-6 -right-6 px-6 py-4 rounded-2xl bg-card gold-border shadow-glow">
-          <p className="font-sanskrit text-primary text-sm">ज्योतिषाचार्य</p>
+          <p className="font-display tracking-widest text-primary text-sm uppercase mb-1">Master Astrologer</p>
           <p className="font-display text-gold text-xs tracking-widest uppercase">AIFAS Elite Member</p>
         </div>
       </div>
 
       <div className="animate-rise" style={{ animationDelay: '0.15s' }}>
-        <p className="font-sanskrit text-primary/80 text-xl mb-3">परिचय</p>
+        <p className="font-display tracking-widest text-primary/80 text-sm uppercase mb-3">Introduction</p>
         <h2 className="font-display text-4xl md:text-5xl text-gold mb-6 leading-tight">
           A Decade of Cosmic Guidance
         </h2>

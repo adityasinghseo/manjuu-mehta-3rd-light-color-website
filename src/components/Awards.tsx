@@ -1,3 +1,14 @@
+import img1 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM (1).jpeg";
+import img2 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM (2).jpeg";
+import img3 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM (3).jpeg";
+import img4 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM (4).jpeg";
+import img5 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM (5).jpeg";
+import img6 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM (6).jpeg";
+import img7 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM (7).jpeg";
+import img8 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM.jpeg";
+import img9 from "@/assets/WhatsApp Image 2026-04-30 at 1.17.02 PM.jpeg";
+import img10 from "@/assets/WhatsApp Image 2026-04-30 at 2.17.04 PM.jpeg";
+
 const awards = [
   { year: "2025", title: "Jyotish Mahakumbh Award", note: "Presented by Hon'ble CM of Uttarakhand, Shri Pushkar Singh Dhami" },
   { year: "2025", title: "Nakshatra Alankar Award", note: "Honouring distinguished contribution to Vedic sciences" },
@@ -9,11 +20,13 @@ const awards = [
   { year: "—", title: "Forever Star India Award", note: "Best Astro Numerologist, Haridwar, Uttarakhand" },
 ];
 
+const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+
 const Awards = () => (
   <section id="awards" className="relative py-32 px-6">
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-20">
-        <p className="font-sanskrit text-primary/70 text-xl mb-3">सम्मान</p>
+        <p className="font-display tracking-widest text-primary/80 text-sm uppercase mb-3">Recognition</p>
         <h2 className="font-display text-4xl md:text-6xl text-gold">Honours & Accolades</h2>
         <div className="mx-auto h-px w-32 bg-gradient-gold mt-4" />
         <p className="mt-6 text-foreground/70 max-w-2xl mx-auto text-lg italic">
@@ -38,6 +51,20 @@ const Awards = () => (
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-24">
+        <div className="text-center mb-12">
+           <h3 className="font-display text-3xl md:text-4xl text-gold">Moments of Glory</h3>
+           <div className="mx-auto h-px w-24 bg-gradient-gold mt-4" />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+           {galleryImages.map((src, idx) => (
+              <div key={idx} className="relative group overflow-hidden rounded-xl gold-border hover:shadow-glow transition-all duration-300">
+                <img src={src} alt={`Award moment ${idx + 1}`} loading="lazy" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+           ))}
+        </div>
       </div>
     </div>
   </section>
