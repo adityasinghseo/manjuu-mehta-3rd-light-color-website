@@ -4,16 +4,23 @@ import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from "lucide-react";
 const contactDetails = [
   {
     icon: Phone,
-    label: "Phone & WhatsApp",
+    label: "Primary Phone",
+    value: "+91 73109 52576",
+    href: "tel:+917310952576",
+    sub: "Available Mon – Sat, 9 AM – 7 PM",
+  },
+  {
+    icon: Phone,
+    label: "Alternate Phone",
     value: "+91 77373 29191",
     href: "tel:+917737329191",
-    sub: "Available Mon – Sat, 9 AM – 7 PM",
+    sub: "For general inquiries",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp Chat",
     value: "Chat on WhatsApp",
-    href: "https://wa.me/917737329191",
+    href: "https://wa.me/917310952576",
     sub: "Quickest way to connect",
   },
   {
@@ -50,7 +57,7 @@ const ContactUs = () => {
     e.preventDefault();
     // Build WhatsApp message
     const msg = `Hello Manjuu ji,%0A%0AName: ${form.name}%0APhone: ${form.phone}%0AEmail: ${form.email}%0AService: ${form.service}%0A%0AMessage: ${form.message}`;
-    window.open(`https://wa.me/917737329191?text=${msg}`, "_blank");
+    window.open(`https://wa.me/917310952576?text=${msg}`, "_blank");
     setSent(true);
   };
 

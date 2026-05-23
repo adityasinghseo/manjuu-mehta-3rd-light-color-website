@@ -7,7 +7,6 @@ const Footer = () => (
       
       {/* Brand Column */}
       <div className="flex flex-col items-center md:items-start text-center md:text-left">
-        <p className="font-display tracking-widest text-primary/80 text-sm uppercase mb-3">OM SHANTI SHANTI SHANTI</p>
         <h2 className="font-display tracking-[0.25em] text-gold text-2xl mb-2">MANJUU MEHTA</h2>
         <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-6">
           Vastu · Astrology · Numerology
@@ -38,8 +37,12 @@ const Footer = () => (
             <Mail className="w-4 h-4 text-primary" />
           </li>
           <li className="flex items-center gap-3 justify-center md:justify-end">
-            <a href="tel:+917737329191" className="hover:text-primary transition-colors">+91 77373 29191</a>
+            <a href="tel:+917310952576" className="hover:text-primary transition-colors">+91 73109 52576</a>
             <Phone className="w-4 h-4 text-primary" />
+          </li>
+          <li className="flex items-center gap-3 justify-center md:justify-end">
+            <a href="tel:+917737329191" className="hover:text-primary transition-colors">+91 77373 29191</a>
+            <Phone className="w-4 h-4 text-transparent" />
           </li>
           <li className="flex items-center gap-3 justify-center md:justify-end">
             <span className="hover:text-primary transition-colors">Haridwar</span>

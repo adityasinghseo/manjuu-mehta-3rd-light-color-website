@@ -15,10 +15,6 @@ const About = () => (
             className="w-full h-auto"
           />
         </div>
-        <div className="absolute -bottom-6 -right-6 px-6 py-4 rounded-2xl bg-card gold-border shadow-glow">
-          <p className="font-display tracking-widest text-primary text-sm uppercase mb-1">Master Astrologer</p>
-          <p className="font-display text-gold text-xs tracking-widest uppercase">AIFAS Elite Member</p>
-        </div>
       </div>
 
       <div className="animate-rise" style={{ animationDelay: '0.15s' }}>

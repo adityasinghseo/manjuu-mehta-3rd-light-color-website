@@ -6,49 +6,49 @@
 
 @layer base {
   :root {
-    --background: 250 45% 6%;
-    --foreground: 42 60% 88%;
+    --background: 40 33% 98%;
+    --foreground: 0 0% 10%; /* Dark charcoal/black for maximum readability */
 
-    --card: 252 40% 10%;
-    --card-foreground: 42 60% 88%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 252 40% 10%;
-    --popover-foreground: 42 60% 88%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 38 85% 58%;
-    --primary-foreground: 250 45% 6%;
+    --primary: 35 70% 35%; /* Rich, dark bronze/gold for headings and accents */
+    --primary-foreground: 40 33% 98%;
 
-    --secondary: 270 50% 22%;
-    --secondary-foreground: 42 60% 88%;
+    --secondary: 40 20% 92%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 252 30% 16%;
-    --muted-foreground: 42 25% 70%;
+    --muted: 40 20% 94%;
+    --muted-foreground: 0 0% 35%; /* Darker gray for muted text */
 
-    --accent: 18 90% 55%;
-    --accent-foreground: 250 45% 6%;
+    --accent: 35 70% 35%;
+    --accent-foreground: 40 33% 98%;
 
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 42 60% 88%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 33% 98%;
 
-    --border: 270 40% 22%;
-    --input: 270 40% 22%;
-    --ring: 38 85% 58%;
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 35 70% 35%;
 
-    --gold: 42 88% 62%;
-    --gold-deep: 35 75% 45%;
-    --saffron: 24 95% 58%;
-    --indigo-deep: 252 60% 8%;
-    --indigo-mid: 258 50% 16%;
-    --plum: 280 45% 22%;
-    --crimson: 350 70% 45%;
+    --gold: 35 70% 35%; /* Deepen the main gold color so text using text-gold is readable */
+    --gold-deep: 35 80% 25%;
+    --saffron: 28 60% 45%;
+    --indigo-deep: 222 47% 11%;
+    --indigo-mid: 222 40% 25%;
+    --plum: 280 20% 40%;
+    --crimson: 350 50% 45%;
 
-    --gradient-cosmic: radial-gradient(ellipse at top, hsl(270 60% 18%) 0%, hsl(252 60% 8%) 50%, hsl(250 70% 4%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(42 88% 62%), hsl(35 90% 50%), hsl(24 95% 58%));
-    --gradient-aura: radial-gradient(circle, hsl(38 85% 58% / 0.35) 0%, transparent 70%);
-    --gradient-text-gold: linear-gradient(180deg, hsl(48 95% 78%), hsl(38 85% 55%), hsl(28 80% 45%));
+    --gradient-cosmic: radial-gradient(ellipse at top, hsl(40 40% 99%) 0%, hsl(40 33% 96%) 50%, hsl(40 20% 92%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 60% 55%), hsl(35 70% 45%), hsl(28 60% 45%));
+    --gradient-aura: radial-gradient(circle, hsl(35 60% 45% / 0.15) 0%, transparent 70%);
+    --gradient-text-gold: linear-gradient(180deg, hsl(35 50% 45%), hsl(35 60% 35%), hsl(35 50% 25%));
 
-    --shadow-glow: 0 0 60px hsl(38 85% 58% / 0.4);
-    --shadow-deep: 0 25px 80px -20px hsl(0 0% 0% / 0.7);
+    --shadow-glow: 0 0 40px hsl(35 60% 45% / 0.15);
+    --shadow-deep: 0 25px 50px -12px hsl(222 47% 11% / 0.15);
 
     --radius: 0.75rem;
   }
@@ -90,14 +90,14 @@
 
   .star-field {
     background-image:
-      radial-gradient(1px 1px at 20% 30%, hsl(var(--gold) / 0.8), transparent),
-      radial-gradient(1px 1px at 60% 70%, hsl(42 80% 80% / 0.7), transparent),
-      radial-gradient(2px 2px at 80% 20%, hsl(var(--gold) / 0.6), transparent),
-      radial-gradient(1px 1px at 40% 80%, hsl(42 80% 80% / 0.5), transparent),
-      radial-gradient(1px 1px at 90% 50%, hsl(var(--gold) / 0.7), transparent),
-      radial-gradient(1px 1px at 10% 60%, hsl(42 80% 80% / 0.6), transparent),
-      radial-gradient(2px 2px at 33% 15%, hsl(var(--gold) / 0.5), transparent),
-      radial-gradient(1px 1px at 70% 90%, hsl(42 80% 80% / 0.7), transparent);
+      radial-gradient(1.5px 1.5px at 20% 30%, hsl(var(--gold) / 0.3), transparent),
+      radial-gradient(1px 1px at 60% 70%, hsl(var(--foreground) / 0.15), transparent),
+      radial-gradient(2px 2px at 80% 20%, hsl(var(--gold) / 0.2), transparent),
+      radial-gradient(1px 1px at 40% 80%, hsl(var(--foreground) / 0.1), transparent),
+      radial-gradient(1.5px 1.5px at 90% 50%, hsl(var(--gold) / 0.25), transparent),
+      radial-gradient(1px 1px at 10% 60%, hsl(var(--foreground) / 0.15), transparent),
+      radial-gradient(2px 2px at 33% 15%, hsl(var(--gold) / 0.15), transparent),
+      radial-gradient(1px 1px at 70% 90%, hsl(var(--foreground) / 0.1), transparent);
     background-size: 600px 600px;
     background-repeat: repeat;
   }
@@ -149,7 +149,7 @@
   .animate-pan-stars { animation: pan-stars 60s linear infinite; }
 
   .shimmer-text {
-    background: linear-gradient(90deg, hsl(38 85% 50%) 0%, hsl(48 100% 80%) 50%, hsl(38 85% 50%) 100%);
+    background: linear-gradient(90deg, hsl(35 60% 35%) 0%, hsl(42 60% 55%) 50%, hsl(35 60% 35%) 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;

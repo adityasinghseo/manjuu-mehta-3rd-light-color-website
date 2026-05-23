@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const stats = [
   { value: "10+", label: "Years of Practice" },
   { value: "5000+", label: "Clients Guided" },
-  { value: "20+", label: "Countries Served" },
+  { value: "10+", label: "Countries Served" },
   { value: "8+", label: "Prestigious Awards" },
 ];
 
@@ -57,10 +57,6 @@ const AboutUsPage = () => (
             style={{ background: "var(--gradient-aura)" }} />
           <div className="relative gold-border rounded-3xl overflow-hidden shadow-deep">
             <img src={portrait} alt="Manjuu Mehta" className="w-full h-auto" loading="lazy" />
-          </div>
-          <div className="absolute -bottom-6 -right-6 px-6 py-4 rounded-2xl bg-card gold-border shadow-glow">
-            <p className="font-display tracking-widest text-primary text-sm uppercase mb-1">Master Astrologer</p>
-            <p className="font-display text-gold text-xs tracking-widest uppercase">AIFAS Elite Member</p>
           </div>
         </div>
 

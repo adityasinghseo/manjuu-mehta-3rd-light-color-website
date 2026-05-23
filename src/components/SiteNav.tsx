@@ -19,13 +19,13 @@ const SiteNav = () => {
     <>
       {/* ── Header ── */}
       <header style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 999 }}
-        className="backdrop-blur-md bg-background/80 lg:bg-background/40 border-b border-primary/10"
+        className="backdrop-blur-md bg-background/90 lg:bg-background/70 border-b border-primary/10 shadow-sm"
       >
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-5 py-4">
           {/* Logo */}
           <Link to="/" onClick={close} className="flex items-center gap-3">
-            <span className="text-2xl font-display" style={{ color: "hsl(42 88% 62%)" }}>✦</span>
-            <div className="font-display tracking-[0.25em] text-sm lg:text-base" style={{ color: "hsl(42 88% 62%)" }}>
+            <span className="text-2xl font-display text-primary">✦</span>
+            <div className="font-display tracking-[0.25em] text-sm lg:text-base text-primary font-semibold">
               MANJUU MEHTA
             </div>
           </Link>
@@ -35,7 +35,7 @@ const SiteNav = () => {
             {links.map((l) => (
               <li key={l.href}>
                 <Link to={l.href}
-                  className={`relative group transition-colors ${location.pathname === l.href ? "text-primary" : "text-foreground/80 hover:text-primary"}`}
+                  className={`relative group transition-colors font-semibold ${location.pathname === l.href ? "text-primary" : "text-foreground/80 hover:text-primary"}`}
                 >
                   {l.label}
                   <span className={`absolute -bottom-1 left-0 h-px bg-gradient-gold transition-all duration-300 ${location.pathname === l.href ? "w-full" : "w-0 group-hover:w-full"}`} />
@@ -47,25 +47,18 @@ const SiteNav = () => {
           {/* Right side */}
           <div className="flex items-center gap-3">
             <Link to="/contact"
-              className="hidden lg:inline-flex px-5 py-2 rounded-full gold-border text-primary text-xs font-display tracking-widest uppercase hover:bg-primary/10 transition"
+              className="hidden lg:inline-flex px-5 py-2.5 rounded-full gold-border text-primary font-bold text-xs font-display tracking-widest uppercase hover:bg-primary/10 transition"
             >
-              Book Consult
+              Book a Consultation
             </Link>
 
             {/* Hamburger — mobile only */}
             <button
               onClick={() => setIsOpen((v) => !v)}
               aria-label="Open menu"
-              className="lg:hidden"
-              style={{
-                background: "transparent",
-                border: "none",
-                color: "hsl(42 88% 62%)",
-                cursor: "pointer",
-                padding: 4,
-              }}
+              className="lg:hidden p-1 text-primary bg-transparent border-none cursor-pointer hover:bg-primary/5 rounded"
             >
-              <Menu size={22} />
+              <Menu size={26} />
             </button>
           </div>
         </nav>
@@ -74,38 +67,19 @@ const SiteNav = () => {
       {/* ── Mobile Overlay — rendered at document level via high z-index ── */}
       {isOpen && (
         <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            zIndex: 9999,
-            background: "hsl(250 45% 5% / 0.98)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background/98 backdrop-blur-md"
         >
           {/* Close button — top right, explicitly styled */}
           <button
             onClick={close}
             aria-label="Close menu"
-            style={{
-              position: "absolute",
-              top: 20,
-              right: 20,
-              background: "transparent",
-              border: "none",
-              color: "hsl(42 88% 62%)",
-              cursor: "pointer",
-              padding: 4,
-            }}
+            className="absolute top-5 right-5 p-2 bg-transparent border-none text-primary cursor-pointer hover:bg-primary/5 rounded-full"
           >
-            <X size={24} />
+            <X size={28} />
           </button>
 
           {/* Brand name inside menu */}
-          <p className="font-display tracking-[0.3em] text-sm uppercase mb-12"
-            style={{ color: "hsl(42 88% 62% / 0.5)" }}>
+          <p className="font-display tracking-[0.3em] text-sm uppercase mb-12 text-primary/60 font-semibold">
             MANJUU MEHTA
           </p>
 
@@ -116,12 +90,7 @@ const SiteNav = () => {
                 <Link
                   to={l.href}
                   onClick={close}
-                  className="font-display tracking-widest uppercase text-2xl transition-colors"
-                  style={{
-                    color: location.pathname === l.href
-                      ? "hsl(42 88% 62%)"
-                      : "hsl(42 60% 88% / 0.75)",
-                  }}
+                  className={`font-display tracking-widest uppercase text-2xl transition-colors font-semibold ${location.pathname === l.href ? "text-primary" : "text-foreground/80 hover:text-primary"}`}
                 >
                   {l.label}
                 </Link>
@@ -133,14 +102,12 @@ const SiteNav = () => {
           <Link
             to="/contact"
             onClick={close}
-            className="mt-12 px-10 py-4 rounded-full font-display tracking-widest text-sm uppercase shadow-glow bg-gradient-gold"
-            style={{ color: "hsl(250 45% 6%)" }}
+            className="mt-12 px-10 py-4 rounded-full font-display tracking-widest text-sm uppercase shadow-glow bg-gradient-gold text-primary-foreground font-bold"
           >
-            Book Consult
+            Book a Consultation
           </Link>
 
-          <p className="mt-12 text-xs tracking-[0.3em] uppercase font-display"
-            style={{ color: "hsl(42 60% 88% / 0.3)" }}>
+          <p className="mt-12 text-xs tracking-[0.3em] uppercase font-display text-primary/50 font-semibold">
             Vastu · Astrology · Numerology
           </p>
         </div>

@@ -47,7 +47,7 @@ const Services = ({ limit }: ServicesProps) => {
   const displayedServices = limit ? services.slice(0, limit) : services;
 
   return (
-    <section id="services" className="relative py-32 px-6">
+    <section id="services" className="relative py-32 px-6 bg-primary/5">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <p className="font-display tracking-widest text-primary/80 text-sm uppercase mb-3">Offerings</p>

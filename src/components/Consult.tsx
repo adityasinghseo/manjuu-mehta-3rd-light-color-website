@@ -1,5 +1,5 @@
 const Consult = () => (
-  <section id="consult" className="relative py-32 px-6">
+  <section id="consult" className="relative py-32 px-6 bg-primary/5">
     <div className="max-w-4xl mx-auto text-center relative">
       <div className="absolute inset-0 -z-10 animate-glow-pulse" style={{ background: 'var(--gradient-aura)' }} />
       <p className="font-display tracking-widest text-primary/80 text-sm uppercase mb-3">Consultation</p>
@@ -14,9 +14,6 @@ const Consult = () => (
       <div className="mt-12 flex flex-wrap items-center justify-center gap-5">
         <a href="mailto:contact@manjuumehta.com" className="px-10 py-4 bg-gradient-gold text-primary-foreground font-display tracking-widest text-sm uppercase rounded-full shadow-glow transition-transform hover:scale-105">
           Book a Consultation
-        </a>
-        <a href="tel:+91" className="px-10 py-4 gold-border text-primary font-display tracking-widest text-sm uppercase rounded-full hover:bg-primary/10 transition-colors">
-          Call Manjuu
         </a>
       </div>
       <p className="mt-10 font-display tracking-widest text-primary/70 text-sm uppercase">May All Be Auspicious</p>

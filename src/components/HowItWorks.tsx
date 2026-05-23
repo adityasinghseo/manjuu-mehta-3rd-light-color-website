@@ -56,10 +56,7 @@ const HowItWorks = () => (
             className="group relative p-8 rounded-2xl bg-card/40 backdrop-blur gold-border text-center hover:shadow-glow transition-all duration-500 hover:-translate-y-2"
             style={{ animation: `rise 0.8s ease-out ${i * 0.15}s both` }}
           >
-            {/* Step number watermark */}
-            <div className="absolute top-4 right-5 font-display text-5xl font-bold text-primary/8 group-hover:text-primary/15 transition-colors select-none">
-              {step.number}
-            </div>
+
 
             {/* Icon */}
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 gold-border mb-6 group-hover:bg-primary/20 transition-colors">

@@ -3,7 +3,7 @@ import { Globe, Users, Award, Clock } from "lucide-react";
 const stats = [
   { icon: Clock, value: "10+", label: "Years of Practice" },
   { icon: Users, value: "5000+", label: "Lives Transformed" },
-  { icon: Globe, value: "20+", label: "Countries Served" },
+  { icon: Globe, value: "10+", label: "Countries Served" },
   { icon: Award, value: "8+", label: "Prestigious Awards" },
 ];
 
@@ -27,7 +27,7 @@ const features = [
 ];
 
 const WhyChooseUs = () => (
-  <section id="why-us" className="relative py-32 px-6">
+  <section id="why-us" className="relative py-32 px-6 bg-primary/5">
     <div className="max-w-7xl mx-auto">
       {/* Section header */}
       <div className="text-center mb-20">
