@@ -8,119 +8,152 @@ import img7 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM (7).jpeg";
 import img8 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM.jpeg";
 import img9 from "@/assets/WhatsApp Image 2026-04-30 at 1.17.02 PM.jpeg";
 import img10 from "@/assets/WhatsApp Image 2026-04-30 at 2.17.04 PM.jpeg";
-import { useState } from "react";
-import { X, ZoomIn } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react";
 import { OrnDivider } from "@/components/SiteNav";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
 const GalleryPage = () => {
-  const [lightbox, setLightbox] = useState<string | null>(null);
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+  const [zoomed, setZoomed] = useState(false);
+
+  const openLightbox = (idx: number) => {
+    setLightboxIdx(idx);
+    setZoomed(false);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeLightbox = () => {
+    setLightboxIdx(null);
+    setZoomed(false);
+    document.body.style.overflow = "";
+  };
+
+  const goPrev = useCallback(() => {
+    if (lightboxIdx === null) return;
+    setZoomed(false);
+    setLightboxIdx((lightboxIdx - 1 + images.length) % images.length);
+  }, [lightboxIdx]);
+
+  const goNext = useCallback(() => {
+    if (lightboxIdx === null) return;
+    setZoomed(false);
+    setLightboxIdx((lightboxIdx + 1) % images.length);
+  }, [lightboxIdx]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    if (lightboxIdx === null) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") goPrev();
+      if (e.key === "ArrowRight") goNext();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [lightboxIdx, goPrev, goNext]);
 
   return (
-    <main className="relative min-h-screen pt-24" style={{ background: "linear-gradient(180deg, #FAF0E4 0%, #F5E6D2 50%, #FAF0E4 100%)" }}>
-      {/* Background Star Overlay */}
-      <div className="pointer-events-none absolute inset-0 opacity-30 star-field" />
+    <main
+      className="relative min-h-screen pt-24"
+      style={{ background: "linear-gradient(180deg, #FAF0E4 0%, #F5E6D2 50%, #FAF0E4 100%)" }}
+    >
+      {/* Background Sparkle */}
+      <div className="pointer-events-none absolute inset-0 opacity-25 star-field" />
 
       {/* ── Hero Banner ── */}
       <section className="relative py-24 px-6 text-center overflow-hidden">
-        {/* Background radial glow */}
+        {/* Radial aura glow */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="w-[600px] h-[600px] rounded-full opacity-20 animate-glow-pulse"
-            style={{ background: "radial-gradient(circle, rgba(197,146,42,0.14) 0%, transparent 70%)", filter: "blur(80px)" }} />
+          <div
+            className="w-[600px] h-[600px] rounded-full opacity-20"
+            style={{
+              background: "radial-gradient(circle, rgba(197,146,42,0.16) 0%, transparent 70%)",
+              filter: "blur(80px)",
+            }}
+          />
         </div>
 
-        {/* Faint spinning mandala watermark */}
-        <div className="anim-spinrev" style={{
-          position: "absolute",
-          top: "-15%",
-          right: "-10%",
-          width: "45%",
-          maxWidth: 450,
-          aspectRatio: "1",
-          opacity: 0.02,
-          pointerEvents: "none",
-          zIndex: 0,
-        }}>
+        {/* Spinning watermark mandala */}
+        <div
+          className="anim-spinrev"
+          style={{
+            position: "absolute",
+            top: "-15%",
+            right: "-10%",
+            width: "42%",
+            maxWidth: 420,
+            aspectRatio: "1",
+            opacity: 0.025,
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        >
           <svg viewBox="0 0 100 100" fill="none" stroke="#C5922A" strokeWidth="0.6">
             <circle cx="50" cy="50" r="48" />
+            <circle cx="50" cy="50" r="34" strokeDasharray="2 2" />
             <polygon points="50,2 98,50 50,98 2,50" />
+            <polygon points="50,2 98,50 50,98 2,50" transform="rotate(45 50 50)" />
           </svg>
         </div>
 
         <div className="relative max-w-3xl mx-auto anim-fadeup" style={{ zIndex: 1 }}>
-          <p className="font-display tracking-[0.26em] text-[10px] font-bold uppercase mb-4" style={{ color: "#C5922A" }}>
+          <p
+            className="font-cinzel tracking-[0.28em] text-[10px] font-bold uppercase mb-4"
+            style={{ color: "#C5922A" }}
+          >
             ✦ Moments of Honor ✦
           </p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-cinzel" style={{ color: "#7B1034" }}>
+          <h1
+            className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-cinzel"
+            style={{ color: "#7B1034" }}
+          >
             Prestige Gallery
           </h1>
           <OrnDivider style={{ margin: "0 auto 28px" } as React.CSSProperties} />
-          <p className="text-foreground/75 text-xl font-garamond italic leading-relaxed max-w-2xl mx-auto">
-            A visual testament to prestigious awards, public recognitions, and a decade of sacred guidance.
+          <p
+            className="text-xl font-garamond italic leading-relaxed max-w-2xl mx-auto"
+            style={{ color: "rgba(58,32,16,0.72)" }}
+          >
+            A visual testament to prestigious awards, public recognitions, and a decade of
+            sacred cosmic guidance.
           </p>
         </div>
       </section>
 
-      {/* ── Image Grid ── */}
-      <section className="px-6 pb-32 relative z-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
+      {/* ── Masonry Gallery Grid ── */}
+      <section className="px-4 md:px-8 pb-32 relative z-10">
+        <div className="max-w-7xl mx-auto gallery-masonry">
           {images.map((src, idx) => (
             <div
               key={idx}
-              className="relative overflow-hidden cursor-pointer p-3 gallery-editorial-card transition-all duration-500"
-              style={{
-                background: "rgba(255,255,255,0.78)",
-                border: "1px solid rgba(197,146,42,0.18)",
-                boxShadow: "0 6px 20px -8px rgba(91,10,36,0.06)",
-                borderRadius: 20,
-                animation: `fadeUp 0.8s ease ${idx * 0.06}s both`,
-                aspectRatio: "4/3",
-              }}
-              onClick={() => setLightbox(src)}
+              className="gallery-masonry-item"
+              style={{ animationDelay: `${idx * 0.07}s` }}
+              onClick={() => openLightbox(idx)}
+              role="button"
+              tabIndex={0}
+              aria-label={`View recognition image ${idx + 1}`}
+              onKeyDown={(e) => e.key === "Enter" && openLightbox(idx)}
             >
-              {/* Horizontal Hover gold line */}
-              <div className="card-top-line" style={{
-                position: "absolute",
-                top: 0,
-                left: "50%",
-                transform: "translateX(-50%) scaleX(0)",
-                width: "100%",
-                height: 3,
-                background: "var(--grad-gold)",
-                transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
-                transformOrigin: "center",
-              }} />
+              {/* Gold expanding top line */}
+              <div className="gallery-top-line" />
 
-              {/* Inner picture container with offset borders */}
-              <div className="w-full h-full rounded-[1.1rem] overflow-hidden bg-background relative"
-                style={{ border: "1px solid rgba(123,16,52,0.12)" }}
-              >
+              {/* Image — full visible, no crop */}
+              <div className="gallery-img-wrap">
                 <img
                   src={src}
-                  alt={`Honor & Recognition ${idx + 1}`}
+                  alt={`Award & Recognition ${idx + 1}`}
                   loading="lazy"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)" }}
-                  className="gallery-main-img"
+                  className="gallery-img"
                 />
-                
-                {/* Elegant Glassmorphic Hover Overlay */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-2.5 transition-all duration-500 gallery-hover-overlay"
-                  style={{
-                    background: "rgba(123,16,52,0)",
-                    backdropFilter: "blur(0px)",
-                    WebkitBackdropFilter: "blur(0px)",
-                    opacity: 0,
-                  }}
-                >
-                  <div className="w-10 h-10 rounded-full bg-[#FDF6EE] border border-gold flex items-center justify-center text-primary transition-transform duration-500 scale-badge"
-                    style={{ transform: "scale(0.85)" }}
-                  >
-                    <ZoomIn className="w-4 h-4" strokeWidth={1.5} style={{ color: "#7B1034" }} />
+
+                {/* Hover overlay */}
+                <div className="gallery-overlay">
+                  <div className="gallery-overlay-icon">
+                    <ZoomIn size={18} strokeWidth={1.5} style={{ color: "#7B1034" }} />
                   </div>
-                  <span className="font-cinzel tracking-[0.20em] text-[10px] uppercase font-bold text-white text-glow">
-                    Expand Honor
-                  </span>
+                  <span className="gallery-overlay-label">View</span>
                 </div>
               </div>
             </div>
@@ -128,109 +161,424 @@ const GalleryPage = () => {
         </div>
       </section>
 
-      {/* ── Lightbox ── */}
-      {lightbox && (
+      {/* ── Premium Lightbox ── */}
+      {lightboxIdx !== null && (
         <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-6 animate-fade-in"
-          style={{ background: "rgba(10, 5, 8, 0.95)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}
-          onClick={() => setLightbox(null)}
+          className="lightbox-backdrop"
+          onClick={closeLightbox}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image lightbox"
         >
-          {/* Close button badge */}
+          {/* Close */}
           <button
-            onClick={() => setLightbox(null)}
-            aria-label="Close"
-            className="lightbox-close-btn"
-            style={{
-              position: "absolute",
-              top: 24,
-              right: 24,
-              background: "rgba(255,255,255,0.08)",
-              border: "1px solid rgba(197,146,42,0.40)",
-              color: "#C5922A",
-              cursor: "pointer",
-              width: 44,
-              height: 44,
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              transition: "all 0.3s ease",
-            }}
+            className="lightbox-btn lightbox-close"
+            onClick={closeLightbox}
+            aria-label="Close lightbox"
           >
             <X size={20} strokeWidth={1.5} />
           </button>
-          
-          {/* Framed Image Container */}
-          <div 
-            style={{
-              padding: 8,
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(197,146,42,0.30)",
-              borderRadius: 24,
-              boxShadow: "0 32px 72px -12px rgba(0,0,0,0.50)",
-              maxWidth: "92vw",
-              maxHeight: "85vh",
-            }}
+
+          {/* Counter */}
+          <div className="lightbox-counter">
+            <span className="font-cinzel" style={{ color: "#C5922A", fontSize: 10, letterSpacing: "0.2em" }}>
+              {String(lightboxIdx + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
+            </span>
+          </div>
+
+          {/* Zoom toggle */}
+          <button
+            className="lightbox-btn lightbox-zoom"
+            onClick={(e) => { e.stopPropagation(); setZoomed((z) => !z); }}
+            aria-label={zoomed ? "Zoom out" : "Zoom in"}
+          >
+            {zoomed ? <ZoomOut size={18} strokeWidth={1.5} /> : <ZoomIn size={18} strokeWidth={1.5} />}
+          </button>
+
+          {/* Prev */}
+          <button
+            className="lightbox-btn lightbox-prev"
+            onClick={(e) => { e.stopPropagation(); goPrev(); }}
+            aria-label="Previous image"
+          >
+            <ChevronLeft size={24} strokeWidth={1.5} />
+          </button>
+
+          {/* Image frame */}
+          <div
+            className={`lightbox-frame ${zoomed ? "zoomed" : ""}`}
             onClick={(e) => e.stopPropagation()}
-            className="animate-scale-in"
           >
             <img
-              src={lightbox}
-              alt="Gallery honor full view"
-              style={{ display: "block", width: "100%", maxHeight: "80vh", objectFit: "contain", borderRadius: 16 }}
+              key={lightboxIdx}
+              src={images[lightboxIdx]}
+              alt={`Recognition ${lightboxIdx + 1}`}
+              className="lightbox-img"
             />
+            {/* Subtle caption */}
+            <div className="lightbox-caption">
+              <p
+                className="font-cinzel uppercase"
+                style={{ fontSize: 9, letterSpacing: "0.22em", color: "rgba(197,146,42,0.80)" }}
+              >
+                ✦ Award & Recognition ✦
+              </p>
+            </div>
+          </div>
+
+          {/* Next */}
+          <button
+            className="lightbox-btn lightbox-next"
+            onClick={(e) => { e.stopPropagation(); goNext(); }}
+            aria-label="Next image"
+          >
+            <ChevronRight size={24} strokeWidth={1.5} />
+          </button>
+
+          {/* Thumbnail strip */}
+          <div className="lightbox-thumbs" onClick={(e) => e.stopPropagation()}>
+            {images.map((src, i) => (
+              <button
+                key={i}
+                className={`lightbox-thumb ${i === lightboxIdx ? "active" : ""}`}
+                onClick={() => { setLightboxIdx(i); setZoomed(false); }}
+                aria-label={`Go to image ${i + 1}`}
+              >
+                <img src={src} alt="" loading="lazy" />
+              </button>
+            ))}
           </div>
         </div>
       )}
 
-      {/* Custom Styles */}
+      {/* ── All Styles ── */}
       <style>{`
-        .gallery-editorial-card:hover {
-          transform: translateY(-5px);
-          background: #ffffff !important;
-          border-color: rgba(197, 146, 42, 0.48) !important;
-          box-shadow: 0 20px 48px -12px rgba(91,10,36,0.12), 0 0 10px rgba(197,146,42,0.08) !important;
+        /* ══ MASONRY LAYOUT ══════════════════════════════════════ */
+        .gallery-masonry {
+          columns: 4;
+          column-gap: 20px;
         }
-        .gallery-editorial-card:hover .card-top-line {
+        @media (max-width: 1100px) { .gallery-masonry { columns: 3; } }
+        @media (max-width: 720px)  { .gallery-masonry { columns: 2; column-gap: 14px; } }
+        @media (max-width: 480px)  { .gallery-masonry { columns: 1; } }
+
+        /* ══ MASONRY ITEM ════════════════════════════════════════ */
+        .gallery-masonry-item {
+          break-inside: avoid;
+          margin-bottom: 20px;
+          display: block;
+          position: relative;
+          overflow: hidden;
+          border-radius: 18px;
+          background: rgba(255,255,255,0.80);
+          border: 1px solid rgba(197,146,42,0.18);
+          box-shadow: 0 6px 22px -8px rgba(91,10,36,0.08);
+          cursor: pointer;
+          transition: transform 0.45s cubic-bezier(0.16,1,0.3,1),
+                      box-shadow 0.45s cubic-bezier(0.16,1,0.3,1),
+                      border-color 0.3s ease;
+          animation: fadeUp 0.8s ease both;
+        }
+        @media (max-width: 720px) {
+          .gallery-masonry-item { margin-bottom: 14px; border-radius: 14px; }
+        }
+        .gallery-masonry-item:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 24px 52px -12px rgba(91,10,36,0.16),
+                      0 0 16px rgba(197,146,42,0.12);
+          border-color: rgba(197,146,42,0.50);
+          background: #ffffff;
+        }
+        .gallery-masonry-item:focus-visible {
+          outline: 2px solid #C5922A;
+          outline-offset: 3px;
+        }
+
+        /* ══ GOLD TOP LINE (hover expand) ════════════════════════ */
+        .gallery-top-line {
+          position: absolute;
+          top: 0; left: 50%;
+          width: 100%; height: 3px;
+          transform: translateX(-50%) scaleX(0);
+          transform-origin: center;
+          background: linear-gradient(90deg, #D4A843, #C5922A, #9E7220);
+          border-radius: 0 0 3px 3px;
+          transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+          z-index: 2;
+        }
+        .gallery-masonry-item:hover .gallery-top-line {
           transform: translateX(-50%) scaleX(1);
         }
-        .gallery-editorial-card:hover .gallery-main-img {
-          transform: scale(1.05);
+
+        /* ══ IMAGE WRAPPER — no forced crop ═════════════════════ */
+        .gallery-img-wrap {
+          position: relative;
+          width: 100%;
+          padding: 8px;         /* minimal, elegant padding */
+          box-sizing: border-box;
         }
-        .gallery-editorial-card:hover .gallery-hover-overlay {
-          background: rgba(123, 16, 52, 0.22) !important;
-          backdrop-filter: blur(4px) !important;
-          -webkit-backdrop-filter: blur(4px) !important;
-          opacity: 1 !important;
+
+        /* ══ IMAGE — full visibility, no cropping ════════════════ */
+        .gallery-img {
+          display: block;
+          width: 100%;
+          height: auto;          /* natural height — no forced aspect ratio */
+          object-fit: contain;   /* NEVER crop */
+          border-radius: 12px;
+          background: #FAF0E4;   /* cream bg for transparent/portrait images */
+          transition: transform 0.7s cubic-bezier(0.16,1,0.3,1),
+                      filter 0.4s ease;
+          filter: brightness(1) saturate(1);
         }
-        .gallery-editorial-card:hover .scale-badge {
-          transform: scale(1) !important;
+        .gallery-masonry-item:hover .gallery-img {
+          transform: scale(1.03);
+          filter: brightness(1.02) saturate(1.05);
         }
-        .lightbox-close-btn:hover {
-          background: #7B1034 !important;
-          color: #FAF0E4 !important;
-          border-color: #7B1034 !important;
+
+        /* ══ HOVER OVERLAY ═══════════════════════════════════════ */
+        .gallery-overlay {
+          position: absolute;
+          inset: 8px;
+          border-radius: 12px;
+          background: rgba(123,16,52,0);
+          backdrop-filter: blur(0px);
+          -webkit-backdrop-filter: blur(0px);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          opacity: 0;
+          transition: all 0.45s cubic-bezier(0.16,1,0.3,1);
+        }
+        .gallery-masonry-item:hover .gallery-overlay {
+          background: rgba(123,16,52,0.18);
+          backdrop-filter: blur(3px);
+          -webkit-backdrop-filter: blur(3px);
+          opacity: 1;
+        }
+        .gallery-overlay-icon {
+          width: 40px; height: 40px;
+          border-radius: 50%;
+          background: rgba(253,246,238,0.92);
+          border: 1px solid rgba(197,146,42,0.35);
+          display: flex; align-items: center; justify-content: center;
+          transform: scale(0.8);
+          transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+          box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .gallery-masonry-item:hover .gallery-overlay-icon {
+          transform: scale(1);
+        }
+        .gallery-overlay-label {
+          font-family: 'Cinzel', serif;
+          font-size: 9px;
+          font-weight: 700;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #FAF0E4;
+          text-shadow: 0 2px 8px rgba(0,0,0,0.55);
+          opacity: 0;
+          transform: translateY(4px);
+          transition: all 0.4s ease 0.05s;
+        }
+        .gallery-masonry-item:hover .gallery-overlay-label {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* ══ LIGHTBOX BACKDROP ═══════════════════════════════════ */
+        .lightbox-backdrop {
+          position: fixed;
+          inset: 0;
+          z-index: 9999;
+          background: rgba(8, 4, 6, 0.96);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 24px;
+          animation: lbFadeIn 0.35s cubic-bezier(0.16,1,0.3,1) both;
+        }
+        @keyframes lbFadeIn {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+        }
+
+        /* ══ LIGHTBOX CONTROL BUTTONS ════════════════════════════ */
+        .lightbox-btn {
+          position: absolute;
+          display: flex; align-items: center; justify-content: center;
+          border-radius: 50%;
+          border: 1px solid rgba(197,146,42,0.35);
+          background: rgba(255,255,255,0.07);
+          color: #C5922A;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          z-index: 10;
+          backdrop-filter: blur(6px);
+        }
+        .lightbox-btn:hover {
+          background: #7B1034;
+          border-color: #7B1034;
+          color: #FAF0E4;
+          transform: scale(1.08);
+        }
+        .lightbox-close {
+          top: 20px; right: 20px;
+          width: 44px; height: 44px;
+        }
+        .lightbox-close:hover {
           transform: rotate(90deg) scale(1.08);
         }
-        
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
+        .lightbox-zoom {
+          top: 20px; right: 76px;
+          width: 44px; height: 44px;
         }
-        @keyframes scaleIn {
-          from { opacity: 0; transform: scale(0.94); }
-          to { opacity: 1; transform: scale(1); }
+        .lightbox-prev {
+          left: 16px; top: 50%;
+          transform: translateY(-50%);
+          width: 52px; height: 52px;
         }
-        
-        .animate-fade-in {
-          animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+        .lightbox-prev:hover {
+          transform: translateY(-50%) scale(1.08);
         }
-        .animate-scale-in {
-          animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+        .lightbox-next {
+          right: 16px; top: 50%;
+          transform: translateY(-50%);
+          width: 52px; height: 52px;
         }
-        
-        .text-glow {
-          text-shadow: 0 2px 8px rgba(0,0,0,0.50);
+        .lightbox-next:hover {
+          transform: translateY(-50%) scale(1.08);
+        }
+        @media (max-width: 640px) {
+          .lightbox-prev { left: 6px; width: 40px; height: 40px; }
+          .lightbox-next { right: 6px; width: 40px; height: 40px; }
+        }
+
+        /* ══ COUNTER ═════════════════════════════════════════════ */
+        .lightbox-counter {
+          position: absolute;
+          top: 28px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 10;
+          padding: 5px 16px;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(197,146,42,0.22);
+          backdrop-filter: blur(6px);
+        }
+
+        /* ══ IMAGE FRAME ═════════════════════════════════════════ */
+        .lightbox-frame {
+          position: relative;
+          max-width: min(88vw, 860px);
+          max-height: 80vh;
+          padding: 10px;
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(197,146,42,0.28);
+          border-radius: 24px;
+          box-shadow: 0 40px 80px rgba(0,0,0,0.55),
+                      0 0 0 1px rgba(197,146,42,0.10);
+          animation: lbScaleIn 0.45s cubic-bezier(0.16,1,0.3,1) both;
+          transition: max-width 0.5s cubic-bezier(0.16,1,0.3,1);
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .lightbox-frame.zoomed {
+          max-width: min(96vw, 1100px);
+          max-height: 90vh;
+        }
+        @keyframes lbScaleIn {
+          from { opacity: 0; transform: scale(0.92); }
+          to   { opacity: 1; transform: scale(1); }
+        }
+
+        /* ══ LIGHTBOX IMAGE ══════════════════════════════════════ */
+        .lightbox-img {
+          display: block;
+          max-width: 100%;
+          max-height: calc(80vh - 60px);
+          width: auto;
+          height: auto;
+          object-fit: contain;   /* full image always visible */
+          border-radius: 16px;
+          background: #1a0a10;
+          animation: lbScaleIn 0.45s cubic-bezier(0.16,1,0.3,1) both;
+          transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+        }
+        .lightbox-frame.zoomed .lightbox-img {
+          max-height: calc(90vh - 60px);
+        }
+
+        /* ══ CAPTION ═════════════════════════════════════════════ */
+        .lightbox-caption {
+          text-align: center;
+          padding: 10px 0 2px;
+        }
+
+        /* ══ THUMBNAIL STRIP ════════════════════════════════════ */
+        .lightbox-thumbs {
+          position: absolute;
+          bottom: 16px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 8px;
+          padding: 8px 14px;
+          background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(197,146,42,0.18);
+          border-radius: 999px;
+          backdrop-filter: blur(10px);
+          z-index: 10;
+          overflow-x: auto;
+          max-width: 90vw;
+          scrollbar-width: none;
+        }
+        .lightbox-thumbs::-webkit-scrollbar { display: none; }
+
+        .lightbox-thumb {
+          flex-shrink: 0;
+          width: 44px;
+          height: 32px;
+          border-radius: 8px;
+          overflow: hidden;
+          border: 1.5px solid rgba(197,146,42,0.20);
+          background: rgba(255,255,255,0.08);
+          cursor: pointer;
+          transition: all 0.3s ease;
+          padding: 0;
+        }
+        .lightbox-thumb img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          opacity: 0.55;
+          transition: opacity 0.3s ease;
+        }
+        .lightbox-thumb:hover img,
+        .lightbox-thumb.active img {
+          opacity: 1;
+        }
+        .lightbox-thumb.active {
+          border-color: #C5922A;
+          box-shadow: 0 0 0 2px rgba(197,146,42,0.35);
+          transform: scale(1.08);
+        }
+
+        @media (max-width: 480px) {
+          .lightbox-thumbs { display: none; }
+          .lightbox-frame {
+            max-width: 96vw;
+            padding: 6px;
+            border-radius: 16px;
+          }
+          .lightbox-img { border-radius: 10px; }
         }
       `}</style>
     </main>
