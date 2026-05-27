@@ -1,73 +1,282 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook, Youtube } from "lucide-react";
+import { MMLogo } from "./SiteNav";
 
 const Footer = () => (
-  <footer className="relative border-t border-primary/15 pt-20 pb-8 px-6 mt-10 bg-card/30">
-    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-16">
-      
-      {/* Brand Column */}
-      <div className="flex flex-col items-center md:items-start text-center md:text-left">
-        <h2 className="font-display tracking-[0.25em] text-gold text-2xl mb-2">MANJUU MEHTA</h2>
-        <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-6">
-          Vastu · Astrology · Numerology
-        </p>
-        <p className="text-sm text-foreground/70 italic leading-relaxed max-w-sm">
-          Guiding you toward prosperity, harmony, and purpose through the ancient sciences of the cosmos.
-        </p>
+  <footer style={{
+    background: "linear-gradient(180deg, #E3C5A0 0%, #EDD8BE 40%, #FAF0E4 100%)",
+    borderTop: "1px solid rgba(197, 146, 42, 0.24)",
+    padding: "88px 0 36px",
+    position: "relative",
+    overflow: "hidden",
+  }}>
+    {/* Ambient Glow */}
+    <div style={{
+      position: "absolute",
+      bottom: "-10%",
+      left: "5%",
+      width: 320,
+      height: 320,
+      borderRadius: "50%",
+      background: "radial-gradient(circle, rgba(197,146,42,0.12) 0%, transparent 70%)",
+      filter: "blur(50px)",
+      pointerEvents: "none",
+      zIndex: 0,
+    }} />
+
+    <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 1 }}>
+
+      {/* Top ornamental row with pulsing halo */}
+      <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 64 }}>
+        <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, rgba(197,146,42,0.40))" }} />
+        <div style={{
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}>
+          {/* Faint gold radial halo behind logo */}
+          <div style={{
+            position: "absolute",
+            width: 80,
+            height: 80,
+            background: "radial-gradient(circle, rgba(197,146,42,0.22) 0%, transparent 70%)",
+            filter: "blur(8px)",
+          }} />
+          <MMLogo size={52} />
+        </div>
+        <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, rgba(197,146,42,0.40), transparent)" }} />
       </div>
 
-      {/* Menu Column */}
-      <div className="flex flex-col items-center">
-        <h3 className="font-display tracking-widest text-gold text-lg mb-6 uppercase">Quick Links</h3>
-        <ul className="flex flex-col space-y-4 text-sm font-display tracking-widest uppercase text-muted-foreground items-center">
-          <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
-          <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-          <li><Link to="/services" className="hover:text-primary transition-colors">Services</Link></li>
-          <li><Link to="/gallery" className="hover:text-primary transition-colors">Gallery</Link></li>
-          <li><Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
-        </ul>
-      </div>
+      {/* Three columns grid */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(1, 1fr)", gap: 48, marginBottom: 64 }} className="footer-cols">
 
-      {/* Contacts Column */}
-      <div className="flex flex-col items-center md:items-end text-center md:text-right">
-        <h3 className="font-display tracking-widest text-gold text-lg mb-6 uppercase">Contact Details</h3>
-        <ul className="flex flex-col space-y-4 text-sm text-foreground/80 items-center md:items-end">
-          <li className="flex items-center gap-3 justify-center md:justify-end">
-            <a href="mailto:manjuumehta1@gmail.com" className="hover:text-primary transition-colors">manjuumehta1@gmail.com</a>
-            <Mail className="w-4 h-4 text-primary" />
-          </li>
-          <li className="flex items-center gap-3 justify-center md:justify-end">
-            <a href="tel:+917310952576" className="hover:text-primary transition-colors">+91 73109 52576</a>
-            <Phone className="w-4 h-4 text-primary" />
-          </li>
-          <li className="flex items-center gap-3 justify-center md:justify-end">
-            <a href="tel:+917737329191" className="hover:text-primary transition-colors">+91 77373 29191</a>
-            <Phone className="w-4 h-4 text-transparent" />
-          </li>
-          <li className="flex items-center gap-3 justify-center md:justify-end">
-            <span className="hover:text-primary transition-colors">Haridwar</span>
-            <MapPin className="w-4 h-4 text-primary" />
-          </li>
-        </ul>
-        <div className="flex justify-center md:justify-end gap-4 mt-8">
-          <a href="#" className="p-3 gold-border rounded-full text-primary hover:bg-primary/10 transition-colors shadow-glow">
-            <Facebook className="w-4 h-4" />
-          </a>
-          <a href="#" className="p-3 gold-border rounded-full text-primary hover:bg-primary/10 transition-colors shadow-glow">
-            <Instagram className="w-4 h-4" />
-          </a>
+        {/* Brand Description Column */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 800, fontSize: 17, color: "#7B1034", letterSpacing: "0.12em", marginBottom: 5 }}>
+            MANJUU MEHTA
+          </h2>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 8.5, fontWeight: 600, color: "#C5922A", letterSpacing: "0.26em", textTransform: "uppercase", marginBottom: 18 }}>
+            Vastu ✦ Astrology ✦ Numerology
+          </p>
+          <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 15.5, fontStyle: "italic", color: "rgba(58,32,16,0.72)", lineHeight: 1.75, maxWidth: 300, marginBottom: 12 }}>
+            Guiding you toward prosperity, harmony, and cosmic alignment through the ancient Vedic sciences.
+          </p>
+          
+          {/* Cursive Brand Signoff */}
+          <p style={{ fontFamily: "Great Vibes, cursive", fontSize: 24, color: "#C5922A", marginBottom: 22, marginTop: 4, letterSpacing: "0.02em" }}>
+            Aligning Lives with the Cosmos
+          </p>
+
+          {/* Sleek Social Circle Badges */}
+          <div style={{ display: "flex", gap: 12 }}>
+            {[
+              { href: "https://instagram.com/manjuumehtaofficial", Icon: Instagram },
+              { href: "https://facebook.com/manjuumehtaofficial", Icon: Facebook },
+              { href: "https://youtube.com/manjuumehtaofficial", Icon: Youtube },
+            ].map(({ href, Icon }, i) => (
+              <a key={i} href={href} target="_blank" rel="noopener noreferrer"
+                style={{
+                  width: 38, height: 38, borderRadius: "50%",
+                  background: "rgba(255, 255, 255, 0.45)",
+                  border: "1px solid rgba(197, 146, 42, 0.28)",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  color: "#7B1034",
+                  boxShadow: "0 4px 10px rgba(91,10,36,0.02)",
+                  transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                }}
+                className="footer-social-icon"
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = "#7B1034";
+                  e.currentTarget.style.color = "#FAF0E4";
+                  e.currentTarget.style.borderColor = "#7B1034";
+                  e.currentTarget.style.transform = "translateY(-3px) rotate(8deg)";
+                  e.currentTarget.style.boxShadow = "0 8px 20px rgba(123,16,52,0.25)";
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = "rgba(255, 255, 255, 0.45)";
+                  e.currentTarget.style.color = "#7B1034";
+                  e.currentTarget.style.borderColor = "rgba(197, 146, 42, 0.28)";
+                  e.currentTarget.style.transform = "none";
+                  e.currentTarget.style.boxShadow = "0 4px 10px rgba(91,10,36,0.02)";
+                }}
+              >
+                <Icon size={15} strokeWidth={1.4} />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Quick Links Column with Gold Star Bullets */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+          <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 11.5, letterSpacing: "0.22em", textTransform: "uppercase", color: "#7B1034", marginBottom: 24, borderBottom: "1.5px solid rgba(197,146,42,0.30)", paddingBottom: 6, width: "100%", maxWidth: 160 }}>
+            Navigation
+          </h3>
+          <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 14 }}>
+            {[
+              { to: "/", label: "Home" },
+              { to: "/about", label: "About Us" },
+              { to: "/services", label: "Services" },
+              { to: "/gallery", label: "Gallery" },
+              { to: "/contact", label: "Contact Us" },
+            ].map(link => (
+              <li key={link.to} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <span style={{ color: "#C5922A", fontSize: 8, userSelect: "none" }}>✦</span>
+                <Link to={link.to}
+                  style={{
+                    fontFamily: "Cinzel, serif",
+                    fontWeight: 700,
+                    fontSize: 9.5,
+                    letterSpacing: "0.20em",
+                    textTransform: "uppercase",
+                    color: "rgba(58,32,16,0.64)",
+                    transition: "all 0.3s ease",
+                    position: "relative",
+                  }}
+                  className="footer-nav-link"
+                  onMouseEnter={e => { e.currentTarget.style.color = "#7B1034"; e.currentTarget.style.transform = "translateX(2px)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.color = "rgba(58,32,16,0.64)"; e.currentTarget.style.transform = "none"; }}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact Column with Thinned Glowing Details */}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+          <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 11.5, letterSpacing: "0.22em", textTransform: "uppercase", color: "#7B1034", marginBottom: 24, borderBottom: "1.5px solid rgba(197,146,42,0.30)", paddingBottom: 6, width: "100%", maxWidth: 160 }}>
+            Sacred Office
+          </h3>
+          <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 16 }}>
+            {[
+              { href: "mailto:manjuumehta1@gmail.com", label: "manjuumehta1@gmail.com", Icon: Mail },
+              { href: "tel:+917310952576", label: "+91 73109 52576", Icon: Phone },
+              { href: "tel:+917737329191", label: "+91 77373 29191", Icon: Phone },
+              { href: "#", label: "Haridwar, Uttarakhand", Icon: MapPin },
+            ].map(({ href, label, Icon }, i) => (
+              <li key={i}>
+                <a href={href}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 12,
+                    fontFamily: "Poppins, sans-serif",
+                    fontSize: 13,
+                    fontWeight: 400,
+                    color: "rgba(58,32,16,0.72)",
+                    transition: "all 0.3s ease",
+                  }}
+                  className="footer-contact-link"
+                  onMouseEnter={e => {
+                    e.currentTarget.style.color = "#7B1034";
+                    e.currentTarget.style.transform = "translateX(2px)";
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.color = "rgba(58,32,16,0.72)";
+                    e.currentTarget.style.transform = "none";
+                  }}
+                >
+                  <div style={{
+                    width: 26,
+                    height: 26,
+                    borderRadius: "50%",
+                    background: "rgba(255,255,255,0.45)",
+                    border: "1px solid rgba(197,146,42,0.18)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    transition: "all 0.3s",
+                  }} className="contact-icon-frame">
+                    <Icon size={12} color="#C5922A" strokeWidth={1.4} />
+                  </div>
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
+
+      {/* Spaced Follow Me On Row */}
+      <div style={{ marginTop: 64, borderTop: "1px solid rgba(197,146,42,0.18)", paddingTop: 44 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 26, maxWidth: 460, margin: "0 auto 26px" }}>
+          <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, rgba(197,146,42,0.36))" }} />
+          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 9.5, letterSpacing: "0.28em", textTransform: "uppercase", color: "#C5922A", flexShrink: 0 }}>
+            Follow Me On
+          </p>
+          <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, rgba(197,146,42,0.36), transparent)" }} />
+        </div>
+
+        {/* Follow handle tags */}
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12 }}>
+          {[
+            { href: "https://instagram.com/manjuumehtaofficial", Icon: Instagram, label: "/manjuumehtaofficial" },
+            { href: "https://facebook.com/manjuumehtaofficial", Icon: Facebook, label: "/manjuumehtaofficial" },
+            { href: "https://youtube.com/manjuumehtaofficial", Icon: Youtube, label: "/manjuumehtaofficial" },
+            { href: "https://wa.me/919820954254", Icon: null, label: "+91 98209 54254" },
+          ].map(({ href, Icon, label }, i) => (
+            <a key={i} href={href} target="_blank" rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 8,
+                padding: "8px 18px",
+                background: "rgba(255,255,255,0.50)",
+                border: "1px solid rgba(197,146,42,0.22)",
+                borderRadius: 999,
+                fontFamily: "Poppins, sans-serif",
+                fontSize: 11.5,
+                fontWeight: 500,
+                color: "rgba(58,32,16,0.72)",
+                transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                boxShadow: "0 2px 8px rgba(91,10,36,0.01)",
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.borderColor = "rgba(123,16,52,0.45)";
+                e.currentTarget.style.color = "#7B1034";
+                e.currentTarget.style.background = "#FFFFFF";
+                e.currentTarget.style.transform = "translateY(-1.5px)";
+                e.currentTarget.style.boxShadow = "0 6px 16px rgba(91,10,36,0.03)";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = "rgba(197,146,42,0.22)";
+                e.currentTarget.style.color = "rgba(58,32,16,0.72)";
+                e.currentTarget.style.background = "rgba(255,255,255,0.50)";
+                e.currentTarget.style.transform = "none";
+                e.currentTarget.style.boxShadow = "0 2px 8px rgba(91,10,36,0.01)";
+              }}
+            >
+              {Icon ? (
+                <Icon size={13} color="#C5922A" strokeWidth={1.5} />
+              ) : (
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#25D366">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              )}
+              {label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Bottom Copyright & AIFAS Credentials */}
+      <div style={{ marginTop: 44, textAlign: "center", borderTop: "1px solid rgba(197,146,42,0.14)", paddingTop: 28 }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 10, color: "rgba(58,32,16,0.48)", fontWeight: 400 }}>
+          © {new Date().getFullYear()} Manjuu Mehta ✦ All Rights Reserved
+        </p>
+        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 8.5, letterSpacing: "0.32em", textTransform: "uppercase", color: "rgba(197,146,42,0.58)", marginTop: 6 }}>
+          AIFAS Elite Member
+        </p>
+      </div>
     </div>
-    
-    <div className="max-w-7xl mx-auto border-t border-primary/10 pt-8 text-center flex flex-col md:flex-row justify-between items-center gap-4">
-      <p className="text-xs text-muted-foreground/70 italic">
-        © {new Date().getFullYear()} Manjuu Mehta · All Rights Reserved
-      </p>
-      <p className="text-xs text-muted-foreground/50 uppercase tracking-widest font-display">
-        AIFAS Elite Member
-      </p>
-    </div>
+
+    {/* Responsive Media Queries */}
+    <style>{`
+      @media (min-width: 768px) {
+        .footer-cols { grid-template-columns: repeat(3, 1fr) !important; gap: 64px !important; }
+      }
+    `}</style>
   </footer>
 );
 

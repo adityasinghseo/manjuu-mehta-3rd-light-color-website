@@ -1,159 +1,197 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Sanskrit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ── Shadcn required variables ─────────────────────────────── */
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 0 0% 10%; /* Dark charcoal/black for maximum readability */
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
-
-    --primary: 35 70% 35%; /* Rich, dark bronze/gold for headings and accents */
-    --primary-foreground: 40 33% 98%;
-
-    --secondary: 40 20% 92%;
-    --secondary-foreground: 0 0% 10%;
-
-    --muted: 40 20% 94%;
-    --muted-foreground: 0 0% 35%; /* Darker gray for muted text */
-
-    --accent: 35 70% 35%;
-    --accent-foreground: 40 33% 98%;
-
+    --background: 40 60% 97%;
+    --foreground: 20 40% 14%;
+    --card: 40 50% 98%;
+    --card-foreground: 20 40% 14%;
+    --popover: 40 60% 97%;
+    --popover-foreground: 20 40% 14%;
+    --primary: 343 72% 28%;
+    --primary-foreground: 40 60% 97%;
+    --secondary: 40 30% 92%;
+    --secondary-foreground: 343 72% 28%;
+    --muted: 38 30% 88%;
+    --muted-foreground: 30 20% 45%;
+    --accent: 38 55% 52%;
+    --accent-foreground: 40 60% 97%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 40 33% 98%;
-
-    --border: 40 20% 85%;
-    --input: 40 20% 85%;
-    --ring: 35 70% 35%;
-
-    --gold: 35 70% 35%; /* Deepen the main gold color so text using text-gold is readable */
-    --gold-deep: 35 80% 25%;
-    --saffron: 28 60% 45%;
-    --indigo-deep: 222 47% 11%;
-    --indigo-mid: 222 40% 25%;
-    --plum: 280 20% 40%;
-    --crimson: 350 50% 45%;
-
-    --gradient-cosmic: radial-gradient(ellipse at top, hsl(40 40% 99%) 0%, hsl(40 33% 96%) 50%, hsl(40 20% 92%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(42 60% 55%), hsl(35 70% 45%), hsl(28 60% 45%));
-    --gradient-aura: radial-gradient(circle, hsl(35 60% 45% / 0.15) 0%, transparent 70%);
-    --gradient-text-gold: linear-gradient(180deg, hsl(35 50% 45%), hsl(35 60% 35%), hsl(35 50% 25%));
-
-    --shadow-glow: 0 0 40px hsl(35 60% 45% / 0.15);
-    --shadow-deep: 0 25px 50px -12px hsl(222 47% 11% / 0.15);
-
+    --destructive-foreground: 40 60% 97%;
+    --border: 38 35% 82%;
+    --input: 38 35% 82%;
+    --ring: 343 72% 28%;
     --radius: 0.75rem;
   }
 }
 
-@layer base {
-  * { @apply border-border; }
-  html { scroll-behavior: smooth; }
-  body {
-    @apply bg-background text-foreground;
-    background: var(--gradient-cosmic);
-    background-attachment: fixed;
-    font-family: 'Cormorant Garamond', serif;
-    overflow-x: hidden;
-  }
-  h1,h2,h3,h4 { font-family: 'Cinzel', serif; letter-spacing: 0.02em; }
+/* ══════════════════════════════════════════════════════════════
+   POSTER-ACCURATE DESIGN SYSTEM
+   Warm Cream (#FAF0E4) · Maroon (#7B1034) · Gold (#C5922A)
+══════════════════════════════════════════════════════════════ */
+
+:root {
+  --cream:        #FAF0E4;
+  --cream-mid:    #F5E6D2;
+  --cream-deep:   #EEDAD0;
+  --cream-warm:   #EED5B8;
+  --maroon:       #7B1034;
+  --maroon-deep:  #5A0A24;
+  --maroon-light: #9B2048;
+  --gold:         #C5922A;
+  --gold-light:   #D4A843;
+  --gold-pale:    #E8C97A;
+  --gold-deep:    #9E7220;
+  --text-dark:    #3A2010;
+  --text-mid:     #6B4030;
+  --text-muted:   #9A7060;
+  --white:        #FFFFFF;
+
+  /* Gradients */
+  --grad-bg:      linear-gradient(160deg, #FDF6EE 0%, #FAF0E4 30%, #F5E6D2 65%, #EDD5B8 100%);
+  --grad-gold:    linear-gradient(135deg, #D4A843 0%, #C5922A 50%, #9E7220 100%);
+  --grad-maroon:  linear-gradient(135deg, #9B2048 0%, #7B1034 50%, #5A0A24 100%);
+  --grad-section: linear-gradient(180deg, #FAF0E4 0%, #F5E6D2 100%);
+  --grad-section2:linear-gradient(180deg, #F5E6D2 0%, #FAF0E4 100%);
+  --grad-footer:  linear-gradient(180deg, #EDD5B8 0%, #E0C49A 100%);
+
+  /* Shadows */
+  --shadow-card:  0 4px 24px -6px rgba(91,10,36,0.10), 0 0 0 1px rgba(197,146,42,0.14);
+  --shadow-warm:  0 8px 32px -8px rgba(91,10,36,0.12);
+  --shadow-gold:  0 0 32px rgba(197,146,42,0.18);
 }
 
-@layer utilities {
-  .font-display { font-family: 'Cinzel', serif; }
-  .font-sanskrit { font-family: 'Tiro Devanagari Sanskrit', serif; }
-  .font-body { font-family: 'Cormorant Garamond', serif; }
+/* ── Base Reset ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--grad-bg);
+  background-attachment: fixed;
+  color: var(--text-dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
 
-  .text-gold {
-    background: var(--gradient-text-gold);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .bg-gradient-gold { background: var(--gradient-gold); }
-  .bg-cosmic { background: var(--gradient-cosmic); }
-  .shadow-glow { box-shadow: var(--shadow-glow); }
-  .shadow-deep { box-shadow: var(--shadow-deep); }
+/* ── Typography Utilities ───────────────────────────────────── */
+.font-cinzel    { font-family: 'Cinzel', serif; }
+.font-script    { font-family: 'Great Vibes', cursive; }
+.font-garamond  { font-family: 'Cormorant Garamond', serif; }
+.font-poppins   { font-family: 'Poppins', sans-serif; }
 
-  .gold-border {
-    border: 1px solid hsl(var(--gold) / 0.4);
-    box-shadow: inset 0 0 30px hsl(var(--gold) / 0.05), 0 0 30px hsl(var(--gold) / 0.1);
-  }
+/* ── Color Utilities ─────────────────────────────────────────── */
+.text-maroon  { color: var(--maroon); }
+.text-gold    { color: var(--gold); }
+.text-cream   { color: var(--cream); }
+.bg-maroon    { background-color: var(--maroon); }
+.bg-gold      { background-color: var(--gold); }
+.bg-cream     { background-color: var(--cream); }
 
-  .star-field {
-    background-image:
-      radial-gradient(1.5px 1.5px at 20% 30%, hsl(var(--gold) / 0.3), transparent),
-      radial-gradient(1px 1px at 60% 70%, hsl(var(--foreground) / 0.15), transparent),
-      radial-gradient(2px 2px at 80% 20%, hsl(var(--gold) / 0.2), transparent),
-      radial-gradient(1px 1px at 40% 80%, hsl(var(--foreground) / 0.1), transparent),
-      radial-gradient(1.5px 1.5px at 90% 50%, hsl(var(--gold) / 0.25), transparent),
-      radial-gradient(1px 1px at 10% 60%, hsl(var(--foreground) / 0.15), transparent),
-      radial-gradient(2px 2px at 33% 15%, hsl(var(--gold) / 0.15), transparent),
-      radial-gradient(1px 1px at 70% 90%, hsl(var(--foreground) / 0.1), transparent);
-    background-size: 600px 600px;
-    background-repeat: repeat;
-  }
+/* ── Gradient Utilities ──────────────────────────────────────── */
+.bg-grad-gold   { background: var(--grad-gold); }
+.bg-grad-maroon { background: var(--grad-maroon); }
+
+/* ── Poster Card ─────────────────────────────────────────────── */
+.poster-card {
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(197,146,42,0.28);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.35s ease;
+}
+.poster-card:hover {
+  border-color: rgba(197,146,42,0.55);
+  box-shadow: var(--shadow-card), var(--shadow-gold);
+  transform: translateY(-2px);
 }
 
-@layer components {
-  @keyframes spin-slow { to { transform: rotate(360deg); } }
-  @keyframes spin-reverse { to { transform: rotate(-360deg); } }
-  @keyframes float-slow {
-    0%,100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(2deg); }
-  }
-  @keyframes glow-pulse {
-    0%,100% { opacity: 0.6; filter: blur(40px); }
-    50% { opacity: 1; filter: blur(60px); }
-  }
-  @keyframes twinkle {
-    0%,100% { opacity: 0.3; }
-    50% { opacity: 1; }
-  }
-  @keyframes shimmer {
-    0% { background-position: -200% center; }
-    100% { background-position: 200% center; }
-  }
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  @keyframes orbit {
-    from { transform: rotate(0deg) translateX(var(--r,180px)) rotate(0deg); }
-    to { transform: rotate(360deg) translateX(var(--r,180px)) rotate(-360deg); }
-  }
-  @keyframes pan-stars {
-    from { background-position: 0 0; }
-    to { background-position: 600px 600px; }
-  }
-
-  .animate-spin-slow { animation: spin-slow 60s linear infinite; }
-  .animate-spin-reverse { animation: spin-reverse 90s linear infinite; }
-  .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
-  .animate-glow-pulse { animation: glow-pulse 4s ease-in-out infinite; }
-  .animate-twinkle { animation: twinkle 3s ease-in-out infinite; }
-  .animate-rise { animation: rise 1s cubic-bezier(.2,.7,.2,1) both; }
-  .animate-fade-in { animation: fade-in 1.4s ease-out both; }
-  .animate-pan-stars { animation: pan-stars 60s linear infinite; }
-
-  .shimmer-text {
-    background: linear-gradient(90deg, hsl(35 60% 35%) 0%, hsl(42 60% 55%) 50%, hsl(35 60% 35%) 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: shimmer 4s linear infinite;
-  }
+/* ── Gold Ornamental Divider ─────────────────────────────────── */
+.divider-gold {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
+.divider-gold::before,
+.divider-gold::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197,146,42,0.55), transparent);
+}
+
+/* ── Animations ──────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes floatY {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-10px); }
+}
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+@keyframes spinRev {
+  to { transform: rotate(-360deg); }
+}
+@keyframes glow {
+  0%,100% { opacity: 0.6; }
+  50%     { opacity: 1; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes twinkle {
+  0%,100% { opacity: 0.2; transform: scale(1); }
+  50%     { opacity: 0.9; transform: scale(1.2); }
+}
+
+.anim-fadeup   { animation: fadeUp 0.8s cubic-bezier(.2,.8,.2,1) both; }
+.anim-fadein   { animation: fadeIn 1s ease both; }
+.anim-float    { animation: floatY 6s ease-in-out infinite; }
+.anim-spin     { animation: spinSlow 80s linear infinite; }
+.anim-spinrev  { animation: spinRev 100s linear infinite; }
+.anim-glow     { animation: glow 4s ease-in-out infinite; }
+
+/* ── Sparkle Field ───────────────────────────────────────────── */
+.sparkle-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.sparkle-field::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 8%  15%, rgba(197,146,42,0.45) 0%, transparent 100%),
+    radial-gradient(1px   1px   at 22% 40%, rgba(197,146,42,0.30) 0%, transparent 100%),
+    radial-gradient(2px   2px   at 38% 8%,  rgba(197,146,42,0.35) 0%, transparent 100%),
+    radial-gradient(1px   1px   at 55% 75%, rgba(197,146,42,0.25) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 70% 25%, rgba(197,146,42,0.40) 0%, transparent 100%),
+    radial-gradient(1px   1px   at 82% 60%, rgba(197,146,42,0.30) 0%, transparent 100%),
+    radial-gradient(2px   2px   at 92% 10%, rgba(197,146,42,0.35) 0%, transparent 100%),
+    radial-gradient(1px   1px   at 15% 85%, rgba(197,146,42,0.20) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 45% 55%, rgba(197,146,42,0.25) 0%, transparent 100%),
+    radial-gradient(1px   1px   at 65% 90%, rgba(197,146,42,0.20) 0%, transparent 100%);
+  background-size: 100% 100%;
+}
+
+/* ── Section backgrounds ─────────────────────────────────────── */
+.sect-a { background: var(--grad-section); }
+.sect-b { background: var(--grad-section2); }
+.sect-c { background: linear-gradient(160deg, #F5E6D2 0%, #EDD5B8 100%); }

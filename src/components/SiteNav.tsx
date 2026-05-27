@@ -1,117 +1,247 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
-const links = [
+const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "/contact", label: "Contact" },
 ];
 
+/* ── Shared MM Logo ─────────────────────────────────────────── */
+export const MMLogo = ({ size = 48 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Outer ring */}
+    <circle cx="55" cy="55" r="52" stroke="#C5922A" strokeWidth="1.6" />
+    {/* Dashed inner ring */}
+    <circle cx="55" cy="55" r="46" stroke="#C5922A" strokeWidth="0.8" strokeDasharray="3.5 2.5" opacity="0.7" />
+    {/* Cardinal accents */}
+    <line x1="55" y1="3"  x2="55" y2="11" stroke="#C5922A" strokeWidth="1.2" opacity="0.65" />
+    <line x1="55" y1="99" x2="55" y2="107" stroke="#C5922A" strokeWidth="1.2" opacity="0.65" />
+    <line x1="3"  y1="55" x2="11" y2="55" stroke="#C5922A" strokeWidth="1.2" opacity="0.65" />
+    <line x1="99" y1="55" x2="107" y2="55" stroke="#C5922A" strokeWidth="1.2" opacity="0.65" />
+    {/* Cardinal dots */}
+    <circle cx="55" cy="4"   r="2.2" fill="#C5922A" opacity="0.8" />
+    <circle cx="55" cy="106" r="2.2" fill="#C5922A" opacity="0.8" />
+    <circle cx="4"  cy="55"  r="2.2" fill="#C5922A" opacity="0.8" />
+    <circle cx="106" cy="55" r="2.2" fill="#C5922A" opacity="0.8" />
+    {/* Fill */}
+    <circle cx="55" cy="55" r="43" fill="rgba(253,246,238,0.95)" />
+    {/* MM text */}
+    <text
+      x="55" y="69"
+      textAnchor="middle"
+      fontFamily="Cinzel, serif"
+      fontSize="34"
+      fontWeight="700"
+      fill="#7B1034"
+      letterSpacing="-0.5"
+    >MM</text>
+  </svg>
+);
+
+/* ── Ornamental divider (poster-style) ─────────────────────── */
+export const OrnDivider = ({ className = "" }: { className?: string }) => (
+  <div className={`flex items-center gap-3 ${className}`}>
+    <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,transparent,rgba(197,146,42,.55),transparent)" }} />
+    {/* Lotus bud */}
+    <svg width="18" height="12" viewBox="0 0 36 24" fill="none">
+      <path d="M18 22C15 14 5 12 2 6C7 4 13 8 18 16C23 8 29 4 34 6C31 12 21 14 18 22Z" fill="#C5922A" opacity="0.85"/>
+      <circle cx="18" cy="6" r="2" fill="#C5922A" opacity="0.6"/>
+    </svg>
+    <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg,transparent,rgba(197,146,42,.55),transparent)" }} />
+  </div>
+);
+
+/* ── SiteNav ─────────────────────────────────────────────────── */
 const SiteNav = () => {
   const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
-  const close = () => setIsOpen(false);
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const close = () => setOpen(false);
+
+  useEffect(() => {
+    const fn = () => setScrolled(window.scrollY > 30);
+    window.addEventListener("scroll", fn, { passive: true });
+    return () => window.removeEventListener("scroll", fn);
+  }, []);
+
+  const navStyle: React.CSSProperties = {
+    position: "fixed",
+    top: 0, left: 0, right: 0,
+    zIndex: 1000,
+    backdropFilter: "blur(18px)",
+    WebkitBackdropFilter: "blur(18px)",
+    background: scrolled ? "rgba(253,246,238,0.88)" : "rgba(253,246,238,0.45)",
+    borderBottom: scrolled ? "1px solid rgba(197,146,42,0.16)" : "1px solid rgba(197,146,42,0.06)",
+    boxShadow: scrolled ? "0 4px 24px rgba(91,10,36,0.04)" : "none",
+    transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+  };
 
   return (
     <>
-      {/* ── Header ── */}
-      <header style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 999 }}
-        className="backdrop-blur-md bg-background/90 lg:bg-background/70 border-b border-primary/10 shadow-sm"
-      >
-        <nav className="max-w-7xl mx-auto flex items-center justify-between px-5 py-4">
+      <header style={navStyle}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 62 }}>
+          
           {/* Logo */}
-          <Link to="/" onClick={close} className="flex items-center gap-3">
-            <span className="text-2xl font-display text-primary">✦</span>
-            <div className="font-display tracking-[0.25em] text-sm lg:text-base text-primary font-semibold">
-              MANJUU MEHTA
+          <Link to="/" onClick={close} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <MMLogo size={40} />
+            <div>
+              <div style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.22em", color: "#7B1034", lineHeight: 1.2 }}>
+                MANJUU MEHTA
+              </div>
+              <div style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 8, letterSpacing: "0.28em", color: "#C5922A", textTransform: "uppercase", marginTop: 1 }}>
+                Vastu · Astrology · Numerology
+              </div>
             </div>
           </Link>
 
-          {/* Desktop nav links */}
-          <ul className="hidden lg:flex items-center gap-8 text-sm font-display tracking-widest uppercase">
-            {links.map((l) => (
-              <li key={l.href}>
-                <Link to={l.href}
-                  className={`relative group transition-colors font-semibold ${location.pathname === l.href ? "text-primary" : "text-foreground/80 hover:text-primary"}`}
-                >
-                  {l.label}
-                  <span className={`absolute -bottom-1 left-0 h-px bg-gradient-gold transition-all duration-300 ${location.pathname === l.href ? "w-full" : "w-0 group-hover:w-full"}`} />
-                </Link>
-              </li>
+          {/* Desktop links */}
+          <nav style={{ display: "flex", alignItems: "center", gap: 36 }}>
+            {NAV_LINKS.map(l => (
+              <Link
+                key={l.href}
+                to={l.href}
+                style={{ display: "none" }}
+                className={`lg-nav-link ${location.pathname === l.href ? "active" : ""}`}
+              >
+                {l.label}
+              </Link>
             ))}
-          </ul>
+          </nav>
 
-          {/* Right side */}
-          <div className="flex items-center gap-3">
-            <Link to="/contact"
-              className="hidden lg:inline-flex px-5 py-2.5 rounded-full gold-border text-primary font-bold text-xs font-display tracking-widest uppercase hover:bg-primary/10 transition"
+          {/* CTA + Hamburger */}
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <Link
+              to="/contact"
+              id="nav-cta"
+              style={{ display: "none" }}
+              className="lg-cta"
             >
-              Book a Consultation
+              Book Consultation
             </Link>
-
-            {/* Hamburger — mobile only */}
             <button
-              onClick={() => setIsOpen((v) => !v)}
-              aria-label="Open menu"
-              className="lg:hidden p-1 text-primary bg-transparent border-none cursor-pointer hover:bg-primary/5 rounded"
+              onClick={() => setOpen(v => !v)}
+              aria-label="Menu"
+              style={{
+                background: "transparent",
+                border: "1px solid rgba(197,146,42,0.40)",
+                borderRadius: 999,
+                padding: "7px",
+                cursor: "pointer",
+                color: "#7B1034",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              className="hamburger"
             >
-              <Menu size={26} />
+              <Menu size={18} />
             </button>
           </div>
-        </nav>
+        </div>
       </header>
 
-      {/* ── Mobile Overlay — rendered at document level via high z-index ── */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background/98 backdrop-blur-md"
-        >
-          {/* Close button — top right, explicitly styled */}
-          <button
-            onClick={close}
-            aria-label="Close menu"
-            className="absolute top-5 right-5 p-2 bg-transparent border-none text-primary cursor-pointer hover:bg-primary/5 rounded-full"
-          >
-            <X size={28} />
+      {/* Mobile Overlay */}
+      {open && (
+        <div style={{
+          position: "fixed", inset: 0, zIndex: 9999,
+          background: "rgba(253,246,238,0.98)",
+          backdropFilter: "blur(16px)",
+          display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+          animation: "fadeIn 0.2s ease both",
+        }}>
+          <button onClick={close} style={{ position: "absolute", top: 20, right: 20, background: "transparent", border: "1px solid rgba(197,146,42,0.35)", borderRadius: 999, padding: 8, cursor: "pointer", color: "#7B1034" }}>
+            <X size={22} />
           </button>
-
-          {/* Brand name inside menu */}
-          <p className="font-display tracking-[0.3em] text-sm uppercase mb-12 text-primary/60 font-semibold">
-            MANJUU MEHTA
-          </p>
-
-          {/* Nav links */}
-          <ul className="flex flex-col items-center gap-8">
-            {links.map((l) => (
-              <li key={l.href}>
-                <Link
-                  to={l.href}
-                  onClick={close}
-                  className={`font-display tracking-widest uppercase text-2xl transition-colors font-semibold ${location.pathname === l.href ? "text-primary" : "text-foreground/80 hover:text-primary"}`}
-                >
-                  {l.label}
-                </Link>
-              </li>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: 40 }}>
+            <MMLogo size={60} />
+            <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.20em", color: "#7B1034", marginTop: 12 }}>MANJUU MEHTA</p>
+            <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 9, letterSpacing: "0.28em", color: "#C5922A", textTransform: "uppercase", marginTop: 4 }}>Vastu · Astrology · Numerology</p>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 28 }}>
+            {NAV_LINKS.map(l => (
+              <Link key={l.href} to={l.href} onClick={close}
+                style={{ fontFamily: "Cinzel, serif", fontWeight: 600, fontSize: 17, letterSpacing: "0.18em", textTransform: "uppercase", color: location.pathname === l.href ? "#7B1034" : "rgba(58,32,16,0.65)" }}
+              >{l.label}</Link>
             ))}
-          </ul>
-
-          {/* CTA */}
-          <Link
-            to="/contact"
-            onClick={close}
-            className="mt-12 px-10 py-4 rounded-full font-display tracking-widest text-sm uppercase shadow-glow bg-gradient-gold text-primary-foreground font-bold"
-          >
-            Book a Consultation
-          </Link>
-
-          <p className="mt-12 text-xs tracking-[0.3em] uppercase font-display text-primary/50 font-semibold">
-            Vastu · Astrology · Numerology
-          </p>
+          </div>
+          <Link to="/contact" onClick={close}
+            style={{ marginTop: 44, fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "#FAF0E4", background: "var(--grad-maroon)", padding: "13px 32px", borderRadius: 999, boxShadow: "0 4px 16px rgba(91,10,36,0.20)" }}
+          >Book Consultation</Link>
         </div>
       )}
+
+      {/* Responsive CSS for nav */}
+      <style>{`
+        @media (min-width: 1024px) {
+          .lg-nav-link { display: block !important; }
+          .lg-cta { display: block !important; }
+          .hamburger { display: none !important; }
+        }
+
+        .lg-nav-link {
+          font-family: "Cinzel", serif;
+          font-weight: 600;
+          font-size: 11px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: rgba(58,32,16,0.65) !important;
+          transition: color 0.4s ease;
+          position: relative;
+          padding: 4px 0;
+        }
+        .lg-nav-link:hover {
+          color: #7B1034 !important;
+        }
+        .lg-nav-link.active {
+          color: #7B1034 !important;
+          font-weight: 700;
+        }
+        .lg-nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 100%;
+          height: 1.5px;
+          background: #C5922A;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .lg-nav-link:hover::after,
+        .lg-nav-link.active::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+        .lg-nav-link:hover::after {
+          background: #7B1034;
+        }
+        .lg-nav-link.active::after {
+          background: #C5922A;
+        }
+
+        .lg-cta {
+          font-family: "Cinzel", serif;
+          font-weight: 700;
+          font-size: 10px;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: #FAF0E4 !important;
+          background: var(--grad-maroon);
+          padding: 9px 22px;
+          border-radius: 999px;
+          box-shadow: 0 4px 16px rgba(91,10,36,0.14);
+          transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .lg-cta:hover {
+          transform: scale(1.03) translateY(-1px);
+          box-shadow: 0 8px 20px rgba(123,16,52,0.26);
+        }
+      `}</style>
     </>
   );
 };

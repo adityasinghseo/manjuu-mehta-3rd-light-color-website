@@ -1,82 +1,284 @@
 import { Phone, FileText, Star, Sparkles } from "lucide-react";
+import { OrnDivider } from "./SiteNav";
 
-const steps = [
+const STEPS = [
   {
-    number: "01",
-    icon: Phone,
-    title: "Book a Session",
-    desc: "Schedule your personal consultation via call, WhatsApp, or email at a time that suits you.",
+    num: "01",
+    phase: "PHASE I",
+    Icon: Phone,
+    title: "Schedule Session",
+    desc: "Connect via call or WhatsApp at your convenience.",
   },
   {
-    number: "02",
-    icon: FileText,
-    title: "Share Your Details",
-    desc: "Provide your birth date, time, and place for Vedic readings — or property details for Vastu analysis.",
+    num: "02",
+    phase: "PHASE II",
+    Icon: FileText,
+    title: "Share Coordinates",
+    desc: "Provide birth or property details for accurate readings.",
   },
   {
-    number: "03",
-    icon: Star,
-    title: "Receive Deep Insights",
-    desc: "Manjuu ji prepares a thorough, personalised report with precise remedies and actionable guidance.",
+    num: "03",
+    phase: "PHASE III",
+    Icon: Star,
+    title: "Receive Insights",
+    desc: "Obtain a personalized blueprint with practical remedies.",
   },
   {
-    number: "04",
-    icon: Sparkles,
-    title: "Transform Your Life",
-    desc: "Implement the cosmic prescriptions and witness powerful shifts in health, wealth, and relationships.",
+    num: "04",
+    phase: "PHASE IV",
+    Icon: Sparkles,
+    title: "Transform Life",
+    desc: "Implement guidelines to welcome abundance and clarity.",
   },
 ];
 
 const HowItWorks = () => (
-  <section id="how-it-works" className="relative py-32 px-6">
-    {/* Background glow */}
-    <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-      <div className="w-[600px] h-[600px] rounded-full animate-glow-pulse opacity-20"
-        style={{ background: "var(--gradient-aura)", filter: "blur(80px)" }} />
+  <section
+    id="how-it-works"
+    style={{
+      padding: "116px 0",
+      background: "linear-gradient(180deg, #F5E6D2 0%, #FAF0E4 100%)",
+      position: "relative",
+      overflow: "hidden",
+    }}
+  >
+    {/* Background Watermark Mandala */}
+    <div style={{
+      position: "absolute",
+      bottom: "-15%",
+      right: "-10%",
+      width: "55%",
+      maxWidth: 550,
+      aspectRatio: "1",
+      opacity: 0.012,
+      pointerEvents: "none",
+      zIndex: 0,
+    }}>
+      <svg viewBox="0 0 100 100" fill="none" stroke="#C5922A" strokeWidth="0.5">
+        <circle cx="50" cy="50" r="48" />
+        <circle cx="50" cy="50" r="38" strokeDasharray="2 2" />
+        <polygon points="50,2 98,50 50,98 2,50" />
+        <polygon points="50,2 98,50 50,98 2,50" transform="rotate(30 50 50)" />
+        <polygon points="50,2 98,50 50,98 2,50" transform="rotate(60 50 50)" />
+      </svg>
     </div>
 
-    <div className="max-w-6xl mx-auto relative">
-      {/* Section header */}
-      <div className="text-center mb-20">
-        <p className="font-display tracking-widest text-primary/80 text-sm uppercase mb-3">
-          Your Journey
+    {/* Subtle sparkle field */}
+    <div className="sparkle-field" style={{ opacity: 0.28 }} />
+
+    <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 1 }}>
+      {/* Header */}
+      <div style={{ textAlign: "center", marginBottom: 72 }}>
+        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10, letterSpacing: "0.26em", textTransform: "uppercase", color: "#C5922A", marginBottom: 12 }}>
+          The Sacred Path
         </p>
-        <h2 className="font-display text-4xl md:text-6xl text-gold">How It Works</h2>
-        <div className="mx-auto h-px w-32 bg-gradient-gold mt-4" />
-        <p className="mt-6 text-foreground/70 max-w-2xl mx-auto text-lg italic">
-          A simple, sacred process to begin your transformation.
+        <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "clamp(2.2rem, 4.5vw, 3.4rem)", color: "#7B1034", marginBottom: 20 }}>
+          How It Works
+        </h2>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <OrnDivider className="w-full" style={{ maxWidth: 420 } as React.CSSProperties} />
+        </div>
+        <p style={{ fontFamily: "Cormorant Garamond, serif", fontStyle: "italic", fontSize: 18, color: "rgba(58,32,16,0.72)", marginTop: 16 }}>
+          A simple, aligned four-step journey to invite transformation into your life.
         </p>
       </div>
 
-      {/* Steps */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {steps.map((step, i) => (
-          <div
-            key={step.number}
-            className="group relative p-8 rounded-2xl bg-card/40 backdrop-blur gold-border text-center hover:shadow-glow transition-all duration-500 hover:-translate-y-2"
-            style={{ animation: `rise 0.8s ease-out ${i * 0.15}s both` }}
-          >
+      {/* Grid container with connected line wrapper */}
+      <div style={{ position: "relative" }}>
+        {/* Connected Flow Line for Desktop */}
+        <div
+          className="hiw-line"
+          style={{
+            position: "absolute",
+            top: "90px", // Exact vertical center of circular icons
+            left: "12%",
+            right: "12%",
+            height: "2px",
+            background: "transparent",
+            borderTop: "1.5px dashed rgba(197, 146, 42, 0.32)",
+            zIndex: 0,
+            pointerEvents: "none",
+          }}
+        />
 
+        {/* Steps Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(1, 1fr)", gap: 24 }} className="hiw-grid">
+          {STEPS.map((s, i) => (
+            <div
+              key={s.num}
+              style={{
+                position: "relative",
+                padding: "38px 28px",
+                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(253, 246, 238, 0.52) 100%)",
+                border: "1px solid rgba(197, 146, 42, 0.16)",
+                borderRadius: 18,
+                boxShadow: "0 10px 30px -12px rgba(91,10,36,0.03)",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+                animation: `fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.1}s both`,
+                zIndex: 2,
+                overflow: "hidden",
+              }}
+              className="hiw-card"
+            >
+              {/* Top gold border expansion */}
+              <div style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                height: 3,
+                background: "linear-gradient(90deg, #C5922A 0%, #FAF0E4 50%, #7B1034 100%)",
+                transform: "scaleX(0)",
+                transformOrigin: "left",
+                transition: "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+                zIndex: 3,
+              }} className="hiw-top-line" />
 
-            {/* Icon */}
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 gold-border mb-6 group-hover:bg-primary/20 transition-colors">
-              <step.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
-            </div>
+              {/* Behind card glow backlight */}
+              <div style={{
+                position: "absolute",
+                inset: 0,
+                borderRadius: 18,
+                background: "radial-gradient(circle at center, rgba(197, 146, 42, 0.08) 0%, transparent 70%)",
+                opacity: 0,
+                transition: "opacity 0.5s ease",
+                pointerEvents: "none",
+                zIndex: 0,
+              }} className="hiw-glow" />
 
-            <h3 className="font-display text-xl text-gold mb-3">{step.title}</h3>
-            <p className="text-foreground/70 leading-relaxed text-base">{step.desc}</p>
-
-            {/* Connector arrow (hidden on last) */}
-            {i < steps.length - 1 && (
-              <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 text-primary/30 text-2xl z-10">
-                →
+              {/* Roman / Numeral Watermark */}
+              <div style={{
+                position: "absolute",
+                bottom: -12,
+                right: 12,
+                fontFamily: "Cinzel, serif",
+                fontWeight: 800,
+                fontSize: 68,
+                color: "rgba(197, 146, 42, 0.045)",
+                pointerEvents: "none",
+                zIndex: 1,
+                transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+              }} className="hiw-number-watermark">
+                {s.num}
               </div>
-            )}
-          </div>
-        ))}
+
+              {/* Phase Badge */}
+              <div style={{
+                fontFamily: "Cinzel, serif",
+                fontSize: "10px",
+                fontWeight: 700,
+                color: "#C5922A",
+                letterSpacing: "0.22em",
+                marginBottom: 14,
+                position: "relative",
+                zIndex: 2,
+              }}>
+                {s.phase}
+              </div>
+
+              {/* Circle Icon Badge */}
+              <div style={{
+                width: 68,
+                height: 68,
+                borderRadius: "50%",
+                background: "#FAF0E4",
+                border: "1px solid rgba(197, 146, 42, 0.28)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: 20,
+                position: "relative",
+                zIndex: 2,
+                transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                boxShadow: "0 4px 12px rgba(91,10,36,0.02)",
+              }} className="hiw-icon-wrapper">
+                <s.Icon size={24} strokeWidth={1.2} color="#C5922A" style={{ transition: "all 0.4s ease" }} />
+              </div>
+
+              {/* Step Title */}
+              <h3 style={{
+                fontFamily: "Cinzel, serif",
+                fontWeight: 700,
+                fontSize: 13.5,
+                letterSpacing: "0.14em",
+                color: "#7B1034",
+                marginBottom: 10,
+                position: "relative",
+                zIndex: 2,
+              }}>
+                {s.title}
+              </h3>
+
+              {/* Step Description */}
+              <p style={{
+                fontFamily: "Poppins, sans-serif",
+                fontSize: 13,
+                lineHeight: 1.7,
+                color: "rgba(58,32,16,0.68)",
+                position: "relative",
+                zIndex: 2,
+                maxWidth: "240px",
+              }}>
+                {s.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
+
+    {/* Luxury styles for hover and grid configurations */}
+    <style>{`
+      @media (min-width: 640px) {
+        .hiw-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      }
+      @media (min-width: 1200px) {
+        .hiw-grid { grid-template-columns: repeat(4, 1fr) !important; gap: 28px !important; }
+      }
+
+      /* Desktop connecting line visibility */
+      @media (max-width: 1199px) {
+        .hiw-line { display: none !important; }
+      }
+
+      /* Card Hover Effects */
+      .hiw-card:hover {
+        transform: translateY(-6px);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(253, 246, 238, 0.72) 100%) !important;
+        border-color: rgba(197, 146, 42, 0.45) !important;
+        box-shadow: 0 20px 40px -16px rgba(91,10,36,0.08), 0 0 16px rgba(197,146,42,0.04) !important;
+      }
+      
+      .hiw-card:hover .hiw-top-line {
+        transform: scaleX(1);
+      }
+
+      .hiw-card:hover .hiw-glow {
+        opacity: 1;
+      }
+
+      .hiw-card:hover .hiw-number-watermark {
+        transform: scale(1.08) translateY(-4px);
+        color: rgba(197, 146, 42, 0.08) !important;
+      }
+
+      .hiw-card:hover .hiw-icon-wrapper {
+        transform: scale(1.08);
+        background: #7B1034 !important;
+        border-color: #7B1034 !important;
+        box-shadow: 0 6px 16px rgba(123, 16, 52, 0.25);
+      }
+
+      .hiw-card:hover .hiw-icon-wrapper svg {
+        color: #FAF0E4 !important;
+      }
+    `}</style>
   </section>
 );
 
 export default HowItWorks;
+
