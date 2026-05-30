@@ -30,8 +30,8 @@ const values = [
 /* ── Section Header helper ─────────────────────────────────── */
 const SectionHeader = ({ sup, title }: { sup: string; title: string }) => (
   <div style={{ textAlign: "center", marginBottom: 56 }} className="anim-fadeup">
-    <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10, letterSpacing: "0.26em", textTransform: "uppercase", color: "#C5922A", marginBottom: 12 }}>{sup}</p>
-    <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "clamp(2rem,4vw,3.2rem)", color: "#7B1034", marginBottom: 20 }}>{title}</h2>
+    <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>{sup}</p>
+    <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem,3.2vw,2.4rem)", color: "#8E6D3D", marginBottom: 20 }}>{title}</h2>
     <div style={{ display: "flex", justifyContent: "center" }}>
       <OrnDivider className="w-full" style={{ maxWidth: 360 } as React.CSSProperties} />
     </div>
@@ -40,10 +40,10 @@ const SectionHeader = ({ sup, title }: { sup: string; title: string }) => (
 
 /* ── Component ─────────────────────────────────────────────── */
 const AboutUsPage = () => (
-  <main style={{ minHeight: "100vh", paddingTop: 72, background: "linear-gradient(180deg, #FAF0E4 0%, #F5E6D2 50%, #FAF0E4 100%)" }}>
+  <main style={{ minHeight: "100vh", paddingTop: 72, background: "linear-gradient(180deg, #FFFFFF 0%, #FAF6F0 50%, #FFFFFF 100%)" }}>
 
     {/* ── 1. Hero Banner ─────────────────────────── */}
-    <section style={{ padding: "96px 0 56px", textAlign: "center", position: "relative", overflow: "hidden", background: "linear-gradient(180deg, #FAF0E4 0%, #FDF6EE 100%)" }}>
+    <section style={{ padding: "96px 0 56px", textAlign: "center", position: "relative", overflow: "hidden", background: "linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%)" }}>
       {/* Background Glows */}
       <div style={{
         position: "absolute",
@@ -53,7 +53,7 @@ const AboutUsPage = () => (
         width: "60%",
         maxWidth: 600,
         aspectRatio: "1",
-        background: "radial-gradient(circle, rgba(197,146,42,0.06) 0%, transparent 70%)",
+        background: "radial-gradient(circle, rgba(142,109,61,0.06) 0%, transparent 70%)",
         filter: "blur(50px)",
         pointerEvents: "none",
         zIndex: 0,
@@ -71,7 +71,7 @@ const AboutUsPage = () => (
         pointerEvents: "none",
         zIndex: 0,
       }}>
-        <svg viewBox="0 0 100 100" fill="none" stroke="#C5922A" strokeWidth="0.6">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.6">
           <circle cx="50" cy="50" r="48" />
           <polygon points="50,2 98,50 50,98 2,50" transform="rotate(15 50 50)" />
           <polygon points="50,2 98,50 50,98 2,50" transform="rotate(45 50 50)" />
@@ -81,14 +81,14 @@ const AboutUsPage = () => (
       <div className="sparkle-field" style={{ opacity: 0.32 }} />
 
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 1 }} className="anim-fadeup">
-        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10, letterSpacing: "0.28em", textTransform: "uppercase", color: "#C5922A", marginBottom: 14 }}>
+        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10, letterSpacing: "0.28em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>
           ✦ The Cosmic Guide ✦
         </p>
-        <h1 style={{ fontFamily: "Cinzel, serif", fontWeight: 800, fontSize: "clamp(2.4rem,6vw,4.2rem)", color: "#7B1034", lineHeight: 1.1, marginBottom: 20 }}>
+        <h1 style={{ fontFamily: "Cinzel, serif", fontWeight: 800, fontSize: "clamp(2.4rem,6vw,4.2rem)", color: "#8E6D3D", lineHeight: 1.1, marginBottom: 20 }}>
           Manjuu Mehta
         </h1>
         <OrnDivider />
-        <p style={{ fontFamily: "Cormorant Garamond, serif", fontStyle: "italic", fontSize: "clamp(1.1rem,2.4vw,1.4rem)", color: "rgba(58,32,16,0.76)", marginTop: 22, letterSpacing: "0.02em" }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(12.5px, 1.8vw, 15px)", color: "#8E6D3D", fontWeight: 600, marginTop: 22, letterSpacing: "0.10em", textTransform: "uppercase" }}>
           Renowned Vastu Advisor · Vedic Astrologer · Karmic Numerologist
         </p>
       </div>
@@ -106,7 +106,7 @@ const AboutUsPage = () => (
               position: "absolute",
               inset: "16px 0",
               borderRadius: "12rem 12rem 2rem 2rem",
-              border: "1.5px solid rgba(197,146,42,0.30)",
+              border: "1.5px solid rgba(142,109,61,0.30)",
               transform: "translate(-14px, -14px)",
               pointerEvents: "none",
               zIndex: 1,
@@ -118,7 +118,7 @@ const AboutUsPage = () => (
               position: "absolute",
               inset: "16px 0",
               borderRadius: "12rem 12rem 2rem 2rem",
-              border: "1.5px solid rgba(123,16,52,0.14)",
+              border: "1.5px solid rgba(142,109,61,0.14)",
               transform: "translate(14px, 14px)",
               pointerEvents: "none",
               zIndex: 1,
@@ -131,7 +131,7 @@ const AboutUsPage = () => (
               position: "absolute",
               inset: -20,
               borderRadius: "50%",
-              background: "radial-gradient(circle, rgba(197,146,42,0.14) 0%, transparent 70%)",
+              background: "radial-gradient(circle, rgba(142,109,61,0.14) 0%, transparent 70%)",
               filter: "blur(40px)",
               pointerEvents: "none",
               zIndex: 0,
@@ -144,10 +144,10 @@ const AboutUsPage = () => (
               left: "-12%",
               zIndex: 10,
               background: "linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,246,238,0.85) 100%)",
-              border: "1px solid rgba(197,146,42,0.28)",
+              border: "1px solid rgba(142,109,61,0.28)",
               borderRadius: 16,
               padding: "10px 18px",
-              boxShadow: "0 10px 24px -6px rgba(91,10,36,0.08)",
+              boxShadow: "0 10px 24px -6px rgba(68,65,54,0.08)",
               backdropFilter: "blur(10px)",
               WebkitBackdropFilter: "blur(10px)",
               display: "flex",
@@ -155,8 +155,8 @@ const AboutUsPage = () => (
               alignItems: "center",
               animation: "floatSlow 6s ease-in-out infinite",
             }} className="about-float-badge">
-              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: 18, color: "#7B1034", lineHeight: 1.1 }}>10+</span>
-              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#C5922A", marginTop: 2 }}>Years Wisdom</span>
+              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: "clamp(1.6rem, 2.2vw, 1.8rem)", color: "#8E6D3D", lineHeight: 1.1 }}>10+</span>
+              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.8rem, 1vw, 0.9rem)", letterSpacing: "0.14em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 2 }}>Years Wisdom</span>
             </div>
 
             {/* Bottom-Right Floating Badge */}
@@ -166,10 +166,10 @@ const AboutUsPage = () => (
               right: "-12%",
               zIndex: 10,
               background: "linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,246,238,0.85) 100%)",
-              border: "1px solid rgba(197,146,42,0.28)",
+              border: "1px solid rgba(142,109,61,0.28)",
               borderRadius: 16,
               padding: "10px 18px",
-              boxShadow: "0 10px 24px -6px rgba(91,10,36,0.08)",
+              boxShadow: "0 10px 24px -6px rgba(68,65,54,0.08)",
               backdropFilter: "blur(10px)",
               WebkitBackdropFilter: "blur(10px)",
               display: "flex",
@@ -178,8 +178,8 @@ const AboutUsPage = () => (
               animation: "floatSlow 6s ease-in-out infinite",
               animationDelay: "3s",
             }} className="about-float-badge">
-              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: 18, color: "#7B1034", lineHeight: 1.1 }}>5000+</span>
-              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#C5922A", marginTop: 2 }}>Happy Clients</span>
+              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: "clamp(1.6rem, 2.2vw, 1.8rem)", color: "#8E6D3D", lineHeight: 1.1 }}>5000+</span>
+              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.8rem, 1vw, 0.9rem)", letterSpacing: "0.14em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 2 }}>Happy Clients</span>
             </div>
 
             {/* Main Image Container in Arch Style */}
@@ -187,9 +187,9 @@ const AboutUsPage = () => (
               position: "relative",
               borderRadius: "12rem 12rem 2rem 2rem",
               overflow: "hidden",
-              border: "1px solid rgba(197,146,42,0.22)",
-              boxShadow: "0 28px 64px -14px rgba(91,10,36,0.14), 0 0 30px rgba(197,146,42,0.06)",
-              background: "#FDF6EE",
+              border: "1px solid rgba(142,109,61,0.22)",
+              boxShadow: "0 28px 64px -14px rgba(68,65,54,0.14), 0 0 30px rgba(142,109,61,0.06)",
+              background: "#FFFFFF",
               zIndex: 2,
               transition: "all 0.5s ease",
             }} className="about-portrait-card">
@@ -206,37 +206,33 @@ const AboutUsPage = () => (
 
         {/* RIGHT COLUMN: Editorial Description & Bio */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }} className="anim-fadeup">
-          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10, letterSpacing: "0.26em", textTransform: "uppercase", color: "#C5922A", marginBottom: 12 }}>
+          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>
             Her Journey
           </p>
-          <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "clamp(2rem, 4vw, 3.2rem)", color: "#7B1034", lineHeight: 1.15, marginBottom: 20 }}>
+          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem, 3.2vw, 2.4rem)", color: "#8E6D3D", lineHeight: 1.15, marginBottom: 20 }}>
             A Decade of Cosmic Guidance
           </h2>
           <OrnDivider className="w-full" style={{ maxWidth: 460, marginBottom: 24 } as React.CSSProperties} />
 
-          <div style={{ display: "flex", flexDirection: "column", gap: 16, fontFamily: "Poppins, sans-serif", fontSize: 14.5, lineHeight: 1.95, color: "rgba(58,32,16,0.76)" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16, fontFamily: "Poppins, sans-serif", fontSize: 14.5, lineHeight: 1.95, color: "rgba(40,22,10,0.82)" }}>
             <p>
-              <strong style={{ color: "#7B1034", fontWeight: 600 }}>Manjuu Mehta</strong> is a certified professional Vastu Advisor, Vedic Astrologer and Karmic Numerologist, based in the sacred, eternal city of <strong style={{ color: "#7B1034", fontWeight: 600 }}>Haridwar, Uttarakhand</strong> — a holy land that has served as the nursery of cosmic wisdom for five millennia.
+              <strong style={{ color: "#8E6D3D", fontWeight: 600 }}>Manjuu Mehta</strong> is a certified professional Vastu Advisor, Vedic Astrologer, and Karmic Numerologist based in the holy city of <strong style={{ color: "#8E6D3D", fontWeight: 600 }}>Haridwar, Uttarakhand</strong>. With over a decade of professional practice, she has transformed the lives of thousands of seekers worldwide.
             </p>
             <p>
-              Her path into the ancient sciences was born of a personal calling — a profound recognition that the cosmos communicates through a precise, mathematical tapestry of numbers, celestial movements, and spatial energies. What began as a dedicated spiritual quest soon matured into a lifelong calling of service, guiding individuals out of confusion and into aligned paths of abundance and harmony.
-            </p>
-            <p>
-              Over a decade of meticulous practice, she has counseled a distinguished clientele spanning across India and major international hubs. Her approach balances rigor and empathy in equal measure; she firmly rejects generic formulas, carving out highly custom, actionable prescriptions rooted in pure classical tradition.
+              Her approach balances rigorous ancient wisdom and modern clarity. By decoding celestial blueprints and spatial energy maps, she provides highly customized, practical remedies that empower individuals and businesses to step into their highest alignment.
             </p>
             
             {/* Elegant Quotation block inside Bio */}
             <div style={{
-              borderLeft: "2.5px solid #C5922A",
+              borderLeft: "2.5px solid #8E6D3D",
               paddingLeft: 20,
               margin: "12px 0 8px",
               maxWidth: 580,
-              fontStyle: "italic",
             }}>
-              <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 17.5, lineHeight: 1.8, color: "#7B1034", fontWeight: 500 }}>
+              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A" }}>
                 "Every physical space has a soul, and every planetary chart is a cosmic map. My mission is to decode these blueprints, letting seekers step into their absolute divine alignment."
               </p>
-              <p style={{ fontFamily: "Cinzel, serif", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#C5922A", marginTop: 8, fontWeight: 700 }}>
+              <p style={{ fontFamily: "Cinzel, serif", fontSize: "clamp(0.85rem, 1.2vw, 1rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 8, fontWeight: 700 }}>
                 — Manjuu Mehta
               </p>
             </div>
@@ -250,13 +246,117 @@ const AboutUsPage = () => (
         }
         .about-portrait-card:hover {
           transform: scale(1.015) translateY(-4px);
-          box-shadow: 0 32px 72px -12px rgba(91,10,36,0.20), 0 0 40px rgba(197,146,42,0.12) !important;
+          box-shadow: 0 32px 72px -12px rgba(68,65,54,0.20), 0 0 40px rgba(142,109,61,0.12) !important;
         }
         .about-portrait-card:hover .about-portrait-img {
           transform: scale(1.03);
         }
         @media (max-width: 768px) {
           .about-float-badge { display: none !important; }
+        }
+      `}</style>
+    </section>
+
+    {/* ── VIP Honors & Prestige Badges (Sohini Sastri Inspired) ── */}
+    <section style={{
+      padding: "56px 0",
+      background: "linear-gradient(90deg, rgba(142,109,61,0.03) 0%, rgba(142,109,61,0.06) 50%, rgba(142,109,61,0.03) 100%)",
+      borderTop: "1px solid rgba(142,109,61,0.18)",
+      borderBottom: "1px solid rgba(142,109,61,0.18)",
+      position: "relative",
+      zIndex: 10,
+    }}>
+      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px" }}>
+        
+        {/* Subtle decorative scroll at top of section */}
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 28 }}>
+          <svg width="60" height="10" viewBox="0 0 144 24" fill="none">
+            <path d="M10 12C35 12 45 5 72 12C80 16 82 16 72 12C99 5 109 12 134 12" stroke="#8E6D3D" strokeWidth="1.2" strokeLinecap="round" opacity="0.8"/>
+            <circle cx="72" cy="12" r="3" fill="#8E6D3D" opacity="0.85"/>
+          </svg>
+        </div>
+
+        <h3 className="font-cinzel text-center tracking-[0.22em] uppercase font-bold mb-10" style={{ color: "#8E6D3D", fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)" }}>
+          ✦ VIP Recognition &amp; Elite Accolades ✦
+        </h3>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(1, 1fr)", gap: 20 }} className="prestige-badge-grid">
+          {[
+            {
+              icon: Award,
+              title: "Jyotish Mahakumbh Award",
+              subtitle: "Uttarakhand CM Honoree",
+              desc: "Presented directly by CM Shri Pushkar Singh Dhami for exceptional contributions to Vedic sciences.",
+            },
+            {
+              icon: Star,
+              title: "AIFAS Elite Member",
+              subtitle: "All India Astrologers Society",
+              desc: "Elite member status in the nation's premier, gold-standard academic council.",
+            },
+            {
+              icon: Sparkles,
+              title: "Certified Vastu Expert",
+              subtitle: "Space & Energy Auditor",
+              desc: "Certified practitioner of elemental spatial correction and Vastu Shastra remedies.",
+            },
+            {
+              icon: Globe,
+              title: "International Consultant",
+              subtitle: "Serving Seekers Globally",
+              desc: "Serving a distinguished clientele across India, USA, UK, Canada, UAE, and Singapore.",
+            },
+          ].map((badge, idx) => (
+            <div
+              key={badge.title}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                padding: "24px 20px",
+                background: "rgba(255, 255, 255, 0.70)",
+                border: "1px solid rgba(142, 109, 61, 0.20)",
+                borderRadius: 16,
+                boxShadow: "0 4px 20px -8px rgba(68,65,54,0.04)",
+                transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                animation: `fadeUp 0.8s ease ${idx * 0.08}s both`,
+              }}
+              className="prestige-card"
+            >
+              {/* Badge Icon */}
+              <div 
+                className="w-11 h-11 rounded-full flex items-center justify-center mb-4 card-icon-badge"
+                style={{ background: "#FFFFFF", border: "1px solid rgba(142,109,61,0.28)", transition: "all 0.4s ease" }}
+              >
+                <badge.icon className="w-5 h-5 icon-svg" strokeWidth={1.7} style={{ color: "#8E6D3D", transition: "all 0.4s ease" }} />
+              </div>
+              <h4 className="font-cinzel font-bold" style={{ color: "#8E6D3D", fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}>{badge.title}</h4>
+              <p className="font-poppins tracking-[0.18em] uppercase font-bold mt-1 mb-2.5" style={{ color: "#8E6D3D", fontSize: "clamp(0.8rem, 1vw, 0.9rem)" }}>{badge.subtitle}</p>
+              <p className="font-poppins leading-relaxed text-foreground/70" style={{ color: "rgba(40,22,10,0.65)", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)" }}>{badge.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <style>{`
+        @media (min-width: 640px) {
+          .prestige-badge-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        @media (min-width: 1024px) {
+          .prestige-badge-grid { grid-template-columns: repeat(4, 1fr) !important; }
+        }
+        .prestige-card:hover {
+          transform: translateY(-4px);
+          background: #ffffff !important;
+          border-color: rgba(142, 109, 61, 0.48) !important;
+          box-shadow: 0 14px 32px -10px rgba(68,65,54,0.08) !important;
+        }
+        .prestige-card:hover .card-icon-badge {
+          background: #8E6D3D !important;
+          border-color: #8E6D3D !important;
+        }
+        .prestige-card:hover .icon-svg {
+          color: #FFFFFF !important;
         }
       `}</style>
     </section>
@@ -271,8 +371,8 @@ const AboutUsPage = () => (
               borderRadius: 16,
               textAlign: "center",
               background: "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(253,246,238,0.60) 100%)",
-              border: "1px solid rgba(197,146,42,0.20)",
-              boxShadow: "0 6px 20px -8px rgba(91,10,36,0.06)",
+              border: "1px solid rgba(142,109,61,0.20)",
+              boxShadow: "0 6px 20px -8px rgba(68,65,54,0.06)",
               transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
               animation: `fadeUp 0.8s ease ${i * 0.08}s both`,
               position: "relative",
@@ -294,9 +394,9 @@ const AboutUsPage = () => (
               transformOrigin: "center",
             }} />
 
-            <div style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: 36, color: "#7B1034", lineHeight: 1.1 }}>{s.value}</div>
-            <div style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 9, letterSpacing: "0.20em", textTransform: "uppercase", color: "#C5922A", marginTop: 8, lineHeight: 1.2 }}>{s.label}</div>
-            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: 10.5, color: "rgba(58,32,16,0.55)", marginTop: 6, lineHeight: 1.3 }}>{s.desc}</div>
+            <div style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: "clamp(2rem, 3vw, 2.6rem)", color: "#8E6D3D", lineHeight: 1.1 }}>{s.value}</div>
+            <div style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.85rem, 1.2vw, 1rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 8, lineHeight: 1.2 }}>{s.label}</div>
+            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)", color: "rgba(58,32,16,0.55)", marginTop: 6, lineHeight: 1.3 }}>{s.desc}</div>
           </div>
         ))}
       </div>
@@ -305,8 +405,8 @@ const AboutUsPage = () => (
         .about-stat-card:hover {
           transform: translateY(-5px);
           background: rgba(255, 255, 255, 0.94) !important;
-          border-color: rgba(197, 146, 42, 0.50) !important;
-          box-shadow: 0 16px 36px -12px rgba(91,10,36,0.12), 0 0 10px rgba(197,146,42,0.08) !important;
+          border-color: rgba(142, 109, 61, 0.50) !important;
+          box-shadow: 0 16px 36px -12px rgba(68,65,54,0.12), 0 0 10px rgba(142,109,61,0.08) !important;
         }
         .about-stat-card:hover .card-top-line {
           transform: translateX(-50%) scaleX(1);
@@ -315,31 +415,31 @@ const AboutUsPage = () => (
     </section>
 
     {/* ── 4. Philosophy Section ─────────────────────────── */}
-    <section style={{ padding: "128px 0", background: "linear-gradient(160deg, #F5E6D2 0%, #EDD8BE 100%)", position: "relative", overflow: "hidden" }}>
+    <section style={{ padding: "128px 0", background: "linear-gradient(160deg, #FAF6F0 0%, #F2ECE2 100%)", position: "relative", overflow: "hidden" }}>
       <div className="sparkle-field" style={{ opacity: 0.25 }} />
       <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 2 }}>
         <div style={{ textAlign: "center", marginBottom: 44 }}>
-          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10, letterSpacing: "0.26em", textTransform: "uppercase", color: "#C5922A", marginBottom: 12 }}>Core Philosophy</p>
-          <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "clamp(2rem,4vw,3.2rem)", color: "#7B1034", marginBottom: 20 }}>The Cosmos is a Living Scripture</h2>
+          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>Core Philosophy</p>
+          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem,3.2vw,2.4rem)", color: "#8E6D3D", marginBottom: 20 }}>The Cosmos is a Living Scripture</h2>
           <OrnDivider />
         </div>
         
         <div style={{
           background: "rgba(255,255,255,0.45)",
-          border: "1px solid rgba(197,146,42,0.18)",
+          border: "1px solid rgba(142,109,61,0.18)",
           borderRadius: 24,
           padding: "44px 38px",
           backdropFilter: "blur(8px)",
-          boxShadow: "0 12px 32px -8px rgba(91,10,36,0.05)",
+          boxShadow: "0 12px 32px -8px rgba(68,65,54,0.05)",
         }}>
-          <blockquote style={{ borderLeft: "3px solid #C5922A", paddingLeft: 28, marginBottom: 28 }}>
-            <p style={{ fontFamily: "Cormorant Garamond, serif", fontStyle: "italic", fontSize: "clamp(1.15rem,2.4vw,1.4rem)", lineHeight: 1.85, color: "#3A2010", fontWeight: 500 }}>
+          <blockquote style={{ borderLeft: "3px solid #8E6D3D", paddingLeft: 28, marginBottom: 28 }}>
+            <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.85, color: "#28160A" }}>
               "I believe that every single seeker arrives in this world mapped with a highly distinct cosmic signature — a celestial blueprint written in the stars at the precise breath of birth. My work is simply to read that blueprint with absolute transparency, assisting the seeker to walk their destined path with clarity, power, and boundless grace."
             </p>
-            <footer style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.20em", textTransform: "uppercase", color: "#7B1034", marginTop: 18 }}>— Manjuu Mehta</footer>
+            <footer style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.85rem, 1.2vw, 1rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 18 }}>— Manjuu Mehta</footer>
           </blockquote>
           
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 14.5, lineHeight: 1.9, color: "rgba(58,32,16,0.72)" }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 14.5, lineHeight: 1.9, color: "rgba(40,22,10,0.82)" }}>
             She maintains that the sacred architectures of Vastu Shastra, planetary coordinates of Jyotisha, and cosmic equations of Numerology are not superstitious beliefs but deeply scientific and empirical sciences. Cultivated, refined, and verified over five thousand years by India's greatest sages, they remain the most powerful tools available to align our modern lives with natural, cosmic flow.
           </p>
         </div>
@@ -358,8 +458,8 @@ const AboutUsPage = () => (
                 padding: "36px 32px",
                 borderRadius: 20,
                 background: "rgba(255,255,255,0.78)",
-                border: "1px solid rgba(197,146,42,0.18)",
-                boxShadow: "0 8px 24px -10px rgba(91,10,36,0.06)",
+                border: "1px solid rgba(142,109,61,0.18)",
+                boxShadow: "0 8px 24px -10px rgba(68,65,54,0.06)",
                 transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
                 animation: `fadeUp 0.8s ease ${i * 0.08}s both`,
                 position: "relative",
@@ -385,18 +485,18 @@ const AboutUsPage = () => (
                 width: 48,
                 height: 48,
                 borderRadius: "50%",
-                background: "#FDF6EE",
-                border: "1px solid rgba(197,146,42,0.28)",
+                background: "#FFFFFF",
+                border: "1px solid rgba(142,109,61,0.28)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 marginBottom: 20,
                 transition: "all 0.4s ease",
               }}>
-                <c.icon className="icon-svg" size={20} strokeWidth={1.2} style={{ color: "#C5922A", transition: "all 0.4s ease" }} />
+                <c.icon className="icon-svg" size={20} strokeWidth={1.7} style={{ color: "#8E6D3D", transition: "all 0.4s ease" }} />
               </div>
 
-              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 13.5, letterSpacing: "0.06em", color: "#7B1034", marginBottom: 12 }}>
+              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 12 }}>
                 {c.title}
               </h3>
               <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 13.5, lineHeight: 1.8, color: "rgba(58,32,16,0.68)" }}>
@@ -412,26 +512,26 @@ const AboutUsPage = () => (
           .about-interactive-card:hover {
             transform: translateY(-5px);
             background: #ffffff !important;
-            border-color: rgba(197, 146, 42, 0.48) !important;
-            box-shadow: 0 20px 48px -12px rgba(91,10,36,0.12), 0 0 10px rgba(197,146,42,0.08) !important;
+            border-color: rgba(142, 109, 61, 0.48) !important;
+            box-shadow: 0 20px 48px -12px rgba(68,65,54,0.12), 0 0 10px rgba(142,109,61,0.08) !important;
           }
           .about-interactive-card:hover .card-top-line {
             transform: translateX(-50%) scaleX(1);
           }
           .about-interactive-card:hover .card-icon-badge {
-            background: #7B1034 !important;
-            border-color: #7B1034 !important;
+            background: #8E6D3D !important;
+            border-color: #8E6D3D !important;
             transform: scale(1.08);
           }
           .about-interactive-card:hover .icon-svg {
-            color: #FAF0E4 !important;
+            color: #FFFFFF !important;
           }
         `}</style>
       </div>
     </section>
 
     {/* ── 6. Core Values ────────────────────────── */}
-    <section style={{ padding: "116px 0", background: "linear-gradient(180deg, #F5E6D2 0%, #FAF0E4 100%)" }}>
+    <section style={{ padding: "116px 0", background: "linear-gradient(180deg, #FAF6F0 0%, #FFFFFF 100%)" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 32px" }}>
         <SectionHeader sup="Pillars of Practice" title="Core Values" />
         
@@ -444,8 +544,8 @@ const AboutUsPage = () => (
                 padding: "32px 28px",
                 borderRadius: 20,
                 background: "rgba(255,255,255,0.78)",
-                border: "1px solid rgba(197,146,42,0.18)",
-                boxShadow: "0 8px 24px -10px rgba(91,10,36,0.05)",
+                border: "1px solid rgba(142,109,61,0.18)",
+                boxShadow: "0 8px 24px -10px rgba(68,65,54,0.05)",
                 transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
                 animation: `fadeUp 0.8s ease ${i * 0.1}s both`,
                 position: "relative",
@@ -471,19 +571,19 @@ const AboutUsPage = () => (
                 width: 52,
                 height: 52,
                 borderRadius: "50%",
-                background: "#FDF6EE",
-                border: "1px solid rgba(197,146,42,0.28)",
+                background: "#FFFFFF",
+                border: "1px solid rgba(142,109,61,0.28)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 flexShrink: 0,
                 transition: "all 0.4s ease",
               }}>
-                <v.icon className="icon-svg" size={22} strokeWidth={1.2} style={{ color: "#C5922A", transition: "all 0.4s ease" }} />
+                <v.icon className="icon-svg" size={22} strokeWidth={1.7} style={{ color: "#8E6D3D", transition: "all 0.4s ease" }} />
               </div>
               
               <div>
-                <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 13.5, letterSpacing: "0.06em", color: "#7B1034", marginBottom: 8 }}>
+                <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 8 }}>
                   {v.title}
                 </h3>
                 <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 13.5, lineHeight: 1.8, color: "rgba(58,32,16,0.68)" }}>
@@ -507,7 +607,7 @@ const AboutUsPage = () => (
         <div style={{
           position: "relative",
           paddingLeft: 44,
-          borderLeft: "1.5px solid rgba(197,146,42,0.24)",
+          borderLeft: "1.5px solid rgba(142,109,61,0.24)",
           marginLeft: 12,
           display: "flex",
           flexDirection: "column",
@@ -541,8 +641,8 @@ const AboutUsPage = () => (
                 zIndex: 2,
               }} className="timeline-bullet">
                 <svg viewBox="0 0 100 100" width="100%" height="100%">
-                  <polygon points="50,10 90,50 50,90 10,50" fill="#7B1034" stroke="#FAF0E4" strokeWidth="12" />
-                  <polygon points="50,25 75,50 50,75 25,50" fill="#C5922A" />
+                  <polygon points="50,10 90,50 50,90 10,50" fill="#8E6D3D" stroke="#FFFFFF" strokeWidth="12" />
+                  <polygon points="50,25 75,50 50,75 25,50" fill="#8E6D3D" />
                 </svg>
               </div>
 
@@ -550,15 +650,15 @@ const AboutUsPage = () => (
               <div style={{
                 padding: "24px 28px",
                 background: "linear-gradient(135deg, rgba(255,255,255,0.76) 0%, rgba(253,246,238,0.50) 100%)",
-                border: "1px solid rgba(197,146,42,0.16)",
+                border: "1px solid rgba(142,109,61,0.16)",
                 borderRadius: 16,
-                boxShadow: "0 4px 18px -6px rgba(91,10,36,0.04)",
+                boxShadow: "0 4px 18px -6px rgba(68,65,54,0.04)",
                 transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
               }} className="timeline-card">
-                <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10.5, letterSpacing: "0.20em", textTransform: "uppercase", color: "#C5922A", marginBottom: 6 }}>
+                <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10.5, letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 6 }}>
                   {item.year}
                 </p>
-                <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 14, letterSpacing: "0.02em", color: "#7B1034", marginBottom: 8 }}>
+                <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)", letterSpacing: "0.02em", color: "#8E6D3D", marginBottom: 8 }}>
                   {item.title}
                 </h3>
                 <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 13.5, lineHeight: 1.75, color: "rgba(58,32,16,0.68)" }}>
@@ -573,12 +673,12 @@ const AboutUsPage = () => (
         .about-timeline-block:hover .timeline-card {
           transform: translateX(6px);
           background: #ffffff !important;
-          border-color: rgba(197, 146, 42, 0.40) !important;
-          box-shadow: 0 12px 30px -10px rgba(91,10,36,0.08) !important;
+          border-color: rgba(142, 109, 61, 0.40) !important;
+          box-shadow: 0 12px 30px -10px rgba(68,65,54,0.08) !important;
         }
         .about-timeline-block:hover .timeline-bullet {
           transform: scale(1.22) rotate(45deg);
-          filter: drop-shadow(0 0 4px rgba(197,146,42,0.40));
+          filter: drop-shadow(0 0 4px rgba(142,109,61,0.40));
         }
         .timeline-bullet {
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -589,7 +689,7 @@ const AboutUsPage = () => (
     {/* ── 8. Overhauled High-Contrast CTA Section ───────────────────────────────── */}
     <section style={{
       padding: "128px 0",
-      background: "linear-gradient(135deg, #7B1034 0%, #4A081F 100%)",
+      background: "linear-gradient(135deg, #8E6D3D 0%, #2C2922 100%)",
       textAlign: "center",
       position: "relative",
       overflow: "hidden",
@@ -607,7 +707,7 @@ const AboutUsPage = () => (
         pointerEvents: "none",
         zIndex: 0,
       }}>
-        <svg viewBox="0 0 100 100" fill="none" stroke="#C5922A" strokeWidth="0.5">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.5">
           <circle cx="50" cy="50" r="48" />
           <circle cx="50" cy="50" r="38" strokeDasharray="1 1" />
           <polygon points="50,2 98,50 50,98 2,50" />
@@ -625,7 +725,7 @@ const AboutUsPage = () => (
         width: "50%",
         maxWidth: 500,
         aspectRatio: "1",
-        background: "radial-gradient(circle, rgba(197,146,42,0.18) 0%, transparent 70%)",
+        background: "radial-gradient(circle, rgba(142,109,61,0.18) 0%, transparent 70%)",
         filter: "blur(60px)",
         pointerEvents: "none",
         zIndex: 0,
@@ -634,18 +734,18 @@ const AboutUsPage = () => (
       <div className="sparkle-field" style={{ opacity: 0.28 }} />
 
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 1 }} className="anim-fadeup">
-        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10.5, letterSpacing: "0.26em", textTransform: "uppercase", color: "#FAF0E4", marginBottom: 14 }}>
+        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.20em", textTransform: "uppercase", color: "#FFFFFF", marginBottom: 14 }}>
           ✦ Book Your Personalized Consultation Today ✦
         </p>
         
         <h2 style={{
-          fontFamily: "Cormorant Garamond, serif",
+          fontFamily: "Cinzel, serif",
           fontWeight: 700,
-          fontSize: "clamp(2.2rem, 5vw, 3.8rem)",
-          color: "#FAF0E4",
-          lineHeight: 1.15,
+          fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)",
+          color: "#FFFFFF",
+          lineHeight: 1.2,
           marginBottom: 24,
-          letterSpacing: "0.01em",
+          letterSpacing: "0.02em",
         }}>
           Ready to Step Into Your Divine Alignment?
         </h2>
@@ -653,11 +753,10 @@ const AboutUsPage = () => (
         <OrnDivider className="w-full" style={{ maxWidth: 480, margin: "0 auto" } as React.CSSProperties} />
         
         <p style={{
-          fontFamily: "Cormorant Garamond, serif",
-          fontStyle: "italic",
-          fontSize: "clamp(1.15rem, 2.4vw, 1.45rem)",
-          lineHeight: 1.8,
-          color: "rgba(250,240,228,0.80)",
+          fontFamily: "Poppins, sans-serif",
+          fontSize: "15px",
+          lineHeight: "1.95",
+          color: "rgba(250,240,228,0.90)",
           margin: "24px auto 44px",
           maxWidth: 580,
         }}>
@@ -672,17 +771,17 @@ const AboutUsPage = () => (
             style={{
               fontFamily: "Cinzel, serif",
               fontWeight: 700,
-              fontSize: 10,
+              fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
               letterSpacing: "0.20em",
               textTransform: "uppercase",
-              color: "#7B1034",
-              background: "linear-gradient(135deg, #FDF6EE 0%, #C5922A 100%)",
+              color: "#8E6D3D",
+              background: "linear-gradient(135deg, #FFFFFF 0%, #8E6D3D 100%)",
               padding: "16px 36px",
               borderRadius: 999,
               display: "inline-block",
               transition: "all 0.4s ease",
-              border: "1.5px solid #C5922A",
-              boxShadow: "0 8px 30px -10px rgba(197,146,42,0.40)",
+              border: "1.5px solid #8E6D3D",
+              boxShadow: "0 8px 30px -10px rgba(142,109,61,0.40)",
             }}
             className="cta-primary-btn"
           >
@@ -696,10 +795,10 @@ const AboutUsPage = () => (
             style={{
               fontFamily: "Cinzel, serif",
               fontWeight: 700,
-              fontSize: 10,
+              fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
               letterSpacing: "0.20em",
               textTransform: "uppercase",
-              color: "#FAF0E4",
+              color: "#FFFFFF",
               background: "rgba(255,255,255,0.08)",
               padding: "15px 34px",
               borderRadius: 999,
@@ -707,7 +806,7 @@ const AboutUsPage = () => (
               alignItems: "center",
               gap: 8,
               transition: "all 0.4s ease",
-              border: "1.5px solid rgba(197,146,42,0.45)",
+              border: "1.5px solid rgba(142,109,61,0.45)",
             }}
             className="cta-secondary-btn"
           >
@@ -723,7 +822,7 @@ const AboutUsPage = () => (
             fontSize: 9.5,
             letterSpacing: "0.18em",
             textTransform: "uppercase",
-            color: "#C5922A",
+            color: "#8E6D3D",
             fontWeight: 700,
           }}>
             ✦ Priority response within 2–4 Hours ✦
@@ -733,15 +832,15 @@ const AboutUsPage = () => (
       <style>{`
         .cta-primary-btn:hover {
           transform: translateY(-3px);
-          box-shadow: 0 16px 40px -8px rgba(197,146,42,0.60) !important;
-          background: #FAF0E4 !important;
-          border-color: #FAF0E4 !important;
+          box-shadow: 0 16px 40px -8px rgba(142,109,61,0.60) !important;
+          background: #FFFFFF !important;
+          border-color: #FFFFFF !important;
         }
         .cta-secondary-btn:hover {
           transform: translateY(-3px);
-          background: #FAF0E4 !important;
-          color: #7B1034 !important;
-          border-color: #FAF0E4 !important;
+          background: #FFFFFF !important;
+          color: #8E6D3D !important;
+          border-color: #FFFFFF !important;
           box-shadow: 0 16px 40px -12px rgba(250,240,228,0.22) !important;
         }
         @media (max-width: 500px) {

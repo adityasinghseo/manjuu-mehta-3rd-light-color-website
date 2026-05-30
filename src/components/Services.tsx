@@ -2,12 +2,12 @@ import { Compass, Sparkles, Hash, HeartHandshake, Briefcase, Gem } from "lucide-
 import { OrnDivider } from "./SiteNav";
 
 const SERVICES = [
-  { deva: "वास्तु शास्त्र",   title: "Vastu Consultation",    desc: "Harmonize homes and workplaces with the five elements and directional energies for prosperity and peace.",          Icon: Compass },
-  { deva: "ज्योतिष",          title: "Vedic Astrology",        desc: "Personalised birth chart readings, Mahadasha analysis and remedies aligned with your planetary blueprint.",        Icon: Sparkles },
-  { deva: "अंक शास्त्र",      title: "Karmic Numerology",      desc: "Decode the vibrations of your name and date of birth to unlock your soul's purpose and life path.",              Icon: Hash },
-  { deva: "विवाह मिलन",       title: "Match Making",           desc: "Ashta-Koota compatibility readings to bless unions with harmony, longevity and shared destiny.",                  Icon: HeartHandshake },
-  { deva: "व्यापार परामर्श",  title: "Business Guidance",      desc: "Strategic Vastu and astrological counsel for entrepreneurs and enterprises seeking aligned growth.",             Icon: Briefcase },
-  { deva: "रत्न परामर्श",     title: "Gemstone Counsel",       desc: "Sacred stones recommended through precise planetary analysis to amplify benefic cosmic energies.",              Icon: Gem },
+  { deva: "वास्तु शास्त्र",   title: "Vastu Consultation",    desc: "Harmonize your home or workplace with natural energies to attract lasting health, wealth, and peace.",          Icon: Compass },
+  { deva: "ज्योतिष",          title: "Vedic Astrology",        desc: "Understand your cosmic map through precise birth chart readings and practical, empowering remedies.",        Icon: Sparkles },
+  { deva: "अंक शास्त्र",      title: "Karmic Numerology",      desc: "Decode the vibrational energy of your name and birth date to unlock your true destiny and potential.",              Icon: Hash },
+  { deva: "विवाह मिलन",       title: "Match Making",           desc: "Bless your marriage with cosmic harmony. Comprehensive Kundali matching for soul-level compatibility.",                  Icon: HeartHandshake },
+  { deva: "व्यापार परामर्श",  title: "Business Guidance",      desc: "Choose auspicious launch timings, names, and spatial alignments to drive profitable business growth.",             Icon: Briefcase },
+  { deva: "रत्न परामर्श",     title: "Gemstone Counsel",       desc: "Strengthen favorable planetary energies with carefully analyzed, certified therapeutic gemstones.",              Icon: Gem },
 ];
 
 const Services = ({ limit }: { limit?: number }) => {
@@ -17,7 +17,7 @@ const Services = ({ limit }: { limit?: number }) => {
       id="services"
       style={{
         padding: "116px 0",
-        background: "linear-gradient(180deg, #F5E6D2 0%, #FAF0E4 100%)",
+        background: "linear-gradient(180deg, #FAF6F0 0%, #FFFFFF 100%)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -34,7 +34,7 @@ const Services = ({ limit }: { limit?: number }) => {
         pointerEvents: "none",
         zIndex: 0,
       }}>
-        <svg viewBox="0 0 100 100" fill="none" stroke="#C5922A" strokeWidth="0.6">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.6">
           <circle cx="50" cy="50" r="48" />
           <polygon points="50,2 98,50 50,98 2,50" transform="rotate(45 50 50)" />
         </svg>
@@ -45,12 +45,12 @@ const Services = ({ limit }: { limit?: number }) => {
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 2 }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10, letterSpacing: "0.26em", textTransform: "uppercase", color: "#C5922A", marginBottom: 12 }}>Offerings</p>
-          <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "clamp(2rem,4vw,3.2rem)", color: "#7B1034", marginBottom: 20 }}>Sacred Services</h2>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>Offerings</p>
+          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20, lineHeight: 1.2 }}>Sacred Services</h2>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <OrnDivider className="w-full" style={{ maxWidth: 360 } as React.CSSProperties} />
           </div>
-          <p style={{ fontFamily: "Cormorant Garamond, serif", fontStyle: "italic", fontSize: 17.5, color: "rgba(58,32,16,0.68)", marginTop: 14, maxWidth: 540, marginLeft: "auto", marginRight: "auto", lineHeight: 1.6 }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A", marginTop: 16, maxWidth: 520, marginLeft: "auto", marginRight: "auto" }}>
             Precision-crafted consultations rooted in ancient wisdom, delivered with modern clarity.
           </p>
         </div>
@@ -64,9 +64,9 @@ const Services = ({ limit }: { limit?: number }) => {
               style={{
                 padding: "38px 32px",
                 background: "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(253,246,238,0.60) 100%)",
-                border: "1px solid rgba(197,146,42,0.18)",
+                border: "1px solid rgba(142,109,61,0.18)",
                 borderRadius: 16,
-                boxShadow: "0 10px 30px -12px rgba(91,10,36,0.04)",
+                boxShadow: "0 10px 30px -12px rgba(68,65,54,0.04)",
                 transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
                 position: "relative",
                 overflow: "hidden",
@@ -81,7 +81,7 @@ const Services = ({ limit }: { limit?: number }) => {
                 left: 0,
                 right: 0,
                 height: 3.5,
-                background: "linear-gradient(90deg, #C5922A 0%, #FAF0E4 50%, #7B1034 100%)",
+                background: "linear-gradient(90deg, #8E6D3D 0%, #FFFFFF 50%, #8E6D3D 100%)",
                 transform: "scaleX(0)",
                 transformOrigin: "left",
                 transition: "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -90,38 +90,38 @@ const Services = ({ limit }: { limit?: number }) => {
 
               {/* Ghost icon */}
               <div style={{ position: "absolute", right: -8, bottom: -8, opacity: 0.04, pointerEvents: "none", transition: "transform 0.8s ease" }} className="service-ghost-icon">
-                <s.Icon size={90} color="#7B1034" strokeWidth={0.6} />
+                <s.Icon size={90} color="#8E6D3D" strokeWidth={0.6} />
               </div>
 
               {/* Sanskrit label */}
-              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 11, fontStyle: "italic", color: "rgba(197,146,42,0.65)", marginBottom: 10, fontWeight: 500 }}>{s.deva}</p>
+              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.85rem, 1.2vw, 1rem)", color: "rgba(142,109,61,0.65)", marginBottom: 10, fontWeight: 500 }}>{s.deva}</p>
 
               {/* Icon - Refined with transition */}
               <div style={{
                 width: 48, height: 48, borderRadius: "50%",
                 background: "#FBF4EA",
-                border: "1px solid rgba(197,146,42,0.22)",
+                border: "1px solid rgba(142,109,61,0.22)",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 marginBottom: 16,
                 transition: "all 0.4s ease",
               }} className="service-icon-wrapper">
-                <s.Icon size={19} strokeWidth={1.2} color="#C5922A" />
+                <s.Icon size={19} strokeWidth={1.7} color="#8E6D3D" />
               </div>
 
-              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.10em", color: "#7B1034", marginBottom: 14 }}>{s.title}</h3>
-              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 13.5, lineHeight: 1.85, color: "rgba(58,32,16,0.70)", fontWeight: 400, marginBottom: 20 }}>{s.desc}</p>
+              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 12 }}>{s.title}</h3>
+              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A", marginBottom: 22 }}>{s.desc}</p>
               
               {/* Animated Enquire arrow */}
               <p style={{
-                fontFamily: "Cinzel, serif",
-                fontSize: 9,
-                fontWeight: 700,
-                letterSpacing: "0.18em",
+                fontFamily: "Poppins, sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                color: "#7B1034",
+                color: "#8E6D3D",
                 display: "inline-flex",
                 alignItems: "center",
-                gap: 4,
+                gap: 5,
                 cursor: "pointer",
                 transition: "transform 0.3s ease",
               }} className="service-enquire">
@@ -141,27 +141,27 @@ const Services = ({ limit }: { limit?: number }) => {
         .service-card:hover {
           transform: translateY(-6px);
           background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,246,238,0.72) 100%) !important;
-          border-color: rgba(197, 146, 42, 0.45) !important;
-          box-shadow: 0 20px 48px -16px rgba(91,10,36,0.08), 0 0 12px rgba(197,146,42,0.06) !important;
+          border-color: rgba(142, 109, 61, 0.45) !important;
+          box-shadow: 0 20px 48px -16px rgba(68,65,54,0.08), 0 0 12px rgba(142,109,61,0.06) !important;
         }
         .service-card:hover .service-top-line {
           transform: scaleX(1);
         }
         .service-card:hover .service-icon-wrapper {
           transform: scale(1.06) translateY(-1px);
-          background: #7B1034 !important;
-          border-color: #7B1034 !important;
-          box-shadow: 0 4px 12px rgba(123,16,52,0.25);
+          background: #8E6D3D !important;
+          border-color: #8E6D3D !important;
+          box-shadow: 0 4px 12px rgba(142,109,61,0.25);
         }
         .service-card:hover .service-icon-wrapper svg {
-          color: #FAF0E4 !important;
+          color: #FFFFFF !important;
         }
         .service-card:hover .service-ghost-icon {
           transform: scale(1.08) rotate(3deg);
           opacity: 0.07;
         }
         .service-card:hover .service-enquire {
-          color: #C5922A !important;
+          color: #8E6D3D !important;
         }
         .service-card:hover .enquire-arrow {
           transform: translateX(4px);

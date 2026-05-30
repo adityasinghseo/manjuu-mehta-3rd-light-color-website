@@ -20,7 +20,7 @@ const Rashis = () => (
         <p className="font-sanskrit text-primary/70 text-xl mb-3">द्वादश राशयः</p>
         <h2 className="font-display text-4xl md:text-6xl text-gold mb-4">The Twelve Rashis</h2>
         <div className="mx-auto h-px w-32 bg-gradient-gold" />
-        <p className="mt-6 text-foreground/70 max-w-2xl mx-auto text-lg italic">
+        <p className="mt-6 text-foreground/70 max-w-2xl mx-auto text-lg">
           Each soul is born under a celestial sign — a sacred imprint of the moon's path among the stars.
         </p>
       </div>
@@ -39,7 +39,7 @@ const Rashis = () => (
               </div>
               <p className="font-sanskrit text-2xl text-primary/90">{r.deva}</p>
               <h3 className="font-display text-xl mt-2 text-foreground">{r.name}</h3>
-              <p className="text-sm text-muted-foreground italic">{r.en}</p>
+              <p className="text-base text-muted-foreground">{r.en}</p>
               <div className="mt-4 inline-block px-3 py-1 rounded-full text-xs tracking-widest font-display uppercase border border-primary/30 text-primary/80">
                 {r.element}
               </div>

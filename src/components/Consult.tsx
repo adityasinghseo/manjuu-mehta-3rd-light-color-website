@@ -6,9 +6,9 @@ const Consult = () => (
     id="consult"
     style={{
       padding: "128px 0",
-      background: "linear-gradient(135deg, #7B1034 0%, #4A081F 100%)",
-      borderTop: "1px solid rgba(197, 146, 42, 0.32)",
-      borderBottom: "1px solid rgba(197, 146, 42, 0.20)",
+      background: "linear-gradient(135deg, #8E6D3D 0%, #2C2922 100%)",
+      borderTop: "1px solid rgba(142, 109, 61, 0.32)",
+      borderBottom: "1px solid rgba(142, 109, 61, 0.20)",
       position: "relative",
       overflow: "hidden",
     }}
@@ -22,7 +22,7 @@ const Consult = () => (
       width: 540,
       height: 540,
       borderRadius: "50%",
-      background: "radial-gradient(circle, rgba(197,146,42,0.22) 0%, rgba(255,255,255,0.03) 45%, transparent 70%)",
+      background: "radial-gradient(circle, rgba(142,109,61,0.22) 0%, rgba(255,255,255,0.03) 45%, transparent 70%)",
       filter: "blur(64px)",
       pointerEvents: "none",
       zIndex: 0,
@@ -43,7 +43,7 @@ const Consult = () => (
       zIndex: 0,
       animation: "spinSlow 100s linear infinite",
     }}>
-      <svg viewBox="0 0 100 100" fill="none" stroke="#C5922A" strokeWidth="0.5">
+      <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.5">
         <circle cx="50" cy="50" r="48" />
         <circle cx="50" cy="50" r="38" strokeDasharray="2 2" />
         <polygon points="50,5 95,50 50,95 5,50" />
@@ -60,20 +60,20 @@ const Consult = () => (
       {/* Decorative Thinned Top Scroll */}
       <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
         <svg width="90" height="20" viewBox="0 0 160 36" fill="none">
-          <path d="M10 18C42 18 58 6 80 18C88 24 90 24 80 18C102 6 118 18 150 18" stroke="#C5922A" strokeWidth="1.5" strokeLinecap="round" opacity="0.85"/>
-          <circle cx="80" cy="18" r="4" fill="#C5922A" opacity="0.95"/>
-          <circle cx="62" cy="18" r="2.2" fill="#C5922A" opacity="0.70"/>
-          <circle cx="98" cy="18" r="2.2" fill="#C5922A" opacity="0.70"/>
+          <path d="M10 18C42 18 58 6 80 18C88 24 90 24 80 18C102 6 118 18 150 18" stroke="#8E6D3D" strokeWidth="1.5" strokeLinecap="round" opacity="0.85"/>
+          <circle cx="80" cy="18" r="4" fill="#8E6D3D" opacity="0.95"/>
+          <circle cx="62" cy="18" r="2.2" fill="#8E6D3D" opacity="0.70"/>
+          <circle cx="98" cy="18" r="2.2" fill="#8E6D3D" opacity="0.70"/>
         </svg>
       </div>
 
       {/* Pre-Title in Radiant Gold */}
-      <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10.5, letterSpacing: "0.24em", textTransform: "uppercase", color: "#C5922A", marginBottom: 16 }}>
+      <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 18 }}>
         Book Your Personalized Consultation Today
       </p>
 
       {/* Cinematic Headline in Cream */}
-      <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "clamp(2.4rem, 5.5vw, 3.8rem)", color: "#FAF0E4", lineHeight: 1.15, marginBottom: 24 }}>
+      <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.6rem, 3.8vw, 2.8rem)", color: "#FFFFFF", lineHeight: 1.2, marginBottom: 24 }}>
         Step Into Your Divine Alignment
       </h2>
 
@@ -83,16 +83,15 @@ const Consult = () => (
 
       {/* Emotionally Compelling Bio Call in soft Cream/Rose */}
       <p style={{
-        fontFamily: "Cormorant Garamond, serif",
-        fontStyle: "italic",
-        fontSize: "clamp(1.15rem, 2.5vw, 1.4rem)",
-        lineHeight: 1.85,
-        color: "rgba(250, 240, 228, 0.85)",
-        maxWidth: 620,
+        fontFamily: "Poppins, sans-serif",
+        fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)",
+        lineHeight: 1.9,
+        color: "rgba(250, 240, 228, 0.90)",
+        maxWidth: 580,
         margin: "0 auto 44px",
-        fontWeight: 500,
+        fontWeight: 400,
       }}>
-        "Step into a life of effortless abundance, deep clarity, and peace. Through a private cosmic reading, we will unlock your personalized roadmap to success, health, and harmonious growth."
+        Step into a life of effortless abundance, deep clarity, and peace. Through a private cosmic reading, we will unlock your personalized roadmap to success, health, and harmonious growth.
       </p>
 
       {/* Double CTA Buttons with High Contrast Hierarchy */}
@@ -105,25 +104,25 @@ const Consult = () => (
           style={{
             fontFamily: "Cinzel, serif",
             fontWeight: 700,
-            fontSize: 10.5,
+            fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
             letterSpacing: "0.20em",
             textTransform: "uppercase",
-            color: "#7B1034",
-            background: "linear-gradient(135deg, #FDF6EE 0%, #C5922A 100%)",
-            padding: "16px 38px",
+            color: "#8E6D3D",
+            background: "linear-gradient(135deg, #FFFFFF 0%, #8E6D3D 100%)",
+            padding: "16px 36px",
             borderRadius: 999,
-            border: "1px solid #C5922A",
-            boxShadow: "0 12px 32px -12px rgba(197, 146, 42, 0.50)",
+            border: "1px solid #8E6D3D",
+            boxShadow: "0 12px 32px -12px rgba(142, 109, 61, 0.50)",
             display: "inline-block",
             transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
           onMouseEnter={e => {
             e.currentTarget.style.transform = "translateY(-2px)";
-            e.currentTarget.style.boxShadow = "0 16px 40px -8px rgba(197, 146, 42, 0.65), 0 0 16px rgba(255, 255, 255, 0.22)";
+            e.currentTarget.style.boxShadow = "0 16px 40px -8px rgba(142, 109, 61, 0.65), 0 0 16px rgba(255, 255, 255, 0.22)";
           }}
           onMouseLeave={e => {
             e.currentTarget.style.transform = "none";
-            e.currentTarget.style.boxShadow = "0 12px 32px -12px rgba(197, 146, 42, 0.50)";
+            e.currentTarget.style.boxShadow = "0 12px 32px -12px rgba(142, 109, 61, 0.50)";
           }}
         >
           Book a Consultation
@@ -138,14 +137,14 @@ const Consult = () => (
           style={{
             fontFamily: "Cinzel, serif",
             fontWeight: 700,
-            fontSize: 10.5,
+            fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
             letterSpacing: "0.20em",
             textTransform: "uppercase",
-            color: "#FAF0E4",
+            color: "#FFFFFF",
             background: "rgba(255, 255, 255, 0.08)",
-            padding: "15px 36px",
+            padding: "16px 36px",
             borderRadius: 999,
-            border: "1.5px solid rgba(197, 146, 42, 0.65)",
+            border: "1.5px solid rgba(142, 109, 61, 0.65)",
             display: "inline-flex",
             alignItems: "center",
             gap: 8,
@@ -153,16 +152,16 @@ const Consult = () => (
             transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
           onMouseEnter={e => {
-            e.currentTarget.style.background = "#FAF0E4";
-            e.currentTarget.style.color = "#7B1034";
-            e.currentTarget.style.borderColor = "#FAF0E4";
+            e.currentTarget.style.background = "#FFFFFF";
+            e.currentTarget.style.color = "#8E6D3D";
+            e.currentTarget.style.borderColor = "#FFFFFF";
             e.currentTarget.style.transform = "translateY(-2px)";
             e.currentTarget.style.boxShadow = "0 14px 32px -12px rgba(255, 255, 255, 0.25)";
           }}
           onMouseLeave={e => {
             e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
-            e.currentTarget.style.color = "#FAF0E4";
-            e.currentTarget.style.borderColor = "rgba(197, 146, 42, 0.65)";
+            e.currentTarget.style.color = "#FFFFFF";
+            e.currentTarget.style.borderColor = "rgba(142, 109, 61, 0.65)";
             e.currentTarget.style.transform = "none";
             e.currentTarget.style.boxShadow = "0 10px 24px -10px rgba(0,0,0,0.20)";
           }}
@@ -177,12 +176,12 @@ const Consult = () => (
       {/* Response priority note in soft gold */}
       <p style={{
         fontFamily: "Poppins, sans-serif",
-        fontSize: 10,
+        fontSize: 11,
         fontWeight: 600,
-        letterSpacing: "0.12em",
+        letterSpacing: "0.10em",
         textTransform: "uppercase",
-        color: "rgba(234, 210, 149, 0.82)",
-        marginTop: 22,
+        color: "rgba(234, 210, 149, 0.88)",
+        marginTop: 24,
       }}>
         ✦ Priority Response within 2–4 Hours ✦
       </p>

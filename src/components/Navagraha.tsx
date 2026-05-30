@@ -17,7 +17,7 @@ const Navagraha = () => (
         <p className="font-sanskrit text-primary/70 text-xl mb-3">नवग्रह</p>
         <h2 className="font-display text-4xl md:text-6xl text-gold mb-4">The Nine Planets</h2>
         <div className="mx-auto h-px w-32 bg-gradient-gold" />
-        <p className="mt-6 text-foreground/70 max-w-2xl mx-auto text-lg italic">
+        <p className="mt-6 text-foreground/70 max-w-2xl mx-auto text-lg">
           The Navagraha — celestial forces that weave the threads of karma through every life.
         </p>
       </div>
@@ -83,7 +83,7 @@ const Navagraha = () => (
             />
             <p className="font-sanskrit text-primary text-lg">{g.deva}</p>
             <p className="font-display text-sm text-foreground/90">{g.name}</p>
-            <p className="text-xs text-muted-foreground italic">{g.en}</p>
+            <p className="text-sm text-muted-foreground">{g.en}</p>
           </div>
         ))}
       </div>

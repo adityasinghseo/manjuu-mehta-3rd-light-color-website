@@ -7,7 +7,7 @@ const Wisdom = () => (
     id="wisdom"
     style={{
       padding: "116px 0",
-      background: "linear-gradient(155deg, #FAF0E4 0%, #F5E6D2 50%, #EDD8BE 100%)",
+      background: "linear-gradient(155deg, #FFFFFF 0%, #FAF6F0 50%, #F2ECE2 100%)",
       position: "relative",
       overflow: "hidden",
     }}
@@ -24,7 +24,7 @@ const Wisdom = () => (
       pointerEvents: "none",
       zIndex: 0,
     }}>
-      <svg viewBox="0 0 100 100" fill="none" stroke="#C5922A" strokeWidth="0.5">
+      <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.5">
         <circle cx="50" cy="50" r="48" />
         <polygon points="50,2 98,50 50,98 2,50" transform="rotate(15 50 50)" />
       </svg>
@@ -47,7 +47,7 @@ const Wisdom = () => (
           position: "absolute",
           inset: -40,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(197,146,42,0.18) 0%, rgba(123,16,52,0.06) 45%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(142,109,61,0.18) 0%, rgba(142,109,61,0.06) 45%, transparent 70%)",
           filter: "blur(48px)",
           pointerEvents: "none",
           zIndex: 0,
@@ -64,7 +64,7 @@ const Wisdom = () => (
             zIndex: 1,
             animation: "spinSlow 90s linear infinite",
             opacity: 0.90,
-            filter: "drop-shadow(0 12px 32px rgba(197,146,42,0.14))",
+            filter: "drop-shadow(0 12px 32px rgba(142,109,61,0.14))",
           }}
           loading="lazy"
         />
@@ -91,32 +91,20 @@ const Wisdom = () => (
 
       {/* RIGHT: Text & Spaced Premium CTA */}
       <div style={{ animation: "fadeUp 0.9s ease both" }} className="wisdom-text-col">
-        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10, letterSpacing: "0.26em", textTransform: "uppercase", color: "#C5922A", marginBottom: 12 }}>
+        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.26em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>
           Cosmic Wisdom
         </p>
-        <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "clamp(2.2rem, 4.5vw, 3.4rem)", color: "#7B1034", lineHeight: 1.18, marginBottom: 20 }}>
+        <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "clamp(2.2rem, 4.5vw, 3.4rem)", color: "#8E6D3D", lineHeight: 1.18, marginBottom: 20 }}>
           The Stars Whisper,<br />the Wise Listen.
         </h2>
         <div style={{ marginBottom: 24 }}>
           <OrnDivider className="w-full" style={{ maxWidth: 420 } as React.CSSProperties} />
         </div>
 
-        {/* High-Contrast quotation */}
-        <blockquote style={{
-          borderLeft: "2.5px solid #7B1034",
-          paddingLeft: 22,
-          fontFamily: "Cormorant Garamond, serif",
-          fontStyle: "italic",
-          fontSize: "clamp(1.1rem, 2.5vw, 1.35rem)",
-          lineHeight: 1.85,
-          color: "#3A2010",
-          marginBottom: 24,
-        }}>
-          "As is the microcosm, so is the macrocosm. The same cosmic rhythm pulses within you and within the heavens."
-        </blockquote>
+
 
         {/* High-Contrast body paragraph */}
-        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 14.5, lineHeight: 1.9, color: "rgba(58,32,16,0.82)", marginBottom: 44, maxWidth: 580 }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A", marginBottom: 44, maxWidth: 580 }}>
           For five thousand years, the Rishis have read the language of light. Through Vedic Jyotisha, the ancient seers mapped karma, dharma, and destiny across the wheel of stars—a living science of self, time, and the divine.
         </p>
 
@@ -127,25 +115,25 @@ const Wisdom = () => (
           style={{
             fontFamily: "Cinzel, serif",
             fontWeight: 700,
-            fontSize: 10.5,
+            fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
             letterSpacing: "0.20em",
             textTransform: "uppercase",
-            color: "#FAF0E4",
-            background: "linear-gradient(135deg, #7B1034 0%, #5B0A24 100%)",
+            color: "#FFFFFF",
+            background: "linear-gradient(135deg, #8E6D3D 0%, #444136 100%)",
             padding: "16px 36px",
             borderRadius: 999,
-            border: "1px solid rgba(197, 146, 42, 0.22)",
-            boxShadow: "0 12px 32px -12px rgba(91, 10, 36, 0.40)",
+            border: "1px solid rgba(142, 109, 61, 0.22)",
+            boxShadow: "0 12px 32px -12px rgba(68, 65, 54, 0.40)",
             display: "inline-block",
             transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
           onMouseEnter={e => {
             e.currentTarget.style.transform = "translateY(-2px)";
-            e.currentTarget.style.boxShadow = "0 16px 40px -10px rgba(91, 10, 36, 0.50), 0 0 12px rgba(197, 146, 42, 0.12)";
+            e.currentTarget.style.boxShadow = "0 16px 40px -10px rgba(68, 65, 54, 0.50), 0 0 12px rgba(142, 109, 61, 0.12)";
           }}
           onMouseLeave={e => {
             e.currentTarget.style.transform = "none";
-            e.currentTarget.style.boxShadow = "0 12px 32px -12px rgba(91, 10, 36, 0.40)";
+            e.currentTarget.style.boxShadow = "0 12px 32px -12px rgba(68, 65, 54, 0.40)";
           }}
         >
           Begin Your Reading
