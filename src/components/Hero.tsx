@@ -165,7 +165,7 @@ const Hero = () => (
           <p style={{
             fontFamily: "Poppins, sans-serif",
             fontWeight: 600,
-            fontSize: "clamp(1.05rem, 1.35vw, 1.05rem)",
+            fontSize: "clamp(0.7rem, 1vw, 0.9rem)",
             color: "#8E6D3D",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
@@ -176,9 +176,9 @@ const Hero = () => (
             alignItems: "center",
           }}>
             <span>Vastu Advisor</span>
-            <span style={{ color: "#8E6D3D", fontSize: 10 }}>✦</span>
+            <span style={{ color: "#8E6D3D", fontSize: "clamp(0.7rem, 1vw, 0.9rem)" }}>✦</span>
             <span>Astrologer</span>
-            <span style={{ color: "#8E6D3D", fontSize: 10 }}>✦</span>
+            <span style={{ color: "#8E6D3D", fontSize: "clamp(0.7rem, 1vw, 0.9rem)" }}>✦</span>
             <span>Karmic Numerologist</span>
           </p>
         </div>
@@ -188,7 +188,7 @@ const Hero = () => (
         <h1 style={{
           fontFamily: "Cinzel, serif",
           fontWeight: 900,
-          fontSize: "clamp(3.3rem, 6vw, 4.8rem)",
+          fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
           color: "#B8860B", // Solid dark goldenrod color for better readability
           lineHeight: 1.0,
           letterSpacing: "0.02em",
@@ -263,7 +263,7 @@ const Hero = () => (
           </svg>
           <span style={{
             fontFamily: "Poppins, sans-serif",
-            fontSize: 16,
+            fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)",
             fontWeight: 500,
             color: "#8E6D3D", // Solid color for better readability
             letterSpacing: "0.08em",
@@ -403,7 +403,7 @@ const Hero = () => (
             </svg>
           </div>
           <div>
-            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: 14, fontWeight: 700, color: "#70542C", letterSpacing: "0.14em", textTransform: "uppercase" }}>Experience</div>
+            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.4vw, 1.2rem)", fontWeight: 700, color: "#70542C", letterSpacing: "0.14em", textTransform: "uppercase" }}>Experience</div>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: 22, fontWeight: 700, color: "#8E6D3D", marginTop: 3, lineHeight: 1.15 }}>
               10+ <span style={{ fontSize: 18, fontWeight: 600 }}>Years</span>
             </div>
@@ -430,9 +430,9 @@ const Hero = () => (
             </svg>
           </div>
           <div>
-            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: 14, fontWeight: 700, color: "#70542C", letterSpacing: "0.14em", textTransform: "uppercase" }}>Affiliation</div>
+            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.4vw, 1.2rem)", fontWeight: 700, color: "#70542C", letterSpacing: "0.14em", textTransform: "uppercase" }}>Affiliation</div>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: 20, fontWeight: 700, color: "#8E6D3D", marginTop: 3, lineHeight: 1.2 }}>
-              AIFAS Elite <span style={{ fontSize: 16, fontWeight: 600 }}>Member</span>
+              AIFAS Elite <span style={{ fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)", fontWeight: 600 }}>Member</span>
             </div>
           </div>
         </div>
@@ -458,9 +458,9 @@ const Hero = () => (
             </svg>
           </div>
           <div>
-            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: 14, fontWeight: 700, color: "#70542C", letterSpacing: "0.14em", textTransform: "uppercase" }}>Trust &amp; Reach</div>
+            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.4vw, 1.2rem)", fontWeight: 700, color: "#70542C", letterSpacing: "0.14em", textTransform: "uppercase" }}>Trust &amp; Reach</div>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: 20, fontWeight: 700, color: "#8E6D3D", marginTop: 3, lineHeight: 1.2 }}>
-              Global <span style={{ fontSize: 16, fontWeight: 600 }}>Clientele</span>
+              Global <span style={{ fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)", fontWeight: 600 }}>Clientele</span>
             </div>
           </div>
         </div>

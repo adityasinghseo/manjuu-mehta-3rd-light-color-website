@@ -40,7 +40,7 @@ const Rashis = () => (
               <p className="font-sanskrit text-2xl text-primary/90">{r.deva}</p>
               <h3 className="font-display text-xl mt-2 text-foreground">{r.name}</h3>
               <p className="text-base text-muted-foreground">{r.en}</p>
-              <div className="mt-4 inline-block px-3 py-1 rounded-full text-xs tracking-widest font-display uppercase border border-primary/30 text-primary/80">
+              <div className="mt-4 inline-block px-3 py-1 rounded-full text-sm md:text-base tracking-widest font-display uppercase border border-primary/30 text-primary/80">
                 {r.element}
               </div>
             </div>

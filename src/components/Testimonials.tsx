@@ -86,7 +86,7 @@ const Testimonials = () => {
       <div style={{ maxWidth: 1000, margin: "0 auto", padding: "0 64px", position: "relative", zIndex: 1 }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>
             Voices of Trust
           </p>
           <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20, lineHeight: 1.2 }}>
@@ -178,7 +178,7 @@ const Testimonials = () => {
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.136 4.114-3.51 0-6.355-2.855-6.355-6.355S10.49 5.8 14 5.8c1.558 0 2.978.56 4.092 1.484l3.057-3.057C19.26 2.5 16.786 1.5 14 1.5 8.2 1.5 3.5 6.2 3.5 12s4.7 10.5 10.5 10.5c5.77 0 10.4-4.63 10.4-10.5 0-.7-.08-1.37-.215-2.015H12.24z" fill="#8E6D3D"/>
               </svg>
-              <span style={{ fontFamily: "Poppins, sans-serif", fontSize: 9.5, fontWeight: 600, color: "#8E6D3D", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+              <span style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.65rem, 1vw, 0.75rem)", fontWeight: 600, color: "#8E6D3D", letterSpacing: "0.08em", textTransform: "uppercase" }}>
                 Google Verified Review
               </span>
             </div>
@@ -228,7 +228,7 @@ const Testimonials = () => {
                 justifyContent: "center",
                 fontFamily: "Cinzel, serif",
                 fontWeight: 700,
-                fontSize: 16,
+                fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)",
                 color: "#FFFFFF",
                 boxShadow: "0 6px 18px rgba(68,65,54,0.22)",
                 letterSpacing: "0.05em",
@@ -239,7 +239,7 @@ const Testimonials = () => {
                 <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 3 }}>
                   {t.name}
                 </p>
-                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#8E6D3D" }}>
+                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#8E6D3D" }}>
                   {t.role} <span style={{ opacity: 0.4 }}>•</span> {t.location}
                 </p>
               </div>

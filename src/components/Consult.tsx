@@ -134,7 +134,7 @@ const Consult = () => (
       {/* Response priority note */}
       <p style={{
         fontFamily: "Poppins, sans-serif",
-        fontSize: "clamp(1rem, 1.1vw, 1.05rem)",
+        fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)",
         fontWeight: 600,
         letterSpacing: "0.10em",
         textTransform: "uppercase",

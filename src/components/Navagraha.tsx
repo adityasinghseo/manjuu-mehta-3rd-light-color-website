@@ -53,7 +53,7 @@ const Navagraha = () => (
             }}
           >
             <div
-              className="h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center text-[10px] font-display"
+              className="h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center text-sm font-display"
               style={{
                 background: `radial-gradient(circle, hsl(${g.color}), hsl(${g.color} / 0.4))`,
                 boxShadow: `0 0 20px hsl(${g.color} / 0.7)`,

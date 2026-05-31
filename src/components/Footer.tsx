@@ -56,10 +56,10 @@ const Footer = () => (
           <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 800, fontSize: "clamp(1.4rem, 2vw, 1.6rem)", color: "#8E6D3D", letterSpacing: "0.12em", marginBottom: 5 }}>
             MANJUU MEHTA
           </h2>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.85rem, 1.2vw, 0.95rem)", fontWeight: 500, color: "#8E6D3D", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: 18 }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.3vw, 1.2rem)", fontWeight: 500, color: "#8E6D3D", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: 18 }}>
             Vastu ✦ Astrology ✦ Numerology
           </p>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1rem, 1.35vw, 1.05rem)", color: "rgba(40,22,10,0.76)", lineHeight: 1.8, maxWidth: 300, marginBottom: 22 }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)", color: "rgba(40,22,10,0.76)", lineHeight: 1.8, maxWidth: 300, marginBottom: 22 }}>
             Guiding you toward prosperity, harmony, and cosmic alignment through the ancient Vedic sciences.
           </p>
 
@@ -104,7 +104,7 @@ const Footer = () => (
 
         {/* Quick Links Column with Gold Star Bullets */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-          <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", letterSpacing: "0.22em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 24, borderBottom: "1.5px solid rgba(142,109,61,0.30)", paddingBottom: 6, width: "100%", maxWidth: 160 }}>
+          <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)", letterSpacing: "0.22em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 24, borderBottom: "1.5px solid rgba(142,109,61,0.30)", paddingBottom: 6, width: "100%", maxWidth: 160 }}>
             Navigation
           </h3>
           <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 14 }}>
@@ -116,12 +116,12 @@ const Footer = () => (
               { to: "/contact", label: "Contact Us" },
             ].map(link => (
               <li key={link.to} style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <span style={{ color: "#8E6D3D", fontSize: "clamp(0.85rem, 1vw, 0.9rem)", userSelect: "none" }}>✦</span>
+                <span style={{ color: "#8E6D3D", fontSize: "clamp(1.1rem, 1.3vw, 1.2rem)", userSelect: "none" }}>✦</span>
                 <Link to={link.to}
                   style={{
                     fontFamily: "Cinzel, serif",
                     fontWeight: 600,
-                    fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)",
+                    fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)",
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
                     color: "rgba(40,22,10,0.68)",
@@ -141,7 +141,7 @@ const Footer = () => (
 
         {/* Contact Column with Thinned Glowing Details */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-          <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", letterSpacing: "0.22em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 24, borderBottom: "1.5px solid rgba(142,109,61,0.30)", paddingBottom: 6, width: "100%", maxWidth: 160 }}>
+          <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)", letterSpacing: "0.22em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 24, borderBottom: "1.5px solid rgba(142,109,61,0.30)", paddingBottom: 6, width: "100%", maxWidth: 160 }}>
             Sacred Office
           </h3>
           <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 16 }}>
@@ -158,7 +158,7 @@ const Footer = () => (
                     alignItems: "center",
                     gap: 12,
                     fontFamily: "Poppins, sans-serif",
-                    fontSize: "clamp(1rem, 1.35vw, 1.05rem)",
+                    fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)",
                     fontWeight: 400,
                     color: "rgba(40,22,10,0.76)",
                     transition: "all 0.3s ease",
@@ -199,7 +199,7 @@ const Footer = () => (
       <div style={{ marginTop: 64, borderTop: "1px solid rgba(142,109,61,0.18)", paddingTop: 44 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 26, maxWidth: 460, margin: "0 auto 26px" }}>
           <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, rgba(142,109,61,0.36))" }} />
-          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)", letterSpacing: "0.28em", textTransform: "uppercase", color: "#8E6D3D", flexShrink: 0 }}>
+          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.1rem, 1.3vw, 1.2rem)", letterSpacing: "0.28em", textTransform: "uppercase", color: "#8E6D3D", flexShrink: 0 }}>
             Follow Me On
           </p>
           <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, rgba(142,109,61,0.36), transparent)" }} />
@@ -221,7 +221,7 @@ const Footer = () => (
                 border: "1px solid rgba(142,109,61,0.22)",
                 borderRadius: 999,
                 fontFamily: "Poppins, sans-serif",
-                fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)",
+                fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)",
                 fontWeight: 500,
                 color: "rgba(58,32,16,0.72)",
                 transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -257,10 +257,10 @@ const Footer = () => (
 
       {/* Bottom Copyright & AIFAS Credentials */}
       <div style={{ marginTop: 44, textAlign: "center", borderTop: "1px solid rgba(142,109,61,0.14)", paddingTop: 28 }}>
-        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", color: "rgba(40,22,10,0.52)", fontWeight: 400 }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)", color: "rgba(40,22,10,0.52)", fontWeight: 400 }}>
           © {new Date().getFullYear()} Manjuu Mehta ✦ All Rights Reserved
         </p>
-        <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(0.85rem, 1vw, 0.9rem)", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(142,109,61,0.65)", marginTop: 6 }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.1rem, 1.3vw, 1.2rem)", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(142,109,61,0.65)", marginTop: 6 }}>
           AIFAS Elite Member
         </p>
       </div>

@@ -229,11 +229,11 @@ const ContactUs = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full font-cinzel tracking-[0.20em] uppercase shadow-gold transition-transform hover:scale-[1.01] flex items-center justify-center gap-3 text-[#8E6D3D] font-bold submit-btn"
+                  className="w-full py-4 rounded-full bg-gradient-gold font-cinzel tracking-[0.20em] uppercase shadow-gold transition-transform hover:scale-[1.01] flex items-center justify-center gap-3 text-[#8E6D3D] font-bold submit-btn"
                   style={{
                     background: "#FFFFFF",
                     border: "1.5px solid #8E6D3D",
-                    boxShadow: "0 8px 24px -10px rgba(142,109,61,0.25)",
+                    boxShadow: "0 8px 24px -10px rgba(142,109,61,0.40)",
                     cursor: "pointer",
                     fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)",
                   }}

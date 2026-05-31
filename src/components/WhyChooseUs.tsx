@@ -57,7 +57,7 @@ const WhyChooseUs = () => (
       <div style={{ display: "flex", flexDirection: "column" }} className="wcu-left-col">
         {/* Section header */}
         <div style={{ marginBottom: 36 }}>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>
             Our Pillars
           </p>
           <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 16, lineHeight: 1.2 }}>

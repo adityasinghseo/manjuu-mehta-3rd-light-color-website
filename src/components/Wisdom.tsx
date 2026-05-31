@@ -91,7 +91,7 @@ const Wisdom = () => (
 
       {/* RIGHT: Text & Spaced Premium CTA */}
       <div style={{ animation: "fadeUp 0.9s ease both" }} className="wisdom-text-col">
-        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.26em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>
+        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.26em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>
           Cosmic Wisdom
         </p>
         <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "clamp(2.5rem, 4.5vw, 3.4rem)", color: "#8E6D3D", lineHeight: 1.18, marginBottom: 20 }}>

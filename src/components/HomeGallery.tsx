@@ -1,3 +1,7 @@
+import { useState, useEffect, useCallback } from "react";
+import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react";
+import { OrnDivider } from "./SiteNav";
+
 import img1 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM (1).jpeg";
 import img2 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM (2).jpeg";
 import img3 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM (3).jpeg";
@@ -9,14 +13,10 @@ import img8 from "@/assets/WhatsApp Image 2026-04-30 at 1.13.50 PM.jpeg";
 import img9 from "@/assets/WhatsApp Image 2026-04-30 at 1.17.02 PM.jpeg";
 import img10 from "@/assets/WhatsApp Image 2026-04-30 at 2.17.04 PM.jpeg";
 import img11 from "@/assets/WhatsApp Image 2026-05-29 at 7.00.09 PM (1).jpeg";
-import { useState, useEffect, useCallback } from "react";
-import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react";
-import { OrnDivider } from "@/components/SiteNav";
-import Consult from "@/components/Consult";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11];
 
-const GalleryPage = () => {
+const HomeGallery = () => {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
   const [zoomed, setZoomed] = useState(false);
 
@@ -44,7 +44,6 @@ const GalleryPage = () => {
     setLightboxIdx((lightboxIdx + 1) % images.length);
   }, [lightboxIdx]);
 
-  // Keyboard navigation
   useEffect(() => {
     if (lightboxIdx === null) return;
     const handler = (e: KeyboardEvent) => {
@@ -57,70 +56,18 @@ const GalleryPage = () => {
   }, [lightboxIdx, goPrev, goNext]);
 
   return (
-    <main
-      className="relative min-h-screen pt-24"
-      style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #FAF6F0 50%, #FFFFFF 100%)" }}
-    >
-      {/* Background Sparkle */}
-      <div className="pointer-events-none absolute inset-0 opacity-25 star-field" />
+    <section className="py-24 relative" style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #FAF6F0 50%, #FFFFFF 100%)" }}>
+      <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight font-cinzel" style={{ color: "#8E6D3D" }}>
+          Prestige Gallery
+        </h2>
+        <OrnDivider style={{ margin: "0 auto 24px" } as React.CSSProperties} />
+        <p className="text-foreground/80 font-poppins leading-relaxed max-w-2xl mx-auto" style={{ color: "rgba(58,32,16,0.80)", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)" }}>
+          A visual testament to prestigious awards, public recognitions, and a decade of sacred cosmic guidance.
+        </p>
+      </div>
 
-      {/* ── Hero Banner ── */}
-      <section className="relative py-24 px-6 text-center overflow-hidden">
-        {/* Radial aura glow */}
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div
-            className="w-[600px] h-[600px] rounded-full opacity-20"
-            style={{
-              background: "radial-gradient(circle, rgba(142,109,61,0.16) 0%, transparent 70%)",
-              filter: "blur(80px)",
-            }}
-          />
-        </div>
-
-        {/* Spinning watermark mandala */}
-        <div
-          className="anim-spinrev"
-          style={{
-            position: "absolute",
-            top: "-15%",
-            right: "-10%",
-            width: "42%",
-            maxWidth: 420,
-            aspectRatio: "1",
-            opacity: 0.025,
-            pointerEvents: "none",
-            zIndex: 0,
-          }}
-        >
-          <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.6">
-            <circle cx="50" cy="50" r="48" />
-            <circle cx="50" cy="50" r="34" strokeDasharray="2 2" />
-            <polygon points="50,2 98,50 50,98 2,50" />
-            <polygon points="50,2 98,50 50,98 2,50" transform="rotate(45 50 50)" />
-          </svg>
-        </div>
-
-        <div className="relative max-w-3xl mx-auto anim-fadeup" style={{ zIndex: 1 }}>
-
-          <h1
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-cinzel"
-            style={{ color: "#8E6D3D" }}
-          >
-            Prestige Gallery
-          </h1>
-          <OrnDivider style={{ margin: "0 auto 28px" } as React.CSSProperties} />
-          <p
-            className="text-foreground/80 text-[15.5px] font-poppins leading-relaxed max-w-2xl mx-auto"
-            style={{ color: "rgba(58,32,16,0.80)" }}
-          >
-            A visual testament to prestigious awards, public recognitions, and a decade of
-            sacred cosmic guidance.
-          </p>
-        </div>
-      </section>
-
-      {/* ── Masonry Gallery Grid ── */}
-      <section className="px-4 md:px-8 pb-32 relative z-10">
+      <div className="px-4 md:px-8">
         <div className="max-w-7xl mx-auto gallery-masonry">
           {images.map((src, idx) => (
             <div
@@ -133,10 +80,7 @@ const GalleryPage = () => {
               aria-label={`View recognition image ${idx + 1}`}
               onKeyDown={(e) => e.key === "Enter" && openLightbox(idx)}
             >
-              {/* Gold expanding top line */}
               <div className="gallery-top-line" />
-
-              {/* Image — full visible, no crop */}
               <div className="gallery-img-wrap">
                 <img
                   src={src}
@@ -144,8 +88,6 @@ const GalleryPage = () => {
                   loading="lazy"
                   className="gallery-img"
                 />
-
-                {/* Hover overlay */}
                 <div className="gallery-overlay">
                   <div className="gallery-overlay-icon">
                     <ZoomIn size={18} strokeWidth={1.5} style={{ color: "#8E6D3D" }} />
@@ -156,91 +98,39 @@ const GalleryPage = () => {
             </div>
           ))}
         </div>
-      </section>
+      </div>
 
-      {/* ── Premium Lightbox ── */}
+      {/* Premium Lightbox */}
       {lightboxIdx !== null && (
-        <div
-          className="lightbox-backdrop"
-          onClick={closeLightbox}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Image lightbox"
-        >
-          {/* Close */}
-          <button
-            className="lightbox-btn lightbox-close"
-            onClick={closeLightbox}
-            aria-label="Close lightbox"
-          >
+        <div className="lightbox-backdrop" onClick={closeLightbox} role="dialog" aria-modal="true" aria-label="Image lightbox">
+          <button className="lightbox-btn lightbox-close" onClick={closeLightbox} aria-label="Close lightbox">
             <X size={20} strokeWidth={1.5} />
           </button>
-
-          {/* Counter */}
           <div className="lightbox-counter">
             <span className="font-cinzel" style={{ color: "#8E6D3D", fontSize: "clamp(1.08rem, 1.2vw, 1.1rem)", letterSpacing: "0.2em" }}>
               {String(lightboxIdx + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
             </span>
           </div>
-
-          {/* Zoom toggle */}
-          <button
-            className="lightbox-btn lightbox-zoom"
-            onClick={(e) => { e.stopPropagation(); setZoomed((z) => !z); }}
-            aria-label={zoomed ? "Zoom out" : "Zoom in"}
-          >
+          <button className="lightbox-btn lightbox-zoom" onClick={(e) => { e.stopPropagation(); setZoomed((z) => !z); }} aria-label={zoomed ? "Zoom out" : "Zoom in"}>
             {zoomed ? <ZoomOut size={18} strokeWidth={1.5} /> : <ZoomIn size={18} strokeWidth={1.5} />}
           </button>
-
-          {/* Prev */}
-          <button
-            className="lightbox-btn lightbox-prev"
-            onClick={(e) => { e.stopPropagation(); goPrev(); }}
-            aria-label="Previous image"
-          >
+          <button className="lightbox-btn lightbox-prev" onClick={(e) => { e.stopPropagation(); goPrev(); }} aria-label="Previous image">
             <ChevronLeft size={24} strokeWidth={1.5} />
           </button>
-
-          {/* Image frame */}
-          <div
-            className={`lightbox-frame ${zoomed ? "zoomed" : ""}`}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              key={lightboxIdx}
-              src={images[lightboxIdx]}
-              alt={`Recognition ${lightboxIdx + 1}`}
-              className="lightbox-img"
-            />
-            {/* Subtle caption */}
+          <div className={`lightbox-frame ${zoomed ? "zoomed" : ""}`} onClick={(e) => e.stopPropagation()}>
+            <img key={lightboxIdx} src={images[lightboxIdx]} alt={`Recognition ${lightboxIdx + 1}`} className="lightbox-img" />
             <div className="lightbox-caption">
-              <p
-                className="font-cinzel uppercase"
-                style={{ fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)", letterSpacing: "0.22em", color: "rgba(142,109,61,0.80)" }}
-              >
+              <p className="font-cinzel uppercase" style={{ fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)", letterSpacing: "0.22em", color: "rgba(142,109,61,0.80)" }}>
                 ✦ Award & Recognition ✦
               </p>
             </div>
           </div>
-
-          {/* Next */}
-          <button
-            className="lightbox-btn lightbox-next"
-            onClick={(e) => { e.stopPropagation(); goNext(); }}
-            aria-label="Next image"
-          >
+          <button className="lightbox-btn lightbox-next" onClick={(e) => { e.stopPropagation(); goNext(); }} aria-label="Next image">
             <ChevronRight size={24} strokeWidth={1.5} />
           </button>
-
-          {/* Thumbnail strip */}
           <div className="lightbox-thumbs" onClick={(e) => e.stopPropagation()}>
             {images.map((src, i) => (
-              <button
-                key={i}
-                className={`lightbox-thumb ${i === lightboxIdx ? "active" : ""}`}
-                onClick={() => { setLightboxIdx(i); setZoomed(false); }}
-                aria-label={`Go to image ${i + 1}`}
-              >
+              <button key={i} className={`lightbox-thumb ${i === lightboxIdx ? "active" : ""}`} onClick={() => { setLightboxIdx(i); setZoomed(false); }} aria-label={`Go to image ${i + 1}`}>
                 <img src={src} alt="" loading="lazy" />
               </button>
             ))}
@@ -578,9 +468,8 @@ const GalleryPage = () => {
           .lightbox-img { border-radius: 10px; }
         }
       `}</style>
-      <Consult />
-    </main>
+    </section>
   );
 };
 
-export default GalleryPage;
+export default HomeGallery;

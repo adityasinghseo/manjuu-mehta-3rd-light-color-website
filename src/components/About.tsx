@@ -160,7 +160,7 @@ const About = () => (
 
       {/* RIGHT COLUMN: Editorial Description & Spaced Stats */}
       <div style={{ animation: "fadeUp 0.9s ease 0.15s both", display: "flex", flexDirection: "column", alignItems: "flex-start" }} className="about-text-col">
-        <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>
           Discover the Journey
         </p>
         <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", lineHeight: 1.2, marginBottom: 20 }}>
@@ -185,7 +185,7 @@ const About = () => (
           <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A" }}>
             "Every space carries its own soul, and every planetary alignment is a roadmap to your highest self. My purpose is to help you decode these cosmic whispers, guiding you to a life of abundance, deep trust, and effortless flow."
           </p>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 10, fontWeight: 600 }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)", letterSpacing: "0.14em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 10, fontWeight: 600 }}>
             — Manjuu Mehta
           </p>
         </div>

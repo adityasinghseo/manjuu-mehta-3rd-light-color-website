@@ -31,7 +31,7 @@ const values = [
 /* ── Section Header helper ─────────────────────────────────── */
 const SectionHeader = ({ sup, title }: { sup: string; title: string }) => (
   <div style={{ textAlign: "center", marginBottom: 56 }} className="anim-fadeup">
-    <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>{sup}</p>
+    <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>{sup}</p>
     <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem,3.2vw,2.4rem)", color: "#8E6D3D", marginBottom: 20 }}>{title}</h2>
     <div style={{ display: "flex", justifyContent: "center" }}>
       <OrnDivider className="w-full" style={{ maxWidth: 360 } as React.CSSProperties} />
@@ -87,7 +87,7 @@ const AboutUsPage = () => (
           Manjuu Mehta
         </h1>
         <OrnDivider />
-        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1rem, 1.5vw, 1.15rem)", color: "#8E6D3D", fontWeight: 600, marginTop: 22, letterSpacing: "0.10em", textTransform: "uppercase" }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)", color: "#8E6D3D", fontWeight: 600, marginTop: 22, letterSpacing: "0.10em", textTransform: "uppercase" }}>
           Renowned Vastu Advisor · Vedic Astrologer · Karmic Numerologist
         </p>
       </div>
@@ -136,50 +136,7 @@ const AboutUsPage = () => (
               zIndex: 0,
             }} />
 
-            {/* Top-Left Floating Badge */}
-            <div style={{
-              position: "absolute",
-              top: "12%",
-              left: "-12%",
-              zIndex: 10,
-              background: "linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,246,238,0.85) 100%)",
-              border: "1px solid rgba(142,109,61,0.28)",
-              borderRadius: 16,
-              padding: "10px 18px",
-              boxShadow: "0 10px 24px -6px rgba(68,65,54,0.08)",
-              backdropFilter: "blur(10px)",
-              WebkitBackdropFilter: "blur(10px)",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              animation: "floatSlow 6s ease-in-out infinite",
-            }} className="about-float-badge">
-              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: "clamp(1.6rem, 2.2vw, 1.8rem)", color: "#8E6D3D", lineHeight: 1.1 }}>10+</span>
-              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1rem, 1.2vw, 1.1rem)", letterSpacing: "0.14em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 2 }}>Years Wisdom</span>
-            </div>
 
-            {/* Bottom-Right Floating Badge */}
-            <div style={{
-              position: "absolute",
-              bottom: "16%",
-              right: "-12%",
-              zIndex: 10,
-              background: "linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,246,238,0.85) 100%)",
-              border: "1px solid rgba(142,109,61,0.28)",
-              borderRadius: 16,
-              padding: "10px 18px",
-              boxShadow: "0 10px 24px -6px rgba(68,65,54,0.08)",
-              backdropFilter: "blur(10px)",
-              WebkitBackdropFilter: "blur(10px)",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              animation: "floatSlow 6s ease-in-out infinite",
-              animationDelay: "3s",
-            }} className="about-float-badge">
-              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: "clamp(1.6rem, 2.2vw, 1.8rem)", color: "#8E6D3D", lineHeight: 1.1 }}>5000+</span>
-              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1rem, 1.2vw, 1.1rem)", letterSpacing: "0.14em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 2 }}>Happy Clients</span>
-            </div>
 
             {/* Main Image Container in Arch Style */}
             <div style={{
@@ -331,7 +288,7 @@ const AboutUsPage = () => (
                 <badge.icon className="w-5 h-5 icon-svg" strokeWidth={1.7} style={{ color: "#8E6D3D", transition: "all 0.4s ease" }} />
               </div>
               <h4 className="font-cinzel font-bold" style={{ color: "#8E6D3D", fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)" }}>{badge.title}</h4>
-              <p className="font-poppins tracking-[0.18em] uppercase font-bold mt-1 mb-2.5" style={{ color: "#8E6D3D", fontSize: "clamp(1rem, 1.2vw, 1.1rem)" }}>{badge.subtitle}</p>
+              <p className="font-poppins tracking-[0.18em] uppercase font-bold mt-1 mb-2.5" style={{ color: "#8E6D3D", fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)" }}>{badge.subtitle}</p>
               <p className="font-poppins leading-relaxed text-foreground/70" style={{ color: "rgba(40,22,10,0.65)", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)" }}>{badge.desc}</p>
             </div>
           ))}
@@ -418,7 +375,7 @@ const AboutUsPage = () => (
       <div className="sparkle-field" style={{ opacity: 0.25 }} />
       <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 2 }}>
         <div style={{ textAlign: "center", marginBottom: 44 }}>
-          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>Core Philosophy</p>
+          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>Core Philosophy</p>
           <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem,3.2vw,2.4rem)", color: "#8E6D3D", marginBottom: 20 }}>The Cosmos is a Living Scripture</h2>
           <OrnDivider />
         </div>
@@ -587,7 +544,7 @@ const AboutUsPage = () => (
                 boxShadow: "0 4px 18px -6px rgba(68,65,54,0.04)",
                 transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
               }} className="timeline-card">
-                <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 6 }}>
+                <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 6 }}>
                   {item.year}
                 </p>
                 <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)", letterSpacing: "0.02em", color: "#8E6D3D", marginBottom: 8 }}>

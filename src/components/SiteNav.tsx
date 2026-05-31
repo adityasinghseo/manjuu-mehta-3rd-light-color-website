@@ -89,10 +89,10 @@ const SiteNav = () => {
           <Link to="/" onClick={close} style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <MMLogo size={64} />
             <div>
-              <div style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 16, letterSpacing: "0.22em", color: "#8E6D3D", lineHeight: 1.2 }}>
+              <div style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.1rem, 1.2vw, 1.25rem)", letterSpacing: "0.22em", color: "#8E6D3D", lineHeight: 1.2 }}>
                 MANJUU MEHTA
               </div>
-              <div style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 11, letterSpacing: "0.28em", color: "#8E6D3D", textTransform: "uppercase", marginTop: 1 }}>
+              <div style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(0.55rem, 0.6vw, 0.65rem)", letterSpacing: "0.28em", color: "#8E6D3D", textTransform: "uppercase", marginTop: 1 }}>
                 Vastu · Astrology · Numerology
               </div>
             </div>
@@ -158,8 +158,8 @@ const SiteNav = () => {
           </button>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: 40 }}>
             <MMLogo size={60} />
-            <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.20em", color: "#8E6D3D", marginTop: 12 }}>MANJUU MEHTA</p>
-            <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 9, letterSpacing: "0.28em", color: "#8E6D3D", textTransform: "uppercase", marginTop: 4 }}>Vastu · Astrology · Numerology</p>
+            <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.20em", color: "#8E6D3D", marginTop: 12 }}>MANJUU MEHTA</p>
+            <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.7rem, 0.9vw, 0.85rem)", letterSpacing: "0.28em", color: "#8E6D3D", textTransform: "uppercase", marginTop: 4 }}>Vastu · Astrology · Numerology</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 28 }}>
             {NAV_LINKS.map(l => (
@@ -169,7 +169,7 @@ const SiteNav = () => {
             ))}
           </div>
           <Link to="/contact" onClick={close}
-            style={{ marginTop: 44, fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", background: "transparent", border: "1px solid rgba(142,109,61,0.40)", padding: "12px 31px", borderRadius: 999 }}
+            style={{ marginTop: 44, fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", background: "transparent", border: "1px solid rgba(142,109,61,0.40)", padding: "12px 31px", borderRadius: 999 }}
           >Book Consultation</Link>
         </div>
       )}
