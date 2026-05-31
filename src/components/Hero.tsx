@@ -165,7 +165,7 @@ const Hero = () => (
           <p style={{
             fontFamily: "Poppins, sans-serif",
             fontWeight: 600,
-            fontSize: "clamp(0.82rem, 1.35vw, 0.95rem)",
+            fontSize: "clamp(1.05rem, 1.35vw, 1.05rem)",
             color: "#8E6D3D",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
@@ -188,7 +188,7 @@ const Hero = () => (
         <h1 style={{
           fontFamily: "Cinzel, serif",
           fontWeight: 900,
-          fontSize: "clamp(2.8rem, 6vw, 4.8rem)",
+          fontSize: "clamp(3.3rem, 6vw, 4.8rem)",
           color: "#B8860B", // Solid dark goldenrod color for better readability
           lineHeight: 1.0,
           letterSpacing: "0.02em",
@@ -223,7 +223,7 @@ const Hero = () => (
           <p style={{
             fontFamily: "Cinzel, serif",
             fontWeight: 600,
-            fontSize: "clamp(1.1rem, 2.2vw, 1.55rem)",
+            fontSize: "clamp(1.3rem, 2.2vw, 1.55rem)",
             color: "#8E6D3D",
             lineHeight: 1.3,
             letterSpacing: "0.06em",
@@ -236,7 +236,7 @@ const Hero = () => (
         <div className="hero-body">
         <p style={{
           fontFamily: "Poppins, sans-serif",
-          fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)",
+          fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)",
           lineHeight: 1.9,
           color: "#28160A", // Solid dark brown for maximum readability
           maxWidth: 460,
@@ -396,10 +396,10 @@ const Hero = () => (
             transition: "all 0.35s ease",
           }} className="stat-icon">
             <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <circle cx="13" cy="16" r="8.5" stroke="#8E6D3D" strokeWidth="1.0" />
-              <path d="M9 8L5 2L13 4.5L21 2L17 8" stroke="#8E6D3D" strokeWidth="1.0" strokeLinejoin="round" />
-              <path d="M9 8H17" stroke="#8E6D3D" strokeWidth="1.0" />
-              <path d="M10 16L12.5 18.5L16 13.5" stroke="#8E6D3D" strokeWidth="1.0" strokeLinecap="round" strokeLinejoin="round" />
+              <circle cx="13" cy="16" r="8.5" stroke="#70542C" strokeWidth="1.5" />
+              <path d="M9 8L5 2L13 4.5L21 2L17 8" stroke="#70542C" strokeWidth="1.5" strokeLinejoin="round" />
+              <path d="M9 8H17" stroke="#70542C" strokeWidth="1.5" />
+              <path d="M10 16L12.5 18.5L16 13.5" stroke="#70542C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
           <div>
@@ -425,7 +425,7 @@ const Hero = () => (
             flexShrink: 0,
             transition: "all 0.35s ease",
           }} className="stat-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8E6D3D" strokeWidth="1.0">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#70542C" strokeWidth="1.5">
               <polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
@@ -452,7 +452,7 @@ const Hero = () => (
             flexShrink: 0,
             transition: "all 0.35s ease",
           }} className="stat-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8E6D3D" strokeWidth="1.0">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#70542C" strokeWidth="1.5">
               <circle cx="12" cy="12" r="10" />
               <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -601,33 +601,39 @@ const Hero = () => (
         /* Mobile stats */
         .stats-scroll-wrapper { overflow: visible !important; }
         .stats-grid {
-          display: grid !important;
-          grid-template-columns: 1fr auto 1fr auto 1fr !important;
-          padding: 16px 10px !important;
-          gap: 0 !important;
-          width: 100% !important;
+          display: flex !important;
+          flex-direction: column !important;
+          padding: 0 !important;
+          gap: 16px !important;
+          background: transparent !important;
+          border: none !important;
+          box-shadow: none !important;
+          backdrop-filter: none !important;
         }
         .stat-item {
-          flex-direction: column !important;
+          flex-direction: row !important;
           align-items: center !important;
-          justify-content: center !important;
-          text-align: center !important;
-          padding: 10px 6px !important;
-          gap: 8px !important;
+          justify-content: flex-start !important;
+          text-align: left !important;
+          padding: 20px 24px !important;
+          gap: 16px !important;
+          background: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(253,246,238,0.7) 100%) !important;
+          border: 1px solid rgba(142,109,61,0.2) !important;
+          border-radius: 16px !important;
+          box-shadow: 0 8px 24px -8px rgba(68,65,54,0.08) !important;
+          backdrop-filter: blur(10px) !important;
         }
         .stat-icon {
-          width: 38px !important;
-          height: 38px !important;
+          width: 48px !important;
+          height: 48px !important;
           flex-shrink: 0 !important;
         }
         .stat-icon svg {
-          width: 18px !important;
-          height: 18px !important;
+          width: 22px !important;
+          height: 22px !important;
         }
         .stat-div {
-          display: flex !important;
-          align-items: center !important;
-          flex-shrink: 0 !important;
+          display: none !important;
         }
       }
     `}</style>

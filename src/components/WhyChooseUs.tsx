@@ -60,7 +60,7 @@ const WhyChooseUs = () => (
           <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>
             Our Pillars
           </p>
-          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 16, lineHeight: 1.2 }}>
+          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 16, lineHeight: 1.2 }}>
             Core Offerings
           </h2>
           <OrnDivider className="w-full" style={{ maxWidth: 460 } as React.CSSProperties} />
@@ -111,10 +111,10 @@ const WhyChooseUs = () => (
                 <img src={s.image} alt={s.title} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.5s ease" }} className="offer-image" />
               </div>
               <div>
-                <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)", letterSpacing: "0.07em", color: "#8E6D3D", marginBottom: 8 }}>
+                <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)", letterSpacing: "0.07em", color: "#8E6D3D", marginBottom: 8 }}>
                   {s.title}
                 </h3>
-                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A" }}>
+                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A" }}>
                   {s.desc}
                 </p>
               </div>
@@ -130,7 +130,7 @@ const WhyChooseUs = () => (
             style={{
               fontFamily: "Cinzel, serif",
               fontWeight: 700,
-              fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
+              fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)",
               letterSpacing: "0.18em",
               textTransform: "uppercase",
               color: "#8E6D3D",

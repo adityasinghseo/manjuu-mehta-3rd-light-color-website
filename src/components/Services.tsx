@@ -46,11 +46,11 @@ const Services = ({ limit }: { limit?: number }) => {
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 64 }}>
           <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>Offerings</p>
-          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20, lineHeight: 1.2 }}>Sacred Services</h2>
+          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20, lineHeight: 1.2 }}>Sacred Services</h2>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <OrnDivider className="w-full" style={{ maxWidth: 360 } as React.CSSProperties} />
           </div>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A", marginTop: 16, maxWidth: 520, marginLeft: "auto", marginRight: "auto" }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A", marginTop: 16, maxWidth: 520, marginLeft: "auto", marginRight: "auto" }}>
             Precision-crafted consultations rooted in ancient wisdom, delivered with modern clarity.
           </p>
         </div>
@@ -94,7 +94,7 @@ const Services = ({ limit }: { limit?: number }) => {
               </div>
 
               {/* Sanskrit label */}
-              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.85rem, 1.2vw, 1rem)", color: "rgba(142,109,61,0.65)", marginBottom: 10, fontWeight: 500 }}>{s.deva}</p>
+              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.08rem, 1.2vw, 1.1rem)", color: "rgba(142,109,61,0.65)", marginBottom: 10, fontWeight: 500 }}>{s.deva}</p>
 
               {/* Icon - Refined with transition */}
               <div style={{
@@ -108,8 +108,8 @@ const Services = ({ limit }: { limit?: number }) => {
                 <s.Icon size={19} strokeWidth={1.7} color="#8E6D3D" />
               </div>
 
-              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 12 }}>{s.title}</h3>
-              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A", marginBottom: 22 }}>{s.desc}</p>
+              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 12 }}>{s.title}</h3>
+              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A", marginBottom: 22 }}>{s.desc}</p>
               
               {/* Animated Enquire arrow */}
               <p style={{

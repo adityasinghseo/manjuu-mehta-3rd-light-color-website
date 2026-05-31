@@ -1,31 +1,16 @@
 import { Link } from "react-router-dom";
-import { Compass, Sparkles, Hash, HeartHandshake, Briefcase, Gem, CheckCircle, ArrowRight, MessageCircle } from "lucide-react";
+import { Compass, Heart, Sparkles, Hash, HeartHandshake, Briefcase, Gem, CheckCircle, ArrowRight, MessageCircle } from "lucide-react";
 import { OrnDivider } from "@/components/SiteNav";
+import Consult from "@/components/Consult";
 
 // Import custom generated high-fidelity service images
 import imgVastu from "@/assets/services/vastu.png";
 import imgAstrology from "@/assets/services/astrology.png";
 import imgNumerology from "@/assets/services/numerology.png";
-import imgMatchmaking from "@/assets/services/matchmaking.png";
-import imgBusiness from "@/assets/services/business.png";
-import imgGemstone from "@/assets/services/gemstone.png";
+import spiritualImg from "@/assets/spiritual_wcu.png";
+
 
 const services = [
-  {
-    icon: Compass,
-    image: imgVastu,
-    title: "Vastu Consultation",
-    tagline: "Align Your Space, Transform Your Life",
-    desc: "Vastu Shastra is the ancient Indian science of space and energy. When your home or workplace is aligned with the five elements — Earth, Water, Fire, Air, and Space — harmony, prosperity and wellbeing flow naturally. Manjuu ji performs detailed on-site and remote Vastu audits, identifying energy imbalances and providing precise, practical remedies.",
-    includes: [
-      "Residential Vastu analysis",
-      "Commercial & office Vastu audit",
-      "Plot & construction Vastu",
-      "Factory & industrial Vastu",
-      "Directional corrections & remedies",
-      "Vastu for health, wealth & relationships",
-    ],
-  },
   {
     icon: Sparkles,
     image: imgAstrology,
@@ -57,48 +42,33 @@ const services = [
     ],
   },
   {
-    icon: HeartHandshake,
-    image: imgMatchmaking,
-    title: "Match Making",
-    tagline: "Bless Your Union with Cosmic Harmony",
-    desc: "Marriage is the most sacred of all partnerships. Through the traditional Ashta-Koota compatibility system and deep Navamsa analysis, Manjuu ji offers comprehensive Kundali Milan readings — helping couples and families understand compatibility at the soul level and make this most important decision with clarity and confidence.",
+    icon: Compass,
+    image: imgVastu,
+    title: "Vastu Consultation",
+    tagline: "Align Your Space, Transform Your Life",
+    desc: "Vastu Shastra is the ancient Indian science of space and energy. When your home or workplace is aligned with the five elements — Earth, Water, Fire, Air, and Space — harmony, prosperity and wellbeing flow naturally. Manjuu ji performs detailed on-site and remote Vastu audits, identifying energy imbalances and providing precise, practical remedies.",
     includes: [
-      "Ashta-Koota Guna Milan",
-      "Manglik dosha analysis & remedies",
-      "Navamsa compatibility reading",
-      "Emotional & spiritual compatibility",
-      "Auspicious wedding Muhurta selection",
-      "Post-marriage planetary guidance",
+      "Residential Vastu analysis",
+      "Commercial & office Vastu audit",
+      "Plot & construction Vastu",
+      "Factory & industrial Vastu",
+      "Directional corrections & remedies",
+      "Vastu for health, wealth & relationships",
     ],
   },
   {
-    icon: Briefcase,
-    image: imgBusiness,
-    title: "Business Guidance",
-    tagline: "Align Your Enterprise with the Cosmos",
-    desc: "Every successful enterprise has an unseen cosmic dimension. Manjuu ji provides strategic astrological and Vastu counsel tailored specifically for entrepreneurs, startups, and established businesses — helping them choose auspicious timings, aligned premises, and navigate challenges through planetary insight.",
+    icon: Heart,
+    image: spiritualImg,
+    title: "Spiritual Coaching",
+    tagline: "Absolute Clarity for Confident Growth",
+    desc: "Heal past blockages and gain absolute clarity for confident, aligned growth. Manjuu ji provides intuitive spiritual guidance to help you navigate life's challenges, dissolve inner limitations, and step into your highest potential.",
     includes: [
-      "Business launch Muhurta selection",
-      "Partner compatibility analysis",
-      "Business Vastu audit",
-      "Astrological risk assessment",
-      "Brand name & logo numerology",
-      "Quarterly astrological business forecast",
-    ],
-  },
-  {
-    icon: Gem,
-    image: imgGemstone,
-    title: "Gemstone Counsel",
-    tagline: "Harness the Power of Sacred Stones",
-    desc: "Vedic gemology prescribes specific gemstones to strengthen benefic planets and mitigate malefic influences in the birth chart. Manjuu ji provides a precise gemstone analysis — recommending only what is genuinely suited to your chart, worn correctly for maximum therapeutic and cosmic benefit.",
-    includes: [
-      "Planetary gemstone prescription",
-      "Substitute stone recommendations",
-      "Correct metal, finger & timing guidance",
-      "Gemstone quality assessment advice",
-      "Activation & energisation guidance",
-      "Periodic review & adjustment",
+      "Personalized spiritual counseling",
+      "Energy blockage identification",
+      "Karmic pattern healing",
+      "Guided meditation techniques",
+      "Life path alignment",
+      "Ongoing energetic support",
     ],
   },
 ];
@@ -136,14 +106,12 @@ const ServicesPage = () => (
       </div>
 
       <div className="relative max-w-3xl mx-auto anim-fadeup" style={{ zIndex: 1 }}>
-        <p className="font-display tracking-[0.20em] text-[11px] font-bold uppercase mb-4" style={{ color: "#8E6D3D" }}>
-          ✦ Custom Consultations ✦
-        </p>
+
         <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight font-cinzel" style={{ color: "#8E6D3D" }}>
           Sacred Services
         </h1>
         <OrnDivider style={{ margin: "0 auto 28px" } as React.CSSProperties} />
-        <p className="text-foreground/80 text-[15.5px] font-poppins leading-relaxed max-w-2xl mx-auto">
+        <p className="text-foreground/80 font-poppins leading-relaxed max-w-2xl mx-auto" style={{ fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)" }}>
           Precision-crafted spatial audits and planetary interpretations rooted in 5000 years of Vedic wisdom, delivered with absolute modern clarity.
         </p>
       </div>
@@ -184,8 +152,8 @@ const ServicesPage = () => (
               <div className="grid grid-cols-1 md:grid-cols-12 gap-0 items-stretch">
                 
                 {/* Column 1 — Image Card Section (5 cols) */}
-                <div className={`relative overflow-hidden md:col-span-5 min-h-[260px] md:min-h-full flex items-stretch ${isEven ? "order-1 md:order-1" : "order-1 md:order-2"}`}>
-                  <div className="w-full relative group h-full overflow-hidden">
+                <div className={`relative overflow-hidden md:col-span-5 min-h-[260px] md:min-h-full flex items-stretch p-4 md:p-6 ${isEven ? "order-1 md:order-1" : "order-1 md:order-2"}`}>
+                  <div className="w-full relative group h-full overflow-hidden rounded-xl shadow-sm border border-gold/10" style={{ borderColor: "rgba(142,109,61,0.15)" }}>
                     <img
                       src={s.image}
                       alt={s.title}
@@ -224,7 +192,7 @@ const ServicesPage = () => (
                         <h2 className="font-cinzel text-xl md:text-[22px] font-bold leading-tight" style={{ color: "#8E6D3D" }}>
                           {s.title}
                         </h2>
-                        <p className="font-poppins text-[9.5px] tracking-[0.18em] uppercase mt-1 font-bold" style={{ color: "#8E6D3D" }}>
+                        <p className="font-poppins tracking-[0.18em] uppercase mt-1 font-bold" style={{ color: "#8E6D3D", fontSize: "clamp(1.05rem, 1.3vw, 1.15rem)" }}>
                           {s.tagline}
                         </p>
                       </div>
@@ -236,19 +204,19 @@ const ServicesPage = () => (
                     </div>
 
                     {/* Description */}
-                    <p className="leading-relaxed text-[13.5px] md:text-[14px] font-poppins mb-6" style={{ color: "rgba(40,22,10,0.80)" }}>
+                    <p className="leading-relaxed font-poppins mb-6" style={{ color: "rgba(40,22,10,0.80)", fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)" }}>
                       {s.desc}
                     </p>
 
                     {/* Includes Section */}
                     <div className="mb-6">
-                      <p className="font-cinzel tracking-[0.16em] font-bold text-[10.5px] uppercase mb-4" style={{ color: "#8E6D3D" }}>
+                      <p className="font-cinzel tracking-[0.16em] font-bold uppercase mb-4" style={{ color: "#8E6D3D", fontSize: "clamp(1.05rem, 1.3vw, 1.15rem)" }}>
                         What's Included
                       </p>
                       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
                         {s.includes.map((item) => (
-                          <li key={item} className="flex items-start gap-2.5 text-foreground/75 text-[12.5px] font-poppins font-medium" style={{ color: "rgba(40,22,10,0.72)" }}>
-                            <CheckCircle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" strokeWidth={1.7} style={{ color: "#8E6D3D" }} />
+                          <li key={item} className="flex items-start gap-2.5 text-foreground/75 font-poppins font-medium" style={{ color: "rgba(40,22,10,0.72)", fontSize: "clamp(1.08rem, 1.35vw, 1.18rem)" }}>
+                            <CheckCircle className="w-3.5 h-3.5 mt-1 flex-shrink-0" strokeWidth={1.7} style={{ color: "#8E6D3D" }} />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -260,8 +228,8 @@ const ServicesPage = () => (
                   <div className="mt-6 pt-4 border-t border-dashed border-gold/15">
                     <Link
                       to="/contact"
-                      className="inline-flex items-center gap-2 font-cinzel tracking-[0.2em] text-[10px] uppercase font-bold transition-all hover:gap-4 book-service-link"
-                      style={{ color: "#8E6D3D" }}
+                      className="inline-flex items-center gap-2 font-cinzel tracking-[0.2em] uppercase font-bold transition-all hover:gap-4 book-service-link"
+                      style={{ color: "#8E6D3D", fontSize: "clamp(1.05rem, 1.3vw, 1.15rem)" }}
                     >
                       Book This Service <ArrowRight className="w-4 h-4" />
                     </Link>
@@ -316,152 +284,7 @@ const ServicesPage = () => (
       `}</style>
     </section>
 
-    {/* ── Overhauled High-Contrast CTA Section ── */}
-    <section style={{
-      padding: "128px 0",
-      background: "linear-gradient(135deg, #8E6D3D 0%, #2C2922 100%)",
-      textAlign: "center",
-      position: "relative",
-      overflow: "hidden",
-    }}>
-      {/* Background Radial Glow */}
-      <div style={{
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        width: "50%",
-        maxWidth: 500,
-        aspectRatio: "1",
-        background: "radial-gradient(circle, rgba(142,109,61,0.18) 0%, transparent 70%)",
-        filter: "blur(60px)",
-        pointerEvents: "none",
-        zIndex: 0,
-      }} />
-
-      {/* Rotating Background Mandala Watermark */}
-      <div className="anim-spinrev" style={{
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        width: "80%",
-        maxWidth: 680,
-        aspectRatio: "1",
-        opacity: 0.04,
-        pointerEvents: "none",
-        zIndex: 0,
-      }}>
-        <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.5">
-          <circle cx="50" cy="50" r="48" />
-          <circle cx="50" cy="50" r="38" strokeDasharray="1 1" />
-          <polygon points="50,2 98,50 50,98 2,50" />
-          <polygon points="50,2 98,50 50,98 2,50" transform="rotate(30 50 50)" />
-          <polygon points="50,2 98,50 50,98 2,50" transform="rotate(60 50 50)" />
-        </svg>
-      </div>
-
-      <div className="sparkle-field" style={{ opacity: 0.28 }} />
-
-      <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 1 }} className="anim-fadeup">
-        <p className="font-display tracking-[0.20em] text-[11px] font-bold uppercase mb-4" style={{ color: "#FFFFFF" }}>
-          ✦ Take the First Step ✦
-        </p>
-        <h2 className="font-cinzel text-3xl md:text-4xl font-bold mb-6 leading-tight" style={{ color: "#FFFFFF" }}>
-          Not Sure Which Service Is Right for You?
-        </h2>
-        <OrnDivider style={{ margin: "0 auto 28px" } as React.CSSProperties} />
-        <p className="text-foreground/90 text-[15px] font-poppins max-w-2xl mx-auto mb-10" style={{ color: "rgba(250,240,228,0.90)" }}>
-          Simply reach out. Manjuu ji will personally review your planetary chart and spatial guidelines to recommend the consultation best suited to your path.
-        </p>
-        
-        {/* Buttons */}
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 18 }} className="cta-btn-group">
-          
-          {/* Primary CTA */}
-          <Link
-            to="/contact"
-            style={{
-              fontFamily: "Cinzel, serif",
-              fontWeight: 700,
-              fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
-              letterSpacing: "0.20em",
-              textTransform: "uppercase",
-              color: "#8E6D3D",
-              background: "linear-gradient(135deg, #FFFFFF 0%, #8E6D3D 100%)",
-              padding: "16px 36px",
-              borderRadius: 999,
-              display: "inline-block",
-              transition: "all 0.4s ease",
-              border: "1.5px solid #8E6D3D",
-              boxShadow: "0 8px 30px -10px rgba(142,109,61,0.40)",
-            }}
-            className="cta-primary-btn"
-          >
-            Get in Touch
-          </Link>
-          
-          {/* Secondary CTA (WhatsApp) */}
-          <a href="https://wa.me/917310952576"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontFamily: "Cinzel, serif",
-              fontWeight: 700,
-              fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
-              letterSpacing: "0.20em",
-              textTransform: "uppercase",
-              color: "#FFFFFF",
-              background: "rgba(255,255,255,0.08)",
-              padding: "15px 34px",
-              borderRadius: 999,
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              transition: "all 0.4s ease",
-              border: "1.5px solid rgba(142,109,61,0.45)",
-            }}
-            className="cta-secondary-btn"
-          >
-            <MessageCircle size={14} />
-            Chat on WhatsApp
-          </a>
-        </div>
-
-        {/* Priority Badge */}
-        <div style={{ marginTop: 28 }} className="anim-glow">
-          <span style={{
-            fontFamily: "Cinzel, serif",
-            fontSize: 9.5,
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: "#8E6D3D",
-            fontWeight: 700,
-          }}>
-            ✦ Priority response within 2–4 Hours ✦
-          </span>
-        </div>
-      </div>
-      <style>{`
-        .cta-primary-btn:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 16px 40px -8px rgba(142,109,61,0.60) !important;
-          background: #FFFFFF !important;
-          border-color: #FFFFFF !important;
-        }
-        .cta-secondary-btn:hover {
-          transform: translateY(-3px);
-          background: #FFFFFF !important;
-          color: #8E6D3D !important;
-          border-color: #FFFFFF !important;
-          box-shadow: 0 16px 40px -12px rgba(250,240,228,0.22) !important;
-        }
-        @media (max-width: 500px) {
-          .cta-btn-group { flex-direction: column !important; width: 100% !important; max-width: 320px !important; margin: 0 auto !important; }
-          .cta-primary-btn, .cta-secondary-btn { width: 100% !important; text-align: center !important; justify-content: center !important; }
-        }
-      `}</style>
-    </section>
+    <Consult />
 
   </main>
 );

@@ -2,6 +2,7 @@ import portrait from "@/assets/WhatsApp Image 2026-05-27 at 2.08.25 PM (1).jpeg"
 import { Award, BookOpen, Globe, Heart, Sparkles, Star, Users, Zap, Calendar, ArrowRight, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { OrnDivider } from "@/components/SiteNav";
+import Consult from "@/components/Consult";
 
 /* ─── Data ─────────────────────────────────────────────── */
 const stats = [
@@ -30,7 +31,7 @@ const values = [
 /* ── Section Header helper ─────────────────────────────────── */
 const SectionHeader = ({ sup, title }: { sup: string; title: string }) => (
   <div style={{ textAlign: "center", marginBottom: 56 }} className="anim-fadeup">
-    <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>{sup}</p>
+    <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>{sup}</p>
     <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem,3.2vw,2.4rem)", color: "#8E6D3D", marginBottom: 20 }}>{title}</h2>
     <div style={{ display: "flex", justifyContent: "center" }}>
       <OrnDivider className="w-full" style={{ maxWidth: 360 } as React.CSSProperties} />
@@ -81,14 +82,12 @@ const AboutUsPage = () => (
       <div className="sparkle-field" style={{ opacity: 0.32 }} />
 
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 1 }} className="anim-fadeup">
-        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10, letterSpacing: "0.28em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>
-          ✦ The Cosmic Guide ✦
-        </p>
+
         <h1 style={{ fontFamily: "Cinzel, serif", fontWeight: 800, fontSize: "clamp(2.4rem,6vw,4.2rem)", color: "#8E6D3D", lineHeight: 1.1, marginBottom: 20 }}>
           Manjuu Mehta
         </h1>
         <OrnDivider />
-        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(12.5px, 1.8vw, 15px)", color: "#8E6D3D", fontWeight: 600, marginTop: 22, letterSpacing: "0.10em", textTransform: "uppercase" }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1rem, 1.5vw, 1.15rem)", color: "#8E6D3D", fontWeight: 600, marginTop: 22, letterSpacing: "0.10em", textTransform: "uppercase" }}>
           Renowned Vastu Advisor · Vedic Astrologer · Karmic Numerologist
         </p>
       </div>
@@ -156,7 +155,7 @@ const AboutUsPage = () => (
               animation: "floatSlow 6s ease-in-out infinite",
             }} className="about-float-badge">
               <span style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: "clamp(1.6rem, 2.2vw, 1.8rem)", color: "#8E6D3D", lineHeight: 1.1 }}>10+</span>
-              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.8rem, 1vw, 0.9rem)", letterSpacing: "0.14em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 2 }}>Years Wisdom</span>
+              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1rem, 1.2vw, 1.1rem)", letterSpacing: "0.14em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 2 }}>Years Wisdom</span>
             </div>
 
             {/* Bottom-Right Floating Badge */}
@@ -179,7 +178,7 @@ const AboutUsPage = () => (
               animationDelay: "3s",
             }} className="about-float-badge">
               <span style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: "clamp(1.6rem, 2.2vw, 1.8rem)", color: "#8E6D3D", lineHeight: 1.1 }}>5000+</span>
-              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.8rem, 1vw, 0.9rem)", letterSpacing: "0.14em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 2 }}>Happy Clients</span>
+              <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1rem, 1.2vw, 1.1rem)", letterSpacing: "0.14em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 2 }}>Happy Clients</span>
             </div>
 
             {/* Main Image Container in Arch Style */}
@@ -206,15 +205,15 @@ const AboutUsPage = () => (
 
         {/* RIGHT COLUMN: Editorial Description & Bio */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }} className="anim-fadeup">
-          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>
+          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.1rem, 1.35vw, 1.2rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>
             Her Journey
           </p>
-          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem, 3.2vw, 2.4rem)", color: "#8E6D3D", lineHeight: 1.15, marginBottom: 20 }}>
+          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", lineHeight: 1.15, marginBottom: 20 }}>
             A Decade of Cosmic Guidance
           </h2>
           <OrnDivider className="w-full" style={{ maxWidth: 460, marginBottom: 24 } as React.CSSProperties} />
 
-          <div style={{ display: "flex", flexDirection: "column", gap: 16, fontFamily: "Poppins, sans-serif", fontSize: 14.5, lineHeight: 1.95, color: "rgba(40,22,10,0.82)" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16, fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.95, color: "rgba(40,22,10,0.82)" }}>
             <p>
               <strong style={{ color: "#8E6D3D", fontWeight: 600 }}>Manjuu Mehta</strong> is a certified professional Vastu Advisor, Vedic Astrologer, and Karmic Numerologist based in the holy city of <strong style={{ color: "#8E6D3D", fontWeight: 600 }}>Haridwar, Uttarakhand</strong>. With over a decade of professional practice, she has transformed the lives of thousands of seekers worldwide.
             </p>
@@ -229,10 +228,10 @@ const AboutUsPage = () => (
               margin: "12px 0 8px",
               maxWidth: 580,
             }}>
-              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A" }}>
+              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A" }}>
                 "Every physical space has a soul, and every planetary chart is a cosmic map. My mission is to decode these blueprints, letting seekers step into their absolute divine alignment."
               </p>
-              <p style={{ fontFamily: "Cinzel, serif", fontSize: "clamp(0.85rem, 1.2vw, 1rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 8, fontWeight: 700 }}>
+              <p style={{ fontFamily: "Cinzel, serif", fontSize: "clamp(1.08rem, 1.2vw, 1.1rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 8, fontWeight: 700 }}>
                 — Manjuu Mehta
               </p>
             </div>
@@ -276,7 +275,7 @@ const AboutUsPage = () => (
           </svg>
         </div>
 
-        <h3 className="font-cinzel text-center tracking-[0.22em] uppercase font-bold mb-10" style={{ color: "#8E6D3D", fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)" }}>
+        <h3 className="font-cinzel text-center tracking-[0.22em] uppercase font-bold mb-10" style={{ color: "#8E6D3D", fontSize: "clamp(1.1rem, 1.35vw, 1.2rem)" }}>
           ✦ VIP Recognition &amp; Elite Accolades ✦
         </h3>
 
@@ -331,9 +330,9 @@ const AboutUsPage = () => (
               >
                 <badge.icon className="w-5 h-5 icon-svg" strokeWidth={1.7} style={{ color: "#8E6D3D", transition: "all 0.4s ease" }} />
               </div>
-              <h4 className="font-cinzel font-bold" style={{ color: "#8E6D3D", fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)" }}>{badge.title}</h4>
-              <p className="font-poppins tracking-[0.18em] uppercase font-bold mt-1 mb-2.5" style={{ color: "#8E6D3D", fontSize: "clamp(0.8rem, 1vw, 0.9rem)" }}>{badge.subtitle}</p>
-              <p className="font-poppins leading-relaxed text-foreground/70" style={{ color: "rgba(40,22,10,0.65)", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)" }}>{badge.desc}</p>
+              <h4 className="font-cinzel font-bold" style={{ color: "#8E6D3D", fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)" }}>{badge.title}</h4>
+              <p className="font-poppins tracking-[0.18em] uppercase font-bold mt-1 mb-2.5" style={{ color: "#8E6D3D", fontSize: "clamp(1rem, 1.2vw, 1.1rem)" }}>{badge.subtitle}</p>
+              <p className="font-poppins leading-relaxed text-foreground/70" style={{ color: "rgba(40,22,10,0.65)", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)" }}>{badge.desc}</p>
             </div>
           ))}
         </div>
@@ -395,8 +394,8 @@ const AboutUsPage = () => (
             }} />
 
             <div style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: "clamp(2rem, 3vw, 2.6rem)", color: "#8E6D3D", lineHeight: 1.1 }}>{s.value}</div>
-            <div style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.85rem, 1.2vw, 1rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 8, lineHeight: 1.2 }}>{s.label}</div>
-            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)", color: "rgba(58,32,16,0.55)", marginTop: 6, lineHeight: 1.3 }}>{s.desc}</div>
+            <div style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.08rem, 1.2vw, 1.1rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 8, lineHeight: 1.2 }}>{s.label}</div>
+            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.35vw, 1.2rem)", color: "rgba(58,32,16,0.55)", marginTop: 6, lineHeight: 1.3 }}>{s.desc}</div>
           </div>
         ))}
       </div>
@@ -419,7 +418,7 @@ const AboutUsPage = () => (
       <div className="sparkle-field" style={{ opacity: 0.25 }} />
       <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 2 }}>
         <div style={{ textAlign: "center", marginBottom: 44 }}>
-          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>Core Philosophy</p>
+          <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>Core Philosophy</p>
           <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem,3.2vw,2.4rem)", color: "#8E6D3D", marginBottom: 20 }}>The Cosmos is a Living Scripture</h2>
           <OrnDivider />
         </div>
@@ -433,13 +432,13 @@ const AboutUsPage = () => (
           boxShadow: "0 12px 32px -8px rgba(68,65,54,0.05)",
         }}>
           <blockquote style={{ borderLeft: "3px solid #8E6D3D", paddingLeft: 28, marginBottom: 28 }}>
-            <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.85, color: "#28160A" }}>
+            <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.85, color: "#28160A" }}>
               "I believe that every single seeker arrives in this world mapped with a highly distinct cosmic signature — a celestial blueprint written in the stars at the precise breath of birth. My work is simply to read that blueprint with absolute transparency, assisting the seeker to walk their destined path with clarity, power, and boundless grace."
             </p>
-            <footer style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.85rem, 1.2vw, 1rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 18 }}>— Manjuu Mehta</footer>
+            <footer style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.08rem, 1.2vw, 1.1rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 18 }}>— Manjuu Mehta</footer>
           </blockquote>
           
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 14.5, lineHeight: 1.9, color: "rgba(40,22,10,0.82)" }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "rgba(40,22,10,0.82)" }}>
             She maintains that the sacred architectures of Vastu Shastra, planetary coordinates of Jyotisha, and cosmic equations of Numerology are not superstitious beliefs but deeply scientific and empirical sciences. Cultivated, refined, and verified over five thousand years by India's greatest sages, they remain the most powerful tools available to align our modern lives with natural, cosmic flow.
           </p>
         </div>
@@ -496,10 +495,10 @@ const AboutUsPage = () => (
                 <c.icon className="icon-svg" size={20} strokeWidth={1.7} style={{ color: "#8E6D3D", transition: "all 0.4s ease" }} />
               </div>
 
-              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 12 }}>
+              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 12 }}>
                 {c.title}
               </h3>
-              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 13.5, lineHeight: 1.8, color: "rgba(58,32,16,0.68)" }}>
+              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.08rem, 1.35vw, 1.15rem)", lineHeight: 1.8, color: "rgba(58,32,16,0.68)" }}>
                 {c.desc}
               </p>
             </div>
@@ -530,74 +529,7 @@ const AboutUsPage = () => (
       </div>
     </section>
 
-    {/* ── 6. Core Values ────────────────────────── */}
-    <section style={{ padding: "116px 0", background: "linear-gradient(180deg, #FAF6F0 0%, #FFFFFF 100%)" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 32px" }}>
-        <SectionHeader sup="Pillars of Practice" title="Core Values" />
-        
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(1,1fr)", gap: 24 }} className="val-grid">
-          {values.map((v, i) => (
-            <div key={v.title}
-              style={{
-                display: "flex",
-                gap: 24,
-                padding: "32px 28px",
-                borderRadius: 20,
-                background: "rgba(255,255,255,0.78)",
-                border: "1px solid rgba(142,109,61,0.18)",
-                boxShadow: "0 8px 24px -10px rgba(68,65,54,0.05)",
-                transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
-                animation: `fadeUp 0.8s ease ${i * 0.1}s both`,
-                position: "relative",
-                overflow: "hidden",
-              }}
-              className="about-interactive-card"
-            >
-              {/* Sliding Top Line */}
-              <div className="card-top-line" style={{
-                position: "absolute",
-                top: 0,
-                left: "50%",
-                transform: "translateX(-50%) scaleX(0)",
-                width: "100%",
-                height: 3,
-                background: "var(--grad-gold)",
-                transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
-                transformOrigin: "center",
-              }} />
 
-              {/* Icon Badge */}
-              <div className="card-icon-badge" style={{
-                width: 52,
-                height: 52,
-                borderRadius: "50%",
-                background: "#FFFFFF",
-                border: "1px solid rgba(142,109,61,0.28)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-                transition: "all 0.4s ease",
-              }}>
-                <v.icon className="icon-svg" size={22} strokeWidth={1.7} style={{ color: "#8E6D3D", transition: "all 0.4s ease" }} />
-              </div>
-              
-              <div>
-                <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 8 }}>
-                  {v.title}
-                </h3>
-                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 13.5, lineHeight: 1.8, color: "rgba(58,32,16,0.68)" }}>
-                  {v.desc}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <style>{`
-          @media (min-width:768px){.val-grid{grid-template-columns:repeat(2,1fr)!important}}
-        `}</style>
-      </div>
-    </section>
 
     {/* ── 7. Journey Timeline ──────────────────── */}
     <section style={{ padding: "116px 0" }}>
@@ -655,13 +587,13 @@ const AboutUsPage = () => (
                 boxShadow: "0 4px 18px -6px rgba(68,65,54,0.04)",
                 transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
               }} className="timeline-card">
-                <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 10.5, letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 6 }}>
+                <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", letterSpacing: "0.20em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 6 }}>
                   {item.year}
                 </p>
-                <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)", letterSpacing: "0.02em", color: "#8E6D3D", marginBottom: 8 }}>
+                <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)", letterSpacing: "0.02em", color: "#8E6D3D", marginBottom: 8 }}>
                   {item.title}
                 </h3>
-                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 13.5, lineHeight: 1.75, color: "rgba(58,32,16,0.68)" }}>
+                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.08rem, 1.35vw, 1.15rem)", lineHeight: 1.75, color: "rgba(58,32,16,0.68)" }}>
                   {item.desc}
                 </p>
               </div>
@@ -686,169 +618,7 @@ const AboutUsPage = () => (
       `}</style>
     </section>
 
-    {/* ── 8. Overhauled High-Contrast CTA Section ───────────────────────────────── */}
-    <section style={{
-      padding: "128px 0",
-      background: "linear-gradient(135deg, #8E6D3D 0%, #2C2922 100%)",
-      textAlign: "center",
-      position: "relative",
-      overflow: "hidden",
-    }}>
-      {/* Dynamic Spin Mandala Behind Text */}
-      <div className="anim-spinrev" style={{
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        width: "80%",
-        maxWidth: 680,
-        aspectRatio: "1",
-        opacity: 0.04,
-        pointerEvents: "none",
-        zIndex: 0,
-      }}>
-        <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.5">
-          <circle cx="50" cy="50" r="48" />
-          <circle cx="50" cy="50" r="38" strokeDasharray="1 1" />
-          <polygon points="50,2 98,50 50,98 2,50" />
-          <polygon points="50,2 98,50 50,98 2,50" transform="rotate(30 50 50)" />
-          <polygon points="50,2 98,50 50,98 2,50" transform="rotate(60 50 50)" />
-        </svg>
-      </div>
-
-      {/* Behind Aura Glow */}
-      <div style={{
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        width: "50%",
-        maxWidth: 500,
-        aspectRatio: "1",
-        background: "radial-gradient(circle, rgba(142,109,61,0.18) 0%, transparent 70%)",
-        filter: "blur(60px)",
-        pointerEvents: "none",
-        zIndex: 0,
-      }} />
-
-      <div className="sparkle-field" style={{ opacity: 0.28 }} />
-
-      <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 1 }} className="anim-fadeup">
-        <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.20em", textTransform: "uppercase", color: "#FFFFFF", marginBottom: 14 }}>
-          ✦ Book Your Personalized Consultation Today ✦
-        </p>
-        
-        <h2 style={{
-          fontFamily: "Cinzel, serif",
-          fontWeight: 700,
-          fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)",
-          color: "#FFFFFF",
-          lineHeight: 1.2,
-          marginBottom: 24,
-          letterSpacing: "0.02em",
-        }}>
-          Ready to Step Into Your Divine Alignment?
-        </h2>
-        
-        <OrnDivider className="w-full" style={{ maxWidth: 480, margin: "0 auto" } as React.CSSProperties} />
-        
-        <p style={{
-          fontFamily: "Poppins, sans-serif",
-          fontSize: "15px",
-          lineHeight: "1.95",
-          color: "rgba(250,240,228,0.90)",
-          margin: "24px auto 44px",
-          maxWidth: 580,
-        }}>
-          A detailed personal chart reading or spatial Vastu audit can instantly dissolve years of stagnation, aligning your life with abundance and clarity.
-        </p>
-        
-        {/* Buttons */}
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 18 }} className="cta-btn-group">
-          
-          {/* Primary CTA */}
-          <Link to="/contact"
-            style={{
-              fontFamily: "Cinzel, serif",
-              fontWeight: 700,
-              fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
-              letterSpacing: "0.20em",
-              textTransform: "uppercase",
-              color: "#8E6D3D",
-              background: "linear-gradient(135deg, #FFFFFF 0%, #8E6D3D 100%)",
-              padding: "16px 36px",
-              borderRadius: 999,
-              display: "inline-block",
-              transition: "all 0.4s ease",
-              border: "1.5px solid #8E6D3D",
-              boxShadow: "0 8px 30px -10px rgba(142,109,61,0.40)",
-            }}
-            className="cta-primary-btn"
-          >
-            Request Consultation
-          </Link>
-          
-          {/* Secondary CTA (WhatsApp) */}
-          <a href="https://wa.me/917310952576"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontFamily: "Cinzel, serif",
-              fontWeight: 700,
-              fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
-              letterSpacing: "0.20em",
-              textTransform: "uppercase",
-              color: "#FFFFFF",
-              background: "rgba(255,255,255,0.08)",
-              padding: "15px 34px",
-              borderRadius: 999,
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              transition: "all 0.4s ease",
-              border: "1.5px solid rgba(142,109,61,0.45)",
-            }}
-            className="cta-secondary-btn"
-          >
-            <MessageCircle size={14} />
-            Chat on WhatsApp
-          </a>
-        </div>
-
-        {/* Priority Badge */}
-        <div style={{ marginTop: 28 }} className="anim-glow">
-          <span style={{
-            fontFamily: "Cinzel, serif",
-            fontSize: 9.5,
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: "#8E6D3D",
-            fontWeight: 700,
-          }}>
-            ✦ Priority response within 2–4 Hours ✦
-          </span>
-        </div>
-      </div>
-      <style>{`
-        .cta-primary-btn:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 16px 40px -8px rgba(142,109,61,0.60) !important;
-          background: #FFFFFF !important;
-          border-color: #FFFFFF !important;
-        }
-        .cta-secondary-btn:hover {
-          transform: translateY(-3px);
-          background: #FFFFFF !important;
-          color: #8E6D3D !important;
-          border-color: #FFFFFF !important;
-          box-shadow: 0 16px 40px -12px rgba(250,240,228,0.22) !important;
-        }
-        @media (max-width: 500px) {
-          .cta-btn-group { flex-direction: column !important; width: 100% !important; max-width: 320px !important; margin: 0 auto !important; }
-          .cta-primary-btn, .cta-secondary-btn { width: 100% !important; text-align: center !important; justify-content: center !important; }
-        }
-      `}</style>
-    </section>
+    <Consult />
 
   </main>
 );

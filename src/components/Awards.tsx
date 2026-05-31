@@ -64,11 +64,11 @@ const Awards = () => (
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 56 }}>
         <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>Recognition</p>
-        <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20 }}>Honours &amp; Accolades</h2>
+        <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20 }}>Honours &amp; Accolades</h2>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <OrnDivider className="w-full" style={{ maxWidth: 360 } as React.CSSProperties} />
         </div>
-        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A", marginTop: 16, maxWidth: 520, marginLeft: "auto", marginRight: "auto" }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A", marginTop: 16, maxWidth: 520, marginLeft: "auto", marginRight: "auto" }}>
           Honored across the globe for bringing authentic Vedic sciences to modern life.
         </p>
       </div>
@@ -125,8 +125,8 @@ const Awards = () => (
             </div>
 
             <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)", color: "#8E6D3D", marginBottom: 6 }}>{a.title}</h3>
-              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A" }}>{a.note}</p>
+              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)", color: "#8E6D3D", marginBottom: 6 }}>{a.title}</h3>
+              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A" }}>{a.note}</p>
             </div>
           </div>
         ))}
@@ -140,7 +140,7 @@ const Awards = () => (
           style={{
             fontFamily: "Cinzel, serif",
             fontWeight: 700,
-            fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
+            fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
             color: "#8E6D3D",

@@ -163,15 +163,15 @@ const About = () => (
         <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>
           Discover the Journey
         </p>
-        <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem, 3.2vw, 2.4rem)", color: "#8E6D3D", lineHeight: 1.2, marginBottom: 20 }}>
+        <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", lineHeight: 1.2, marginBottom: 20 }}>
           A Decade of Cosmic Guidance
         </h2>
         <OrnDivider className="w-full" style={{ maxWidth: 460, marginBottom: 24 } as React.CSSProperties} />
 
-        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A", marginBottom: 18, maxWidth: 560 }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A", marginBottom: 18, maxWidth: 560 }}>
           <strong style={{ color: "#8E6D3D", fontWeight: 600 }}>Manjuu Mehta</strong> is a <strong style={{ color: "#8E6D3D", fontWeight: 600 }}>trusted guide on your path to harmony</strong>. With over a decade of practice, she blends the ancient sciences of <strong style={{ color: "#8E6D3D", fontWeight: 600 }}>Vastu Shastra, Vedic Astrology, and Karmic Numerology</strong> to bring clarity, peace, and practical alignment to your life.
         </p>
-        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A", marginBottom: 24, maxWidth: 560 }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A", marginBottom: 24, maxWidth: 560 }}>
           As an elite member of <strong style={{ color: "#8E6D3D", fontWeight: 600 }}>AIFAS</strong>, her precise consultations have transformed homes, offices, and destinies worldwide — replacing obstacles with <strong style={{ color: "#8E6D3D", fontWeight: 600 }}>stunning prosperity and growth</strong>.
         </p>
 
@@ -182,7 +182,7 @@ const About = () => (
           margin: "12px 0 32px",
           maxWidth: 580,
         }}>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A" }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A" }}>
             "Every space carries its own soul, and every planetary alignment is a roadmap to your highest self. My purpose is to help you decode these cosmic whispers, guiding you to a life of abundance, deep trust, and effortless flow."
           </p>
           <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 10, fontWeight: 600 }}>
@@ -211,8 +211,8 @@ const About = () => (
               className="about-stat-card"
             >
               <div style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: "clamp(1.6rem, 2.2vw, 1.8rem)", color: "#8E6D3D", lineHeight: 1.0 }}>{s.n}</div>
-              <div style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 11, letterSpacing: "0.10em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 8, lineHeight: 1.3 }}>{s.l}</div>
-              <div style={{ fontFamily: "Poppins, sans-serif", fontSize: 12, color: "rgba(40,22,10,0.60)", marginTop: 4, lineHeight: 1.45 }}>{s.desc}</div>
+              <div style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.05rem, 1.2vw, 1.05rem)", letterSpacing: "0.10em", textTransform: "uppercase", color: "#8E6D3D", marginTop: 8, lineHeight: 1.3 }}>{s.l}</div>
+              <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.3vw, 1.1rem)", color: "rgba(40,22,10,0.60)", marginTop: 4, lineHeight: 1.45 }}>{s.desc}</div>
             </div>
           ))}
         </div>

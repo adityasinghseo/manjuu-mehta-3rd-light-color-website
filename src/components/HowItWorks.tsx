@@ -68,13 +68,13 @@ const HowItWorks = () => (
         <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>
           The Sacred Path
         </p>
-        <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20, lineHeight: 1.2 }}>
+        <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20, lineHeight: 1.2 }}>
           How It Works
         </h2>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <OrnDivider className="w-full" style={{ maxWidth: 420 } as React.CSSProperties} />
         </div>
-        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", color: "#28160A", marginTop: 18, lineHeight: 1.9 }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", color: "#28160A", marginTop: 18, lineHeight: 1.9 }}>
           A simple, aligned four-step journey to invite transformation into your life.
         </p>
       </div>
@@ -185,7 +185,7 @@ const HowItWorks = () => (
               <h3 style={{
                 fontFamily: "Cinzel, serif",
                 fontWeight: 700,
-                fontSize: "clamp(1.15rem, 1.8vw, 1.4rem)",
+                fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)",
                 letterSpacing: "0.05em",
                 color: "#8E6D3D",
                 marginBottom: 10,
@@ -198,7 +198,7 @@ const HowItWorks = () => (
               {/* Step Description */}
               <p style={{
                 fontFamily: "Poppins, sans-serif",
-                fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)",
+                fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)",
                 lineHeight: 1.9,
                 color: "#28160A",
                 position: "relative",

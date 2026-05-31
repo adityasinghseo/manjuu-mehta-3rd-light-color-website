@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from "lucide-react";
 import { OrnDivider } from "@/components/SiteNav";
+import Consult from "@/components/Consult";
 
 const contactDetails = [
   {
@@ -96,9 +97,7 @@ const ContactUs = () => {
         </div>
 
         <div className="relative max-w-3xl mx-auto anim-fadeup" style={{ zIndex: 1 }}>
-          <p className="font-display tracking-[0.26em] text-[10px] font-bold uppercase mb-4" style={{ color: "#8E6D3D" }}>
-            ✦ Begin Your Journey ✦
-          </p>
+
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-cinzel" style={{ color: "#8E6D3D" }}>
             Contact Us
           </h1>
@@ -134,7 +133,7 @@ const ContactUs = () => {
                 <button
                   onClick={() => setSent(false)}
                   className="mt-8 px-8 py-3.5 rounded-full border border-gold text-[#8E6D3D] font-cinzel font-bold tracking-widest uppercase hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
-                  style={{ border: "1.5px solid #8E6D3D", fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)" }}
+                  style={{ border: "1.5px solid #8E6D3D", fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)" }}
                 >
                   Send Another Message
                 </button>
@@ -230,13 +229,13 @@ const ContactUs = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-gradient-gold font-cinzel tracking-[0.20em] uppercase shadow-gold transition-transform hover:scale-[1.01] flex items-center justify-center gap-3 text-[#8E6D3D] font-bold submit-btn"
+                  className="w-full py-4 rounded-full font-cinzel tracking-[0.20em] uppercase shadow-gold transition-transform hover:scale-[1.01] flex items-center justify-center gap-3 text-[#8E6D3D] font-bold submit-btn"
                   style={{
-                    background: "linear-gradient(135deg, #FFFFFF 0%, #8E6D3D 100%)",
+                    background: "#FFFFFF",
                     border: "1.5px solid #8E6D3D",
-                    boxShadow: "0 8px 24px -10px rgba(142,109,61,0.40)",
+                    boxShadow: "0 8px 24px -10px rgba(142,109,61,0.25)",
                     cursor: "pointer",
-                    fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
+                    fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)",
                   }}
                 >
                   <MessageCircle className="w-4 h-4" />
@@ -305,26 +304,6 @@ const ContactUs = () => {
               ))}
             </div>
 
-            {/* Arched Personal Note Quote Block */}
-            <div className="p-7 bg-[#F5ECE0]/40 border border-gold/18 shadow-inner flex flex-col justify-between"
-              style={{
-                borderRadius: "2.5rem 2.5rem 0.8rem 0.8rem",
-                boxShadow: "inset 0 4px 20px rgba(68,65,54,0.02)",
-                backdropFilter: "blur(10px)",
-              }}
-            >
-              <div>
-                <p className="font-cinzel tracking-[0.16em] text-[#8E6D3D] font-bold text-xs uppercase mb-3">
-                  ✦ A Personal Blessing ✦
-                </p>
-                <p className="text-foreground/75 leading-relaxed font-poppins" style={{ color: "rgba(58,32,16,0.80)", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)" }}>
-                  "Every seeker that reaches out to this sanctuary is treated as sacred. I review your planetary transits and Vastu inquiries personally, assuring that every consultation is structured with the deepest compassion, focus, and ancient wisdom."
-                </p>
-              </div>
-              <p className="mt-4 font-cinzel text-[#8E6D3D] text-[10px] tracking-widest font-bold uppercase">
-                — Manjuu Mehta
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -371,6 +350,7 @@ const ContactUs = () => {
           background: #ffffff !important;
         }
       `}</style>
+      <Consult />
     </main>
   );
 };

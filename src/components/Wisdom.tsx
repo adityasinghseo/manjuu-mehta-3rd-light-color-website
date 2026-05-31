@@ -94,7 +94,7 @@ const Wisdom = () => (
         <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.26em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>
           Cosmic Wisdom
         </p>
-        <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "clamp(2.2rem, 4.5vw, 3.4rem)", color: "#8E6D3D", lineHeight: 1.18, marginBottom: 20 }}>
+        <h2 style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 700, fontSize: "clamp(2.5rem, 4.5vw, 3.4rem)", color: "#8E6D3D", lineHeight: 1.18, marginBottom: 20 }}>
           The Stars Whisper,<br />the Wise Listen.
         </h2>
         <div style={{ marginBottom: 24 }}>
@@ -104,7 +104,7 @@ const Wisdom = () => (
 
 
         {/* High-Contrast body paragraph */}
-        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", lineHeight: 1.9, color: "#28160A", marginBottom: 44, maxWidth: 580 }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A", marginBottom: 44, maxWidth: 580 }}>
           For five thousand years, the Rishis have read the language of light. Through Vedic Jyotisha, the ancient seers mapped karma, dharma, and destiny across the wheel of stars—a living science of self, time, and the divine.
         </p>
 
@@ -115,11 +115,11 @@ const Wisdom = () => (
           style={{
             fontFamily: "Cinzel, serif",
             fontWeight: 700,
-            fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
+            fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)",
             letterSpacing: "0.20em",
             textTransform: "uppercase",
             color: "#FFFFFF",
-            background: "linear-gradient(135deg, #8E6D3D 0%, #444136 100%)",
+            background: "#88693D",
             padding: "16px 36px",
             borderRadius: 999,
             border: "1px solid rgba(142, 109, 61, 0.22)",

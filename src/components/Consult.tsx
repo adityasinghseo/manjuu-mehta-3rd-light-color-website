@@ -6,7 +6,7 @@ const Consult = () => (
     id="consult"
     style={{
       padding: "128px 0",
-      background: "linear-gradient(135deg, #8E6D3D 0%, #2C2922 100%)",
+      background: "#A38552", // Lighter shade of #8E6E3C
       borderTop: "1px solid rgba(142, 109, 61, 0.32)",
       borderBottom: "1px solid rgba(142, 109, 61, 0.20)",
       position: "relative",
@@ -60,20 +60,20 @@ const Consult = () => (
       {/* Decorative Thinned Top Scroll */}
       <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
         <svg width="90" height="20" viewBox="0 0 160 36" fill="none">
-          <path d="M10 18C42 18 58 6 80 18C88 24 90 24 80 18C102 6 118 18 150 18" stroke="#8E6D3D" strokeWidth="1.5" strokeLinecap="round" opacity="0.85"/>
-          <circle cx="80" cy="18" r="4" fill="#8E6D3D" opacity="0.95"/>
-          <circle cx="62" cy="18" r="2.2" fill="#8E6D3D" opacity="0.70"/>
-          <circle cx="98" cy="18" r="2.2" fill="#8E6D3D" opacity="0.70"/>
+          <path d="M10 18C42 18 58 6 80 18C88 24 90 24 80 18C102 6 118 18 150 18" stroke="#28160A" strokeWidth="1.5" strokeLinecap="round" opacity="0.85"/>
+          <circle cx="80" cy="18" r="4" fill="#28160A" opacity="0.95"/>
+          <circle cx="62" cy="18" r="2.2" fill="#28160A" opacity="0.70"/>
+          <circle cx="98" cy="18" r="2.2" fill="#28160A" opacity="0.70"/>
         </svg>
       </div>
 
-      {/* Pre-Title in Radiant Gold */}
-      <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 18 }}>
+      {/* Pre-Title */}
+      <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#28160A", marginBottom: 18 }}>
         Book Your Personalized Consultation Today
       </p>
 
-      {/* Cinematic Headline in Cream */}
-      <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.6rem, 3.8vw, 2.8rem)", color: "#FFFFFF", lineHeight: 1.2, marginBottom: 24 }}>
+      {/* Cinematic Headline */}
+      <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: "clamp(1.6rem, 3.8vw, 2.8rem)", color: "#FFFFFF", lineHeight: 1.2, marginBottom: 24, textShadow: "0 2px 10px rgba(40,22,10,0.15)" }}>
         Step Into Your Divine Alignment
       </h2>
 
@@ -81,106 +81,64 @@ const Consult = () => (
         <OrnDivider className="w-full" style={{ maxWidth: 440 } as React.CSSProperties} />
       </div>
 
-      {/* Emotionally Compelling Bio Call in soft Cream/Rose */}
+      {/* Emotionally Compelling Bio Call */}
       <p style={{
         fontFamily: "Poppins, sans-serif",
-        fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)",
+        fontSize: "clamp(1.15rem, 1.4vw, 1.2rem)",
         lineHeight: 1.9,
-        color: "rgba(250, 240, 228, 0.90)",
+        color: "#28160A",
         maxWidth: 580,
         margin: "0 auto 44px",
-        fontWeight: 400,
+        fontWeight: 600,
       }}>
         Step into a life of effortless abundance, deep clarity, and peace. Through a private cosmic reading, we will unlock your personalized roadmap to success, health, and harmonious growth.
       </p>
 
-      {/* Double CTA Buttons with High Contrast Hierarchy */}
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 18 }}>
-        
-        {/* Primary Consultation Button - Glowing Gold Gradient */}
+      {/* Single CTA Button with Translucent Design */}
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <Link
           to="/contact"
           id="consult-book-cta"
           style={{
             fontFamily: "Cinzel, serif",
             fontWeight: 700,
-            fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
+            fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)",
             letterSpacing: "0.20em",
             textTransform: "uppercase",
-            color: "#8E6D3D",
-            background: "linear-gradient(135deg, #FFFFFF 0%, #8E6D3D 100%)",
+            color: "#8E6E3C",
+            background: "#FFFFFF",
             padding: "16px 36px",
             borderRadius: 999,
-            border: "1px solid #8E6D3D",
-            boxShadow: "0 12px 32px -12px rgba(142, 109, 61, 0.50)",
+            border: "2px solid #FFFFFF",
             display: "inline-block",
+            boxShadow: "0 10px 24px -10px rgba(0,0,0,0.15)",
             transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
           }}
           onMouseEnter={e => {
+            e.currentTarget.style.background = "transparent";
+            e.currentTarget.style.color = "#FFFFFF";
             e.currentTarget.style.transform = "translateY(-2px)";
-            e.currentTarget.style.boxShadow = "0 16px 40px -8px rgba(142, 109, 61, 0.65), 0 0 16px rgba(255, 255, 255, 0.22)";
+            e.currentTarget.style.boxShadow = "0 14px 32px -12px rgba(40, 22, 10, 0.25)";
           }}
           onMouseLeave={e => {
+            e.currentTarget.style.background = "#FFFFFF";
+            e.currentTarget.style.color = "#8E6E3C";
             e.currentTarget.style.transform = "none";
-            e.currentTarget.style.boxShadow = "0 12px 32px -12px rgba(142, 109, 61, 0.50)";
+            e.currentTarget.style.boxShadow = "0 10px 24px -10px rgba(0,0,0,0.15)";
           }}
         >
           Book a Consultation
         </Link>
-
-        {/* Secondary WhatsApp Button - Translucent Glass */}
-        <a
-          href="https://wa.me/919820954254"
-          target="_blank"
-          rel="noopener noreferrer"
-          id="consult-whatsapp-cta"
-          style={{
-            fontFamily: "Cinzel, serif",
-            fontWeight: 700,
-            fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)",
-            letterSpacing: "0.20em",
-            textTransform: "uppercase",
-            color: "#FFFFFF",
-            background: "rgba(255, 255, 255, 0.08)",
-            padding: "16px 36px",
-            borderRadius: 999,
-            border: "1.5px solid rgba(142, 109, 61, 0.65)",
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 8,
-            boxShadow: "0 10px 24px -10px rgba(0,0,0,0.20)",
-            transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
-          }}
-          onMouseEnter={e => {
-            e.currentTarget.style.background = "#FFFFFF";
-            e.currentTarget.style.color = "#8E6D3D";
-            e.currentTarget.style.borderColor = "#FFFFFF";
-            e.currentTarget.style.transform = "translateY(-2px)";
-            e.currentTarget.style.boxShadow = "0 14px 32px -12px rgba(255, 255, 255, 0.25)";
-          }}
-          onMouseLeave={e => {
-            e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
-            e.currentTarget.style.color = "#FFFFFF";
-            e.currentTarget.style.borderColor = "rgba(142, 109, 61, 0.65)";
-            e.currentTarget.style.transform = "none";
-            e.currentTarget.style.boxShadow = "0 10px 24px -10px rgba(0,0,0,0.20)";
-          }}
-        >
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          Connect on WhatsApp
-        </a>
       </div>
 
-      {/* Response priority note in soft gold */}
+      {/* Response priority note */}
       <p style={{
         fontFamily: "Poppins, sans-serif",
-        fontSize: 11,
+        fontSize: "clamp(1rem, 1.1vw, 1.05rem)",
         fontWeight: 600,
         letterSpacing: "0.10em",
         textTransform: "uppercase",
-        color: "rgba(234, 210, 149, 0.88)",
+        color: "#28160A",
         marginTop: 24,
       }}>
         ✦ Priority Response within 2–4 Hours ✦

@@ -89,13 +89,13 @@ const Testimonials = () => {
           <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: 15, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>
             Voices of Trust
           </p>
-          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.55rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20, lineHeight: 1.2 }}>
+          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20, lineHeight: 1.2 }}>
             Client Testimonials
           </h2>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <OrnDivider className="w-full" style={{ maxWidth: 420 } as React.CSSProperties} />
           </div>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)", color: "#28160A", marginTop: 18, lineHeight: 1.9 }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", color: "#28160A", marginTop: 18, lineHeight: 1.9 }}>
             Real stories of prosperity, alignment, and life-changing growth.
           </p>
         </div>
@@ -193,7 +193,7 @@ const Testimonials = () => {
             {/* Testimonial Quote Text */}
             <blockquote style={{
               fontFamily: "Poppins, sans-serif",
-              fontSize: "clamp(0.92rem, 1.35vw, 1.03rem)",
+              fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)",
               lineHeight: 1.9,
               color: "#28160A",
               fontWeight: 400,
@@ -236,7 +236,7 @@ const Testimonials = () => {
                 {t.init}
               </div>
               <div>
-                <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.05rem, 1.5vw, 1.25rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 3 }}>
+                <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 3 }}>
                   {t.name}
                 </p>
                 <p style={{ fontFamily: "Poppins, sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#8E6D3D" }}>

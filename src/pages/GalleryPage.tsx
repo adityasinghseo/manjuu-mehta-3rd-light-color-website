@@ -11,6 +11,7 @@ import img10 from "@/assets/WhatsApp Image 2026-04-30 at 2.17.04 PM.jpeg";
 import { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react";
 import { OrnDivider } from "@/components/SiteNav";
+import Consult from "@/components/Consult";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
@@ -99,12 +100,7 @@ const GalleryPage = () => {
         </div>
 
         <div className="relative max-w-3xl mx-auto anim-fadeup" style={{ zIndex: 1 }}>
-          <p
-            className="font-cinzel tracking-[0.28em] text-[10px] font-bold uppercase mb-4"
-            style={{ color: "#8E6D3D" }}
-          >
-            ✦ Moments of Honor ✦
-          </p>
+
           <h1
             className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-cinzel"
             style={{ color: "#8E6D3D" }}
@@ -181,7 +177,7 @@ const GalleryPage = () => {
 
           {/* Counter */}
           <div className="lightbox-counter">
-            <span className="font-cinzel" style={{ color: "#8E6D3D", fontSize: "clamp(0.85rem, 1.2vw, 1rem)", letterSpacing: "0.2em" }}>
+            <span className="font-cinzel" style={{ color: "#8E6D3D", fontSize: "clamp(1.08rem, 1.2vw, 1.1rem)", letterSpacing: "0.2em" }}>
               {String(lightboxIdx + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
             </span>
           </div>
@@ -581,6 +577,7 @@ const GalleryPage = () => {
           .lightbox-img { border-radius: 10px; }
         }
       `}</style>
+      <Consult />
     </main>
   );
 };
