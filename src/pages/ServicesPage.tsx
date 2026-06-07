@@ -74,7 +74,7 @@ const services = [
 ];
 
 const ServicesPage = () => (
-  <main className="relative min-h-screen pt-24" style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #FAF6F0 50%, #FFFFFF 100%)" }}>
+  <main className="relative min-h-screen pt-24" style={{ background: "var(--color-bg-primary)" }}>
     
     {/* Star field overlay */}
     <div className="pointer-events-none absolute inset-0 opacity-30 star-field" />
@@ -84,7 +84,7 @@ const ServicesPage = () => (
       {/* Background radial glow */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <div className="w-[600px] h-[600px] rounded-full opacity-20 animate-glow-pulse"
-          style={{ background: "radial-gradient(circle, rgba(142,109,61,0.14) 0%, transparent 70%)", filter: "blur(80px)" }} />
+          style={{ background: "radial-gradient(circle, rgba(var(--color-accent-gold-rgb),0.14) 0%, transparent 70%)", filter: "blur(80px)" }} />
       </div>
       
       {/* Faint spinning mandala watermark */}
@@ -99,7 +99,7 @@ const ServicesPage = () => (
         pointerEvents: "none",
         zIndex: 0,
       }}>
-        <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.6">
+        <svg viewBox="0 0 100 100" fill="none" stroke="var(--color-accent-gold)" strokeWidth="0.6">
           <circle cx="50" cy="50" r="48" />
           <polygon points="50,2 98,50 50,98 2,50" transform="rotate(22.5 50 50)" />
         </svg>
@@ -107,7 +107,7 @@ const ServicesPage = () => (
 
       <div className="relative max-w-3xl mx-auto anim-fadeup" style={{ zIndex: 1 }}>
 
-        <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight font-cinzel" style={{ color: "#8E6D3D" }}>
+        <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight font-cinzel" style={{ color: "var(--color-text-heading)" }}>
           Sacred Services
         </h1>
         <OrnDivider style={{ margin: "0 auto 28px" } as React.CSSProperties} />
@@ -127,9 +127,9 @@ const ServicesPage = () => (
               key={s.title}
               className="relative overflow-hidden rounded-2xl transition-all duration-500 services-editorial-card"
               style={{
-                background: "rgba(255,255,255,0.78)",
-                border: "1px solid rgba(142,109,61,0.18)",
-                boxShadow: "0 8px 30px -10px rgba(68,65,54,0.06)",
+                background: "#FAF0EC",
+                border: "1px solid rgba(var(--color-accent-gold-rgb),0.18)",
+                boxShadow: "0 8px 30px -10px rgba(var(--color-text-heading-rgb),0.06)",
                 animation: `fadeUp 0.8s ease ${i * 0.08}s both`,
                 backdropFilter: "blur(20px)",
                 WebkitBackdropFilter: "blur(20px)",
@@ -143,7 +143,7 @@ const ServicesPage = () => (
                 transform: "translateX(-50%) scaleX(0)",
                 width: "100%",
                 height: 3.5,
-                background: "linear-gradient(90deg, #8E6D3D 0%, #FFFFFF 50%, #8E6D3D 100%)",
+                background: "linear-gradient(90deg, var(--color-accent-gold) 0%, #FFFFFF 50%, var(--color-accent-gold) 100%)",
                 transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
                 transformOrigin: "center",
                 zIndex: 10,
@@ -153,7 +153,7 @@ const ServicesPage = () => (
                 
                 {/* Column 1 — Image Card Section (5 cols) */}
                 <div className={`relative overflow-hidden md:col-span-5 min-h-[260px] md:min-h-full flex items-stretch p-4 md:p-6 ${isEven ? "order-1 md:order-1" : "order-1 md:order-2"}`}>
-                  <div className="w-full relative group h-full overflow-hidden rounded-xl shadow-sm border border-gold/10" style={{ borderColor: "rgba(142,109,61,0.15)" }}>
+                  <div className="w-full relative group h-full overflow-hidden rounded-xl shadow-sm border border-gold/10" style={{ borderColor: "rgba(var(--color-accent-gold-rgb),0.15)" }}>
                     <img
                       src={s.image}
                       alt={s.title}
@@ -165,12 +165,7 @@ const ServicesPage = () => (
                     
                     {/* Custom Vignette & Cosmic Gradient Overlay */}
                     <div 
-                      className="absolute inset-0 pointer-events-none"
-                      style={{
-                        background: isEven 
-                          ? "linear-gradient(to right, transparent 60%, rgba(250,240,228,0.1) 100%), linear-gradient(180deg, rgba(142,109,61,0.02) 0%, rgba(142,109,61,0.18) 100%)"
-                          : "linear-gradient(to left, transparent 60%, rgba(250,240,228,0.1) 100%), linear-gradient(180deg, rgba(142,109,61,0.02) 0%, rgba(142,109,61,0.18) 100%)"
-                      }} 
+                      className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/30 via-transparent to-transparent"
                     />
                   </div>
                 </div>
@@ -184,23 +179,23 @@ const ServicesPage = () => (
                     <div className="flex items-center gap-4 mb-5">
                       <div
                         className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 card-icon-badge"
-                        style={{ background: "#FFFFFF", border: "1px solid rgba(142,109,61,0.28)", transition: "all 0.4s ease" }}
+                        style={{ background: "var(--color-bg-primary)", border: "1px solid rgba(var(--color-accent-gold-rgb),0.35)", transition: "all 0.4s ease" }}
                       >
-                        <s.icon className="w-5 h-5 icon-svg" strokeWidth={1.7} style={{ color: "#8E6D3D", transition: "all 0.4s ease" }} />
+                        <s.icon className="w-5 h-5 icon-svg" strokeWidth={1.7} style={{ color: "var(--color-accent-gold)", transition: "all 0.4s ease" }} />
                       </div>
                       <div>
-                        <h2 className="font-cinzel text-xl md:text-[22px] font-bold leading-tight" style={{ color: "#8E6D3D" }}>
+                        <h2 className="font-cinzel text-xl md:text-[22px] font-bold leading-tight" style={{ color: "var(--color-text-heading)" }}>
                           {s.title}
                         </h2>
-                        <p className="font-poppins tracking-[0.18em] uppercase mt-1 font-bold" style={{ color: "#8E6D3D", fontSize: "clamp(1.05rem, 1.3vw, 1.15rem)" }}>
+                        <p className="font-poppins tracking-[0.18em] uppercase mt-1 font-bold" style={{ color: "var(--color-accent-gold)", fontSize: "clamp(1.05rem, 1.3vw, 1.15rem)" }}>
                           {s.tagline}
                         </p>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-2 mb-5">
-                      <div className="h-px w-16" style={{ background: "linear-gradient(90deg, #8E6D3D, transparent)" }} />
-                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "#8E6D3D" }} />
+                      <div className="h-px w-16" style={{ background: "linear-gradient(90deg, var(--color-accent-gold), transparent)" }} />
+                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--color-accent-gold)" }} />
                     </div>
 
                     {/* Description */}
@@ -210,13 +205,13 @@ const ServicesPage = () => (
 
                     {/* Includes Section */}
                     <div className="mb-6">
-                      <p className="font-cinzel tracking-[0.16em] font-bold uppercase mb-4" style={{ color: "#8E6D3D", fontSize: "clamp(1.05rem, 1.3vw, 1.15rem)" }}>
+                      <p className="font-cinzel tracking-[0.16em] font-bold uppercase mb-4" style={{ color: "var(--color-text-heading)", fontSize: "clamp(1.05rem, 1.3vw, 1.15rem)" }}>
                         What's Included
                       </p>
                       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
                         {s.includes.map((item) => (
                           <li key={item} className="flex items-start gap-2.5 text-foreground/75 font-poppins font-medium" style={{ color: "rgba(40,22,10,0.72)", fontSize: "clamp(1.08rem, 1.35vw, 1.18rem)" }}>
-                            <CheckCircle className="w-3.5 h-3.5 mt-1 flex-shrink-0" strokeWidth={1.7} style={{ color: "#8E6D3D" }} />
+                            <CheckCircle className="w-3.5 h-3.5 mt-1 flex-shrink-0" strokeWidth={1.7} style={{ color: "var(--color-accent-gold)" }} />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -229,7 +224,7 @@ const ServicesPage = () => (
                     <Link
                       to="/contact"
                       className="inline-flex items-center gap-2 font-cinzel tracking-[0.2em] uppercase font-bold transition-all hover:gap-4 book-service-link"
-                      style={{ color: "#8E6D3D", fontSize: "clamp(1.05rem, 1.3vw, 1.15rem)" }}
+                      style={{ color: "var(--color-accent-gold)", fontSize: "clamp(1.05rem, 1.3vw, 1.15rem)" }}
                     >
                       Book This Service <ArrowRight className="w-4 h-4" />
                     </Link>
@@ -245,16 +240,16 @@ const ServicesPage = () => (
       <style>{`
         .services-editorial-card:hover {
           transform: translateY(-5px);
-          background: #ffffff !important;
-          border-color: rgba(142, 109, 61, 0.48) !important;
-          box-shadow: 0 20px 48px -12px rgba(68,65,54,0.12), 0 0 10px rgba(142,109,61,0.08) !important;
+          background: #FAF0EC !important;
+          border-color: rgba(var(--color-accent-gold-rgb), 0.48) !important;
+          box-shadow: 0 20px 48px -12px rgba(var(--color-text-heading-rgb),0.12), 0 0 10px rgba(var(--color-accent-gold-rgb),0.08) !important;
         }
         .services-editorial-card:hover .card-top-line {
           transform: translateX(-50%) scaleX(1);
         }
         .services-editorial-card:hover .card-icon-badge {
-          background: #8E6D3D !important;
-          border-color: #8E6D3D !important;
+          background: var(--color-accent-gold) !important;
+          border-color: var(--color-accent-gold) !important;
           transform: scale(1.08);
         }
         .services-editorial-card:hover .icon-svg {
@@ -275,7 +270,7 @@ const ServicesPage = () => (
           bottom: 0;
           width: 0;
           height: 1px;
-          background: #8E6D3D;
+          background: var(--color-accent-gold);
           transition: width 0.3s ease;
         }
         .book-service-link:hover::after {

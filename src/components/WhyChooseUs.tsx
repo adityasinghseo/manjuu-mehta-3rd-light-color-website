@@ -26,7 +26,7 @@ const WhyChooseUs = () => (
     style={{
       position: "relative",
       padding: "116px 0",
-      background: "linear-gradient(180deg, #FAF6F0 0%, #FFFFFF 100%)",
+      background: "var(--color-bg-primary)",
       overflow: "hidden",
     }}
   >
@@ -42,7 +42,7 @@ const WhyChooseUs = () => (
       pointerEvents: "none",
       zIndex: 0,
     }}>
-      <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.6">
+      <svg viewBox="0 0 100 100" fill="none" stroke="var(--color-accent-gold)" strokeWidth="0.6">
         <circle cx="50" cy="50" r="48" />
         <polygon points="50,2 98,50 50,98 2,50" />
       </svg>
@@ -57,10 +57,10 @@ const WhyChooseUs = () => (
       <div style={{ display: "flex", flexDirection: "column" }} className="wcu-left-col">
         {/* Section header */}
         <div style={{ marginBottom: 36 }}>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 12 }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-text-heading)", marginBottom: 12 }}>
             Our Pillars
           </p>
-          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 16, lineHeight: 1.2 }}>
+          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "var(--color-text-heading)", marginBottom: 16, lineHeight: 1.2 }}>
             Core Offerings
           </h2>
           <OrnDivider className="w-full" style={{ maxWidth: 460 } as React.CSSProperties} />
@@ -76,10 +76,10 @@ const WhyChooseUs = () => (
                 alignItems: "center",
                 gap: 22,
                 padding: "26px 30px",
-                background: "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(253,246,238,0.60) 100%)",
-                border: "1px solid rgba(142,109,61,0.18)",
+                background: "#FAF0EC",
+                border: "1px solid rgba(var(--color-accent-gold-rgb),0.18)",
                 borderRadius: 16,
-                boxShadow: "0 10px 30px -12px rgba(68,65,54,0.04)",
+                boxShadow: "0 10px 30px -12px rgba(var(--color-text-heading-rgb),0.04)",
                 transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
                 position: "relative",
                 overflow: "hidden",
@@ -94,7 +94,7 @@ const WhyChooseUs = () => (
                 left: 0,
                 right: 0,
                 height: 3,
-                background: "linear-gradient(90deg, #8E6D3D 0%, #FFFFFF 50%, #8E6D3D 100%)",
+                background: "linear-gradient(90deg, var(--color-accent-gold) 0%, #FFFFFF 50%, var(--color-accent-gold) 100%)",
                 transform: "scaleX(0)",
                 transformOrigin: "left",
                 transition: "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -111,10 +111,10 @@ const WhyChooseUs = () => (
                 <img src={s.image} alt={s.title} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.5s ease" }} className="offer-image" />
               </div>
               <div>
-                <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)", letterSpacing: "0.07em", color: "#8E6D3D", marginBottom: 8 }}>
+                <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)", letterSpacing: "0.07em", color: "var(--color-text-heading)", marginBottom: 8 }}>
                   {s.title}
                 </h3>
-                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A" }}>
+                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "var(--color-text-primary)" }}>
                   {s.desc}
                 </p>
               </div>
@@ -133,24 +133,24 @@ const WhyChooseUs = () => (
               fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)",
               letterSpacing: "0.18em",
               textTransform: "uppercase",
-              color: "#8E6D3D",
+              color: "var(--color-accent-gold)",
               padding: "16px 36px",
               borderRadius: 999,
-              border: "1px solid rgba(142,109,61,0.30)",
+              border: "1px solid rgba(var(--color-accent-gold-rgb),0.30)",
               display: "inline-block",
               transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
               background: "transparent",
             }}
             onMouseEnter={e => {
-              e.currentTarget.style.background = "#8E6D3D";
+              e.currentTarget.style.background = "var(--color-accent-gold)";
               e.currentTarget.style.color = "#FFFFFF";
-              e.currentTarget.style.borderColor = "#8E6D3D";
+              e.currentTarget.style.borderColor = "var(--color-accent-gold)";
               e.currentTarget.style.transform = "translateY(-1px)";
             }}
             onMouseLeave={e => {
               e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.color = "#8E6D3D";
-              e.currentTarget.style.borderColor = "rgba(142,109,61,0.30)";
+              e.currentTarget.style.color = "var(--color-accent-gold)";
+              e.currentTarget.style.borderColor = "rgba(var(--color-accent-gold-rgb),0.30)";
               e.currentTarget.style.transform = "translateY(0)";
             }}
           >
@@ -179,9 +179,9 @@ const WhyChooseUs = () => (
       }
       .offer-card:hover {
         transform: translateY(-5px);
-        background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,246,238,0.72) 100%) !important;
-        border-color: rgba(142, 109, 61, 0.45) !important;
-        box-shadow: 0 16px 40px -14px rgba(68,65,54,0.08), 0 0 12px rgba(142,109,61,0.06) !important;
+        background: var(--color-bg-primary) !important;
+        border-color: rgba(var(--color-accent-gold-rgb), 0.45) !important;
+        box-shadow: 0 16px 40px -14px rgba(var(--color-text-heading-rgb),0.08), 0 0 12px rgba(var(--color-accent-gold-rgb),0.06) !important;
       }
       .offer-card:hover .offer-top-line {
         transform: scaleX(1);

@@ -19,9 +19,9 @@ const ZodiacWheel = () => (
   >
     <defs>
       <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#8E6D3D" stopOpacity="0.8" />
+        <stop offset="0%" stopColor="var(--color-accent-gold)" stopOpacity="0.8" />
         <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.95" />
-        <stop offset="100%" stopColor="#8E6D3D" stopOpacity="0.7" />
+        <stop offset="100%" stopColor="var(--color-accent-gold)" stopOpacity="0.7" />
       </linearGradient>
     </defs>
     {/* Outer ring */}
@@ -53,7 +53,7 @@ const ZodiacWheel = () => (
           y={160 + r * Math.sin(a) + 4}
           textAnchor="middle"
           fontSize="9"
-          fill="#8E6D3D"
+          fill="var(--color-accent-gold)"
           opacity="0.85"
           fontFamily="Cinzel, serif"
           fontWeight="600"
@@ -71,7 +71,7 @@ const ZodiacWheel = () => (
           cx={160 + 120 * Math.cos(a)}
           cy={160 + 120 * Math.sin(a)}
           r="2"
-          fill="#8E6D3D"
+          fill="var(--color-accent-gold)"
           opacity="0.40"
         />
       );
@@ -91,7 +91,7 @@ const Hero = () => (
       paddingTop: 98,
       paddingBottom: 64,
       overflow: "hidden",
-      background: "linear-gradient(155deg, #FFFFFF 0%, #FFFFFF 35%, #FAF6F0 70%, #F2ECE2 100%)",
+      background: "var(--color-bg-primary)",
     }}
   >
     {/* Sparkle overlay with gentle slow twinkle */}
@@ -111,7 +111,7 @@ const Hero = () => (
       pointerEvents: "none",
       zIndex: 1,
     }}>
-      <svg viewBox="0 0 500 500" fill="none" stroke="#8E6D3D" strokeWidth="0.8">
+      <svg viewBox="0 0 500 500" fill="none" stroke="var(--color-accent-gold)" strokeWidth="0.8">
         <circle cx="250" cy="250" r="240" />
         <circle cx="250" cy="250" r="225" strokeDasharray="3 3" />
         <circle cx="250" cy="250" r="185" />
@@ -130,14 +130,14 @@ const Hero = () => (
     <div style={{
       position: "absolute", top: "-5%", right: "8%",
       width: 480, height: 480, borderRadius: "50%",
-      background: "radial-gradient(circle, rgba(142,109,61,0.11) 0%, transparent 70%)",
+      background: "radial-gradient(circle, rgba(var(--color-accent-gold-rgb),0.11) 0%, transparent 70%)",
       filter: "blur(60px)", pointerEvents: "none",
       animation: "glow 5s ease-in-out infinite",
     }} />
     <div style={{
       position: "absolute", bottom: "5%", left: "3%",
       width: 380, height: 380, borderRadius: "50%",
-      background: "radial-gradient(circle, rgba(142,109,61,0.08) 0%, transparent 70%)",
+      background: "radial-gradient(circle, rgba(var(--color-accent-gold-rgb),0.08) 0%, transparent 70%)",
       filter: "blur(60px)", pointerEvents: "none",
       animation: "glow 6s ease-in-out infinite",
       animationDelay: "2s",
@@ -166,7 +166,7 @@ const Hero = () => (
             fontFamily: "Poppins, sans-serif",
             fontWeight: 600,
             fontSize: "clamp(0.7rem, 1vw, 0.9rem)",
-            color: "#8E6D3D",
+            color: "var(--color-accent-gold)",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
             lineHeight: 1.6,
@@ -176,9 +176,9 @@ const Hero = () => (
             alignItems: "center",
           }}>
             <span>Vastu Advisor</span>
-            <span style={{ color: "#8E6D3D", fontSize: "clamp(0.7rem, 1vw, 0.9rem)" }}>✦</span>
+            <span style={{ color: "var(--color-accent-gold)", fontSize: "clamp(0.7rem, 1vw, 0.9rem)" }}>✦</span>
             <span>Astrologer</span>
-            <span style={{ color: "#8E6D3D", fontSize: "clamp(0.7rem, 1vw, 0.9rem)" }}>✦</span>
+            <span style={{ color: "var(--color-accent-gold)", fontSize: "clamp(0.7rem, 1vw, 0.9rem)" }}>✦</span>
             <span>Karmic Numerologist</span>
           </p>
         </div>
@@ -189,19 +189,19 @@ const Hero = () => (
           fontFamily: "Cinzel, serif",
           fontWeight: 900,
           fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
-          color: "#B8860B", // Solid dark goldenrod color for better readability
+          color: "var(--color-accent-gold)", // Solid dark goldenrod color for better readability
           lineHeight: 1.0,
           letterSpacing: "0.02em",
           marginBottom: 14,
-          textShadow: "0 2px 12px rgba(142,109,61,0.04)",
+          textShadow: "0 2px 12px rgba(var(--color-accent-gold-rgb),0.04)",
           whiteSpace: "nowrap",
         }}>
           <span style={{ position: "relative", display: "inline-block" }}>
             M
             <span style={{
               position: "absolute",
-              width: "0.10em",
-              height: "0.10em",
+              width: "0.15em",
+              height: "0.15em",
               backgroundColor: "#FF0000", // True bright red dot
               borderRadius: "50%",
               top: "25%", // Positioned slightly higher, centered in the 'V' space
@@ -217,14 +217,14 @@ const Hero = () => (
 
         {/* Tagline */}
         <div style={{ marginBottom: 20, display: "flex", alignItems: "center", gap: 10 }} className="hero-tagline">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="#8E6D3D" style={{ animation: "pulseGlow 2.5s ease-in-out infinite", flexShrink: 0 }}>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--color-accent-gold)" style={{ animation: "pulseGlow 2.5s ease-in-out infinite", flexShrink: 0 }}>
             <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" />
           </svg>
           <p style={{
             fontFamily: "Cinzel, serif",
             fontWeight: 600,
             fontSize: "clamp(1.3rem, 2.2vw, 1.55rem)",
-            color: "#8E6D3D",
+            color: "var(--color-text-heading)",
             lineHeight: 1.3,
             letterSpacing: "0.06em",
           }}>
@@ -238,7 +238,7 @@ const Hero = () => (
           fontFamily: "Poppins, sans-serif",
           fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)",
           lineHeight: 1.9,
-          color: "#28160A", // Solid dark brown for maximum readability
+          color: "var(--color-text-primary)", // Solid dark brown for maximum readability
           maxWidth: 460,
           marginBottom: 32,
         }}>
@@ -258,18 +258,18 @@ const Hero = () => (
 
         {/* Trust Element */}
         <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 22, animation: "fadeUp 0.9s ease 0.25s both" }}>
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="#8E6D3D" opacity="0.8" style={{ animation: "pulseGlow 2.5s ease-in-out infinite", flexShrink: 0 }}>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="var(--color-accent-gold)" opacity="0.8" style={{ animation: "pulseGlow 2.5s ease-in-out infinite", flexShrink: 0 }}>
             <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" />
           </svg>
           <span style={{
             fontFamily: "Poppins, sans-serif",
             fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)",
             fontWeight: 500,
-            color: "#8E6D3D", // Solid color for better readability
+            color: "var(--color-accent-gold)", // Solid color for better readability
             letterSpacing: "0.08em",
             textTransform: "uppercase",
           }}>
-            Trusted by clients across <span style={{ color: "#8E6D3D", fontWeight: 700 }}>India &amp; Abroad</span>
+            Trusted by clients across <span style={{ color: "var(--color-accent-gold)", fontWeight: 700 }}>India &amp; Abroad</span>
           </span>
         </div>
         </div>
@@ -295,7 +295,7 @@ const Hero = () => (
             position: "absolute",
             width: "125%",
             height: "125%",
-            background: "radial-gradient(circle, rgba(253,246,238,0.35) 0%, rgba(142,109,61,0.16) 35%, rgba(142,109,61,0.05) 65%, transparent 100%)",
+            background: "radial-gradient(circle, rgba(253,246,238,0.35) 0%, rgba(var(--color-accent-gold-rgb),0.16) 35%, rgba(var(--color-accent-gold-rgb),0.05) 65%, transparent 100%)",
             filter: "blur(50px)",
             pointerEvents: "none",
             zIndex: 1,
@@ -319,7 +319,7 @@ const Hero = () => (
               width: "100%",
               height: "100%",
               opacity: 0.46,
-              filter: "drop-shadow(0 0 16px rgba(142,109,61,0.12))",
+              filter: "drop-shadow(0 0 16px rgba(var(--color-accent-gold-rgb),0.12))",
               animation: "floatSlow 8s ease-in-out infinite",
             }}>
               <ZodiacWheel />
@@ -375,11 +375,11 @@ const Hero = () => (
     }}>
       <div className="stats-scroll-wrapper">
         <div style={{
-          background: "linear-gradient(135deg, rgba(255,255,255,0.78) 0%, rgba(253,246,238,0.60) 100%)",
-          border: "1px solid rgba(142,109,61,0.16)",
+          background: "var(--color-bg-primary)",
+          border: "1px solid rgba(var(--color-accent-gold-rgb),0.22)",
           borderRadius: 18,
           backdropFilter: "blur(20px)",
-          boxShadow: "0 16px 45px -12px rgba(68,65,54,0.08), 0 0 0 1px rgba(255,255,255,0.5) inset",
+          boxShadow: "0 16px 45px -12px rgba(var(--color-text-heading-rgb),0.08), 0 0 0 1px rgba(255,255,255,0.5) inset",
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
           padding: "24px 20px",
@@ -389,22 +389,23 @@ const Hero = () => (
         <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "12px 28px", justifyContent: "flex-start" }} className="stat-item">
           <div style={{
             width: 52, height: 52, borderRadius: "50%",
-            background: "#FBF4EA",
-            border: "1px solid rgba(142,109,61,0.28)",
+            background: "#8A6200",
+            border: "none",
             display: "flex", alignItems: "center", justifyContent: "center",
             flexShrink: 0,
             transition: "all 0.35s ease",
           }} className="stat-icon">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <circle cx="13" cy="16" r="8.5" stroke="#70542C" strokeWidth="1.5" />
-              <path d="M9 8L5 2L13 4.5L21 2L17 8" stroke="#70542C" strokeWidth="1.5" strokeLinejoin="round" />
-              <path d="M9 8H17" stroke="#70542C" strokeWidth="1.5" />
-              <path d="M10 16L12.5 18.5L16 13.5" stroke="#70542C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            {/* Hourglass — 10+ Years Experience */}
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 2h14" />
+              <path d="M5 22h14" />
+              <path d="M5 2l7 9 7-9" />
+              <path d="M5 22l7-9 7 9" />
             </svg>
           </div>
           <div>
-            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.4vw, 1.2rem)", fontWeight: 700, color: "#70542C", letterSpacing: "0.14em", textTransform: "uppercase" }}>Experience</div>
-            <div style={{ fontFamily: "Cinzel, serif", fontSize: 22, fontWeight: 700, color: "#8E6D3D", marginTop: 3, lineHeight: 1.15 }}>
+            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.4vw, 1.2rem)", fontWeight: 700, color: "var(--color-text-heading)", letterSpacing: "0.14em", textTransform: "uppercase" }}>Experience</div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: 22, fontWeight: 700, color: "var(--color-text-heading)", marginTop: 3, lineHeight: 1.15 }}>
               10+ <span style={{ fontSize: 18, fontWeight: 600 }}>Years</span>
             </div>
           </div>
@@ -412,26 +413,31 @@ const Hero = () => (
 
         {/* Divider */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }} className="stat-div">
-          <div style={{ width: 1, height: 52, background: "linear-gradient(to bottom, transparent, rgba(142,109,61,0.30), transparent)" }} />
+          <div style={{ width: 1, height: 52, background: "linear-gradient(to bottom, transparent, rgba(var(--color-accent-gold-rgb),0.30), transparent)" }} />
         </div>
 
         {/* Stat: Affiliation */}
         <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "12px 28px", justifyContent: "center" }} className="stat-item">
           <div style={{
             width: 52, height: 52, borderRadius: "50%",
-            background: "#FBF4EA",
-            border: "1px solid rgba(142,109,61,0.28)",
+            background: "#8A6200",
+            border: "none",
             display: "flex", alignItems: "center", justifyContent: "center",
             flexShrink: 0,
             transition: "all 0.35s ease",
           }} className="stat-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#70542C" strokeWidth="1.5">
-              <polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9" strokeLinecap="round" strokeLinejoin="round" />
+            {/* Medal ribbon — AIFAS Elite Member */}
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="14" r="6" />
+              <path d="M8 6l-2-4h12l-2 4" />
+              <path d="M8 6h8" />
+              <path d="M12 20v2" />
+              <path d="M11 14l1 2 2-3" />
             </svg>
           </div>
           <div>
-            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.4vw, 1.2rem)", fontWeight: 700, color: "#70542C", letterSpacing: "0.14em", textTransform: "uppercase" }}>Affiliation</div>
-            <div style={{ fontFamily: "Cinzel, serif", fontSize: 20, fontWeight: 700, color: "#8E6D3D", marginTop: 3, lineHeight: 1.2 }}>
+            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.4vw, 1.2rem)", fontWeight: 700, color: "var(--color-text-heading)", letterSpacing: "0.14em", textTransform: "uppercase" }}>Affiliation</div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: 20, fontWeight: 700, color: "var(--color-text-heading)", marginTop: 3, lineHeight: 1.2 }}>
               AIFAS Elite <span style={{ fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)", fontWeight: 600 }}>Member</span>
             </div>
           </div>
@@ -439,27 +445,30 @@ const Hero = () => (
 
         {/* Divider */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }} className="stat-div">
-          <div style={{ width: 1, height: 52, background: "linear-gradient(to bottom, transparent, rgba(142,109,61,0.30), transparent)" }} />
+          <div style={{ width: 1, height: 52, background: "linear-gradient(to bottom, transparent, rgba(var(--color-accent-gold-rgb),0.30), transparent)" }} />
         </div>
 
         {/* Stat: Clientele */}
         <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "12px 28px", justifyContent: "flex-end" }} className="stat-item">
           <div style={{
             width: 52, height: 52, borderRadius: "50%",
-            background: "#FBF4EA",
-            border: "1px solid rgba(142,109,61,0.28)",
+            background: "#8A6200",
+            border: "none",
             display: "flex", alignItems: "center", justifyContent: "center",
             flexShrink: 0,
             transition: "all 0.35s ease",
           }} className="stat-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#70542C" strokeWidth="1.5">
+            {/* Globe with people — Global Clientele */}
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="10" />
-              <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M2 12h20" />
+              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+              <path d="M6 5.5C7.5 7 10 8 12 8s4.5-1 6-2.5" />
             </svg>
           </div>
           <div>
-            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.4vw, 1.2rem)", fontWeight: 700, color: "#70542C", letterSpacing: "0.14em", textTransform: "uppercase" }}>Trust &amp; Reach</div>
-            <div style={{ fontFamily: "Cinzel, serif", fontSize: 20, fontWeight: 700, color: "#8E6D3D", marginTop: 3, lineHeight: 1.2 }}>
+            <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.4vw, 1.2rem)", fontWeight: 700, color: "var(--color-text-heading)", letterSpacing: "0.14em", textTransform: "uppercase" }}>Trust &amp; Reach</div>
+            <div style={{ fontFamily: "Cinzel, serif", fontSize: 20, fontWeight: 700, color: "var(--color-text-heading)", marginTop: 3, lineHeight: 1.2 }}>
               Global <span style={{ fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)", fontWeight: 600 }}>Clientele</span>
             </div>
           </div>
@@ -475,12 +484,12 @@ const Hero = () => (
       
       /* Interactive hover styles */
       .portrait-wrapper {
-        filter: drop-shadow(0 8px 20px rgba(142,109,61,0.03));
+        filter: drop-shadow(0 8px 20px rgba(var(--color-accent-gold-rgb),0.03));
         transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
       }
       .portrait-wrapper:hover {
         transform: scale(1.015) translateY(-3px);
-        filter: drop-shadow(0 15px 32px rgba(142,109,61,0.09)) !important;
+        filter: drop-shadow(0 15px 32px rgba(var(--color-accent-gold-rgb),0.09)) !important;
       }
       .portrait-wrapper:hover .portrait-img {
         transform: scale(1.02);
@@ -508,7 +517,7 @@ const Hero = () => (
       }
       @keyframes pulseGlow {
         0%, 100% { transform: scale(1); opacity: 0.6; }
-        50% { transform: scale(1.12); opacity: 1; filter: drop-shadow(0 0 4px rgba(142,109,61,0.5)); }
+        50% { transform: scale(1.12); opacity: 1; filter: drop-shadow(0 0 4px rgba(var(--color-accent-gold-rgb),0.5)); }
       }
 
       .btn-primary {
@@ -521,13 +530,13 @@ const Hero = () => (
         background: var(--grad-maroon);
         padding: 12px 30px;
         border-radius: 999px;
-        box-shadow: 0 4px 16px rgba(142,109,61,0.18);
+        box-shadow: 0 4px 16px rgba(var(--color-accent-gold-rgb),0.18);
         transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         display: inline-block;
       }
       .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(142,109,61,0.30), 0 0 12px rgba(142,109,61,0.18);
+        box-shadow: 0 8px 24px rgba(var(--color-accent-gold-rgb),0.30), 0 0 12px rgba(var(--color-accent-gold-rgb),0.18);
       }
       .btn-hero-solid {
         font-family: "Cinzel", serif;
@@ -536,7 +545,7 @@ const Hero = () => (
         letter-spacing: 0.16em;
         text-transform: uppercase;
         color: #FFFFFF !important;
-        background: #B8860B; /* Same color as Manjuu Mehta title */
+        background: var(--color-accent-gold); /* Same color as Manjuu Mehta title */
         padding: 16px 38px;
         border-radius: 999px;
         border: none;
@@ -550,9 +559,9 @@ const Hero = () => (
 
       .hero-badge-pill:hover {
         background: rgba(255, 255, 255, 0.90) !important;
-        border-color: rgba(142, 109, 61, 0.60) !important;
+        border-color: rgba(var(--color-accent-gold-rgb), 0.60) !important;
         transform: translateY(-2px);
-        box-shadow: 0 6px 14px rgba(68,65,54,0.06) !important;
+        box-shadow: 0 6px 14px rgba(var(--color-text-heading-rgb),0.06) !important;
       }
 
       .stat-item {
@@ -563,9 +572,9 @@ const Hero = () => (
       }
       .stat-item:hover .stat-icon {
         transform: scale(1.10);
-        background: #8E6D3D !important;
-        border-color: #8E6D3D !important;
-        box-shadow: 0 4px 16px rgba(142,109,61,0.25);
+        background: var(--color-accent-gold) !important;
+        border-color: var(--color-accent-gold) !important;
+        box-shadow: 0 4px 16px rgba(var(--color-accent-gold-rgb),0.25);
       }
       .stat-item:hover .stat-icon svg * {
         stroke: #FFFFFF !important;
@@ -618,9 +627,9 @@ const Hero = () => (
           padding: 20px 24px !important;
           gap: 16px !important;
           background: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(253,246,238,0.7) 100%) !important;
-          border: 1px solid rgba(142,109,61,0.2) !important;
+          border: 1px solid rgba(var(--color-accent-gold-rgb),0.2) !important;
           border-radius: 16px !important;
-          box-shadow: 0 8px 24px -8px rgba(68,65,54,0.08) !important;
+          box-shadow: 0 8px 24px -8px rgba(var(--color-text-heading-rgb),0.08) !important;
           backdrop-filter: blur(10px) !important;
         }
         .stat-icon {

@@ -17,17 +17,17 @@ const WhatsAppButton = () => (
       alignItems: "center",
       justifyContent: "center",
       color: "#fff",
-      boxShadow: "0 4px 20px rgba(37,211,102,0.45), 0 0 0 3px rgba(142,109,61,0.22)",
+      boxShadow: "0 4px 20px rgba(37,211,102,0.45), 0 0 0 3px rgba(var(--color-accent-gold-rgb),0.22)",
       transition: "transform 0.25s, box-shadow 0.25s",
       animation: "fadeUp 0.8s ease 0.5s both",
     }}
     onMouseEnter={e => {
       e.currentTarget.style.transform = "scale(1.10)";
-      e.currentTarget.style.boxShadow = "0 8px 28px rgba(37,211,102,0.55), 0 0 0 3px rgba(142,109,61,0.20)";
+      e.currentTarget.style.boxShadow = "0 8px 28px rgba(37,211,102,0.55), 0 0 0 3px rgba(var(--color-accent-gold-rgb),0.20)";
     }}
     onMouseLeave={e => {
       e.currentTarget.style.transform = "scale(1)";
-      e.currentTarget.style.boxShadow = "0 4px 20px rgba(37,211,102,0.45), 0 0 0 3px rgba(142,109,61,0.22)";
+      e.currentTarget.style.boxShadow = "0 4px 20px rgba(37,211,102,0.45), 0 0 0 3px rgba(var(--color-accent-gold-rgb),0.22)";
     }}
   >
     <svg viewBox="0 0 24 24" width="28" height="28" fill="white">

@@ -7,8 +7,8 @@ const Consult = () => (
     style={{
       padding: "128px 0",
       background: "#A38552", // Lighter shade of #8E6E3C
-      borderTop: "1px solid rgba(142, 109, 61, 0.32)",
-      borderBottom: "1px solid rgba(142, 109, 61, 0.20)",
+      borderTop: "1px solid rgba(var(--color-accent-gold-rgb), 0.32)",
+      borderBottom: "1px solid rgba(var(--color-accent-gold-rgb), 0.20)",
       position: "relative",
       overflow: "hidden",
     }}
@@ -22,7 +22,7 @@ const Consult = () => (
       width: 540,
       height: 540,
       borderRadius: "50%",
-      background: "radial-gradient(circle, rgba(142,109,61,0.22) 0%, rgba(255,255,255,0.03) 45%, transparent 70%)",
+      background: "radial-gradient(circle, rgba(var(--color-accent-gold-rgb),0.22) 0%, rgba(255,255,255,0.03) 45%, transparent 70%)",
       filter: "blur(64px)",
       pointerEvents: "none",
       zIndex: 0,
@@ -43,7 +43,7 @@ const Consult = () => (
       zIndex: 0,
       animation: "spinSlow 100s linear infinite",
     }}>
-      <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.5">
+      <svg viewBox="0 0 100 100" fill="none" stroke="var(--color-accent-gold)" strokeWidth="0.5">
         <circle cx="50" cy="50" r="48" />
         <circle cx="50" cy="50" r="38" strokeDasharray="2 2" />
         <polygon points="50,5 95,50 50,95 5,50" />
@@ -60,15 +60,15 @@ const Consult = () => (
       {/* Decorative Thinned Top Scroll */}
       <div style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}>
         <svg width="90" height="20" viewBox="0 0 160 36" fill="none">
-          <path d="M10 18C42 18 58 6 80 18C88 24 90 24 80 18C102 6 118 18 150 18" stroke="#28160A" strokeWidth="1.5" strokeLinecap="round" opacity="0.85"/>
-          <circle cx="80" cy="18" r="4" fill="#28160A" opacity="0.95"/>
-          <circle cx="62" cy="18" r="2.2" fill="#28160A" opacity="0.70"/>
-          <circle cx="98" cy="18" r="2.2" fill="#28160A" opacity="0.70"/>
+          <path d="M10 18C42 18 58 6 80 18C88 24 90 24 80 18C102 6 118 18 150 18" stroke="var(--color-text-primary)" strokeWidth="1.5" strokeLinecap="round" opacity="0.85"/>
+          <circle cx="80" cy="18" r="4" fill="var(--color-text-primary)" opacity="0.95"/>
+          <circle cx="62" cy="18" r="2.2" fill="var(--color-text-primary)" opacity="0.70"/>
+          <circle cx="98" cy="18" r="2.2" fill="var(--color-text-primary)" opacity="0.70"/>
         </svg>
       </div>
 
       {/* Pre-Title */}
-      <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#28160A", marginBottom: 18 }}>
+      <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-text-primary)", marginBottom: 18 }}>
         Book Your Personalized Consultation Today
       </p>
 
@@ -86,7 +86,7 @@ const Consult = () => (
         fontFamily: "Poppins, sans-serif",
         fontSize: "clamp(1.15rem, 1.4vw, 1.2rem)",
         lineHeight: 1.9,
-        color: "#28160A",
+        color: "var(--color-text-primary)",
         maxWidth: 580,
         margin: "0 auto 44px",
         fontWeight: 600,
@@ -138,7 +138,7 @@ const Consult = () => (
         fontWeight: 600,
         letterSpacing: "0.10em",
         textTransform: "uppercase",
-        color: "#28160A",
+        color: "var(--color-text-primary)",
         marginTop: 24,
       }}>
         ✦ Priority Response within 2–4 Hours ✦

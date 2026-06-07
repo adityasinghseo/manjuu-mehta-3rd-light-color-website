@@ -33,7 +33,7 @@ const HowItWorks = () => (
     id="how-it-works"
     style={{
       padding: "116px 0",
-      background: "linear-gradient(180deg, #FAF6F0 0%, #FFFFFF 100%)",
+      background: "var(--color-bg-primary)",
       position: "relative",
       overflow: "hidden",
     }}
@@ -50,7 +50,7 @@ const HowItWorks = () => (
       pointerEvents: "none",
       zIndex: 0,
     }}>
-      <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.5">
+      <svg viewBox="0 0 100 100" fill="none" stroke="var(--color-accent-gold)" strokeWidth="0.5">
         <circle cx="50" cy="50" r="48" />
         <circle cx="50" cy="50" r="38" strokeDasharray="2 2" />
         <polygon points="50,2 98,50 50,98 2,50" />
@@ -65,16 +65,16 @@ const HowItWorks = () => (
     <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 1 }}>
       {/* Header */}
       <div style={{ textAlign: "center", marginBottom: 72 }}>
-        <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-text-heading)", marginBottom: 14 }}>
           The Sacred Path
         </p>
-        <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20, lineHeight: 1.2 }}>
+        <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "var(--color-text-heading)", marginBottom: 20, lineHeight: 1.2 }}>
           How It Works
         </h2>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <OrnDivider className="w-full" style={{ maxWidth: 420 } as React.CSSProperties} />
         </div>
-        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", color: "#28160A", marginTop: 18, lineHeight: 1.9 }}>
+        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", color: "var(--color-text-primary)", marginTop: 18, lineHeight: 1.9 }}>
           A simple, aligned four-step journey to invite transformation into your life.
         </p>
       </div>
@@ -91,7 +91,7 @@ const HowItWorks = () => (
             right: "12%",
             height: "2px",
             background: "transparent",
-            borderTop: "1.5px dashed rgba(142, 109, 61, 0.32)",
+            borderTop: "1.5px dashed rgba(var(--color-accent-gold-rgb), 0.32)",
             zIndex: 0,
             pointerEvents: "none",
           }}
@@ -105,10 +105,10 @@ const HowItWorks = () => (
               style={{
                 position: "relative",
                 padding: "38px 28px",
-                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(253, 246, 238, 0.52) 100%)",
-                border: "1px solid rgba(142, 109, 61, 0.16)",
+                background: "#FAF0EC",
+                border: "1px solid rgba(var(--color-accent-gold-rgb), 0.16)",
                 borderRadius: 18,
-                boxShadow: "0 10px 30px -12px rgba(68,65,54,0.03)",
+                boxShadow: "0 10px 30px -12px rgba(var(--color-text-heading-rgb),0.03)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -127,7 +127,7 @@ const HowItWorks = () => (
                 left: 0,
                 right: 0,
                 height: 3,
-                background: "linear-gradient(90deg, #8E6D3D 0%, #FFFFFF 50%, #8E6D3D 100%)",
+                background: "linear-gradient(90deg, var(--color-accent-gold) 0%, #FFFFFF 50%, var(--color-accent-gold) 100%)",
                 transform: "scaleX(0)",
                 transformOrigin: "left",
                 transition: "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -139,7 +139,7 @@ const HowItWorks = () => (
                 position: "absolute",
                 inset: 0,
                 borderRadius: 18,
-                background: "radial-gradient(circle at center, rgba(142, 109, 61, 0.08) 0%, transparent 70%)",
+                background: "radial-gradient(circle at center, rgba(var(--color-accent-gold-rgb), 0.08) 0%, transparent 70%)",
                 opacity: 0,
                 transition: "opacity 0.5s ease",
                 pointerEvents: "none",
@@ -154,7 +154,7 @@ const HowItWorks = () => (
                 fontFamily: "Cinzel, serif",
                 fontWeight: 800,
                 fontSize: 68,
-                color: "rgba(142, 109, 61, 0.045)",
+                color: "rgba(var(--color-accent-gold-rgb), 0.045)",
                 pointerEvents: "none",
                 zIndex: 1,
                 transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -167,8 +167,8 @@ const HowItWorks = () => (
                 width: 68,
                 height: 68,
                 borderRadius: "50%",
-                background: "#FFFFFF",
-                border: "1px solid rgba(142, 109, 61, 0.28)",
+                background: "#D86A63",
+                border: "1px solid rgba(244, 208, 111, 0.35)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -176,9 +176,9 @@ const HowItWorks = () => (
                 position: "relative",
                 zIndex: 2,
                 transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
-                boxShadow: "0 4px 12px rgba(68,65,54,0.02)",
+                boxShadow: "0 4px 12px rgba(216,106,99,0.15)",
               }} className="hiw-icon-wrapper">
-                <s.Icon size={24} strokeWidth={1.7} color="#8E6D3D" style={{ transition: "all 0.4s ease" }} />
+                <s.Icon size={24} strokeWidth={1.7} color="#F4D06F" style={{ transition: "all 0.4s ease" }} />
               </div>
 
               {/* Step Title */}
@@ -187,7 +187,7 @@ const HowItWorks = () => (
                 fontWeight: 700,
                 fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)",
                 letterSpacing: "0.05em",
-                color: "#8E6D3D",
+                color: "var(--color-accent-gold)",
                 marginBottom: 10,
                 position: "relative",
                 zIndex: 2,
@@ -200,7 +200,7 @@ const HowItWorks = () => (
                 fontFamily: "Poppins, sans-serif",
                 fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)",
                 lineHeight: 1.9,
-                color: "#28160A",
+                color: "var(--color-text-primary)",
                 position: "relative",
                 zIndex: 2,
                 maxWidth: "240px",
@@ -230,9 +230,9 @@ const HowItWorks = () => (
       /* Card Hover Effects */
       .hiw-card:hover {
         transform: translateY(-6px);
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(253, 246, 238, 0.72) 100%) !important;
-        border-color: rgba(142, 109, 61, 0.45) !important;
-        box-shadow: 0 20px 40px -16px rgba(68,65,54,0.08), 0 0 16px rgba(142,109,61,0.04) !important;
+        background: var(--color-bg-primary) !important;
+        border-color: rgba(var(--color-accent-gold-rgb), 0.45) !important;
+        box-shadow: 0 20px 40px -16px rgba(var(--color-text-heading-rgb),0.08), 0 0 16px rgba(var(--color-accent-gold-rgb),0.04) !important;
       }
       
       .hiw-card:hover .hiw-top-line {
@@ -245,20 +245,12 @@ const HowItWorks = () => (
 
       .hiw-card:hover .hiw-number-watermark {
         transform: scale(1.08) translateY(-4px);
-        color: rgba(142, 109, 61, 0.08) !important;
+        color: rgba(var(--color-accent-gold-rgb), 0.08) !important;
       }
 
       .hiw-card:hover .hiw-icon-wrapper {
         transform: scale(1.08);
-        background: #8E6D3D !important;
-        border-color: #8E6D3D !important;
-        box-shadow: 0 6px 16px rgba(142, 109, 61, 0.25);
-      }
-
-      .hiw-card:hover .hiw-icon-wrapper svg,
-      .hiw-card:hover .hiw-icon-wrapper svg * {
-        color: #FFFFFF !important;
-        stroke: #FFFFFF !important;
+        box-shadow: 0 6px 18px rgba(216, 106, 99, 0.3);
       }
     `}</style>
   </section>

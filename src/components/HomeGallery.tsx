@@ -56,9 +56,9 @@ const HomeGallery = () => {
   }, [lightboxIdx, goPrev, goNext]);
 
   return (
-    <section className="py-24 relative" style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #FAF6F0 50%, #FFFFFF 100%)" }}>
+    <section className="py-24 relative" style={{ background: "var(--color-bg-primary)" }}>
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight font-cinzel" style={{ color: "#8E6D3D" }}>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight font-cinzel" style={{ color: "var(--color-text-heading)" }}>
           Prestige Gallery
         </h2>
         <OrnDivider style={{ margin: "0 auto 24px" } as React.CSSProperties} />
@@ -90,7 +90,7 @@ const HomeGallery = () => {
                 />
                 <div className="gallery-overlay">
                   <div className="gallery-overlay-icon">
-                    <ZoomIn size={18} strokeWidth={1.5} style={{ color: "#8E6D3D" }} />
+                    <ZoomIn size={18} strokeWidth={1.5} style={{ color: "var(--color-accent-gold)" }} />
                   </div>
                   <span className="gallery-overlay-label">View</span>
                 </div>
@@ -107,7 +107,7 @@ const HomeGallery = () => {
             <X size={20} strokeWidth={1.5} />
           </button>
           <div className="lightbox-counter">
-            <span className="font-cinzel" style={{ color: "#8E6D3D", fontSize: "clamp(1.08rem, 1.2vw, 1.1rem)", letterSpacing: "0.2em" }}>
+            <span className="font-cinzel" style={{ color: "var(--color-text-heading)", fontSize: "clamp(1.08rem, 1.2vw, 1.1rem)", letterSpacing: "0.2em" }}>
               {String(lightboxIdx + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
             </span>
           </div>
@@ -120,7 +120,7 @@ const HomeGallery = () => {
           <div className={`lightbox-frame ${zoomed ? "zoomed" : ""}`} onClick={(e) => e.stopPropagation()}>
             <img key={lightboxIdx} src={images[lightboxIdx]} alt={`Recognition ${lightboxIdx + 1}`} className="lightbox-img" />
             <div className="lightbox-caption">
-              <p className="font-cinzel uppercase" style={{ fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)", letterSpacing: "0.22em", color: "rgba(142,109,61,0.80)" }}>
+              <p className="font-cinzel uppercase" style={{ fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)", letterSpacing: "0.22em", color: "rgba(var(--color-accent-gold-rgb),0.80)" }}>
                 ✦ Award & Recognition ✦
               </p>
             </div>
@@ -158,8 +158,8 @@ const HomeGallery = () => {
           overflow: hidden;
           border-radius: 18px;
           background: rgba(255,255,255,0.80);
-          border: 1px solid rgba(142,109,61,0.18);
-          box-shadow: 0 6px 22px -8px rgba(68,65,54,0.08);
+          border: 1px solid rgba(var(--color-accent-gold-rgb),0.18);
+          box-shadow: 0 6px 22px -8px rgba(var(--color-text-heading-rgb),0.08);
           cursor: pointer;
           transition: transform 0.45s cubic-bezier(0.16,1,0.3,1),
                       box-shadow 0.45s cubic-bezier(0.16,1,0.3,1),
@@ -171,13 +171,13 @@ const HomeGallery = () => {
         }
         .gallery-masonry-item:hover {
           transform: translateY(-6px);
-          box-shadow: 0 24px 52px -12px rgba(68,65,54,0.16),
-                      0 0 16px rgba(142,109,61,0.12);
-          border-color: rgba(142,109,61,0.50);
+          box-shadow: 0 24px 52px -12px rgba(var(--color-text-heading-rgb),0.16),
+                      0 0 16px rgba(var(--color-accent-gold-rgb),0.12);
+          border-color: rgba(var(--color-accent-gold-rgb),0.50);
           background: #ffffff;
         }
         .gallery-masonry-item:focus-visible {
-          outline: 2px solid #8E6D3D;
+          outline: 2px solid var(--color-accent-gold);
           outline-offset: 3px;
         }
 
@@ -188,7 +188,7 @@ const HomeGallery = () => {
           width: 100%; height: 3px;
           transform: translateX(-50%) scaleX(0);
           transform-origin: center;
-          background: linear-gradient(90deg, #A58352, #8E6D3D, #70542C);
+          background: linear-gradient(90deg, #A58352, var(--color-accent-gold), var(--color-accent-gold));
           border-radius: 0 0 3px 3px;
           transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
           z-index: 2;
@@ -227,7 +227,7 @@ const HomeGallery = () => {
           position: absolute;
           inset: 8px;
           border-radius: 12px;
-          background: rgba(142,109,61,0);
+          background: rgba(var(--color-accent-gold-rgb),0);
           backdrop-filter: blur(0px);
           -webkit-backdrop-filter: blur(0px);
           display: flex;
@@ -239,7 +239,7 @@ const HomeGallery = () => {
           transition: all 0.45s cubic-bezier(0.16,1,0.3,1);
         }
         .gallery-masonry-item:hover .gallery-overlay {
-          background: rgba(142,109,61,0.18);
+          background: rgba(var(--color-accent-gold-rgb),0.18);
           backdrop-filter: blur(3px);
           -webkit-backdrop-filter: blur(3px);
           opacity: 1;
@@ -248,7 +248,7 @@ const HomeGallery = () => {
           width: 40px; height: 40px;
           border-radius: 50%;
           background: rgba(253,246,238,0.92);
-          border: 1px solid rgba(142,109,61,0.35);
+          border: 1px solid rgba(var(--color-accent-gold-rgb),0.35);
           display: flex; align-items: center; justify-content: center;
           transform: scale(0.8);
           transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
@@ -298,17 +298,17 @@ const HomeGallery = () => {
           position: absolute;
           display: flex; align-items: center; justify-content: center;
           border-radius: 50%;
-          border: 1px solid rgba(142,109,61,0.35);
+          border: 1px solid rgba(var(--color-accent-gold-rgb),0.35);
           background: rgba(255,255,255,0.07);
-          color: #8E6D3D;
+          color: var(--color-accent-gold);
           cursor: pointer;
           transition: all 0.3s ease;
           z-index: 10;
           backdrop-filter: blur(6px);
         }
         .lightbox-btn:hover {
-          background: #8E6D3D;
-          border-color: #8E6D3D;
+          background: var(--color-accent-gold);
+          border-color: var(--color-accent-gold);
           color: #FFFFFF;
           transform: scale(1.08);
         }
@@ -354,7 +354,7 @@ const HomeGallery = () => {
           padding: 5px 16px;
           border-radius: 999px;
           background: rgba(255,255,255,0.06);
-          border: 1px solid rgba(142,109,61,0.22);
+          border: 1px solid rgba(var(--color-accent-gold-rgb),0.22);
           backdrop-filter: blur(6px);
         }
 
@@ -365,10 +365,10 @@ const HomeGallery = () => {
           max-height: 80vh;
           padding: 10px;
           background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(142,109,61,0.28);
+          border: 1px solid rgba(var(--color-accent-gold-rgb),0.28);
           border-radius: 24px;
           box-shadow: 0 40px 80px rgba(0,0,0,0.55),
-                      0 0 0 1px rgba(142,109,61,0.10);
+                      0 0 0 1px rgba(var(--color-accent-gold-rgb),0.10);
           animation: lbScaleIn 0.45s cubic-bezier(0.16,1,0.3,1) both;
           transition: max-width 0.5s cubic-bezier(0.16,1,0.3,1);
           overflow: hidden;
@@ -418,7 +418,7 @@ const HomeGallery = () => {
           gap: 8px;
           padding: 8px 14px;
           background: rgba(255,255,255,0.05);
-          border: 1px solid rgba(142,109,61,0.18);
+          border: 1px solid rgba(var(--color-accent-gold-rgb),0.18);
           border-radius: 999px;
           backdrop-filter: blur(10px);
           z-index: 10;
@@ -434,7 +434,7 @@ const HomeGallery = () => {
           height: 32px;
           border-radius: 8px;
           overflow: hidden;
-          border: 1.5px solid rgba(142,109,61,0.20);
+          border: 1.5px solid rgba(var(--color-accent-gold-rgb),0.20);
           background: rgba(255,255,255,0.08);
           cursor: pointer;
           transition: all 0.3s ease;
@@ -453,8 +453,8 @@ const HomeGallery = () => {
           opacity: 1;
         }
         .lightbox-thumb.active {
-          border-color: #8E6D3D;
-          box-shadow: 0 0 0 2px rgba(142,109,61,0.35);
+          border-color: var(--color-accent-gold);
+          box-shadow: 0 0 0 2px rgba(var(--color-accent-gold-rgb),0.35);
           transform: scale(1.08);
         }
 

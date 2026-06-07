@@ -66,7 +66,7 @@ const ContactUs = () => {
   const inputClass = `w-full px-5 py-4 rounded-xl text-foreground text-[14.5px] bg-white/40 border border-gold/22 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-muted-foreground/40 font-poppins premium-input`;
 
   return (
-    <main className="relative min-h-screen pt-24" style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #FAF6F0 50%, #FFFFFF 100%)" }}>
+    <main className="relative min-h-screen pt-24" style={{ background: "var(--color-bg-primary)" }}>
       {/* Background Star Overlay */}
       <div className="pointer-events-none absolute inset-0 opacity-30 star-field" />
 
@@ -75,7 +75,7 @@ const ContactUs = () => {
         {/* Background radial glow */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="w-[600px] h-[600px] rounded-full opacity-20 animate-glow-pulse"
-            style={{ background: "radial-gradient(circle, rgba(142,109,61,0.14) 0%, transparent 70%)", filter: "blur(80px)" }} />
+            style={{ background: "radial-gradient(circle, rgba(var(--color-accent-gold-rgb),0.14) 0%, transparent 70%)", filter: "blur(80px)" }} />
         </div>
 
         {/* Faint spinning mandala watermark */}
@@ -90,7 +90,7 @@ const ContactUs = () => {
           pointerEvents: "none",
           zIndex: 0,
         }}>
-          <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.6">
+          <svg viewBox="0 0 100 100" fill="none" stroke="var(--color-accent-gold)" strokeWidth="0.6">
             <circle cx="50" cy="50" r="48" />
             <polygon points="50,2 98,50 50,98 2,50" transform="rotate(30 50 50)" />
           </svg>
@@ -98,7 +98,7 @@ const ContactUs = () => {
 
         <div className="relative max-w-3xl mx-auto anim-fadeup" style={{ zIndex: 1 }}>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-cinzel" style={{ color: "#8E6D3D" }}>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-cinzel" style={{ color: "var(--color-text-heading)" }}>
             Contact Us
           </h1>
           <OrnDivider style={{ margin: "0 auto 28px" } as React.CSSProperties} />
@@ -114,26 +114,26 @@ const ContactUs = () => {
 
           {/* Left Column — Contact Form (7 cols on desktop) */}
           <div className="lg:col-span-7 anim-fadeup">
-            <p className="font-poppins tracking-[0.16em] text-[#8E6D3D] text-xs font-bold uppercase mb-3">
+            <p className="font-poppins tracking-[0.16em] text-[var(--color-accent-gold)] text-xs font-bold uppercase mb-3">
               Direct Booking
             </p>
-            <h2 className="font-cinzel text-3xl md:text-4xl text-[#8E6D3D] font-bold mb-8 leading-tight">
+            <h2 className="font-cinzel text-3xl md:text-4xl text-[var(--color-accent-gold)] font-bold mb-8 leading-tight">
               Book Your Consultation
             </h2>
 
             {sent ? (
               <div className="p-10 md:p-14 text-center bg-white/70 border border-gold/18 rounded-2xl shadow-glow backdrop-blur-md">
                 <div className="w-16 h-16 rounded-full bg-[#FAF3EB] border border-gold/28 flex items-center justify-center mb-6 text-gold mx-auto animate-glow-pulse">
-                  <Send className="w-6 h-6" style={{ color: "#8E6D3D" }} />
+                  <Send className="w-6 h-6" style={{ color: "var(--color-accent-gold)" }} />
                 </div>
-                <h3 className="font-cinzel text-xl text-[#8E6D3D] font-bold mb-3">Message Formed!</h3>
+                <h3 className="font-cinzel text-xl text-[var(--color-accent-gold)] font-bold mb-3">Message Formed!</h3>
                 <p className="text-foreground/70 max-w-sm font-poppins mx-auto text-sm leading-relaxed" style={{ color: "rgba(58,32,16,0.70)" }}>
                   You have been safely redirected to WhatsApp with your message pre-filled. Manjuu ji will reply to your request shortly.
                 </p>
                 <button
                   onClick={() => setSent(false)}
-                  className="mt-8 px-8 py-3.5 rounded-full border border-gold text-[#8E6D3D] font-cinzel font-bold tracking-widest uppercase hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
-                  style={{ border: "1.5px solid #8E6D3D", fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)" }}
+                  className="mt-8 px-8 py-3.5 rounded-full border border-gold text-[var(--color-accent-gold)] font-cinzel font-bold tracking-widest uppercase hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+                  style={{ border: "1.5px solid var(--color-accent-gold)", fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)" }}
                 >
                   Send Another Message
                 </button>
@@ -157,7 +157,7 @@ const ContactUs = () => {
 
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[#8E6D3D] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Full Name *</label>
+                    <label className="block text-[var(--color-accent-gold)] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Full Name *</label>
                     <input
                       type="text"
                       name="name"
@@ -169,7 +169,7 @@ const ContactUs = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[#8E6D3D] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Phone *</label>
+                    <label className="block text-[var(--color-accent-gold)] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Phone *</label>
                     <input
                       type="text"
                       name="phone"
@@ -183,7 +183,7 @@ const ContactUs = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[#8E6D3D] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Email</label>
+                  <label className="block text-[var(--color-accent-gold)] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Email</label>
                   <input
                     type="email"
                     name="email"
@@ -195,7 +195,7 @@ const ContactUs = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[#8E6D3D] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Service Required *</label>
+                  <label className="block text-[var(--color-accent-gold)] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Service Required *</label>
                   <select
                     name="service"
                     required
@@ -216,7 +216,7 @@ const ContactUs = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[#8E6D3D] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Your Message</label>
+                  <label className="block text-[var(--color-accent-gold)] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Your Message</label>
                   <textarea
                     name="message"
                     rows={5}
@@ -229,11 +229,11 @@ const ContactUs = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-gradient-gold font-cinzel tracking-[0.20em] uppercase shadow-gold transition-transform hover:scale-[1.01] flex items-center justify-center gap-3 text-[#8E6D3D] font-bold submit-btn"
+                  className="w-full py-4 rounded-full bg-gradient-gold font-cinzel tracking-[0.20em] uppercase shadow-gold transition-transform hover:scale-[1.01] flex items-center justify-center gap-3 text-[var(--color-accent-gold)] font-bold submit-btn"
                   style={{
                     background: "#FFFFFF",
-                    border: "1.5px solid #8E6D3D",
-                    boxShadow: "0 8px 24px -10px rgba(142,109,61,0.40)",
+                    border: "1.5px solid var(--color-accent-gold)",
+                    boxShadow: "0 8px 24px -10px rgba(var(--color-accent-gold-rgb),0.40)",
                     cursor: "pointer",
                     fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)",
                   }}
@@ -250,10 +250,10 @@ const ContactUs = () => {
 
           {/* Right Column — Contact Details (5 cols on desktop) */}
           <div className="lg:col-span-5 anim-fadeup" style={{ animationDelay: "0.15s" }}>
-            <p className="font-poppins tracking-[0.16em] text-[#8E6D3D] text-xs font-bold uppercase mb-3">
+            <p className="font-poppins tracking-[0.16em] text-[var(--color-accent-gold)] text-xs font-bold uppercase mb-3">
               Prestige Channels
             </p>
-            <h2 className="font-cinzel text-3xl md:text-4xl text-[#8E6D3D] font-bold mb-8 leading-tight">
+            <h2 className="font-cinzel text-3xl md:text-4xl text-[var(--color-accent-gold)] font-bold mb-8 leading-tight">
               Contact Details
             </h2>
 
@@ -266,7 +266,7 @@ const ContactUs = () => {
                   rel="noopener noreferrer"
                   className="p-6 bg-white/78 border border-gold/18 rounded-2xl flex items-start gap-5 transition-all duration-400 contact-detail-card"
                   style={{
-                    boxShadow: "0 4px 18px -6px rgba(68,65,54,0.05)",
+                    boxShadow: "0 4px 18px -6px rgba(var(--color-text-heading-rgb),0.05)",
                     backdropFilter: "blur(20px)",
                     WebkitBackdropFilter: "blur(20px)",
                     position: "relative",
@@ -286,14 +286,14 @@ const ContactUs = () => {
                     transformOrigin: "center",
                   }} />
 
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#FFFFFF] border border-gold/28 flex items-center justify-center text-gold transition-all duration-400 card-icon-badge">
-                    <c.icon className="w-5 h-5 icon-svg" strokeWidth={1.2} style={{ color: "#8E6D3D", transition: "all 0.4s ease" }} />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full border border-gold/35 flex items-center justify-center text-gold transition-all duration-400 card-icon-badge" style={{ background: "var(--color-bg-primary)" }}>
+                    <c.icon className="w-5 h-5 icon-svg" strokeWidth={1.2} style={{ color: "var(--color-accent-gold)", transition: "all 0.4s ease" }} />
                   </div>
                   <div>
-                    <p className="font-cinzel tracking-[0.16em] text-[#8E6D3D] text-[9.5px] uppercase mb-1.5 font-bold">
+                    <p className="font-cinzel tracking-[0.16em] text-[var(--color-accent-gold)] text-[9.5px] uppercase mb-1.5 font-bold">
                       {c.label}
                     </p>
-                    <p className="font-cinzel text-[#8E6D3D] text-base mb-1 font-bold leading-tight">
+                    <p className="font-cinzel text-[var(--color-accent-gold)] text-base mb-1 font-bold leading-tight">
                       {c.value}
                     </p>
                     <p className="text-muted-foreground text-xs font-poppins font-medium" style={{ color: "rgba(58,32,16,0.55)" }}>
@@ -312,8 +312,8 @@ const ContactUs = () => {
       <style>{`
         .contact-editorial-card:hover {
           transform: translateY(-4px);
-          border-color: rgba(142, 109, 61, 0.48) !important;
-          box-shadow: 0 20px 48px -12px rgba(68,65,54,0.12), 0 0 10px rgba(142,109,61,0.08) !important;
+          border-color: rgba(var(--color-accent-gold-rgb), 0.48) !important;
+          box-shadow: 0 20px 48px -12px rgba(var(--color-text-heading-rgb),0.12), 0 0 10px rgba(var(--color-accent-gold-rgb),0.08) !important;
         }
         .contact-editorial-card:hover .card-top-line {
           transform: translateX(-50%) scaleX(1);
@@ -322,15 +322,15 @@ const ContactUs = () => {
         .contact-detail-card:hover {
           transform: translateY(-4px);
           background: #ffffff !important;
-          border-color: rgba(142, 109, 61, 0.48) !important;
-          box-shadow: 0 16px 36px -12px rgba(68,65,54,0.10) !important;
+          border-color: rgba(var(--color-accent-gold-rgb), 0.48) !important;
+          box-shadow: 0 16px 36px -12px rgba(var(--color-text-heading-rgb),0.10) !important;
         }
         .contact-detail-card:hover .card-top-line {
           transform: translateX(-50%) scaleX(1);
         }
         .contact-detail-card:hover .card-icon-badge {
-          background: #8E6D3D !important;
-          border-color: #8E6D3D !important;
+          background: var(--color-accent-gold) !important;
+          border-color: var(--color-accent-gold) !important;
           transform: scale(1.06);
         }
         .contact-detail-card:hover .icon-svg {
@@ -339,14 +339,14 @@ const ContactUs = () => {
         
         .submit-btn:hover {
           transform: translateY(-2px) scale(1.015);
-          box-shadow: 0 12px 32px -8px rgba(142,109,61,0.60) !important;
-          background: #FFFFFF !important;
-          border-color: #FFFFFF !important;
+          box-shadow: 0 12px 32px -8px rgba(var(--color-accent-gold-rgb),0.60) !important;
+          background: var(--color-bg-primary) !important;
+          border-color: var(--color-border) !important;
         }
         
         .premium-input:focus {
-          border-color: #8E6D3D !important;
-          box-shadow: 0 0 8px rgba(142, 109, 61, 0.15) !important;
+          border-color: var(--color-accent-gold) !important;
+          box-shadow: 0 0 8px rgba(var(--color-accent-gold-rgb), 0.15) !important;
           background: #ffffff !important;
         }
       `}</style>

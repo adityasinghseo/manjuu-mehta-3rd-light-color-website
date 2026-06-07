@@ -54,9 +54,9 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
+      className="testimonials-section"
       style={{
-        padding: "116px 0",
-        background: "linear-gradient(180deg, #FFFFFF 0%, #FAF6F0 100%)",
+        background: "var(--color-bg-primary)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -73,7 +73,7 @@ const Testimonials = () => {
         pointerEvents: "none",
         zIndex: 0,
       }}>
-        <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.5">
+        <svg viewBox="0 0 100 100" fill="none" stroke="var(--color-accent-gold)" strokeWidth="0.5">
           <circle cx="50" cy="50" r="48" />
           <circle cx="50" cy="50" r="38" strokeDasharray="3 3" />
           <polygon points="50,2 98,50 50,98 2,50" />
@@ -83,25 +83,25 @@ const Testimonials = () => {
       {/* Subtle sparkle field */}
       <div className="sparkle-field" style={{ opacity: 0.32 }} />
 
-      <div style={{ maxWidth: 1000, margin: "0 auto", padding: "0 64px", position: "relative", zIndex: 1 }}>
+      <div className="testimonials-container">
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>
+        <div className="testimonials-header">
+          <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-text-heading)", marginBottom: 14 }}>
             Voices of Trust
           </p>
-          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20, lineHeight: 1.2 }}>
+          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "var(--color-text-heading)", marginBottom: 20, lineHeight: 1.2 }}>
             Client Testimonials
           </h2>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <OrnDivider className="w-full" style={{ maxWidth: 420 } as React.CSSProperties} />
           </div>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", color: "#28160A", marginTop: 18, lineHeight: 1.9 }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", color: "var(--color-text-primary)", marginTop: 18, lineHeight: 1.9 }}>
             Real stories of prosperity, alignment, and life-changing growth.
           </p>
         </div>
 
         {/* Testimonial Card Slider */}
-        <div style={{ position: "relative", padding: "0 20px" }}>
+        <div className="testimonials-slider-wrapper">
           
           {/* Main Card with key to trigger CSS transition */}
           <div
@@ -109,12 +109,12 @@ const Testimonials = () => {
             style={{
               position: "relative",
               padding: "56px 64px 48px",
-              background: "linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(253, 246, 238, 0.68) 100%)",
-              border: "1px solid rgba(142, 109, 61, 0.18)",
+              background: "#FFFFFF",
+              border: "1px solid rgba(var(--color-accent-gold-rgb), 0.18)",
               borderRadius: 24,
-              boxShadow: "0 24px 60px -16px rgba(68, 65, 54, 0.08), 0 0 40px -10px rgba(142, 109, 61, 0.04)",
+              boxShadow: "0 24px 60px -16px rgba(var(--color-text-heading-rgb), 0.08), 0 0 40px -10px rgba(var(--color-accent-gold-rgb), 0.04)",
               backdropFilter: "blur(20px)",
-              textAlign: "center",
+              textAlign: "left",
               animation: "slideReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) both",
               overflow: "hidden",
             }}
@@ -127,120 +127,86 @@ const Testimonials = () => {
               left: 0,
               right: 0,
               height: 3,
-              background: "linear-gradient(90deg, #8E6D3D 0%, #FFFFFF 50%, #8E6D3D 100%)",
+              background: "linear-gradient(90deg, var(--color-accent-gold) 0%, rgba(var(--color-accent-gold-rgb), 0.2) 100%)",
             }} />
 
             {/* Giant decorative quotation backgrounds */}
-            <div style={{
-              position: "absolute",
-              top: 24,
-              left: 36,
-              fontFamily: "Cinzel, serif",
-              fontSize: 140,
-              lineHeight: 1,
-              fontWeight: 800,
-              color: "#8E6D3D",
-              opacity: 0.045,
-              pointerEvents: "none",
-              userSelect: "none",
-            }}>
-              “
-            </div>
-            <div style={{
-              position: "absolute",
-              bottom: -40,
-              right: 36,
-              fontFamily: "Cinzel, serif",
-              fontSize: 140,
-              lineHeight: 1,
-              fontWeight: 800,
-              color: "#8E6D3D",
-              opacity: 0.045,
-              pointerEvents: "none",
-              userSelect: "none",
-            }}>
-              ”
-            </div>
+            <div className="quote-mark-left">“</div>
+            <div className="quote-mark-right">”</div>
 
             {/* Google Verified Review Badge */}
-            <div style={{
+            <div className="badge-container" style={{
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
-              background: "rgba(142, 109, 61, 0.08)",
+              background: "rgba(var(--color-accent-gold-rgb), 0.08)",
               padding: "5px 14px",
               borderRadius: 999,
-              border: "1px solid rgba(142, 109, 61, 0.20)",
-              marginBottom: 20,
+              border: "1px solid rgba(var(--color-accent-gold-rgb), 0.20)",
+              marginBottom: 16,
               position: "relative",
               zIndex: 2,
             }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.136 4.114-3.51 0-6.355-2.855-6.355-6.355S10.49 5.8 14 5.8c1.558 0 2.978.56 4.092 1.484l3.057-3.057C19.26 2.5 16.786 1.5 14 1.5 8.2 1.5 3.5 6.2 3.5 12s4.7 10.5 10.5 10.5c5.77 0 10.4-4.63 10.4-10.5 0-.7-.08-1.37-.215-2.015H12.24z" fill="#8E6D3D"/>
+                <path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.136 4.114-3.51 0-6.355-2.855-6.355-6.355S10.49 5.8 14 5.8c1.558 0 2.978.56 4.092 1.484l3.057-3.057C19.26 2.5 16.786 1.5 14 1.5 8.2 1.5 3.5 6.2 3.5 12s4.7 10.5 10.5 10.5c5.77 0 10.4-4.63 10.4-10.5 0-.7-.08-1.37-.215-2.015H12.24z" fill="var(--color-accent-gold)"/>
               </svg>
-              <span style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.65rem, 1vw, 0.75rem)", fontWeight: 600, color: "#8E6D3D", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+              <span style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.65rem, 1vw, 0.75rem)", fontWeight: 600, color: "var(--color-text-heading)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
                 Google Verified Review
               </span>
             </div>
 
             {/* Star Rating Grid */}
-            <div style={{ display: "flex", justifyContent: "center", gap: 5, marginBottom: 24, position: "relative", zIndex: 2 }}>
+            <div className="stars-container" style={{ display: "flex", justifyContent: "flex-start", gap: 5, marginBottom: 20, position: "relative", zIndex: 2 }}>
               {Array.from({ length: t.rating }).map((_, i) => (
-                <Star key={i} size={17} fill="#8E6D3D" color="#8E6D3D" />
+                <Star key={i} size={17} fill="var(--color-accent-gold)" color="var(--color-accent-gold)" />
               ))}
             </div>
 
             {/* Testimonial Quote Text */}
-            <blockquote style={{
+            <blockquote className="quote-text" style={{
               fontFamily: "Poppins, sans-serif",
-              fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)",
-              lineHeight: 1.9,
-              color: "#28160A",
+              fontSize: "clamp(1.08rem, 1.5vw, 1.4rem)",
+              lineHeight: 1.8,
+              color: "var(--color-text-primary)",
               fontWeight: 400,
-              marginBottom: 36,
+              fontStyle: "italic",
+              marginBottom: 28,
               position: "relative",
               zIndex: 2,
-              padding: "0 10px",
             }}>
               "{t.text}"
             </blockquote>
 
-            {/* Luxury Star / Line Separation Ornament */}
-            <div style={{ display: "flex", alignItems: "center", gap: 14, justifyContent: "center", marginBottom: 30, position: "relative", zIndex: 2 }}>
-              <div style={{ width: 60, height: 1, background: "linear-gradient(90deg, transparent, rgba(142,109,61,0.45))" }} />
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#8E6D3D" opacity="0.8">
-                <path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.2-6.3-4.6-6.3 4.6 2.3-7.2-6-4.6h7.6L12 2z" />
-              </svg>
-              <div style={{ width: 60, height: 1, background: "linear-gradient(90deg, rgba(142,109,61,0.45), transparent)" }} />
+            {/* Left-aligned separation ornament */}
+            <div className="divider-line" style={{ display: "flex", alignItems: "center", gap: 14, justifyContent: "flex-start", marginBottom: 28, position: "relative", zIndex: 2 }}>
+              <div style={{ width: 60, height: 1.5, background: "linear-gradient(90deg, var(--color-accent-gold), transparent)" }} />
             </div>
 
             {/* Author Profile */}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, position: "relative", zIndex: 2 }}>
-              {/* Premium Luxury Avatar Frame */}
-              <div style={{
-                width: 58,
-                height: 58,
-                borderRadius: "50%",
-                background: "linear-gradient(135deg, #8E6D3D 0%, #444136 100%)",
-                border: "2px solid #8E6D3D",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontFamily: "Cinzel, serif",
-                fontWeight: 700,
-                fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)",
-                color: "#FFFFFF",
-                boxShadow: "0 6px 18px rgba(68,65,54,0.22)",
-                letterSpacing: "0.05em",
-              }}>
-                {t.init}
-              </div>
-              <div>
-                <p style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 3 }}>
+            <div style={{ position: "relative", zIndex: 2 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                <p className="author-name" style={{ 
+                  fontFamily: "Cinzel, serif", 
+                  fontWeight: 700, 
+                  fontSize: "clamp(1.1rem, 1.4vw, 1.25rem)", 
+                  letterSpacing: "0.04em", 
+                  color: "var(--color-text-heading)", 
+                  margin: 0,
+                  lineHeight: 1.2
+                }}>
                   {t.name}
                 </p>
-                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)", fontWeight: 600, letterSpacing: "0.10em", textTransform: "uppercase", color: "#8E6D3D" }}>
-                  {t.role} <span style={{ opacity: 0.4 }}>•</span> {t.location}
+                <p className="author-role" style={{ 
+                  fontFamily: "Poppins, sans-serif", 
+                  fontSize: "clamp(0.8rem, 1.1vw, 0.88rem)", 
+                  fontWeight: 600, 
+                  letterSpacing: "0.08em", 
+                  textTransform: "uppercase", 
+                  color: "var(--color-text-primary)", 
+                  margin: 0,
+                  opacity: 0.8
+                }}>
+                  {t.role} <span style={{ opacity: 0.4, margin: "0 4px" }}>•</span> {t.location}
                 </p>
               </div>
             </div>
@@ -264,27 +230,27 @@ const Testimonials = () => {
                 height: 50,
                 borderRadius: "50%",
                 background: "rgba(255, 255, 255, 0.90)",
-                border: "1px solid rgba(142, 109, 61, 0.26)",
+                border: "1px solid rgba(var(--color-accent-gold-rgb), 0.26)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#8E6D3D",
+                color: "var(--color-accent-gold)",
                 cursor: "pointer",
-                boxShadow: "0 6px 18px -4px rgba(68, 65, 54, 0.08)",
+                boxShadow: "0 6px 18px -4px rgba(var(--color-text-heading-rgb), 0.08)",
                 transition: "all 0.35s cubic-bezier(0.16, 1, 0.3, 1)",
                 zIndex: 10,
               }}
               className="hiw-slider-arrow"
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#8E6D3D";
+                e.currentTarget.style.background = "var(--color-accent-gold)";
                 e.currentTarget.style.color = "#FFFFFF";
-                e.currentTarget.style.borderColor = "#8E6D3D";
+                e.currentTarget.style.borderColor = "var(--color-accent-gold)";
                 e.currentTarget.style.transform = `translateY(-50%) scale(1.06) ${b.dir === "left" ? "translateX(-2px)" : "translateX(2px)"}`;
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = "rgba(255, 255, 255, 0.90)";
-                e.currentTarget.style.color = "#8E6D3D";
-                e.currentTarget.style.borderColor = "rgba(142, 109, 61, 0.26)";
+                e.currentTarget.style.color = "var(--color-accent-gold)";
+                e.currentTarget.style.borderColor = "rgba(var(--color-accent-gold-rgb), 0.26)";
                 e.currentTarget.style.transform = "translateY(-50%) scale(1)";
               }}
             >
@@ -304,7 +270,7 @@ const Testimonials = () => {
                 borderRadius: 999,
                 height: 6,
                 width: i === cur ? 32 : 6,
-                background: i === cur ? "#8E6D3D" : "rgba(142, 109, 61, 0.22)",
+                background: i === cur ? "var(--color-accent-gold)" : "rgba(var(--color-accent-gold-rgb), 0.22)",
                 border: "none",
                 cursor: "pointer",
                 transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -329,12 +295,100 @@ const Testimonials = () => {
           }
         }
         
+        .testimonials-section {
+          padding: 116px 0;
+        }
+        
+        .testimonials-container {
+          max-width: 1000px;
+          margin: 0 auto;
+          padding: 0 64px;
+          position: relative;
+          z-index: 1;
+        }
+        
+        .testimonials-header {
+          text-align: center;
+          margin-bottom: 56px;
+        }
+        
+        .testimonials-slider-wrapper {
+          position: relative;
+          padding: 0 20px;
+        }
+        
+        .quote-mark-left {
+          position: absolute;
+          top: 40px;
+          left: 24px;
+          font-family: 'Cinzel', serif;
+          font-size: 90px;
+          line-height: 1;
+          font-weight: 800;
+          color: var(--color-accent-gold);
+          opacity: 0.12;
+          pointer-events: none;
+          user-select: none;
+        }
+        
+        .quote-mark-right {
+          position: absolute;
+          bottom: -30px;
+          right: 24px;
+          font-family: 'Cinzel', serif;
+          font-size: 120px;
+          line-height: 1;
+          font-weight: 800;
+          color: var(--color-accent-gold);
+          opacity: 0.04;
+          pointer-events: none;
+          user-select: none;
+        }
+        
         @media (max-width: 768px) {
+          .testimonials-section {
+            padding: 48px 0 !important;
+          }
+          .testimonials-container {
+            padding: 0 16px !important;
+          }
+          .testimonials-header {
+            margin-bottom: 24px !important;
+          }
+          .testimonials-slider-wrapper {
+            padding: 0 !important;
+          }
           .testimonial-card {
-            padding: 44px 24px 36px !important;
+            padding: 28px 20px 24px !important;
           }
           .hiw-slider-arrow {
             display: none !important; /* Hide arrows on mobile to focus on swipe/dots */
+          }
+          .quote-mark-left {
+            top: 24px;
+            left: 10px;
+            font-size: 54px;
+          }
+          .quote-mark-right {
+            bottom: -15px;
+            right: 10px;
+            font-size: 70px;
+          }
+          
+          /* Inner elements adjustment for vertical space */
+          .testimonial-card .badge-container {
+            margin-bottom: 10px !important;
+          }
+          .testimonial-card .stars-container {
+            margin-bottom: 12px !important;
+          }
+          .testimonial-card .quote-text {
+            font-size: 1.05rem !important;
+            line-height: 1.65 !important;
+            margin-bottom: 16px !important;
+          }
+          .testimonial-card .divider-line {
+            margin-bottom: 16px !important;
           }
         }
       `}</style>

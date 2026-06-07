@@ -17,7 +17,7 @@ const Services = ({ limit }: { limit?: number }) => {
       id="services"
       style={{
         padding: "116px 0",
-        background: "linear-gradient(180deg, #FAF6F0 0%, #FFFFFF 100%)",
+        background: "var(--color-bg-secondary)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -34,7 +34,7 @@ const Services = ({ limit }: { limit?: number }) => {
         pointerEvents: "none",
         zIndex: 0,
       }}>
-        <svg viewBox="0 0 100 100" fill="none" stroke="#8E6D3D" strokeWidth="0.6">
+        <svg viewBox="0 0 100 100" fill="none" stroke="var(--color-accent-gold)" strokeWidth="0.6">
           <circle cx="50" cy="50" r="48" />
           <polygon points="50,2 98,50 50,98 2,50" transform="rotate(45 50 50)" />
         </svg>
@@ -45,12 +45,12 @@ const Services = ({ limit }: { limit?: number }) => {
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 2 }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "#8E6D3D", marginBottom: 14 }}>Offerings</p>
-          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "#8E6D3D", marginBottom: 20, lineHeight: 1.2 }}>Sacred Services</h2>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.12rem, 1.4vw, 1.2rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-text-heading)", marginBottom: 14 }}>Offerings</p>
+          <h2 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3.2vw, 2.4rem)", color: "var(--color-text-heading)", marginBottom: 20, lineHeight: 1.2 }}>Sacred Services</h2>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <OrnDivider className="w-full" style={{ maxWidth: 360 } as React.CSSProperties} />
           </div>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A", marginTop: 16, maxWidth: 520, marginLeft: "auto", marginRight: "auto" }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "var(--color-text-primary)", marginTop: 16, maxWidth: 520, marginLeft: "auto", marginRight: "auto" }}>
             Precision-crafted consultations rooted in ancient wisdom, delivered with modern clarity.
           </p>
         </div>
@@ -63,10 +63,10 @@ const Services = ({ limit }: { limit?: number }) => {
               id={`service-${s.title.toLowerCase().replace(/\s+/g,"-")}`}
               style={{
                 padding: "38px 32px",
-                background: "linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(253,246,238,0.60) 100%)",
-                border: "1px solid rgba(142,109,61,0.18)",
+                background: "#FFFFFF",
+                border: "1px solid rgba(var(--color-accent-gold-rgb),0.18)",
                 borderRadius: 16,
-                boxShadow: "0 10px 30px -12px rgba(68,65,54,0.04)",
+                boxShadow: "0 10px 30px -12px rgba(var(--color-text-heading-rgb),0.04)",
                 transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
                 position: "relative",
                 overflow: "hidden",
@@ -81,7 +81,7 @@ const Services = ({ limit }: { limit?: number }) => {
                 left: 0,
                 right: 0,
                 height: 3.5,
-                background: "linear-gradient(90deg, #8E6D3D 0%, #FFFFFF 50%, #8E6D3D 100%)",
+                background: "linear-gradient(90deg, var(--color-accent-gold) 0%, #FFFFFF 50%, var(--color-accent-gold) 100%)",
                 transform: "scaleX(0)",
                 transformOrigin: "left",
                 transition: "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -90,26 +90,26 @@ const Services = ({ limit }: { limit?: number }) => {
 
               {/* Ghost icon */}
               <div style={{ position: "absolute", right: -8, bottom: -8, opacity: 0.04, pointerEvents: "none", transition: "transform 0.8s ease" }} className="service-ghost-icon">
-                <s.Icon size={90} color="#8E6D3D" strokeWidth={0.6} />
+                <s.Icon size={90} color="var(--color-accent-gold)" strokeWidth={0.6} />
               </div>
 
               {/* Sanskrit label */}
-              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.08rem, 1.2vw, 1.1rem)", color: "rgba(142,109,61,0.65)", marginBottom: 10, fontWeight: 500 }}>{s.deva}</p>
+              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.08rem, 1.2vw, 1.1rem)", color: "rgba(var(--color-accent-gold-rgb),0.65)", marginBottom: 10, fontWeight: 500 }}>{s.deva}</p>
 
               {/* Icon - Refined with transition */}
               <div style={{
                 width: 48, height: 48, borderRadius: "50%",
                 background: "#FBF4EA",
-                border: "1px solid rgba(142,109,61,0.22)",
+                border: "1px solid rgba(var(--color-accent-gold-rgb),0.22)",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 marginBottom: 16,
                 transition: "all 0.4s ease",
               }} className="service-icon-wrapper">
-                <s.Icon size={19} strokeWidth={1.7} color="#8E6D3D" />
+                <s.Icon size={19} strokeWidth={1.7} color="var(--color-accent-gold)" />
               </div>
 
-              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)", letterSpacing: "0.06em", color: "#8E6D3D", marginBottom: 12 }}>{s.title}</h3>
-              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "#28160A", marginBottom: 22 }}>{s.desc}</p>
+              <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)", letterSpacing: "0.06em", color: "var(--color-text-heading)", marginBottom: 12 }}>{s.title}</h3>
+              <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)", lineHeight: 1.9, color: "var(--color-text-primary)", marginBottom: 22 }}>{s.desc}</p>
               
               {/* Animated Enquire arrow */}
               <p style={{
@@ -118,7 +118,7 @@ const Services = ({ limit }: { limit?: number }) => {
                 fontWeight: 600,
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                color: "#8E6D3D",
+                color: "var(--color-accent-gold)",
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 5,
@@ -140,18 +140,18 @@ const Services = ({ limit }: { limit?: number }) => {
         /* Hover animation for service cards */
         .service-card:hover {
           transform: translateY(-6px);
-          background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,246,238,0.72) 100%) !important;
-          border-color: rgba(142, 109, 61, 0.45) !important;
-          box-shadow: 0 20px 48px -16px rgba(68,65,54,0.08), 0 0 12px rgba(142,109,61,0.06) !important;
+          background: var(--color-bg-secondary) !important;
+          border-color: rgba(var(--color-accent-gold-rgb), 0.45) !important;
+          box-shadow: 0 20px 48px -16px rgba(var(--color-text-heading-rgb),0.08), 0 0 12px rgba(var(--color-accent-gold-rgb),0.06) !important;
         }
         .service-card:hover .service-top-line {
           transform: scaleX(1);
         }
         .service-card:hover .service-icon-wrapper {
           transform: scale(1.06) translateY(-1px);
-          background: #8E6D3D !important;
-          border-color: #8E6D3D !important;
-          box-shadow: 0 4px 12px rgba(142,109,61,0.25);
+          background: var(--color-accent-gold) !important;
+          border-color: var(--color-accent-gold) !important;
+          box-shadow: 0 4px 12px rgba(var(--color-accent-gold-rgb),0.25);
         }
         .service-card:hover .service-icon-wrapper svg {
           color: #FFFFFF !important;
@@ -161,7 +161,7 @@ const Services = ({ limit }: { limit?: number }) => {
           opacity: 0.07;
         }
         .service-card:hover .service-enquire {
-          color: #8E6D3D !important;
+          color: var(--color-accent-gold) !important;
         }
         .service-card:hover .enquire-arrow {
           transform: translateX(4px);
