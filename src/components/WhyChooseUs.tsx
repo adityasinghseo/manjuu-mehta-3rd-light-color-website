@@ -142,25 +142,26 @@ const WhyChooseUs = () => (
               fontSize: "clamp(1.15rem, 1.2vw, 1.2rem)",
               letterSpacing: "0.18em",
               textTransform: "uppercase",
-              color: "var(--color-accent-gold)",
+              color: "#FFFFFF",
+              background: "var(--color-accent-gold)",
               padding: "16px 36px",
               borderRadius: 999,
-              border: "1px solid rgba(var(--color-accent-gold-rgb),0.30)",
+              border: "1.5px solid var(--color-accent-gold)",
               display: "inline-block",
-              transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
-              background: "transparent",
+              transition: "all 0.25s",
+              boxShadow: "0 6px 20px rgba(var(--color-accent-gold-rgb), 0.25)",
             }}
             onMouseEnter={e => {
-              e.currentTarget.style.background = "var(--color-accent-gold)";
-              e.currentTarget.style.color = "#FFFFFF";
-              e.currentTarget.style.borderColor = "var(--color-accent-gold)";
-              e.currentTarget.style.transform = "translateY(-1px)";
+              e.currentTarget.style.background = "var(--color-accent-light)";
+              e.currentTarget.style.borderColor = "var(--color-accent-light)";
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 8px 24px rgba(var(--color-accent-gold-rgb), 0.35)";
             }}
             onMouseLeave={e => {
-              e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.color = "var(--color-accent-gold)";
-              e.currentTarget.style.borderColor = "rgba(var(--color-accent-gold-rgb),0.30)";
+              e.currentTarget.style.background = "var(--color-accent-gold)";
+              e.currentTarget.style.borderColor = "var(--color-accent-gold)";
               e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 6px 20px rgba(var(--color-accent-gold-rgb), 0.25)";
             }}
           >
             View All Services →
