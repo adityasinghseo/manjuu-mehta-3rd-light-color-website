@@ -56,7 +56,7 @@ const Testimonials = () => {
       id="testimonials"
       className="testimonials-section"
       style={{
-        background: "#F2E7D5",
+        background: "#E5D8C0",
         position: "relative",
         overflow: "hidden",
       }}
