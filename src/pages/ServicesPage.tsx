@@ -153,7 +153,7 @@ const ServicesPage = () => (
                 
                 {/* Column 1 — Image Card Section (5 cols) */}
                 <div className={`relative overflow-hidden md:col-span-5 min-h-[260px] md:min-h-full flex items-stretch p-4 md:p-6 ${isEven ? "order-1 md:order-1" : "order-1 md:order-2"}`}>
-                  <div className="w-full relative group h-full overflow-hidden rounded-xl shadow-sm border border-gold/10" style={{ borderColor: "rgba(var(--color-accent-gold-rgb),0.15)" }}>
+                  <div className="w-full relative group h-full overflow-hidden rounded-xl shadow-sm border" style={{ borderColor: "rgba(var(--color-accent-gold-rgb),0.15)" }}>
                     <img
                       src={s.image}
                       alt={s.title}
@@ -220,7 +220,7 @@ const ServicesPage = () => (
                   </div>
 
                   {/* CTA Book link */}
-                  <div className="mt-6 pt-4 border-t border-dashed border-gold/15">
+                  <div className="mt-6 pt-4 border-t border-dashed" style={{ borderColor: "rgba(var(--color-accent-gold-rgb), 0.22)" }}>
                     <Link
                       to="/contact"
                       className="inline-flex items-center justify-center gap-2 font-cinzel tracking-[0.2em] uppercase font-bold transition-all px-8 py-3.5 rounded-full"

@@ -63,7 +63,7 @@ const ContactUs = () => {
     setSent(true);
   };
 
-  const inputClass = `w-full px-5 py-4 rounded-xl text-foreground text-[14.5px] bg-white/40 border border-gold/22 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-muted-foreground/40 font-poppins premium-input`;
+  const inputClass = `w-full px-5 py-4 rounded-xl text-foreground text-[14.5px] bg-white/40 border focus:outline-none focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-muted-foreground/40 font-poppins premium-input`;
 
   return (
     <main className="relative min-h-screen pt-24" style={{ background: "var(--color-bg-primary)" }}>
@@ -122,8 +122,12 @@ const ContactUs = () => {
             </h2>
 
             {sent ? (
-              <div className="p-10 md:p-14 text-center bg-white/70 border border-gold/18 rounded-2xl shadow-glow backdrop-blur-md">
-                <div className="w-16 h-16 rounded-full bg-[#FAF3EB] border border-gold/28 flex items-center justify-center mb-6 text-gold mx-auto animate-glow-pulse">
+              <div className="p-10 md:p-14 text-center bg-white/70 border rounded-2xl shadow-glow backdrop-blur-md"
+                style={{ border: "1.5px solid var(--color-border)" }}
+              >
+                <div className="w-16 h-16 rounded-full bg-[#FAF3EB] border flex items-center justify-center mb-6 text-gold mx-auto animate-glow-pulse"
+                  style={{ border: "1.5px solid var(--color-border)" }}
+                >
                   <Send className="w-6 h-6" style={{ color: "var(--color-accent-gold)" }} />
                 </div>
                 <h3 className="font-cinzel text-xl text-[var(--color-accent-gold)] font-bold mb-3">Message Formed!</h3>
@@ -139,8 +143,8 @@ const ContactUs = () => {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="p-8 md:p-10 bg-white/78 border border-gold/18 rounded-2xl shadow-glow space-y-6 relative overflow-hidden contact-editorial-card"
-                style={{ backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)" }}
+              <form onSubmit={handleSubmit} className="p-8 md:p-10 bg-white/78 border rounded-2xl shadow-glow space-y-6 relative overflow-hidden contact-editorial-card"
+                style={{ backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", border: "1.5px solid var(--color-border)" }}
               >
                 {/* Expanding Top Line */}
                 <div className="card-top-line" style={{
@@ -265,13 +269,14 @@ const ContactUs = () => {
                   href={c.href}
                   target={c.href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  className="p-6 bg-white/78 border border-gold/18 rounded-2xl flex items-start gap-5 transition-all duration-400 contact-detail-card"
+                  className="p-6 bg-white/78 border rounded-2xl flex items-start gap-5 transition-all duration-400 contact-detail-card"
                   style={{
                     boxShadow: "0 4px 18px -6px rgba(var(--color-text-heading-rgb),0.05)",
                     backdropFilter: "blur(20px)",
                     WebkitBackdropFilter: "blur(20px)",
                     position: "relative",
-                    overflow: "hidden"
+                    overflow: "hidden",
+                    border: "1.5px solid var(--color-border)",
                   }}
                 >
                   {/* Sliding Top Line */}
@@ -287,7 +292,7 @@ const ContactUs = () => {
                     transformOrigin: "center",
                   }} />
 
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full border border-gold/35 flex items-center justify-center text-gold transition-all duration-400 card-icon-badge" style={{ background: "var(--color-bg-primary)" }}>
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full border flex items-center justify-center text-gold transition-all duration-400 card-icon-badge" style={{ background: "var(--color-bg-primary)", border: "1.5px solid var(--color-border)" }}>
                     <c.icon className="w-5 h-5 icon-svg" strokeWidth={1.2} style={{ color: "var(--color-accent-gold)", transition: "all 0.4s ease" }} />
                   </div>
                   <div>
@@ -351,6 +356,10 @@ const ContactUs = () => {
           background: var(--color-accent-light) !important;
           border-color: var(--color-accent-light) !important;
           color: #FFFFFF !important;
+        }
+        
+        .premium-input {
+          border: 1.5px solid rgba(var(--color-accent-gold-rgb), 0.22) !important;
         }
         
         .premium-input:focus {
