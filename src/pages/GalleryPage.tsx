@@ -101,13 +101,26 @@ const GalleryPage = () => {
         </div>
 
         <div className="relative max-w-3xl mx-auto anim-fadeup" style={{ zIndex: 1 }}>
-
-          <h1
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-cinzel"
-            style={{ color: "var(--color-accent-gold)" }}
-          >
-            Prestige Gallery
-          </h1>
+          <div style={{
+            display: "inline-block",
+            padding: "12px 40px",
+            background: "linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 240, 228, 0.9) 100%)",
+            border: "1px solid rgba(110, 76, 0, 0.22)",
+            borderRadius: "999px",
+            boxShadow: "0 10px 24px -8px rgba(110, 76, 0, 0.12), inset 0 1px 2px #ffffff",
+            marginBottom: "24px"
+          }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-cinzel m-0" style={{
+              background: "linear-gradient(135deg, #3D2B00 0%, #6E4C00 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              display: "inline-block",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase"
+            }}>
+              Prestige Gallery
+            </h1>
+          </div>
           <OrnDivider style={{ margin: "0 auto 28px" } as React.CSSProperties} />
           <p
             className="text-foreground/80 text-[15.5px] font-poppins leading-relaxed max-w-2xl mx-auto"

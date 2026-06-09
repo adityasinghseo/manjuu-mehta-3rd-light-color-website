@@ -85,9 +85,26 @@ const HomeGallery = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight font-cinzel" style={{ color: "var(--color-text-heading)" }}>
-          Prestige Gallery
-        </h2>
+        <div style={{
+          display: "inline-block",
+          padding: "10px 32px",
+          background: "linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 240, 228, 0.9) 100%)",
+          border: "1px solid rgba(110, 76, 0, 0.22)",
+          borderRadius: "999px",
+          boxShadow: "0 8px 20px -6px rgba(110, 76, 0, 0.12), inset 0 1px 2px #ffffff",
+          marginBottom: "20px"
+        }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-cinzel m-0" style={{
+            background: "linear-gradient(135deg, #3D2B00 0%, #6E4C00 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            display: "inline-block",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase"
+          }}>
+            Prestige Gallery
+          </h2>
+        </div>
         <OrnDivider style={{ margin: "0 auto 24px" } as React.CSSProperties} />
         <p className="text-foreground/80 font-poppins leading-relaxed max-w-2xl mx-auto" style={{ color: "rgba(58,32,16,0.80)", fontSize: "clamp(1.12rem, 1.35vw, 1.15rem)" }}>
           A visual testament to prestigious awards, public recognitions, and a decade of sacred cosmic guidance.
