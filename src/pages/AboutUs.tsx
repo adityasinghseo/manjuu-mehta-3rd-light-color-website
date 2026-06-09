@@ -282,10 +282,10 @@ const AboutUsPage = () => (
             >
               {/* Badge Icon */}
               <div 
-                className="w-11 h-11 rounded-full flex items-center justify-center mb-4 card-icon-badge"
-                style={{ background: "#FFFFFF", border: "1px solid rgba(var(--color-accent-gold-rgb),0.28)", transition: "all 0.4s ease" }}
+                className="w-14 h-14 rounded-full flex items-center justify-center mb-4 card-icon-badge"
+                style={{ background: "var(--color-accent-gold)", border: "1.5px solid var(--color-accent-gold)", transition: "all 0.4s ease" }}
               >
-                <badge.icon className="w-5 h-5 icon-svg" strokeWidth={1.7} style={{ color: "var(--color-accent-gold)", transition: "all 0.4s ease" }} />
+                <badge.icon className="w-7 h-7 icon-svg" strokeWidth={1.7} style={{ color: "#FFFFFF", transition: "all 0.4s ease" }} />
               </div>
               <h4 className="font-cinzel font-bold" style={{ color: "var(--color-text-heading)", fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)" }}>{badge.title}</h4>
               <p className="font-poppins tracking-[0.18em] uppercase font-bold mt-1 mb-2.5" style={{ color: "var(--color-accent-gold)", fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)" }}>{badge.subtitle}</p>
@@ -308,8 +308,8 @@ const AboutUsPage = () => (
           box-shadow: 0 14px 32px -10px rgba(var(--color-text-heading-rgb),0.08) !important;
         }
         .prestige-card:hover .card-icon-badge {
-          background: var(--color-accent-gold) !important;
-          border-color: var(--color-accent-gold) !important;
+          background: var(--color-accent-light) !important;
+          border-color: var(--color-accent-light) !important;
         }
         .prestige-card:hover .icon-svg {
           color: #FFFFFF !important;
@@ -438,18 +438,18 @@ const AboutUsPage = () => (
 
               {/* Icon Frame */}
               <div className="card-icon-badge" style={{
-                width: 48,
-                height: 48,
+                width: 56,
+                height: 56,
                 borderRadius: "50%",
-                background: "#FFFFFF",
-                border: "1px solid rgba(var(--color-accent-gold-rgb),0.28)",
+                background: "var(--color-accent-gold)",
+                border: "1.5px solid var(--color-accent-gold)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 marginBottom: 20,
                 transition: "all 0.4s ease",
               }}>
-                <c.icon className="icon-svg" size={20} strokeWidth={1.7} style={{ color: "var(--color-accent-gold)", transition: "all 0.4s ease" }} />
+                <c.icon className="icon-svg" size={24} strokeWidth={1.7} style={{ color: "#FFFFFF", transition: "all 0.4s ease" }} />
               </div>
 
               <h3 style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.25rem, 1.8vw, 1.4rem)", letterSpacing: "0.06em", color: "var(--color-text-heading)", marginBottom: 12 }}>
@@ -475,8 +475,8 @@ const AboutUsPage = () => (
             transform: translateX(-50%) scaleX(1);
           }
           .about-interactive-card:hover .card-icon-badge {
-            background: var(--color-accent-gold) !important;
-            border-color: var(--color-accent-gold) !important;
+            background: var(--color-accent-light) !important;
+            border-color: var(--color-accent-light) !important;
             transform: scale(1.08);
           }
           .about-interactive-card:hover .icon-svg {
