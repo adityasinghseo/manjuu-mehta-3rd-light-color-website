@@ -87,15 +87,15 @@ const HomeGallery = () => {
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <div style={{
           display: "inline-block",
-          padding: "10px 32px",
-          background: "linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 240, 228, 0.9) 100%)",
-          border: "1px solid rgba(110, 76, 0, 0.22)",
+          padding: "12px 36px",
+          background: "linear-gradient(135deg, #3D2B00 0%, #241A00 100%)",
+          border: "1.5px solid rgba(212, 175, 55, 0.35)",
           borderRadius: "999px",
-          boxShadow: "0 8px 20px -6px rgba(110, 76, 0, 0.12), inset 0 1px 2px #ffffff",
+          boxShadow: "0 10px 28px -6px rgba(36, 26, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.15)",
           marginBottom: "20px"
         }}>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-cinzel m-0" style={{
-            background: "linear-gradient(135deg, #3D2B00 0%, #6E4C00 100%)",
+            background: "linear-gradient(135deg, #FFF2D4 0%, #D4AF37 50%, #AA8010 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             display: "inline-block",

@@ -103,15 +103,15 @@ const GalleryPage = () => {
         <div className="relative max-w-3xl mx-auto anim-fadeup" style={{ zIndex: 1 }}>
           <div style={{
             display: "inline-block",
-            padding: "12px 40px",
-            background: "linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 240, 228, 0.9) 100%)",
-            border: "1px solid rgba(110, 76, 0, 0.22)",
+            padding: "14px 44px",
+            background: "linear-gradient(135deg, #3D2B00 0%, #241A00 100%)",
+            border: "1.5px solid rgba(212, 175, 55, 0.35)",
             borderRadius: "999px",
-            boxShadow: "0 10px 24px -8px rgba(110, 76, 0, 0.12), inset 0 1px 2px #ffffff",
+            boxShadow: "0 12px 32px -6px rgba(36, 26, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.15)",
             marginBottom: "24px"
           }}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-cinzel m-0" style={{
-              background: "linear-gradient(135deg, #3D2B00 0%, #6E4C00 100%)",
+              background: "linear-gradient(135deg, #FFF2D4 0%, #D4AF37 50%, #AA8010 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               display: "inline-block",
