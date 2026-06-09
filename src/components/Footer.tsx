@@ -81,7 +81,7 @@ const Footer = () => (
             Guiding you toward prosperity, harmony, and cosmic alignment through the ancient Vedic sciences.
           </p>
 
-          {/* Sleek Social Circle Badges */}
+          {/* Sleek Social Rectangular Badges with Official Brand Colors */}
           <div style={{ display: "flex", gap: 12 }}>
             {[
               { href: "https://www.instagram.com/manjuumehta", Icon: InstagramIcon, color: "#E1306C", rgb: "225, 48, 108" },
@@ -90,31 +90,27 @@ const Footer = () => (
             ].map(({ href, Icon, color, rgb }, i) => (
               <a key={i} href={href} target="_blank" rel="noopener noreferrer"
                 style={{
-                  width: 38, height: 38, borderRadius: "50%",
-                  background: "rgba(255, 255, 255, 0.45)",
-                  border: `1px solid rgba(${rgb}, 0.28)`,
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  color: color,
-                  boxShadow: "0 4px 10px rgba(var(--color-text-heading-rgb),0.02)",
-                  transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                  width: 38,
+                  height: 38,
+                  borderRadius: 6,
+                  background: color,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#FFFFFF",
+                  transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
                 }}
                 className="footer-social-icon"
                 onMouseEnter={e => {
-                  e.currentTarget.style.background = color;
-                  e.currentTarget.style.color = "#FFFFFF";
-                  e.currentTarget.style.borderColor = color;
-                  e.currentTarget.style.transform = "translateY(-3px) rotate(8deg)";
-                  e.currentTarget.style.boxShadow = `0 8px 20px rgba(${rgb}, 0.25)`;
+                  e.currentTarget.style.transform = "translateY(-3px)";
+                  e.currentTarget.style.boxShadow = `0 6px 14px rgba(${rgb}, 0.45)`;
                 }}
                 onMouseLeave={e => {
-                  e.currentTarget.style.background = "rgba(255, 255, 255, 0.45)";
-                  e.currentTarget.style.color = color;
-                  e.currentTarget.style.borderColor = `rgba(${rgb}, 0.28)`;
                   e.currentTarget.style.transform = "none";
-                  e.currentTarget.style.boxShadow = "0 4px 10px rgba(var(--color-text-heading-rgb),0.02)";
+                  e.currentTarget.style.boxShadow = "none";
                 }}
               >
-                <Icon size={15} strokeWidth={1.4} fill="currentColor" />
+                <Icon size={16} fill="currentColor" />
               </a>
             ))}
           </div>
