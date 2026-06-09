@@ -59,47 +59,9 @@ const Footer = () => (
           <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.3vw, 1.2rem)", fontWeight: 500, color: "var(--color-text-heading)", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: 18 }}>
             Vastu ✦ Astrology ✦ Numerology
           </p>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)", color: "rgba(40,22,10,0.76)", lineHeight: 1.8, maxWidth: 300, marginBottom: 22 }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)", color: "rgba(40,22,10,0.76)", lineHeight: 1.8, maxWidth: 300 }}>
             Guiding you toward prosperity, harmony, and cosmic alignment through the ancient Vedic sciences.
           </p>
-
-          {/* Sleek Social Circle Badges */}
-          <div style={{ display: "flex", gap: 12 }}>
-            {[
-              { href: "https://www.instagram.com/manjuumehta", Icon: Instagram },
-              { href: "https://www.facebook.com/manjuu.mehta", Icon: Facebook },
-              { href: "https://www.youtube.com/@manjuumehta", Icon: Youtube },
-            ].map(({ href, Icon }, i) => (
-              <a key={i} href={href} target="_blank" rel="noopener noreferrer"
-                style={{
-                  width: 38, height: 38, borderRadius: "50%",
-                  background: "rgba(255, 255, 255, 0.45)",
-                  border: "1px solid rgba(216, 106, 99, 0.28)",
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  color: "#d86a63",
-                  boxShadow: "0 4px 10px rgba(var(--color-text-heading-rgb),0.02)",
-                  transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
-                }}
-                className="footer-social-icon"
-                onMouseEnter={e => {
-                  e.currentTarget.style.background = "#d86a63";
-                  e.currentTarget.style.color = "#FFFFFF";
-                  e.currentTarget.style.borderColor = "#d86a63";
-                  e.currentTarget.style.transform = "translateY(-3px) rotate(8deg)";
-                  e.currentTarget.style.boxShadow = "0 8px 20px rgba(216, 106, 99, 0.25)";
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.background = "rgba(255, 255, 255, 0.45)";
-                  e.currentTarget.style.color = "#d86a63";
-                  e.currentTarget.style.borderColor = "rgba(216, 106, 99, 0.28)";
-                  e.currentTarget.style.transform = "none";
-                  e.currentTarget.style.boxShadow = "0 4px 10px rgba(var(--color-text-heading-rgb),0.02)";
-                }}
-              >
-                <Icon size={15} strokeWidth={1.4} />
-              </a>
-            ))}
-          </div>
         </div>
 
         {/* Quick Links Column with Gold Star Bullets */}
