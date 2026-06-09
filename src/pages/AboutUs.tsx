@@ -41,7 +41,7 @@ const SectionHeader = ({ sup, title }: { sup: string; title: string }) => (
 
 /* ── Component ─────────────────────────────────────────────── */
 const AboutUsPage = () => (
-  <main style={{ minHeight: "100vh", paddingTop: 72, background: "var(--color-bg-secondary)" }}>
+  <main style={{ minHeight: "100vh", paddingTop: 72, background: "var(--color-bg-primary)" }}>
 
     {/* ── 1. Hero Banner ─────────────────────────── */}
     <section style={{ padding: "96px 0 56px", textAlign: "center", position: "relative", overflow: "hidden", background: "var(--color-bg-primary)" }}>
@@ -94,7 +94,7 @@ const AboutUsPage = () => (
     </section>
 
     {/* ── 2. Portrait + Bio ──────────────────────── */}
-    <section style={{ padding: "116px 0", position: "relative" }}>
+    <section style={{ padding: "116px 0", position: "relative", background: "#F2E7D5" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1fr", gap: 76, alignItems: "center", position: "relative", zIndex: 2 }} className="about-bio-grid">
         {/* LEFT COLUMN: Layered Portrait Card */}
         <div style={{ display: "flex", justifyContent: "center", animation: "fadeUp 0.9s ease both", position: "relative" }}>
@@ -216,7 +216,7 @@ const AboutUsPage = () => (
     {/* ── VIP Honors & Prestige Badges (Sohini Sastri Inspired) ── */}
     <section style={{
       padding: "56px 0",
-      background: "var(--color-bg-secondary)",
+      background: "#FAF4E8",
       borderTop: "1px solid rgba(var(--color-accent-gold-rgb),0.18)",
       borderBottom: "1px solid rgba(var(--color-accent-gold-rgb),0.18)",
       position: "relative",
@@ -318,7 +318,7 @@ const AboutUsPage = () => (
     </section>
 
     {/* ── 3. Redesigned Stats cards block ──────────────────────────── */}
-    <section style={{ padding: "32px 0 116px" }}>
+    <section style={{ padding: "56px 0 116px", background: "#F7F0E4" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 20 }} className="stats-bar-grid">
         {stats.map((s, i) => (
           <div key={s.label}
@@ -371,7 +371,7 @@ const AboutUsPage = () => (
     </section>
 
     {/* ── 4. Philosophy Section ─────────────────────────── */}
-    <section style={{ padding: "128px 0", background: "var(--color-bg-primary)", position: "relative", overflow: "hidden" }}>
+    <section style={{ padding: "128px 0", background: "#E5D8C0", position: "relative", overflow: "hidden" }}>
       <div className="sparkle-field" style={{ opacity: 0.25 }} />
       <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 2 }}>
         <div style={{ textAlign: "center", marginBottom: 44 }}>
@@ -403,7 +403,7 @@ const AboutUsPage = () => (
     </section>
 
     {/* ── 5. Credentials & Specialisations ────────────────────────── */}
-    <section style={{ padding: "116px 0", position: "relative" }}>
+    <section style={{ padding: "116px 0", position: "relative", background: "#FAF4E8" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px" }}>
         <SectionHeader sup="Prestige & Experience" title="Credentials & Specialisations" />
         
@@ -489,7 +489,7 @@ const AboutUsPage = () => (
 
 
     {/* ── 7. Journey Timeline ──────────────────── */}
-    <section style={{ padding: "116px 0" }}>
+    <section style={{ padding: "116px 0", background: "#F7F0E4" }}>
       <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 32px" }}>
         <SectionHeader sup="Chronicles of Growth" title="The Journey" />
         

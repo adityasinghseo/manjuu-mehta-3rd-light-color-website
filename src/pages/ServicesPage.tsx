@@ -127,7 +127,7 @@ const ServicesPage = () => (
               key={s.title}
               className="relative overflow-hidden rounded-2xl transition-all duration-500 services-editorial-card"
               style={{
-                background: "#FAF0EC",
+                background: "#FAF4E8",
                 border: "1px solid rgba(var(--color-accent-gold-rgb),0.18)",
                 boxShadow: "0 8px 30px -10px rgba(var(--color-text-heading-rgb),0.06)",
                 animation: `fadeUp 0.8s ease ${i * 0.08}s both`,
@@ -223,8 +223,26 @@ const ServicesPage = () => (
                   <div className="mt-6 pt-4 border-t border-dashed border-gold/15">
                     <Link
                       to="/contact"
-                      className="inline-flex items-center gap-2 font-cinzel tracking-[0.2em] uppercase font-bold transition-all hover:gap-4 book-service-link"
-                      style={{ color: "var(--color-accent-gold)", fontSize: "clamp(1.05rem, 1.3vw, 1.15rem)" }}
+                      className="inline-flex items-center justify-center gap-2 font-cinzel tracking-[0.2em] uppercase font-bold transition-all px-8 py-3.5 rounded-full"
+                      style={{
+                        color: "#FFFFFF",
+                        background: "var(--color-accent-gold)",
+                        border: "1.5px solid var(--color-accent-gold)",
+                        boxShadow: "0 6px 20px rgba(var(--color-accent-gold-rgb), 0.25)",
+                        fontSize: "clamp(1.05rem, 1.3vw, 1.15rem)"
+                      }}
+                      onMouseEnter={e => {
+                        e.currentTarget.style.background = "var(--color-accent-light)";
+                        e.currentTarget.style.borderColor = "var(--color-accent-light)";
+                        e.currentTarget.style.transform = "translateY(-2px)";
+                        e.currentTarget.style.boxShadow = "0 8px 24px rgba(var(--color-accent-gold-rgb), 0.35)";
+                      }}
+                      onMouseLeave={e => {
+                        e.currentTarget.style.background = "var(--color-accent-gold)";
+                        e.currentTarget.style.borderColor = "var(--color-accent-gold)";
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.boxShadow = "0 6px 20px rgba(var(--color-accent-gold-rgb), 0.25)";
+                      }}
                     >
                       Book This Service <ArrowRight className="w-4 h-4" />
                     </Link>
@@ -240,7 +258,7 @@ const ServicesPage = () => (
       <style>{`
         .services-editorial-card:hover {
           transform: translateY(-5px);
-          background: #FAF0EC !important;
+          background: #FAF4E8 !important;
           border-color: rgba(var(--color-accent-gold-rgb), 0.48) !important;
           box-shadow: 0 20px 48px -12px rgba(var(--color-text-heading-rgb),0.12), 0 0 10px rgba(var(--color-accent-gold-rgb),0.08) !important;
         }

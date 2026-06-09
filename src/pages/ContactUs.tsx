@@ -117,7 +117,7 @@ const ContactUs = () => {
             <p className="font-poppins tracking-[0.16em] text-[var(--color-accent-gold)] text-xs font-bold uppercase mb-3">
               Direct Booking
             </p>
-            <h2 className="font-cinzel text-3xl md:text-4xl text-[var(--color-accent-gold)] font-bold mb-8 leading-tight">
+            <h2 className="font-cinzel text-3xl md:text-4xl text-[var(--color-text-heading)] font-bold mb-8 leading-tight">
               Book Your Consultation
             </h2>
 
@@ -229,9 +229,10 @@ const ContactUs = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-gradient-gold font-cinzel tracking-[0.20em] uppercase shadow-gold transition-transform hover:scale-[1.01] flex items-center justify-center gap-3 text-[var(--color-accent-gold)] font-bold submit-btn"
+                  className="w-full py-4 rounded-full bg-gradient-gold font-cinzel tracking-[0.20em] uppercase shadow-gold transition-transform hover:scale-[1.01] flex items-center justify-center gap-3 text-white font-bold submit-btn"
                   style={{
-                    background: "#FFFFFF",
+                    background: "var(--color-accent-gold)",
+                    color: "#FFFFFF",
                     border: "1.5px solid var(--color-accent-gold)",
                     boxShadow: "0 8px 24px -10px rgba(var(--color-accent-gold-rgb),0.40)",
                     cursor: "pointer",
@@ -253,7 +254,7 @@ const ContactUs = () => {
             <p className="font-poppins tracking-[0.16em] text-[var(--color-accent-gold)] text-xs font-bold uppercase mb-3">
               Prestige Channels
             </p>
-            <h2 className="font-cinzel text-3xl md:text-4xl text-[var(--color-accent-gold)] font-bold mb-8 leading-tight">
+            <h2 className="font-cinzel text-3xl md:text-4xl text-[var(--color-text-heading)] font-bold mb-8 leading-tight">
               Contact Details
             </h2>
 
@@ -337,11 +338,19 @@ const ContactUs = () => {
           color: #FFFFFF !important;
         }
         
+        .submit-btn {
+          background: var(--color-accent-gold) !important;
+          color: #FFFFFF !important;
+          border-color: var(--color-accent-gold) !important;
+          transition: all 0.25s ease !important;
+        }
+        
         .submit-btn:hover {
           transform: translateY(-2px) scale(1.015);
-          box-shadow: 0 12px 32px -8px rgba(var(--color-accent-gold-rgb),0.60) !important;
-          background: var(--color-bg-primary) !important;
-          border-color: var(--color-border) !important;
+          box-shadow: 0 12px 32px -8px rgba(var(--color-accent-gold-rgb),0.35) !important;
+          background: var(--color-accent-light) !important;
+          border-color: var(--color-accent-light) !important;
+          color: #FFFFFF !important;
         }
         
         .premium-input:focus {
