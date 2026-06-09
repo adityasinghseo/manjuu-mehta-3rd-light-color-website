@@ -194,7 +194,6 @@ const Hero = () => (
           letterSpacing: "0.02em",
           marginBottom: 14,
           textShadow: "0 2px 12px rgba(var(--color-accent-gold-rgb),0.04)",
-          whiteSpace: "nowrap",
         }}>
           <span style={{ position: "relative", display: "inline-block" }}>
             M
@@ -372,7 +371,7 @@ const Hero = () => (
       width: "100%",
       padding: "0 32px",
       animation: "fadeUp 0.9s ease 0.35s both",
-    }}>
+    }} className="stats-bar-wrap">
       <div className="stats-scroll-wrapper">
         <div style={{
           background: "#F7F0E4",
@@ -481,6 +480,10 @@ const Hero = () => (
       .hero-grid { grid-template-columns: 1.12fr 1fr !important; gap: 64px !important; }
       .hero-text { align-items: flex-start !important; text-align: left !important; }
       .stats-grid { grid-template-columns: 1fr auto 1fr auto 1fr !important; }
+      
+      .hero-name-block h1 {
+        white-space: nowrap;
+      }
       
       /* Interactive hover styles */
       .portrait-wrapper {
@@ -591,6 +594,10 @@ const Hero = () => (
         }
         .hero-text {
           display: contents !important; /* dissolve hero-text so children can be ordered */
+        }
+        
+        .hero-name-block h1 {
+          white-space: normal !important;
         }
 
         /* Mobile element order */
