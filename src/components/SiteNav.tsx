@@ -171,7 +171,22 @@ const SiteNav = () => {
             ))}
           </div>
           <Link to="/contact" onClick={close}
-            style={{ marginTop: 44, fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--color-accent-gold)", background: "transparent", border: "1px solid rgba(var(--color-accent-gold-rgb),0.40)", padding: "12px 31px", borderRadius: 999 }}
+            style={{
+              marginTop: 44,
+              fontFamily: "Cinzel, serif",
+              fontWeight: 700,
+              fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "#FFFFFF",
+              background: "var(--color-accent-gold)",
+              border: "1.5px solid var(--color-accent-gold)",
+              padding: "14px 36px",
+              borderRadius: 999,
+              boxShadow: "0 6px 20px rgba(var(--color-accent-gold-rgb), 0.25)",
+              transition: "all 0.3s ease",
+            }}
+            className="mobile-overlay-cta"
           >Book Consultation</Link>
         </div>
       )}
@@ -191,6 +206,16 @@ const SiteNav = () => {
           background: var(--color-accent-light) !important;
           border-color: var(--color-accent-light) !important;
           transform: scale(1.06);
+        }
+
+        .mobile-overlay-cta {
+          transition: all 0.3s ease !important;
+        }
+        .mobile-overlay-cta:hover, .mobile-overlay-cta:active {
+          background: var(--color-accent-light) !important;
+          border-color: var(--color-accent-light) !important;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(var(--color-accent-gold-rgb), 0.35) !important;
         }
 
         .lg-nav-link {
