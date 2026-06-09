@@ -117,10 +117,10 @@ const Testimonials = () => {
             style={{
               position: "relative",
               padding: "56px 64px 48px",
-              background: "#FFFFFF",
-              border: "1px solid rgba(var(--color-accent-gold-rgb), 0.18)",
+              background: "linear-gradient(135deg, #FFFDF9 0%, #F5ECDF 100%)",
+              border: "1.5px solid rgba(128, 94, 26, 0.38)",
               borderRadius: 24,
-              boxShadow: "0 24px 60px -16px rgba(var(--color-text-heading-rgb), 0.08), 0 0 40px -10px rgba(var(--color-accent-gold-rgb), 0.04)",
+              boxShadow: "0 32px 75px -16px rgba(61, 43, 0, 0.16), 0 0 35px -8px rgba(110, 76, 0, 0.05)",
               backdropFilter: "blur(20px)",
               textAlign: "left",
               animation: "slideReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) both",
@@ -128,14 +128,17 @@ const Testimonials = () => {
             }}
             className="testimonial-card"
           >
-            {/* Top gold line visual signature */}
+            {/* Inner Gold Frame */}
             <div style={{
               position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              height: 3,
-              background: "linear-gradient(90deg, var(--color-accent-gold) 0%, rgba(var(--color-accent-gold-rgb), 0.2) 100%)",
+              top: 12,
+              left: 12,
+              right: 12,
+              bottom: 12,
+              border: "1px solid rgba(128, 94, 26, 0.22)",
+              borderRadius: 16,
+              pointerEvents: "none",
+              zIndex: 1,
             }} />
 
             {/* Giant decorative quotation backgrounds */}
