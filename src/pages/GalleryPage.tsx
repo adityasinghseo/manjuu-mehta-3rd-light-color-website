@@ -111,9 +111,7 @@ const GalleryPage = () => {
             marginBottom: "24px"
           }}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-cinzel m-0" style={{
-              background: "linear-gradient(135deg, #FFF2D4 0%, #D4AF37 50%, #AA8010 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
+              color: "#FFF2D4",
               display: "inline-block",
               letterSpacing: "0.15em",
               textTransform: "uppercase"

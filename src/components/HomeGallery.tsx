@@ -95,9 +95,7 @@ const HomeGallery = () => {
           marginBottom: "20px"
         }}>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-cinzel m-0" style={{
-            background: "linear-gradient(135deg, #FFF2D4 0%, #D4AF37 50%, #AA8010 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+            color: "#FFF2D4",
             display: "inline-block",
             letterSpacing: "0.15em",
             textTransform: "uppercase"
