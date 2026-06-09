@@ -91,7 +91,7 @@ const Hero = () => (
       paddingTop: 98,
       paddingBottom: 64,
       overflow: "hidden",
-      background: "var(--color-bg-primary)",
+      background: "#F7F0E4",
     }}
   >
     {/* Sparkle overlay with gentle slow twinkle */}
@@ -107,7 +107,7 @@ const Hero = () => (
       maxWidth: 820,
       height: "90%",
       maxHeight: 820,
-      opacity: 0.022,
+      opacity: 0.04,
       pointerEvents: "none",
       zIndex: 1,
     }}>
@@ -224,7 +224,7 @@ const Hero = () => (
             fontFamily: "Cinzel, serif",
             fontWeight: 600,
             fontSize: "clamp(1.3rem, 2.2vw, 1.55rem)",
-            color: "var(--color-text-heading)",
+            color: "var(--color-accent-gold)",
             lineHeight: 1.3,
             letterSpacing: "0.06em",
           }}>
@@ -375,7 +375,7 @@ const Hero = () => (
     }}>
       <div className="stats-scroll-wrapper">
         <div style={{
-          background: "var(--color-bg-primary)",
+          background: "#F7F0E4",
           border: "1px solid rgba(var(--color-accent-gold-rgb),0.22)",
           borderRadius: 18,
           backdropFilter: "blur(20px)",
@@ -389,8 +389,8 @@ const Hero = () => (
         <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "12px 28px", justifyContent: "flex-start" }} className="stat-item">
           <div style={{
             width: 52, height: 52, borderRadius: "50%",
-            background: "#8A6200",
-            border: "none",
+            background: "#D86A63",
+            border: "1px solid rgba(244, 208, 111, 0.35)",
             display: "flex", alignItems: "center", justifyContent: "center",
             flexShrink: 0,
             transition: "all 0.35s ease",
@@ -420,8 +420,8 @@ const Hero = () => (
         <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "12px 28px", justifyContent: "center" }} className="stat-item">
           <div style={{
             width: 52, height: 52, borderRadius: "50%",
-            background: "#8A6200",
-            border: "none",
+            background: "#D86A63",
+            border: "1px solid rgba(244, 208, 111, 0.35)",
             display: "flex", alignItems: "center", justifyContent: "center",
             flexShrink: 0,
             transition: "all 0.35s ease",
@@ -452,8 +452,8 @@ const Hero = () => (
         <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "12px 28px", justifyContent: "flex-end" }} className="stat-item">
           <div style={{
             width: 52, height: 52, borderRadius: "50%",
-            background: "#8A6200",
-            border: "none",
+            background: "#D86A63",
+            border: "1px solid rgba(244, 208, 111, 0.35)",
             display: "flex", alignItems: "center", justifyContent: "center",
             flexShrink: 0,
             transition: "all 0.35s ease",
@@ -469,7 +469,7 @@ const Hero = () => (
           <div>
             <div style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.4vw, 1.2rem)", fontWeight: 700, color: "var(--color-text-heading)", letterSpacing: "0.14em", textTransform: "uppercase" }}>Trust &amp; Reach</div>
             <div style={{ fontFamily: "Cinzel, serif", fontSize: 20, fontWeight: 700, color: "var(--color-text-heading)", marginTop: 3, lineHeight: 1.2 }}>
-              Global <span style={{ fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)", fontWeight: 600 }}>Clientele</span>
+               Global <span style={{ fontSize: "clamp(1.15rem, 1.5vw, 1.25rem)", fontWeight: 600 }}>Clientele</span>
             </div>
           </div>
         </div>
@@ -545,16 +545,17 @@ const Hero = () => (
         letter-spacing: 0.16em;
         text-transform: uppercase;
         color: #FFFFFF !important;
-        background: var(--color-accent-gold); /* Same color as Manjuu Mehta title */
+        background: var(--color-accent-gold); /* Gold color */
         padding: 16px 38px;
         border-radius: 999px;
         border: none;
         box-shadow: none;
-        transition: background 0.3s ease;
+        transition: background 0.3s ease, color 0.3s ease;
         display: inline-block;
       }
       .btn-hero-solid:hover {
-        background: #A67809; /* Slightly darker on hover */
+        background: #A67809; /* Slightly darker gold on hover */
+        color: #FFFFFF !important;
       }
 
       .hero-badge-pill:hover {

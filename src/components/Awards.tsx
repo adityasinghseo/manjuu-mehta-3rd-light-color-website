@@ -53,11 +53,38 @@ const Awards = () => (
     id="awards"
     style={{
       padding: "96px 0",
-      background: "var(--color-bg-secondary)",
+      background: "#FAF4E8",
       position: "relative",
       overflow: "hidden",
     }}
   >
+    {/* Elegant Sacred Geometry Mandala Watermark in Background */}
+    <div style={{
+      position: "absolute",
+      top: "10%",
+      right: "-8%",
+      width: "55%",
+      maxWidth: 600,
+      aspectRatio: "1",
+      opacity: 0.04,
+      pointerEvents: "none",
+      zIndex: 0,
+    }}>
+      <svg viewBox="0 0 500 500" fill="none" stroke="var(--color-accent-gold)" strokeWidth="0.8">
+        <circle cx="250" cy="250" r="240" />
+        <circle cx="250" cy="250" r="225" strokeDasharray="3 3" />
+        <circle cx="250" cy="250" r="185" />
+        <circle cx="250" cy="250" r="130" />
+        <circle cx="250" cy="250" r="70" />
+        <polygon points="250,10 391,250 250,490 109,250" />
+        <polygon points="250,10 423,150 250,490 77,150" />
+        <polygon points="250,10 423,350 250,490 77,350" />
+        <polygon points="250,10 109,250 250,490 391,250" transform="rotate(45 250 250)" />
+        <polygon points="250,10 109,250 250,490 391,250" transform="rotate(22.5 250 250)" />
+        <polygon points="250,10 109,250 250,490 391,250" transform="rotate(67.5 250 250)" />
+      </svg>
+    </div>
+
     <div className="sparkle-field" style={{ opacity: 0.22 }} />
 
     <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", position: "relative" }}>

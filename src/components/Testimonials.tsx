@@ -56,27 +56,35 @@ const Testimonials = () => {
       id="testimonials"
       className="testimonials-section"
       style={{
-        background: "var(--color-bg-primary)",
+        background: "#F2E7D5",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Background Watermark Mandala */}
+      {/* Elegant Sacred Geometry Mandala Watermark in Background */}
       <div style={{
         position: "absolute",
-        top: "-15%",
-        left: "-10%",
-        width: "50%",
-        maxWidth: 500,
+        top: "-10%",
+        left: "-8%",
+        width: "55%",
+        maxWidth: 600,
         aspectRatio: "1",
-        opacity: 0.012,
+        opacity: 0.04,
         pointerEvents: "none",
         zIndex: 0,
       }}>
-        <svg viewBox="0 0 100 100" fill="none" stroke="var(--color-accent-gold)" strokeWidth="0.5">
-          <circle cx="50" cy="50" r="48" />
-          <circle cx="50" cy="50" r="38" strokeDasharray="3 3" />
-          <polygon points="50,2 98,50 50,98 2,50" />
+        <svg viewBox="0 0 500 500" fill="none" stroke="var(--color-accent-gold)" strokeWidth="0.8">
+          <circle cx="250" cy="250" r="240" />
+          <circle cx="250" cy="250" r="225" strokeDasharray="3 3" />
+          <circle cx="250" cy="250" r="185" />
+          <circle cx="250" cy="250" r="130" />
+          <circle cx="250" cy="250" r="70" />
+          <polygon points="250,10 391,250 250,490 109,250" />
+          <polygon points="250,10 423,150 250,490 77,150" />
+          <polygon points="250,10 423,350 250,490 77,350" />
+          <polygon points="250,10 109,250 250,490 391,250" transform="rotate(45 250 250)" />
+          <polygon points="250,10 109,250 250,490 391,250" transform="rotate(22.5 250 250)" />
+          <polygon points="250,10 109,250 250,490 391,250" transform="rotate(67.5 250 250)" />
         </svg>
       </div>
 
