@@ -59,9 +59,47 @@ const Footer = () => (
           <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.1rem, 1.3vw, 1.2rem)", fontWeight: 500, color: "var(--color-text-heading)", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: 18 }}>
             Vastu ✦ Astrology ✦ Numerology
           </p>
-          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)", color: "rgba(40,22,10,0.76)", lineHeight: 1.8, maxWidth: 300 }}>
+          <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.15rem, 1.45vw, 1.25rem)", color: "rgba(40,22,10,0.76)", lineHeight: 1.8, maxWidth: 300, marginBottom: 22 }}>
             Guiding you toward prosperity, harmony, and cosmic alignment through the ancient Vedic sciences.
           </p>
+
+          {/* Sleek Social Circle Badges */}
+          <div style={{ display: "flex", gap: 12 }}>
+            {[
+              { href: "https://www.instagram.com/manjuumehta", Icon: Instagram, color: "#E1306C", rgb: "225, 48, 108" },
+              { href: "https://www.facebook.com/manjuu.mehta", Icon: Facebook, color: "#1877F2", rgb: "24, 119, 242" },
+              { href: "https://www.youtube.com/@manjuumehta", Icon: Youtube, color: "#FF0000", rgb: "255, 0, 0" },
+            ].map(({ href, Icon, color, rgb }, i) => (
+              <a key={i} href={href} target="_blank" rel="noopener noreferrer"
+                style={{
+                  width: 38, height: 38, borderRadius: "50%",
+                  background: "rgba(255, 255, 255, 0.45)",
+                  border: `1px solid rgba(${rgb}, 0.28)`,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  color: color,
+                  boxShadow: "0 4px 10px rgba(var(--color-text-heading-rgb),0.02)",
+                  transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                }}
+                className="footer-social-icon"
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = color;
+                  e.currentTarget.style.color = "#FFFFFF";
+                  e.currentTarget.style.borderColor = color;
+                  e.currentTarget.style.transform = "translateY(-3px) rotate(8deg)";
+                  e.currentTarget.style.boxShadow = `0 8px 20px rgba(${rgb}, 0.25)`;
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = "rgba(255, 255, 255, 0.45)";
+                  e.currentTarget.style.color = color;
+                  e.currentTarget.style.borderColor = `rgba(${rgb}, 0.28)`;
+                  e.currentTarget.style.transform = "none";
+                  e.currentTarget.style.boxShadow = "0 4px 10px rgba(var(--color-text-heading-rgb),0.02)";
+                }}
+              >
+                <Icon size={15} strokeWidth={1.4} />
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Quick Links Column with Gold Star Bullets */}
@@ -170,16 +208,16 @@ const Footer = () => (
         {/* Follow handle tags */}
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12 }}>
           {[
-            { href: "https://www.instagram.com/manjuumehta", Icon: Instagram, label: "/manjuumehta" },
-            { href: "https://www.facebook.com/manjuu.mehta", Icon: Facebook, label: "/manjuu.mehta" },
-            { href: "https://www.youtube.com/@manjuumehta", Icon: Youtube, label: "/@manjuumehta" },
-          ].map(({ href, Icon, label }, i) => (
+            { href: "https://www.instagram.com/manjuumehta", Icon: Instagram, label: "/manjuumehta", color: "#E1306C", rgb: "225, 48, 108" },
+            { href: "https://www.facebook.com/manjuu.mehta", Icon: Facebook, label: "/manjuu.mehta", color: "#1877F2", rgb: "24, 119, 242" },
+            { href: "https://www.youtube.com/@manjuumehta", Icon: Youtube, label: "/@manjuumehta", color: "#FF0000", rgb: "255, 0, 0" },
+          ].map(({ href, Icon, label, color, rgb }, i) => (
             <a key={i} href={href} target="_blank" rel="noopener noreferrer"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 8,
                 padding: "8px 18px",
                 background: "rgba(255,255,255,0.50)",
-                border: "1px solid rgba(216, 106, 99, 0.22)",
+                border: `1px solid rgba(${rgb}, 0.22)`,
                 borderRadius: 999,
                 fontFamily: "Poppins, sans-serif",
                 fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)",
@@ -189,14 +227,14 @@ const Footer = () => (
                 boxShadow: "0 2px 8px rgba(var(--color-text-heading-rgb),0.01)",
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.borderColor = "rgba(216, 106, 99, 0.45)";
-                e.currentTarget.style.color = "#d86a63";
+                e.currentTarget.style.borderColor = `rgba(${rgb}, 0.45)`;
+                e.currentTarget.style.color = color;
                 e.currentTarget.style.background = "#FFFFFF";
                 e.currentTarget.style.transform = "translateY(-1.5px)";
                 e.currentTarget.style.boxShadow = "0 6px 16px rgba(var(--color-text-heading-rgb),0.03)";
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.borderColor = "rgba(216, 106, 99, 0.22)";
+                e.currentTarget.style.borderColor = `rgba(${rgb}, 0.22)`;
                 e.currentTarget.style.color = "rgba(58,32,16,0.72)";
                 e.currentTarget.style.background = "rgba(255,255,255,0.50)";
                 e.currentTarget.style.transform = "none";
@@ -204,9 +242,9 @@ const Footer = () => (
               }}
             >
               {Icon ? (
-                <Icon size={13} color="#d86a63" strokeWidth={1.5} />
+                <Icon size={13} color={color} strokeWidth={1.5} />
               ) : (
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="#d86a63">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill={color}>
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
               )}
