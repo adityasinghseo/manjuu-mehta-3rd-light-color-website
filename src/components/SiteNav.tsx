@@ -126,19 +126,21 @@ const SiteNav = () => {
               onClick={() => setOpen(v => !v)}
               aria-label="Menu"
               style={{
-                background: "transparent",
-                border: "1px solid rgba(var(--color-accent-gold-rgb),0.40)",
+                background: "var(--color-accent-gold)",
+                border: "1.5px solid var(--color-accent-gold)",
                 borderRadius: 999,
-                padding: "7px",
+                padding: "8px",
                 cursor: "pointer",
-                color: "var(--color-accent-gold)",
+                color: "#FFFFFF",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                boxShadow: "0 2px 10px rgba(var(--color-accent-gold-rgb), 0.15)",
+                transition: "all 0.3s ease",
               }}
               className="hamburger"
             >
-              <Menu size={18} />
+              <Menu size={20} />
             </button>
           </div>
         </div>
@@ -180,6 +182,15 @@ const SiteNav = () => {
           .lg-nav-link { display: block !important; }
           .lg-cta { display: block !important; }
           .hamburger { display: none !important; }
+        }
+
+        .hamburger {
+          transition: all 0.3s ease !important;
+        }
+        .hamburger:hover, .hamburger:active {
+          background: var(--color-accent-light) !important;
+          border-color: var(--color-accent-light) !important;
+          transform: scale(1.06);
         }
 
         .lg-nav-link {
