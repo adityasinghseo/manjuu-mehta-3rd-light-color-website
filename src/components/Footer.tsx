@@ -181,43 +181,25 @@ const Footer = () => (
                   onMouseEnter={e => {
                     e.currentTarget.style.color = "var(--color-accent-gold)";
                     e.currentTarget.style.transform = "translateX(2px)";
-                    const frame = e.currentTarget.querySelector('.contact-icon-frame') as HTMLElement;
-                    if (frame) {
-                      frame.style.background = "var(--color-accent-gold)";
-                      frame.style.borderColor = "var(--color-accent-gold)";
-                    }
-                    const icon = e.currentTarget.querySelector('.contact-icon-svg') as HTMLElement;
-                    if (icon) {
-                      icon.style.color = "#FFFFFF";
-                    }
                   }}
                   onMouseLeave={e => {
                     e.currentTarget.style.color = "rgba(58,32,16,0.72)";
                     e.currentTarget.style.transform = "none";
-                    const frame = e.currentTarget.querySelector('.contact-icon-frame') as HTMLElement;
-                    if (frame) {
-                      frame.style.background = "rgba(var(--color-accent-gold-rgb), 0.14)";
-                      frame.style.borderColor = "rgba(var(--color-accent-gold-rgb), 0.28)";
-                    }
-                    const icon = e.currentTarget.querySelector('.contact-icon-svg') as HTMLElement;
-                    if (icon) {
-                      icon.style.color = "var(--color-accent-gold)";
-                    }
                   }}
                 >
                   <div style={{
                     width: 26,
                     height: 26,
                     borderRadius: "50%",
-                    background: "rgba(var(--color-accent-gold-rgb), 0.14)",
-                    border: "1.5px solid rgba(var(--color-accent-gold-rgb),0.28)",
+                    background: "var(--color-accent-gold)",
+                    border: "1.5px solid var(--color-accent-gold)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0,
                     transition: "all 0.3s",
                   }} className="contact-icon-frame">
-                    <Icon size={12} color="var(--color-accent-gold)" strokeWidth={1.4} className="contact-icon-svg" style={{ transition: "all 0.3s" }} />
+                    <Icon size={12} color="#FFFFFF" strokeWidth={1.4} className="contact-icon-svg" />
                   </div>
                   {label}
                 </a>
