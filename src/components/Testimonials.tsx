@@ -117,10 +117,10 @@ const Testimonials = () => {
             style={{
               position: "relative",
               padding: "56px 64px 48px",
-              background: "linear-gradient(135deg, #FFFDF9 0%, #F5ECDF 100%)",
-              border: "1.5px solid rgba(128, 94, 26, 0.38)",
+              background: "#2A1B0A",
+              border: "1px solid rgba(var(--color-accent-gold-rgb), 0.35)",
               borderRadius: 24,
-              boxShadow: "0 32px 75px -16px rgba(61, 43, 0, 0.16), 0 0 35px -8px rgba(110, 76, 0, 0.05)",
+              boxShadow: "0 30px 70px -16px rgba(40, 22, 10, 0.40), 0 0 40px -10px rgba(var(--color-accent-gold-rgb), 0.12)",
               backdropFilter: "blur(20px)",
               textAlign: "left",
               animation: "slideReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) both",
@@ -128,40 +128,37 @@ const Testimonials = () => {
             }}
             className="testimonial-card"
           >
-            {/* Inner Gold Frame */}
+            {/* Top gold line visual signature */}
             <div style={{
               position: "absolute",
-              top: 12,
-              left: 12,
-              right: 12,
-              bottom: 12,
-              border: "1px solid rgba(128, 94, 26, 0.22)",
-              borderRadius: 16,
-              pointerEvents: "none",
-              zIndex: 1,
+              top: 0,
+              left: 0,
+              right: 0,
+              height: 3,
+              background: "linear-gradient(90deg, #D5B875 0%, rgba(213, 184, 117, 0.2) 100%)",
             }} />
 
             {/* Giant decorative quotation backgrounds */}
-            <div className="quote-mark-left">“</div>
-            <div className="quote-mark-right">”</div>
+            <div className="quote-mark-left" style={{ color: "#E8D5A3", opacity: 0.18 }}>“</div>
+            <div className="quote-mark-right" style={{ color: "#E8D5A3", opacity: 0.08 }}>”</div>
 
             {/* Google Verified Review Badge */}
             <div className="badge-container" style={{
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
-              background: "rgba(var(--color-accent-gold-rgb), 0.08)",
+              background: "rgba(255, 255, 255, 0.08)",
               padding: "5px 14px",
               borderRadius: 999,
-              border: "1px solid rgba(var(--color-accent-gold-rgb), 0.20)",
+              border: "1px solid rgba(255, 255, 255, 0.15)",
               marginBottom: 16,
               position: "relative",
               zIndex: 2,
             }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.136 4.114-3.51 0-6.355-2.855-6.355-6.355S10.49 5.8 14 5.8c1.558 0 2.978.56 4.092 1.484l3.057-3.057C19.26 2.5 16.786 1.5 14 1.5 8.2 1.5 3.5 6.2 3.5 12s4.7 10.5 10.5 10.5c5.77 0 10.4-4.63 10.4-10.5 0-.7-.08-1.37-.215-2.015H12.24z" fill="var(--color-accent-gold)"/>
+                <path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.136 4.114-3.51 0-6.355-2.855-6.355-6.355S10.49 5.8 14 5.8c1.558 0 2.978.56 4.092 1.484l3.057-3.057C19.26 2.5 16.786 1.5 14 1.5 8.2 1.5 3.5 6.2 3.5 12s4.7 10.5 10.5 10.5c5.77 0 10.4-4.63 10.4-10.5 0-.7-.08-1.37-.215-2.015H12.24z" fill="#D5B875"/>
               </svg>
-              <span style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.65rem, 1vw, 0.75rem)", fontWeight: 600, color: "var(--color-text-heading)", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+              <span style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(0.65rem, 1vw, 0.75rem)", fontWeight: 600, color: "#E8D5A3", letterSpacing: "0.08em", textTransform: "uppercase" }}>
                 Google Verified Review
               </span>
             </div>
@@ -169,7 +166,7 @@ const Testimonials = () => {
             {/* Star Rating Grid */}
             <div className="stars-container" style={{ display: "flex", justifyContent: "flex-start", gap: 5, marginBottom: 20, position: "relative", zIndex: 2 }}>
               {Array.from({ length: t.rating }).map((_, i) => (
-                <Star key={i} size={17} fill="var(--color-accent-gold)" color="var(--color-accent-gold)" />
+                <Star key={i} size={17} fill="#F4D06F" color="#F4D06F" />
               ))}
             </div>
 
@@ -178,7 +175,7 @@ const Testimonials = () => {
               fontFamily: "Poppins, sans-serif",
               fontSize: "clamp(1.08rem, 1.5vw, 1.4rem)",
               lineHeight: 1.8,
-              color: "var(--color-text-primary)",
+              color: "#FFFFFF",
               fontWeight: 400,
               fontStyle: "italic",
               marginBottom: 28,
@@ -190,7 +187,7 @@ const Testimonials = () => {
 
             {/* Left-aligned separation ornament */}
             <div className="divider-line" style={{ display: "flex", alignItems: "center", gap: 14, justifyContent: "flex-start", marginBottom: 28, position: "relative", zIndex: 2 }}>
-              <div style={{ width: 60, height: 1.5, background: "linear-gradient(90deg, var(--color-accent-gold), transparent)" }} />
+              <div style={{ width: 60, height: 1.5, background: "linear-gradient(90deg, #D5B875, transparent)" }} />
             </div>
 
             {/* Author Profile */}
@@ -201,7 +198,7 @@ const Testimonials = () => {
                   fontWeight: 700, 
                   fontSize: "clamp(1.1rem, 1.4vw, 1.25rem)", 
                   letterSpacing: "0.04em", 
-                  color: "var(--color-text-heading)", 
+                  color: "#E8D5A3", 
                   margin: 0,
                   lineHeight: 1.2
                 }}>
@@ -213,9 +210,8 @@ const Testimonials = () => {
                   fontWeight: 600, 
                   letterSpacing: "0.08em", 
                   textTransform: "uppercase", 
-                  color: "var(--color-text-primary)", 
+                  color: "rgba(255, 255, 255, 0.76)", 
                   margin: 0,
-                  opacity: 0.8
                 }}>
                   {t.role} <span style={{ opacity: 0.4, margin: "0 4px" }}>•</span> {t.location}
                 </p>
