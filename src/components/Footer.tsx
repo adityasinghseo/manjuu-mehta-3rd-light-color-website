@@ -254,13 +254,10 @@ const Footer = () => (
         </div>
       </div>
 
-      {/* Bottom Copyright & AIFAS Credentials */}
+      {/* Bottom Copyright */}
       <div style={{ marginTop: 44, textAlign: "center", borderTop: "1px solid rgba(var(--color-accent-gold-rgb),0.14)", paddingTop: 28 }}>
         <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "clamp(1.12rem, 1.4vw, 1.25rem)", color: "rgba(40,22,10,0.52)", fontWeight: 400 }}>
           © {new Date().getFullYear()} Manjuu Mehta ✦ All Rights Reserved
-        </p>
-        <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, fontSize: "clamp(1.1rem, 1.3vw, 1.2rem)", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(var(--color-accent-gold-rgb),0.65)", marginTop: 6 }}>
-          AIFAS Elite Member
         </p>
       </div>
     </div>
