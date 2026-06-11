@@ -1,4 +1,4 @@
-import portrait from "@/assets/WhatsApp Image 2026-05-27 at 2.08.25 PM (1).jpeg";
+import portrait from "@/assets/manjuu_mehta_journey.png";
 import { Award, BookOpen, Globe, Heart, Sparkles, Star, Users, Zap, Calendar, ArrowRight, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { OrnDivider } from "@/components/SiteNav";
@@ -104,7 +104,7 @@ const AboutUsPage = () => (
             <div style={{
               position: "absolute",
               inset: "16px 0",
-              borderRadius: "12rem 12rem 2rem 2rem",
+              borderRadius: "2rem",
               border: "1.5px solid rgba(var(--color-accent-gold-rgb),0.30)",
               transform: "translate(-14px, -14px)",
               pointerEvents: "none",
@@ -116,7 +116,7 @@ const AboutUsPage = () => (
             <div style={{
               position: "absolute",
               inset: "16px 0",
-              borderRadius: "12rem 12rem 2rem 2rem",
+              borderRadius: "2rem",
               border: "1.5px solid rgba(var(--color-accent-gold-rgb),0.14)",
               transform: "translate(14px, 14px)",
               pointerEvents: "none",
@@ -138,10 +138,11 @@ const AboutUsPage = () => (
 
 
 
-            {/* Main Image Container in Arch Style */}
+            {/* Main Image Container in Rounded Square Style */}
             <div style={{
               position: "relative",
-              borderRadius: "12rem 12rem 2rem 2rem",
+              aspectRatio: "1 / 1",
+              borderRadius: "2rem",
               overflow: "hidden",
               border: "1px solid rgba(var(--color-accent-gold-rgb),0.22)",
               boxShadow: "0 28px 64px -14px rgba(var(--color-text-heading-rgb),0.14), 0 0 30px rgba(var(--color-accent-gold-rgb),0.06)",
@@ -152,7 +153,7 @@ const AboutUsPage = () => (
               <img
                 src={portrait}
                 alt="Manjuu Mehta – Spiritual Advisor & Vedic Consultant"
-                style={{ width: "100%", display: "block", objectFit: "cover", transition: "transform 0.8s ease" }}
+                style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", transition: "transform 0.8s ease" }}
                 className="about-portrait-img"
                 loading="lazy"
               />

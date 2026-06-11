@@ -35,7 +35,7 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Haridwar, Uttarakhand",
+    value: "Shop Number 14, Krishna Nagar, Haridwar, Uttarakhand",
     href: "#",
     sub: "Remote consultations available worldwide",
   },
@@ -161,7 +161,7 @@ const ContactUs = () => {
 
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[var(--color-accent-gold)] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Full Name *</label>
+                    <label className="block text-[var(--color-accent-gold)] text-[13px] font-cinzel tracking-widest uppercase mb-2 font-bold">Full Name *</label>
                     <input
                       type="text"
                       name="name"
@@ -173,7 +173,7 @@ const ContactUs = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-[var(--color-accent-gold)] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Phone *</label>
+                    <label className="block text-[var(--color-accent-gold)] text-[13px] font-cinzel tracking-widest uppercase mb-2 font-bold">Phone *</label>
                     <input
                       type="text"
                       name="phone"
@@ -187,7 +187,7 @@ const ContactUs = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[var(--color-accent-gold)] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Email</label>
+                  <label className="block text-[var(--color-accent-gold)] text-[13px] font-cinzel tracking-widest uppercase mb-2 font-bold">Email</label>
                   <input
                     type="email"
                     name="email"
@@ -199,7 +199,7 @@ const ContactUs = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[var(--color-accent-gold)] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Service Required *</label>
+                  <label className="block text-[var(--color-accent-gold)] text-[13px] font-cinzel tracking-widest uppercase mb-2 font-bold">Service Required *</label>
                   <select
                     name="service"
                     required
@@ -220,7 +220,7 @@ const ContactUs = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[var(--color-accent-gold)] text-[10px] font-cinzel tracking-widest uppercase mb-2 font-bold">Your Message</label>
+                  <label className="block text-[var(--color-accent-gold)] text-[13px] font-cinzel tracking-widest uppercase mb-2 font-bold">Your Message</label>
                   <textarea
                     name="message"
                     rows={5}
@@ -292,8 +292,8 @@ const ContactUs = () => {
                     transformOrigin: "center",
                   }} />
 
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full border flex items-center justify-center text-gold transition-all duration-400 card-icon-badge" style={{ background: "var(--color-bg-primary)", border: "1.5px solid var(--color-border)" }}>
-                    <c.icon className="w-5 h-5 icon-svg" strokeWidth={1.2} style={{ color: "var(--color-accent-gold)", transition: "all 0.4s ease" }} />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white transition-all duration-400 card-icon-badge" style={{ background: "var(--color-accent-gold)", border: "1.5px solid var(--color-accent-gold)" }}>
+                    <c.icon className="w-5 h-5 icon-svg" strokeWidth={1.5} style={{ color: "#FFFFFF", transition: "all 0.4s ease" }} />
                   </div>
                   <div>
                     <p className="font-cinzel tracking-[0.16em] text-[var(--color-accent-gold)] text-[9.5px] uppercase mb-1.5 font-bold">
@@ -335,8 +335,8 @@ const ContactUs = () => {
           transform: translateX(-50%) scaleX(1);
         }
         .contact-detail-card:hover .card-icon-badge {
-          background: var(--color-accent-gold) !important;
-          border-color: var(--color-accent-gold) !important;
+          background: var(--color-accent-light) !important;
+          border-color: var(--color-accent-light) !important;
           transform: scale(1.06);
         }
         .contact-detail-card:hover .icon-svg {

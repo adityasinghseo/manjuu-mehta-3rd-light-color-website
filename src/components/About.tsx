@@ -1,4 +1,4 @@
-import portrait from "@/assets/WhatsApp Image 2026-05-27 at 2.08.25 PM (1).jpeg";
+import portrait from "@/assets/manjuu_mehta_journey.png";
 import { OrnDivider } from "./SiteNav";
 
 const About = () => (
@@ -51,7 +51,7 @@ const About = () => (
           <div style={{
             position: "absolute",
             inset: "16px 0",
-            borderRadius: "12rem 12rem 2rem 2rem",
+            borderRadius: "2rem",
             border: "1.5px solid rgba(var(--color-accent-gold-rgb),0.30)",
             transform: "translate(-14px, -14px)",
             pointerEvents: "none",
@@ -63,7 +63,7 @@ const About = () => (
           <div style={{
             position: "absolute",
             inset: "16px 0",
-            borderRadius: "12rem 12rem 2rem 2rem",
+            borderRadius: "2rem",
             border: "1.5px solid rgba(var(--color-accent-gold-rgb),0.14)",
             transform: "translate(14px, 14px)",
             pointerEvents: "none",
@@ -83,55 +83,11 @@ const About = () => (
             zIndex: 0,
           }} />
 
-          {/* Top-Left Floating Badge ("10+ Years Wisdom") */}
-          <div style={{
-            position: "absolute",
-            top: "12%",
-            left: "-14%",
-            zIndex: 10,
-            background: "#FFFFFF",
-            border: "1px solid rgba(var(--color-accent-gold-rgb),0.28)",
-            borderRadius: 16,
-            padding: "10px 18px",
-            boxShadow: "0 10px 24px -6px rgba(var(--color-text-heading-rgb),0.08)",
-            backdropFilter: "blur(10px)",
-            WebkitBackdropFilter: "blur(10px)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            animation: "floatSlow 6s ease-in-out infinite",
-          }} className="about-float-badge">
-            <span style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: 18, color: "var(--color-text-heading)", lineHeight: 1.1 }}>10+</span>
-            <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-text-heading)", marginTop: 2 }}>Years Wisdom</span>
-          </div>
-
-          {/* Bottom-Right Floating Badge ("5000+ Happy Souls") */}
-          <div style={{
-            position: "absolute",
-            bottom: "16%",
-            right: "-14%",
-            zIndex: 10,
-            background: "#FFFFFF",
-            border: "1px solid rgba(var(--color-accent-gold-rgb),0.28)",
-            borderRadius: 16,
-            padding: "10px 18px",
-            boxShadow: "0 10px 24px -6px rgba(var(--color-text-heading-rgb),0.08)",
-            backdropFilter: "blur(10px)",
-            WebkitBackdropFilter: "blur(10px)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            animation: "floatSlow 6s ease-in-out infinite",
-            animationDelay: "3s",
-          }} className="about-float-badge">
-            <span style={{ fontFamily: "Cinzel, serif", fontWeight: 900, fontSize: 18, color: "var(--color-text-heading)", lineHeight: 1.1 }}>5000+</span>
-            <span style={{ fontFamily: "Cinzel, serif", fontWeight: 700, fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-text-heading)", marginTop: 2 }}>Happy Clients</span>
-          </div>
-
-          {/* Main Image Container in Arch Style */}
+          {/* Main Image Container in Rounded Square Style */}
           <div style={{
             position: "relative",
-            borderRadius: "12rem 12rem 2rem 2rem",
+            aspectRatio: "1 / 1",
+            borderRadius: "2rem",
             overflow: "hidden",
             border: "1px solid rgba(var(--color-accent-gold-rgb),0.22)",
             boxShadow: "0 28px 64px -14px rgba(var(--color-text-heading-rgb),0.14), 0 0 30px rgba(var(--color-accent-gold-rgb),0.06)",
@@ -142,7 +98,7 @@ const About = () => (
             <img
               src={portrait}
               alt="Manjuu Mehta – Spiritual Advisor & Vedic Consultant"
-              style={{ width: "100%", display: "block", objectFit: "cover", transition: "transform 0.8s ease" }}
+              style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", transition: "transform 0.8s ease" }}
               className="about-portrait-img"
               loading="lazy"
             />

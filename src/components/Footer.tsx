@@ -163,7 +163,7 @@ const Footer = () => (
               { href: "mailto:manjuumehta1@gmail.com", label: "manjuumehta1@gmail.com", Icon: Mail },
               { href: "tel:+917310952576", label: "+91 73109 52576", Icon: Phone },
               { href: "tel:+917737329191", label: "+91 77373 29191", Icon: Phone },
-              { href: "#", label: "Haridwar, Uttarakhand", Icon: MapPin },
+              { href: "#", label: "Shop Number 14, Krishna Nagar, Haridwar, Uttarakhand", Icon: MapPin },
             ].map(({ href, label, Icon }, i) => (
               <li key={i}>
                 <a href={href}
